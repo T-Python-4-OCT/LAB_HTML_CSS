@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Irrigation Plan</title>
+</head>
+<body>
+  <h1>Irrigation Plan</h1>
+  <p>A simple plan that shows how a <b>water tank</b> feeds <i>three planting zones</i> through one main pipe.</p>
+
+  <!-- Image -->
+  <h2>Layout</h2>
+  <img src="../images/irrigation-plan.svg" alt="Diagram of a tank, a main pipe and three zones" width="500">
+
+  <!-- Unordered list -->
+  <h2>System components</h2>
+  <ul>
+    <li>Water tank</li>
+    <li>Main pipe</li>
+    <li>Branch pipes</li>
+    <li>Valves and sprinklers</li>
+  </ul>
+
+  <!-- Ordered list -->
+  <h2>How the system works</h2>
+  <ol>
+    <li>Water flows from the tank into the main pipe.</li>
+    <li>A valve opens the branch of the chosen zone.</li>
+    <li>Sprinklers water the plants for the scheduled time.</li>
+    <li>The valve closes and the next zone starts.</li>
+  </ol>
+
+  <!-- Table -->
+  <h2>Watering schedule</h2>
+  <table border="1" cellpadding="6">
+    <thead>
+      <tr>
+        <th>Zone</th>
+        <th>Plant type</th>
+        <th>Time</th>
+        <th>Duration (min)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Zone A</td><td>Vegetables</td><td>6:00 AM</td><td>20</td></tr>
+      <tr><td>Zone B</td><td>Palm trees</td><td>6:30 AM</td><td>40</td></tr>
+      <tr><td>Zone C</td><td>Grass</td><td>7:15 AM</td><td>15</td></tr>
+    </tbody>
+  </table>
+
+  <!-- Links -->
+  <h2>Useful links</h2>
+  <ul>
+    <li><a href="https://en.wikipedia.org/wiki/Irrigation" target="_blank" rel="noopener">Irrigation (Wikipedia)</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener">MDN HTML Docs</a></li>
+  </ul>
+
+  <!-- Form -->
+  <h2>Request a schedule change</h2>
+  <form action="#" method="post">
+    <p>
+      <label for="name">Your name:</label>
+      <input type="text" id="name" name="name" required>
+    </p>
+    <p>
+      <label for="zone">Zone:</label>
+      <select id="zone" name="zone">
+        <option value="a">Zone A</option>
+        <option value="b">Zone B</option>
+        <option value="c">Zone C</option>
+      </select>
+    </p>
+    <p>
+      <label for="time">New time:</label>
+      <input type="time" id="time" name="time">
+    </p>
+    <p>
+      <label for="duration">Duration (minutes):</label>
+      <input type="number" id="duration" name="duration" min="5" max="120">
+    </p>
+    <p>
+      <input type="checkbox" id="auto" name="auto">
+      <label for="auto">Repeat every day</label>
+    </p>
+    <p>
+      <label for="notes">Notes:</label><br>
+      <textarea id="notes" name="notes" rows="4" cols="40"></textarea>
+    </p>
+    <button type="submit">Send request</button>
+    <button type="reset">Clear</button>
+  </form>
+
+  <p><a href="../index.html">Back to course index</a></p>
+</body>
+</html>
