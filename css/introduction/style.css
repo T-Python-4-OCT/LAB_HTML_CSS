@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6fb;
+  color: #222;
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 32px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+html {
+  background-color: #f4f6fb;
+}
+
+h1 {
+  color: #2d5be3;
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+b {
+  color: hsl(220, 60%, 35%);
+}
