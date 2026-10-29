@@ -2,11 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My First Page</title>
-  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hello, HTML!</h1>
+  <h1>سامي فهد الحربي</h1>
   <p>This is my <b>first</b> page.</p>
+
+  <p>
+    <a href="#video">My video</a> |
+    <a href="#table">What I am learning</a> |
+    <a href="#links">Useful links</a>
+  </p>
+
+  <hr>
+
+  <h2 id="video">My favorite video</h2>
+  <iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/lCvYkIqZXG4?si=W7bllsFSJ3Flxc8s"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
+  </iframe>
+  <p>
+    <a href="https://www.youtube.com/embed/lCvYkIqZXG4?si=W7bllsFSJ3Flxc8s" target="_blank" rel="noopener">Watch it on YouTube</a>
+  </p>
+
+  <hr>
+
+  <!-- الجدول -->
+  <h2 id="table">What I am learning</h2>
+  <table border="1">
+    <caption>My learning path</caption>
+    <thead>
+      <tr>
+        <th>Topic</th>
+        <th>What it is</th>
+        <th>What I made</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Python</td>
+        <td>Programming language</td>
+        <td>A restaurant reservation system</td>
+      </tr>
+      <tr>
+        <td>pip &amp; venv</td>
+        <td>Packages and virtual environments</td>
+        <td>A fake profiles generator with Faker</td>
+      </tr>
+      <tr>
+        <td>Git &amp; GitHub</td>
+        <td>Version control</td>
+        <td>Commits for every part of my project</td>
+      </tr>
+      <tr>
+        <td>HTML</td>
+        <td>The structure of web pages</td>
+        <td>This page</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <h2 id="links">Useful links</h2>
+  <ul>
+    <li><a href="https://www.python.org" target="_blank" rel="noopener">Python website</a></li>
+    <li><a href="https://pypi.org" target="_blank" rel="noopener">PyPI: Python Package Index</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML" target="_blank" rel="noopener">Learn HTML (MDN)</a></li>
+    <li><a href="https://github.com" target="_blank" rel="noopener">My GitHub</a></li>
+  </ul>
 </body>
 </html>
