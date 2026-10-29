@@ -3,11 +3,92 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My First Page</title>
-  <link rel="stylesheet" href="/css/introduction/style.css">
+  <title>My secnd Page</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Sami Fahad</h1>
-  <p>This is my <b>first</b> page.</p>
+
+  <header>
+    <h1>سامي فهد الحربي</h1>
+    <p>This is my <b>secnd</b> page.</p>
+  </header>
+
+  <nav>
+    <a href="#video">My video</a>
+    <a href="#table">What I am learning</a>
+    <a href="#links">Useful links</a>
+  </nav>
+
+  <main>
+
+    <section id="video">
+      <h2>My video</h2>
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/lCvYkIqZXG4"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          loading="lazy"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <p>
+        <a href="https://www.youtube.com/watch?v=lCvYkIqZXG4" target="_blank" rel="noopener">Watch it on YouTube</a>
+      </p>
+    </section>
+
+    <section id="table">
+      <h2>What I am learning</h2>
+      <div class="table-wrapper">
+        <table>
+          <caption>My learning path</caption>
+          <thead>
+            <tr>
+              <th>Topic</th>
+              <th>What it is</th>
+              <th>What I made</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Python</td>
+              <td>Programming language</td>
+              <td>A restaurant reservation system</td>
+            </tr>
+            <tr>
+              <td>pip &amp; venv</td>
+              <td>Packages and virtual environments</td>
+              <td>A fake profiles generator with Faker</td>
+            </tr>
+            <tr>
+              <td>Git &amp; GitHub</td>
+              <td>Version control</td>
+              <td>Commits for every part of my project</td>
+            </tr>
+            <tr>
+              <td>HTML</td>
+              <td>The structure of web pages</td>
+              <td>This page</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="links">
+      <h2>Useful links</h2>
+      <ul class="links">
+        <li><a href="https://www.python.org" target="_blank" rel="noopener">Python website</a></li>
+        <li><a href="https://pypi.org" target="_blank" rel="noopener">PyPI: Python Package Index</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML" target="_blank" rel="noopener">Learn HTML (MDN)</a></li>
+        <li><a href="https://github.com" target="_blank" rel="noopener">My GitHub</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  
+
 </body>
 </html>
