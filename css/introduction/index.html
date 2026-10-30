@@ -1,0 +1,158 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hobbies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Welcome to My Hobbies</h1>
+        <p>Discover the things I love to do!</p>
+        <a href="#hobbies" class="button">Explore My Hobbies</a>
+        <a href="#contact" class="button">Contact Me</a>
+    </header>
+
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#hobbies">My Hobbies</a>
+        <a href="#schedule">My Schedule</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! My name is Mohammed. I enjoy learning new things and spending my free time doing activities that make me happy.</p>
+            <p>My favorite hobby is <b>drawing</b>, and I also enjoy <i>reading books</i> and learning programming.</p>
+        </section>
+
+        <section id="hobbies">
+            <h2>My Favorite Hobbies</h2>
+
+            <div class="hobbies">
+
+                <div class="hobby">
+                    <img src="drawing.jpg" alt="Drawing and painting">
+                    <div class="hobby-content">
+                        <h3>Drawing</h3>
+                        <p>Drawing helps me express my creativity and explore new ideas.</p>
+                        <a href="https://en.wikipedia.org/wiki/Drawing">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="hobby">
+                    <img src="reading.jpg" alt="Books and reading">
+                    <div class="hobby-content">
+                        <h3>Reading</h3>
+                        <p>Reading books helps me gain knowledge and learn new things.</p>
+                        <a href="https://en.wikipedia.org/wiki/Reading">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="hobby">
+                    <img src="programming.jpg" alt="Computer programming">
+                    <div class="hobby-content">
+                        <h3>Programming</h3>
+                        <p>Programming allows me to build projects and solve problems.</p>
+                        <a href="https://www.w3schools.com/html/">Learn HTML</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <h2>Things I Want to Learn</h2>
+
+            <ul>
+                <li>Web Development</li>
+                <li>Graphic Design</li>
+                <li>Python Programming</li>
+                <li>Photography</li>
+            </ul>
+
+            <h3>My Goals</h3>
+
+            <ol>
+                <li>Learn HTML basics.</li>
+                <li>Build my first website.</li>
+                <li>Learn CSS.</li>
+                <li>Create a complete web project.</li>
+            </ol>
+        </section>
+
+        <section id="schedule">
+            <h2>My Weekly Schedule</h2>
+
+            <table>
+                <tr>
+                    <th>Day</th>
+                    <th>Activity</th>
+                    <th>Duration</th>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>Drawing</td>
+                    <td>1 Hour</td>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                    <td>Reading</td>
+                    <td>30 Minutes</td>
+                </tr>
+                <tr>
+                    <td>Monday</td>
+                    <td>Programming</td>
+                    <td>2 Hours</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>Web Development</td>
+                    <td>1 Hour</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+
+            <form>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="hobby">Favorite Hobby:</label>
+                <select id="hobby" name="hobby">
+                    <option value="">Choose a hobby</option>
+                    <option value="drawing">Drawing</option>
+                    <option value="reading">Reading</option>
+                    <option value="programming">Programming</option>
+                    <option value="photography">Photography</option>
+                </select>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="5"></textarea>
+
+                <button type="submit">Send Message</button>
+                <button type="reset">Clear Form</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Hobbies. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
