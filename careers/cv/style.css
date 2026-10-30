@@ -1,0 +1,241 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080d18;
+    color: #f4f7ff;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+}
+
+:root {
+    --blue: #39c6f4;
+    --purple: #647dff;
+    --gray: #9baac0;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    padding: 15px 8%;
+    background: #080d18eF;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ffffff15;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    text-decoration: none;
+    color: white;
+}
+
+.logo span, h1 span, .heading span, .contact span {
+    color: var(--blue);
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+}
+
+nav a {
+    color: var(--gray);
+    text-decoration: none;
+    font-size: 13px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: var(--blue);
+}
+
+.hero {
+    min-height: 85vh;
+    padding: 70px 10%;
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.tag, .date {
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: clamp(40px, 6vw, 65px);
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.hero h2 {
+    color: var(--blue);
+}
+
+.hero p {
+    color: var(--gray);
+    margin: 15px 0 25px;
+}
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(100deg, var(--blue), var(--purple));
+    color: #08111f;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px #39c6f455;
+}
+
+.card {
+    background: #111b2d;
+    border: 1px solid #ffffff15;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    transition: .3s;
+    animation: appear .8s ease both;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: var(--blue);
+}
+
+.profile {
+    text-align: center;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    margin: 10px auto 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 30%;
+    border: 3px solid #39c6f4;
+    box-shadow: 0 0 25px #39c6f455;
+    animation: float 3s ease-in-out infinite;
+}
+
+.profile p, .card p, li {
+    color: var(--gray);
+    font-size: 13px;
+}
+
+.profile i, .card h3 i {
+    color: var(--blue);
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ffffff20;
+    margin: 20px 0;
+}
+
+section:not(.hero) {
+    width: 85%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 65px 0;
+    scroll-margin-top: 80px;
+}
+
+.heading {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 35px;
+}
+
+.card h3 {
+    margin-bottom: 8px;
+}
+
+ul {
+    padding-left: 20px;
+    margin-top: 15px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.tags span {
+    padding: 7px 12px;
+    background: #39c6f415;
+    color: var(--blue);
+    border: 1px solid #39c6f430;
+    border-radius: 7px;
+    font-size: 12px;
+    transition: .3s;
+}
+
+.tags span:hover {
+    background: var(--blue);
+    color: #080d18;
+}
+
+.contact {
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.contact .btn {
+    margin: 15px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: var(--gray);
+    border-top: 1px solid #ffffff15;
+    font-size: 12px;
+}
+
+@keyframes float {
+    50% { transform: translateY(-12px); }
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 700px) {
+    header { flex-direction: column; gap: 10px; }
+    nav { flex-wrap: wrap; justify-content: center; gap: 12px; }
+    .hero { grid-template-columns: 1fr; padding: 60px 8%; }
+    section:not(.hero) { width: 90%; }
+    .grid { grid-template-columns: 1fr; }
+}
