@@ -416,3 +416,190 @@ footer {
     transition: none;
   }
 }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero h1 {
+  animation: fadeInUp 1.5s ease-out both;
+}
+
+.section-heading h2 {
+  animation: fadeInUp 1.5s ease-out both;
+}
+
+.card h3,
+.future-content h3,
+.conclusion h2 {
+  animation: fadeInUp 1.8s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero h1,
+  .section-heading h2,
+  .card h3,
+  .future-content h3,
+  .conclusion h2 {
+    animation: none;
+  }
+}
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-effects {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.star,
+.orb,
+.line {
+  position: absolute;
+}
+
+.star {
+  width: 6px;
+  height: 6px;
+  background-color: #f5deb0;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #f5deb0;
+  animation: twinkle 2.5s infinite ease-in-out;
+}
+
+.star-1 {
+  top: 18%;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.star-2 {
+  top: 28%;
+  right: 18%;
+  animation-delay: 0.8s;
+}
+
+.star-3 {
+  top: 62%;
+  left: 26%;
+  animation-delay: 1.2s;
+}
+
+.star-4 {
+  top: 54%;
+  right: 24%;
+  animation-delay: 1.8s;
+}
+
+.orb {
+  border: 1px solid rgba(179, 138, 255, 0.5);
+  border-radius: 50%;
+  box-shadow: 0 0 25px rgba(179, 138, 255, 0.25);
+  animation: floatOrb 6s infinite ease-in-out;
+}
+
+.orb-1 {
+  width: 90px;
+  height: 90px;
+  top: 12%;
+  left: 10%;
+}
+
+.orb-2 {
+  width: 140px;
+  height: 140px;
+  top: 8%;
+  right: 10%;
+  animation-delay: 1.5s;
+}
+
+.orb-3 {
+  width: 110px;
+  height: 110px;
+  bottom: 8%;
+  left: 45%;
+  animation-delay: 3s;
+}
+
+.line {
+  height: 2px;
+  background: linear-gradient(to right, transparent, #b38aff, transparent);
+  opacity: 0.7;
+  animation: pulseLine 4s infinite ease-in-out;
+}
+
+.line-1 {
+  width: 160px;
+  top: 34%;
+  left: 12%;
+  transform: rotate(18deg);
+}
+
+.line-2 {
+  width: 140px;
+  top: 64%;
+  right: 14%;
+  transform: rotate(-18deg);
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.4);
+  }
+}
+
+@keyframes floatOrb {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes pulseLine {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scaleX(1);
+  }
+
+  50% {
+    opacity: 0.9;
+    transform: scaleX(1.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .star,
+  .orb,
+  .line {
+    animation: none;
+  }
+}
