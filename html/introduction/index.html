@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A fantasy HTML page about wizards, enchanted forests, and ancient castles."
+    />
+    <title>Enchanted Realm</title>
+  </head>
+
+  <body>
+    <header id="home">
+      <h1>Enchanted Realm</h1>
+      <p>Step into a world of wizards, magical forests, and ancient castles.</p>
+
+      <nav aria-label="Main Navigation">
+        <a href="#about">About</a> | <a href="#gallery">Gallery</a> |
+        <a href="#places">Magical Places</a> |
+        <a href="#contact">Join the Quest</a>
+      </nav>
+    </header>
+
+    <hr />
+
+    <main>
+      <section id="about">
+        <h2>About the Realm</h2>
+
+        <p>
+          Welcome to the <strong>Enchanted Realm</strong>, a magical land filled
+          with mysterious forests, powerful wizards, and legendary castles.
+        </p>
+
+        <p>
+          In this world, ancient trees whisper secrets, glowing rivers shine at
+          night, and brave travelers search for hidden magic. It is a place of
+          <em>wonder</em>, adventure, and imagination.
+        </p>
+
+        <h3>What Makes This Realm Special?</h3>
+        <ul>
+          <li>Wise wizards with powerful magic.</li>
+          <li>Dark and enchanted forests full of mystery.</li>
+          <li>Ancient castles standing on high mountains.</li>
+          <li>Magical creatures and hidden treasures.</li>
+        </ul>
+      </section>
+
+      <hr />
+
+      <section id="gallery">
+        <h2>Realm Gallery</h2>
+        <p>Take a look at scenes from the enchanted world.</p>
+
+        <figure>
+          <img
+            src="https://images.unsplash.com/photo-1511497584788-876760111969?w=800"
+            alt="A magical forest with a fantasy atmosphere"
+            width="500"
+          />
+          <figcaption>The mystical forest of the realm.</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="https://images.unsplash.com/photo-1614668799881-af5581297f42?w=800"
+            alt="A majestic medieval castle on a hill"
+            width="500"
+          />
+          <figcaption>An ancient castle above the valley.</figcaption>
+        </figure>
+      </section>
+
+      <hr />
+
+      <section id="places">
+        <h2>Magical Places</h2>
+        <p>These are some of the most famous places in the Enchanted Realm.</p>
+
+        <h3>Top 3 Places to Visit</h3>
+        <ol>
+          <li>The Whispering Forest</li>
+          <li>The Silver Tower Castle</li>
+          <li>The Wizard's Hidden Library</li>
+        </ol>
+
+        <h3>Realm Locations Table</h3>
+        <table border="1">
+          <thead>
+            <tr>
+              <th scope="col">Place</th>
+              <th scope="col">Type</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Whispering Forest</td>
+              <td>Forest</td>
+              <td>A magical forest filled with glowing plants and secrets.</td>
+            </tr>
+            <tr>
+              <td>Silver Tower</td>
+              <td>Castle</td>
+              <td>An ancient castle where the royal wizard once lived.</td>
+            </tr>
+            <tr>
+              <td>Moonstone Cave</td>
+              <td>Cave</td>
+              <td>A mysterious cave said to hold magical crystals.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          Want inspiration for fantasy worlds?
+          <a
+            href="https://www.britannica.com/art/fantasy-narrative-genre"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read more about fantasy stories
+          </a>
+        </p>
+      </section>
+
+      <hr />
+
+      <section id="contact">
+        <h2>Join the Quest</h2>
+        <p>Complete the form below to become an adventurer of the realm.</p>
+
+        <form>
+          <p>
+            <label for="name">Full Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
+          </p>
+
+          <p>
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+          </p>
+
+          <p>
+            <label for="role">Choose Your Role:</label>
+            <select id="role" name="role">
+              <option value="wizard">Wizard</option>
+              <option value="knight">Knight</option>
+              <option value="archer">Archer</option>
+              <option value="traveler">Traveler</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="message">Why do you want to join the quest?</label>
+          </p>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            cols="40"
+            placeholder="Write your answer here..."
+          ></textarea>
+
+          <p>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <hr />
+
+    <footer>
+      <p>&copy; 2026 Enchanted Realm. All rights reserved.</p>
+      <p><a href="#home">Back to Top</a></p>
+    </footer>
+  </body>
+</html>

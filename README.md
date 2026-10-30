@@ -1,5 +1,4 @@
-# LAB_HTML_CSS
-
+<!-- # LAB_HTML_CSS
 
 # Learn the about HTML/CSS and apply your learning on 4 mini projects!
 - Eatch mini project is in a seperate folder. 
@@ -140,4 +139,4 @@
 ## BONUS
 - Do a page for a dashboard looking like the following image.
 - Path: `dashboard/"
-<img src="assets/dahsboard.png" style="width:100%" />
+<img src="assets/dahsboard.png" style="width:100%" /> -->
