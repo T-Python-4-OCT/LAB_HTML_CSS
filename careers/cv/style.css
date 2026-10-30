@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+  }
+
+body {
+background-color: #eef1f5;
+font-family: Arial, sans-serif;
+color: #263238;
+line-height: 1.7;
+}
+
+.cv-container {
+max-width: 900px;
+margin: auto;
+border-top: 6px solid #244b68;
+}
+
+header h1 {
+color: #244b68;
+font-size: 2rem;
+}
+
+.contact-info a {
+color: #386b8d;
+text-decoration: none;
+}
+
+.contact-info a:hover {
+color: #152f43;
+text-decoration: underline;
+}
+
+.section-title {
+color: #244b68;
+font-size: 1.3rem;
+font-weight: bold;
+text-transform: uppercase;
+border-bottom: 2px solid #244b68;
+padding-bottom: 8px;
+margin-bottom: 18px;
+}
+
+.skill-card {
+background-color: #f1f5f8;
+border-left: 4px solid #386b8d;
+}
+
+.skill-card h3 {
+color: #244b68;
+}
+
+.course-item {
+border-bottom: 1px solid #e2e7eb;
+}
+
+.course-item:last-child {
+border-bottom: none;
+}
+
+.course-item span {
+color: #557286;
+font-weight: 600;
+}
+
+@media (max-width: 600px) {
+header h1 {
+font-size: 1.5rem;
+}
+}
+
+.contact-info {
+    flex-direction: column;
+    gap: 8px !important;
+}
