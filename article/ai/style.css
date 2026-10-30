@@ -1,0 +1,249 @@
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #1d4ed8;
+  --bg-color: #f8fafc;
+  --text-color: #334155;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.8;
+}
+
+.skip-link {
+  position: absolute;
+  top: -60px;
+  right: 10px;
+  padding: 10px 16px;
+  background: white;
+  color: var(--secondary-color);
+  font-weight: bold;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 10px;
+}
+
+a:focus-visible,
+.btn:focus-visible {
+  outline: 3px solid #38bdf8;
+  outline-offset: 3px;
+}
+
+header {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: white;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition-property: color;
+  transition-duration: 0.3s;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  display: block;
+  width: 0;
+  height: 2px;
+  margin-top: 5px;
+  background: #38bdf8;
+  transition-property: width;
+  transition-duration: 0.3s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav ul li a:hover {
+  color: #38bdf8;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #38bdf8;
+  animation-name: fadeInDown;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  animation-name: fadeInDown;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-out;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.main-article,
+.sidebar {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+  padding: 25px;
+}
+
+.main-article h2,
+.main-article h3 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 10px;
+}
+
+.article-img {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  margin: 20px 0;
+  transition-property: transform, box-shadow;
+  transition-duration: 0.4s;
+}
+
+.article-img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.features-list {
+  list-style: none;
+}
+
+.features-list li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.features-list li::before {
+  content: '✔';
+  margin-left: 10px;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.features-list li:nth-child(odd) {
+  background-color: #f1f5f9;
+}
+
+.features-list li:nth-child(even) {
+  background-color: #e2e8f0;
+}
+
+.video-container {
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.video-container iframe,
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.sidebar h3 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.sidebar .btn-primary {
+  --bs-btn-bg: var(--primary-color);
+  --bs-btn-border-color: var(--primary-color);
+  --bs-btn-hover-bg: var(--secondary-color);
+  --bs-btn-hover-border-color: var(--secondary-color);
+  margin-top: 15px;
+  font-family: inherit;
+  font-weight: bold;
+}
+
+a[target="_blank"]::after {
+  content: ' ↗';
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #0f172a;
+  color: #94a3b8;
+  margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
