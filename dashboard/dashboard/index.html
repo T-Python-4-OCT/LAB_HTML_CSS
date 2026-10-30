@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Integrations — Logistics Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+        <div class="brand">
+            <span class="logo">🚢</span>
+            <span class="brand-name">Logistics</span>
+            <button class="icon-btn plain" aria-label="Collapse sidebar"><i class="bi bi-layout-sidebar ic"></i></button>
+        </div>
+
+        <nav class="menu" aria-label="Main">
+            <a href="#"><i class="bi bi-grid ic"></i>Control Tower</a>
+            <a href="#"><i class="bi bi-stars ic"></i>Generate Quote<i class="bi bi-chevron-down ic end"></i></a>
+            <a href="#"><i class="bi bi-box-seam ic"></i>Track Shipments</a>
+            <a href="#"><i class="bi bi-robot ic"></i>AI Console</a>
+            <a href="#"><i class="bi bi-people ic"></i>Customer Portal</a>
+
+            <details class="menu-group" open>
+                <summary class="menu-label">Insight &amp; Control<i class="bi bi-chevron-up ic end"></i></summary>
+
+                <div class="menu-items">
+                    <a href="#"><i class="bi bi-file-earmark-text ic"></i>Documents</a>
+                    <a href="#"><i class="bi bi-graph-up ic"></i>Analytics</a>
+                    <a href="#" class="active" aria-current="page"><i class="bi bi-diagram-3 ic"></i>Integrations</a>
+                    <a href="#"><i class="bi bi-cpu ic"></i>AI Training</a>
+                </div>
+            </details>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <nav class="menu small" aria-label="Support">
+                <a href="#"><i class="bi bi-gear ic"></i>Setting</a>
+                <a href="#"><i class="bi bi-headset ic"></i>Get Help</a>
+                <a href="#"><i class="bi bi-rocket-takeoff ic"></i>Updates</a>
+            </nav>
+            <div class="user">
+                <span class="avatar">A<small>Pro</small></span>
+                <div>
+                    <b>Alex</b>
+                    <span>Acme Logistics</span>
+                </div>
+                <i class="bi bi-chevron-expand ic end"></i>
+            </div>
+        </div>
+    </aside>
+
+    <main class="content">
+
+        <header class="topbar">
+            <nav class="crumbs" aria-label="Breadcrumb">
+                <a href="#">Dashboard</a>
+                <i class="bi bi-chevron-right ic sm"></i>
+                <b>Integrations</b>
+            </nav>
+
+            <div class="top-actions">
+                <label class="search">
+                    <i class="bi bi-search ic"></i>
+                    <input type="search" placeholder="Search by cargo, shipping, user id etc">
+                </label>
+                <button class="ai-btn">Get Ai Insight <i class="bi bi-stars ic sm"></i></button>
+                <button class="icon-btn dot" aria-label="Notifications"><i class="bi bi-bell ic"></i></button>
+                <button class="icon-btn dot" aria-label="Messages"><i class="bi bi-chat-dots ic"></i></button>
+            </div>
+        </header>
+
+        <div class="page-head">
+            <div>
+                <h1>Integrations</h1>
+                <p>Connect your freight operations with existing systems</p>
+            </div>
+            <button class="add-btn"><i class="bi bi-plus-lg ic"></i>Add New</button>
+        </div>
+
+        <section class="stats" aria-label="Summary">
+            <div class="stat">
+                <p>Connected</p>
+                <div class="stat-value"><b>45</b><span>Active integrations</span></div>
+                <span class="stat-icon"><i class="bi bi-link-45deg ic"></i></span>
+            </div>
+            <div class="stat">
+                <p>Syncing</p>
+                <div class="stat-value"><b>5</b><span>In Progress</span></div>
+                <span class="stat-icon"><i class="bi bi-check-circle ic"></i></span>
+            </div>
+            <div class="stat">
+                <p>Errore</p>
+                <div class="stat-value"><b>1</b><span class="danger">Needs attention</span></div>
+                <span class="stat-icon"><i class="bi bi-exclamation-circle ic"></i></span>
+            </div>
+            <div class="stat">
+                <p>Available</p>
+                <div class="stat-value"><b>54</b><span>More to add</span></div>
+                <span class="stat-icon"><i class="bi bi-plus-square ic"></i></span>
+            </div>
+        </section>
+
+        <section class="panel">
+            <div class="panel-head">
+                <h2>Carrier APIs</h2>
+                <a href="#" class="pill-btn">View All <i class="bi bi-arrow-up-right ic sm"></i></a>
+            </div>
+
+            <div class="carriers">
+                <article class="carrier">
+                    <div class="carrier-top">
+                        <span class="carrier-logo">🚢</span>
+                        <span class="status ok"><i class="bi bi-check-circle ic sm"></i>Connected</span>
+                    </div>
+                    <h3>Maersk Line <a href="#">Maersk line.com</a><i class="bi bi-box-arrow-up-right ic sm muted"></i></h3>
+                    <p>AI-powered document generation and management</p>
+                    <div class="carrier-foot">
+                        <a href="#" class="pill-btn">View Integration</a>
+                        <button class="icon-btn plain" aria-label="Settings"><i class="bi bi-gear ic"></i></button>
+                    </div>
+                </article>
+
+                <article class="carrier">
+                    <div class="carrier-top">
+                        <span class="carrier-logo">✈️</span>
+                        <span class="status sync"><i class="bi bi-check-circle ic sm"></i>Syncing</span>
+                    </div>
+                    <h3>Maersk Line <a href="#">Maersk line.com</a><i class="bi bi-box-arrow-up-right ic sm muted"></i></h3>
+                    <p>AI-powered document generation and management</p>
+                    <div class="carrier-foot">
+                        <a href="#" class="pill-btn">View Integration</a>
+                        <button class="icon-btn plain" aria-label="Settings"><i class="bi bi-gear ic"></i></button>
+                    </div>
+                </article>
+
+                <article class="carrier">
+                    <div class="carrier-top">
+                        <span class="carrier-logo">🚢</span>
+                        <span class="status err"><i class="bi bi-exclamation-circle ic sm"></i>Errors</span>
+                    </div>
+                    <h3>Maersk Line <a href="#">Maersk line.com</a><i class="bi bi-box-arrow-up-right ic sm muted"></i></h3>
+                    <p>AI-powered document generation and management</p>
+                    <div class="carrier-foot">
+                        <a href="#" class="pill-btn">View Integration</a>
+                        <button class="icon-btn plain" aria-label="Settings"><i class="bi bi-gear ic"></i></button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="panel">
+            <div class="panel-head">
+                <h2>System Integrations</h2>
+                <div class="panel-tools">
+                    <button class="icon-btn" aria-label="Filter"><i class="bi bi-funnel ic"></i></button>
+                    <button class="icon-btn" aria-label="Grid view"><i class="bi bi-grid ic"></i></button>
+                    <button class="icon-btn" aria-label="More"><i class="bi bi-three-dots-vertical ic"></i></button>
+                </div>
+            </div>
+
+            <ul class="systems">
+                <li>
+                    <span class="sys-logo" style="--c:#0ea5e9">SF</span>
+                    <div class="sys-info"><b>Salesforce CRM</b><span>Customer relationship management</span></div>
+                    <span class="tag">CRM</span>
+                    <span class="status ok"><i class="bi bi-check-circle ic sm"></i>Connected</span>
+                    <a href="#" class="pill-btn">Configure</a>
+                </li>
+                <li>
+                    <span class="sys-logo" style="--c:#2563eb">SAP</span>
+                    <div class="sys-info"><b>SAP TMS</b><span>Transportation management system</span></div>
+                    <span class="tag">TMS</span>
+                    <span class="status ok"><i class="bi bi-check-circle ic sm"></i>Connected</span>
+                    <a href="#" class="pill-btn">Configure</a>
+                </li>
+                <li>
+                    <span class="sys-logo" style="--c:#dc2626">OR</span>
+                    <div class="sys-info"><b>Oracle ERP</b><span>Enterprise resource planning</span></div>
+                    <span class="tag">ERP</span>
+                    <span class="status sync"><i class="bi bi-check-circle ic sm"></i>Syncing</span>
+                    <a href="#" class="pill-btn">Configure</a>
+                </li>
+                <li>
+                    <span class="sys-logo" style="--c:#1d4ed8">MD</span>
+                    <div class="sys-info"><b>Microsoft Dynamics</b><span>Business applications</span></div>
+                    <span class="tag">ERP</span>
+                    <span class="status err"><i class="bi bi-exclamation-circle ic sm"></i>Errors</span>
+                    <a href="#" class="pill-btn">Configure</a>
+                </li>
+                <li>
+                    <span class="sys-logo" style="--c:#7c3aed">SL</span>
+                    <div class="sys-info"><b>Slack</b><span>Team communication</span></div>
+                    <span class="tag">Communication</span>
+                    <span class="status ok"><i class="bi bi-check-circle ic sm"></i>Connected</span>
+                    <a href="#" class="pill-btn">Configure</a>
+                </li>
+                <li>
+                    <span class="sys-logo" style="--c:#16a34a">SH</span>
+                    <div class="sys-info"><b>Shopify</b><span>E-commerce platform</span></div>
+                    <span class="tag">E-commerce</span>
+                    <span class="status ok"><i class="bi bi-check-circle ic sm"></i>Connected</span>
+                    <a href="#" class="pill-btn">Configure</a>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+</div>
+
+</body>
+</html>
