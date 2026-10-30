@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: #111111;
+    color: rgb(240, 240, 240);
+    width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    z-index: 100;
+}
+
+.logo-text {
+    color: hsl(50, 100%, 50%);
+    font-weight: 700;
+}
+
+.nav-link {
+    background-color: #facc15;
+    color: #000000;
+    padding: 4px 10px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.hero-section {
+    position: relative;
+    background-color: #1a1a1a;
+    background-image: url('https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.my-id {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #facc15;
+    color: #000000;
+    padding: 2px 8px;
+    font-size: 12px;
+}
+
+h1 {
+    font-size: 32px;
+    color: #facc15;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 22px;
+    color: #facc15;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+h3, h4, h5 {
+    color: #fde047;
+    margin-top: 10px;
+}
+
+h6 {
+    color: #9ca3af;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+a {
+    color: #facc15;
+    text-decoration: underline;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.box-item {
+    flex: 1;
+    background-color: #1e1e1e;
+    border: 2px solid #333333;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+ul, ol {
+    padding-left: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #444444;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #262626;
+    color: #facc15;
+}
+
+form {
+    background-color: #1e1e1e;
+    border: 1px solid #333333;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+input, select, textarea {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    background-color: #121212;
+    border: 1px solid #555555;
+    color: #ffffff;
+}
+
+button {
+    display: inline-block;
+    background-color: #facc15;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    font-weight: 700;
+}
