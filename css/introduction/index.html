@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="styles/style.css" rel="stylesheet" />
+        <title>Real Madrid Fan Page</title>
+    </head>
+
+    <style>
+            
+    body {
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 110px 90px 40px;
+        color: #222222;
+        line-height: 1.6;
+        font-family: Arial, sans-serif;
+    }
+
+    section {
+        color: rgb(30, 80, 60);
+        margin-bottom: 20px;
+    }
+
+    
+    h2 {
+        color: #174a35;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: left;
+        background-color: white;
+        padding: 12px 18px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        border-left: 6px solid #174a35;
+        border-radius: 5px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+        box-sizing: border-box;
+    }
+
+
+    img {
+        display: block;
+        border-radius: 10px;
+        margin: 10px auto 20px;
+        width: 700px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 50%;
+        margin-bottom: 20px;
+        background-color: white;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    th {
+        background-color: #174a35;
+        color: white;
+    }
+
+    input, select, button {
+        padding: 8px;
+        margin: 5px 0;
+        border: 1px solid #aaa;
+        border-radius: 5px;
+    }
+
+    button {
+        background-color: #174a35;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #236b4d;
+    }
+
+    #cmain-title {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
+        z-index: 9999;
+        color: #174a35;
+        text-align: center;
+        background-color: white;
+        border: 2px solid #174a35;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav a {
+        color: #174a35;
+        font-size: .95rem;
+        text-decoration: none;
+        transition: color .25s;
+    }
+
+    nav a:hover {
+        color: #4b9b70;
+    }
+
+    header.nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        margin: 0;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        z-index: 9999;
+        color: #174a35;
+        text-align: center;
+        background-color: white;
+        border: 2px solid #174a35;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header.nav h1 {
+        margin: 0;
+        font-size: 24px;
+        color: #174a35;
+    }
+    </style>
+
+    <body>
+        <header class="nav">
+            <h1 name="main-title" id="main-title">Real Madrid Football Club</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About the Club</a></li>
+                    <li><a href="#information">Information</a></li>
+                    <li><a href="#famous">Famous Players</a></li>
+                    <li><a href="#website">Website</a></li>
+                    <li><a href="#join">Join the Club</a></li>
+                </ul>
+            </nav>
+        </header>
+        <img src="real.jpg" width="200">
+
+        <h2 id="about">About the Club</h2>
+        <p>Real Madrid is a famous football club from Madrid, Spain. The club was founded in 1902.
+
+            It is one of the most successful football clubs in the world. Real Madrid plays its home matches at the Santiago Bernabéu Stadium. The team wears white shirts.
+
+            Real Madrid has won many important trophies, including the UEFA Champions League and La Liga. The club has had many famous players, such as Cristiano Ronaldo, Zinedine Zidane, and Karim Benzema.
+
+            Real Madrid has millions of fans around the world. It is known for its history, great players, and amazing achievements.
+        </p>
+
+        <h2 id="information">Club Information</h2>
+        <table border="1">
+            <tr>
+                <th>Founded</th>
+                <td>1902</td>
+            </tr>
+            <tr>
+                <th>Stadium</th>
+                <td>Santiago Bernabéu Stadium</td>
+            </tr>
+            <tr>
+                <th>Capacity</th>
+                <td>81,044</td>
+            </tr>
+        </table>
+
+        <h2 id="famous">Famous Players</h2>
+        <ul>
+            <li>Cristiano Ronaldo</li>
+            <li>Zinedine Zidane</li>
+            <li>Luka Modric</li>
+            
+        </ul>
+
+        <h2 id="website">Website</h2>
+        <p>
+            <a href="https://www.realmadrid.com/en-US">Visit the Official Website</a>
+        </p>
+
+        <h2 id="join">Join the Club</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+
+            <br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <br><br>
+
+            <label for="favorite">Favorite Player:</label>
+            <select id="favorite" name="favorite">
+                <option value="ronaldo">Cristiano Ronaldo</option>
+                <option value="zidane">Zinedine Zidane</option>
+                <option value="modric">Luka Modric</option>
+            </select>
+
+            <br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
