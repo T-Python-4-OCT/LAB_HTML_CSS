@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" fill="none">
+  <title>From a prompt to a reviewed draft</title>
+  <desc>A five-stage illustration connects a speech bubble, text tokens, a network representing a trained model, a document, and a human reviewer.</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="m3 2 3 3-3 3" stroke="#526d60" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+  <path fill="#e4e8dc" d="M0 0h1200v360H0z"/>
+  <circle cx="600" cy="180" r="132" fill="#d1dccb"/>
+  <g stroke="#526d60" stroke-width="2" marker-end="url(#arrow)"><path d="M190 180h90"/><path d="M435 180h55"/><path d="M710 180h60"/><path d="M910 180h100"/></g>
+
+  <g stroke="#24594e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M71 126h94a12 12 0 0 1 12 12v64a12 12 0 0 1-12 12h-55l-29 25v-25H71a12 12 0 0 1-12-12v-64a12 12 0 0 1 12-12Z" fill="#f8f8f0"/>
+    <path d="M83 151h70M83 172h52M83 193h35"/>
+    <g transform="translate(33)"><rect x="268" y="118" width="62" height="37" rx="7" fill="#f8f8f0"/><rect x="340" y="118" width="46" height="37" rx="7" fill="#d1dccb"/>
+    <rect x="268" y="165" width="40" height="37" rx="7" fill="#d1dccb"/><rect x="318" y="165" width="68" height="37" rx="7" fill="#f8f8f0"/>
+    <rect x="268" y="212" width="75" height="37" rx="7" fill="#f8f8f0"/><rect x="353" y="212" width="33" height="37" rx="7" fill="#d1dccb"/>
+    <path d="M287 137h24M284 184h8M336 184h32M287 231h36M366 231h7M356 137h14"/></g>
+  </g>
+  <g stroke="#526d60" stroke-width="2"><path d="m523 125 76 55-76 55m0-110 77-28 77 28-78 55 78 55-77 28-77-28m77-138v166m-77-138 154 110m0-110L523 235M523 125v110m154-110v110M523 125h154M523 235h154"/></g>
+  <g fill="#f8f8f0" stroke="#24594e" stroke-width="3"><circle cx="523" cy="125" r="10"/><circle cx="600" cy="97" r="10"/><circle cx="677" cy="125" r="10"/><circle cx="523" cy="235" r="10"/><circle cx="600" cy="263" r="10"/><circle cx="677" cy="235" r="10"/><circle cx="600" cy="180" r="16" fill="#24594e"/></g>
+  <g stroke="#24594e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><g transform="translate(-32)"><path d="M820 116h72l32 32v100H820z" fill="#f8f8f0"/><path d="M892 116v32h32M841 172h61M841 192h61M841 212h40"/></g>
+    <circle cx="1081" cy="143" r="27" fill="#f8f8f0"/><path d="M1034 245v-24c0-26 21-47 47-47 24 0 45 19 47 42" fill="#f8f8f0"/>
+    <circle cx="1123" cy="225" r="29" fill="#24594e"/><path d="m1109 225 9 9 18-19" stroke="#f8f8f0"/>
+  </g>
+</svg>
