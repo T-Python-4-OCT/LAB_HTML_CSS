@@ -1,0 +1,194 @@
+
+/* 1. Basic Syntax and Selectors */
+
+/* Universal Selector */
+* {
+    box-sizing: border-box;
+}
+
+/* Element Selector */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #263238;
+    background-color: #F2F6FA;
+}
+
+h2 {
+    color: #24527A;
+}
+
+/* ID Selector */
+#main-title {
+    color: #FFFFFF;
+}
+
+/* Class Selector */
+.tagline {
+    font-style: italic;
+}
+
+
+/* 2. Colors and Backgrounds */
+
+.profile-header {
+    background-color: #24527A;
+    background-image: linear-gradient(120deg, #24527A, #4F8A8B);
+    background-repeat: no-repeat;
+    color: white;
+    padding: 24px;
+    text-align: center;
+}
+
+/* Examples of color formats */
+.color-examples {
+    color: blue;
+    /* HEX: #24527A */
+    /* RGB: rgb(36, 82, 122) */
+    /* HSL: hsl(208, 54%, 31%) */
+}
+
+
+/* 3. Text Styling */
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-family: Arial, sans-serif;
+    font-size: 1.35rem;
+    text-align: left;
+}
+
+.goal {
+    color: rgb(35, 112, 75);
+    font-weight: bold;
+}
+
+
+/* 4. Units of Measurement and Positions */
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 24px auto;
+}
+
+.profile-header {
+    position: relative;
+}
+
+
+/* 5. Box Model */
+
+.card {
+    background-color: hsl(0, 0%, 100%);
+    width: 100%;
+    margin-bottom: 18px;
+    padding: 20px;
+    border: 1px solid #D5DEE7;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+
+/* 6. Layout Basics */
+
+a {
+    display: inline-block;
+    color: #145DA0;
+    text-decoration: none;
+    padding: 4px 0;
+}
+
+a:hover {
+    color: #B42318;
+    text-decoration: underline;
+}
+
+img {
+    display: block;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    max-width: 100%;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 450px;
+}
+
+th, td {
+    border: 1px solid #AAB7C4;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #E4EDF5;
+}
+
+/* Form controls */
+form label,
+form input,
+form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    border: 1px solid #AAB7C4;
+    border-radius: 4px;
+    font: inherit;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 4px;
+    background-color: #24527A;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #173954;
+}
+
+
+/* 7. Flexbox Basics */
+
+@media (min-width: 700px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: stretch;
+        gap: 18px;
+    }
+
+    .card {
+        width: calc(50% - 9px);
+        margin-bottom: 0;
+    }
+
+    #about {
+        width: 100%;
+    }
+}

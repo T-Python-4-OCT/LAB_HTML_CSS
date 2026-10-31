@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrations | Logistics Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Icon sprite (inline SVG, no JavaScript) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+        <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1.5"/><rect x="14" y="4" width="6" height="6" rx="1.5"/><rect x="4" y="14" width="6" height="6" rx="1.5"/><rect x="14" y="14" width="6" height="6" rx="1.5"/></symbol>
+        <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 16v4M17 18h4"/></symbol>
+        <symbol id="i-box" viewBox="0 0 24 24"><path d="M4 8l8-4 8 4v8l-8 4-8-4z"/><path d="M4 8l8 4 8-4M12 12v8"/></symbol>
+        <symbol id="i-ai" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="5"/><path d="M9 15l2-6 2 6M9.7 13h2.6M16 9v6"/></symbol>
+        <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="9" r="3"/><path d="M3.5 19c.5-3 2.7-4.5 5.5-4.5s5 1.5 5.5 4.5"/><circle cx="17" cy="10" r="2.3"/><path d="M16 14.6c2.6-.2 4.2 1 4.6 3.4"/></symbol>
+        <symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></symbol>
+        <symbol id="i-chart" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M8 15l3-3 2 2 3-4"/></symbol>
+        <symbol id="i-nodes" viewBox="0 0 24 24"><circle cx="7" cy="6" r="2.5"/><circle cx="17" cy="18" r="2.5"/><circle cx="7" cy="14" r="2.5"/><path d="M7 8.5v3M9.5 14H14a3 3 0 013 3"/></symbol>
+        <symbol id="i-train" viewBox="0 0 24 24"><rect x="4" y="3.5" width="16" height="17" rx="3"/><path d="M8 9h8M8 13h5"/></symbol>
+        <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v2.5M12 18.5V21M3 12h2.5M18.5 12H21M5.6 5.6l1.8 1.8M16.6 16.6l1.8 1.8M18.4 5.6l-1.8 1.8M7.4 16.6l-1.8 1.8"/></symbol>
+        <symbol id="i-help" viewBox="0 0 24 24"><path d="M5 14v-2a7 7 0 0114 0v2"/><rect x="4" y="13" width="4" height="6" rx="2"/><rect x="16" y="13" width="4" height="6" rx="2"/></symbol>
+        <symbol id="i-update" viewBox="0 0 24 24"><path d="M14 4c3 0 6 3 6 6-3 0-6 1-8 3l-3-3c2-2 3-5 5-6z"/><circle cx="14.5" cy="9.5" r="1.2"/><path d="M8 15l-3 4 4-3"/></symbol>
+        <symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+        <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M16 16l4 4"/></symbol>
+        <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 17V11a6 6 0 0112 0v6l1.5 2h-15z"/><path d="M10 21h4"/></symbol>
+        <symbol id="i-chat" viewBox="0 0 24 24"><path d="M5 5h14v10H11l-4 4v-4H5z"/><path d="M9 9h6M9 12h4"/></symbol>
+        <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+        <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14l4-4"/><path d="M8.5 11.5L6 14a3 3 0 004 4l2.5-2.5M15.5 12.5L18 10a3 3 0 00-4-4l-2.5 2.5"/></symbol>
+        <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+        <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 8v5M12 16v.5"/></symbol>
+        <symbol id="i-ext" viewBox="0 0 24 24"><path d="M14 5h5v5M19 5l-8 8M17 14v4a1 1 0 01-1 1H6a1 1 0 01-1-1V8a1 1 0 011-1h4"/></symbol>
+        <symbol id="i-filter" viewBox="0 0 24 24"><path d="M4 5h16l-6 7v6l-4 2v-8z"/></symbol>
+        <symbol id="i-dots" viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.4"/><circle cx="12" cy="12" r="1.4"/><circle cx="12" cy="19" r="1.4"/></symbol>
+        <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 12.3l2.4 2.4 4.6-5"/></symbol>
+        <symbol id="i-panel" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="3"/><path d="M10 5v14"/></symbol>
+        <symbol id="i-updown" viewBox="0 0 24 24"><path d="M8 9l4-4 4 4M8 15l4 4 4-4"/></symbol>
+        <symbol id="i-logout" viewBox="0 0 24 24"><path d="M10 5H6a1 1 0 00-1 1v12a1 1 0 001 1h4M14 8l4 4-4 4M18 12H9"/></symbol>
+        <symbol id="i-gauge" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="4"/><path d="M8 12h8M12 8v8"/></symbol>
+    </defs>
+</svg>
+
+<div class="app">
+
+    <!-- ===== Sidebar ===== -->
+    <aside class="sidebar" aria-label="Sidebar">
+        <div class="brand">
+            <span class="brand-logo" aria-hidden="true"></span>
+            <strong>Logistics</strong>
+            <svg class="ic ic-sm" aria-hidden="true"><use href="#i-panel"/></svg>
+        </div>
+
+        <nav aria-label="Main navigation">
+            <ul class="menu">
+                <li><a href="#"><svg class="ic"><use href="#i-grid"/></svg>Control Tower</a></li>
+                <li><a href="#"><svg class="ic"><use href="#i-spark"/></svg>Generate Quote<svg class="ic ic-sm push"><use href="#i-chev"/></svg></a></li>
+                <li><a href="#"><svg class="ic"><use href="#i-box"/></svg>Track Shipments</a></li>
+                <li><a href="#"><svg class="ic"><use href="#i-ai"/></svg>AI Console</a></li>
+                <li><a href="#"><svg class="ic"><use href="#i-users"/></svg>Customer Portal</a></li>
+            </ul>
+
+            <details class="nav-group" open>
+                <summary class="menu-title">Insight &amp; Control <svg class="ic ic-sm nav-arrow" aria-hidden="true"><use href="#i-chev"/></svg></summary>
+                <ul class="menu">
+                <li><a href="#"><svg class="ic"><use href="#i-doc"/></svg>Documents</a></li>
+                <li><a href="#"><svg class="ic"><use href="#i-chart"/></svg>Analytics</a></li>
+                <li><a href="#" class="active" aria-current="page"><svg class="ic"><use href="#i-nodes"/></svg>Integrations</a></li>
+                <li><a href="#"><svg class="ic"><use href="#i-train"/></svg>AI Training</a></li>
+            </ul>
+            </details>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <ul class="menu">
+                <li><a href="#"><svg class="ic"><use href="#i-gear"/></svg>Setting</a></li>
+                <li><a href="#"><svg class="ic"><use href="#i-help"/></svg>Get Help</a></li>
+                <li><a href="#"><svg class="ic"><use href="#i-update"/></svg>Updates</a></li>
+            </ul>
+            <details class="user-menu">
+                <summary class="user" aria-label="Account menu">
+                    <span class="avatar" aria-hidden="true">A</span>
+                    <span class="user-info"><strong>Alex</strong><small>Acme Logistics</small></span>
+                    <svg class="ic ic-sm user-arrow" aria-hidden="true"><use href="#i-chev"/></svg>
+                </summary>
+                <ul class="user-dropdown">
+                    <li><a href="#"><svg class="ic ic-sm"><use href="#i-users"/></svg>Profile</a></li>
+                    <li><a href="#"><svg class="ic ic-sm"><use href="#i-doc"/></svg>Billing</a></li>
+                    <li><a href="#" class="danger"><svg class="ic ic-sm"><use href="#i-logout"/></svg>Log out</a></li>
+                </ul>
+            </details>
+        </div>
+    </aside>
+
+    <!-- ===== Main ===== -->
+    <main class="main">
+
+        <header class="topbar">
+            <nav class="crumbs" aria-label="Breadcrumb">
+                <a href="#">Dashboard</a>
+                <svg class="ic ic-sm" aria-hidden="true"><use href="#i-chev"/></svg>
+                <span aria-current="page">Integrations</span>
+            </nav>
+            <form class="search" role="search" action="#">
+                <svg class="ic ic-sm" aria-hidden="true"><use href="#i-search"/></svg>
+                <input type="search" placeholder="Search by cargo, shipping, user id etc" aria-label="Search">
+            </form>
+            <a href="#" class="insight">Get Ai Insight <svg class="ic ic-sm" aria-hidden="true"><use href="#i-spark"/></svg></a>
+            <button class="icon-btn" type="button" aria-label="Notifications"><svg class="ic"><use href="#i-bell"/></svg><i class="dot"></i></button>
+            <button class="icon-btn" type="button" aria-label="Messages"><svg class="ic"><use href="#i-chat"/></svg><i class="dot"></i></button>
+        </header>
+
+        <div class="page-head">
+            <div>
+                <h1>Integrations</h1>
+                <p>Connect your freight operations with existing systems</p>
+            </div>
+            <a href="#" class="add-btn"><svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg>Add New</a>
+        </div>
+
+        <!-- Stats -->
+        <section class="stats" aria-label="Summary">
+            <article class="stat">
+                <h2>Connected</h2>
+                <p class="num">45 <span>Active integrations</span></p>
+                <span class="stat-ic"><svg class="ic"><use href="#i-link"/></svg></span>
+            </article>
+            <article class="stat">
+                <h2>Syncing</h2>
+                <p class="num">5 <span>In Progress</span></p>
+                <span class="stat-ic"><svg class="ic"><use href="#i-clock"/></svg></span>
+            </article>
+            <article class="stat">
+                <h2>Errors</h2>
+                <p class="num">1 <span class="red">Needs attention</span></p>
+                <span class="stat-ic"><svg class="ic"><use href="#i-alert"/></svg></span>
+            </article>
+            <article class="stat">
+                <h2>Available</h2>
+                <p class="num">54 <span>More to add</span></p>
+                <span class="stat-ic"><svg class="ic"><use href="#i-gauge"/></svg></span>
+            </article>
+        </section>
+
+        <!-- Carrier APIs -->
+        <section class="panel" aria-labelledby="carriers-title">
+            <div class="panel-head">
+                <h2 id="carriers-title">Carrier APIs</h2>
+                <a href="#" class="chip-link">View All <svg class="ic ic-sm" aria-hidden="true"><use href="#i-ext"/></svg></a>
+            </div>
+
+            <div class="carriers">
+                <article class="carrier">
+                    <div class="carrier-top">
+                        <span class="logo ship" aria-hidden="true">🚢</span>
+                        <span class="pill ok"><svg class="ic ic-sm"><use href="#i-check"/></svg>Connected</span>
+                    </div>
+                    <h3>Maersk Line <a href="#">Maersk line.com <svg class="ic ic-xs"><use href="#i-ext"/></svg></a></h3>
+                    <p>AI-powered document generation and management</p>
+                    <div class="carrier-foot">
+                        <a href="#" class="btn-soft">View Integration</a>
+                        <button type="button" class="icon-plain" aria-label="Settings"><svg class="ic"><use href="#i-gear"/></svg></button>
+                    </div>
+                </article>
+
+                <article class="carrier">
+                    <div class="carrier-top">
+                        <span class="logo plane" aria-hidden="true">✈️</span>
+                        <span class="pill sync"><svg class="ic ic-sm"><use href="#i-clock"/></svg>Syncing</span>
+                    </div>
+                    <h3>Maersk Line <a href="#">Maersk line.com <svg class="ic ic-xs"><use href="#i-ext"/></svg></a></h3>
+                    <p>AI-powered document generation and management</p>
+                    <div class="carrier-foot">
+                        <a href="#" class="btn-soft">View Integration</a>
+                        <button type="button" class="icon-plain" aria-label="Settings"><svg class="ic"><use href="#i-gear"/></svg></button>
+                    </div>
+                </article>
+
+                <article class="carrier">
+                    <div class="carrier-top">
+                        <span class="logo ship" aria-hidden="true">🚢</span>
+                        <span class="pill err"><svg class="ic ic-sm"><use href="#i-alert"/></svg>Errors</span>
+                    </div>
+                    <h3>Maersk Line <a href="#">Maersk line.com <svg class="ic ic-xs"><use href="#i-ext"/></svg></a></h3>
+                    <p>AI-powered document generation and management</p>
+                    <div class="carrier-foot">
+                        <a href="#" class="btn-soft">View Integration</a>
+                        <button type="button" class="icon-plain" aria-label="Settings"><svg class="ic"><use href="#i-gear"/></svg></button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- System Integrations -->
+        <section class="panel" aria-labelledby="systems-title">
+            <div class="panel-head">
+                <h2 id="systems-title">System Integrations</h2>
+                <div class="tools">
+                    <button type="button" class="icon-btn sm" aria-label="Filter"><svg class="ic ic-sm"><use href="#i-filter"/></svg></button>
+                    <button type="button" class="icon-btn sm" aria-label="Grid view"><svg class="ic ic-sm"><use href="#i-grid"/></svg></button>
+                    <button type="button" class="icon-btn sm" aria-label="More options"><svg class="ic ic-sm"><use href="#i-dots"/></svg></button>
+                </div>
+            </div>
+
+            <ul class="systems">
+                <li>
+                    <span class="logo" style="--c:#00a1e0" aria-hidden="true">S</span>
+                    <div class="sys-info"><h3>Salesforce CRM</h3><p>Customer relationship management</p></div>
+                    <span class="tag">CRM</span>
+                    <span class="pill ok"><svg class="ic ic-sm"><use href="#i-check"/></svg>Connected</span>
+                    <a href="#" class="btn-soft">Configure</a>
+                </li>
+                <li>
+                    <span class="logo" style="--c:#0a6ed1" aria-hidden="true">SAP</span>
+                    <div class="sys-info"><h3>SAP TMS</h3><p>Transportation management system</p></div>
+                    <span class="tag">TMS</span>
+                    <span class="pill ok"><svg class="ic ic-sm"><use href="#i-check"/></svg>Connected</span>
+                    <a href="#" class="btn-soft">Configure</a>
+                </li>
+                <li>
+                    <span class="logo" style="--c:#e2231a" aria-hidden="true">O</span>
+                    <div class="sys-info"><h3>Oracle ERP</h3><p>Enterprise resource planning</p></div>
+                    <span class="tag">ERP</span>
+                    <span class="pill sync"><svg class="ic ic-sm"><use href="#i-clock"/></svg>Syncing</span>
+                    <a href="#" class="btn-soft">Configure</a>
+                </li>
+                <li>
+                    <span class="logo" style="--c:#0b53ce" aria-hidden="true">D</span>
+                    <div class="sys-info"><h3>Microsoft Dynamics</h3><p>Business applications</p></div>
+                    <span class="tag">ERP</span>
+                    <span class="pill err"><svg class="ic ic-sm"><use href="#i-alert"/></svg>Errors</span>
+                    <a href="#" class="btn-soft">Configure</a>
+                </li>
+                <li>
+                    <span class="logo" style="--c:#611f69" aria-hidden="true">#</span>
+                    <div class="sys-info"><h3>Slack</h3><p>Team communication</p></div>
+                    <span class="tag">Communication</span>
+                    <span class="pill ok"><svg class="ic ic-sm"><use href="#i-check"/></svg>Connected</span>
+                    <a href="#" class="btn-soft">Configure</a>
+                </li>
+                <li>
+                    <span class="logo" style="--c:#5e8e3e" aria-hidden="true">S</span>
+                    <div class="sys-info"><h3>Shopify</h3><p>E-commerce platform</p></div>
+                    <span class="tag">E-commerce</span>
+                    <span class="pill ok"><svg class="ic ic-sm"><use href="#i-check"/></svg>Connected</span>
+                    <a href="#" class="btn-soft">Configure</a>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+</div>
+
+</body>
+</html>
