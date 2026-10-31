@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An introduction to the AI revolution: how we got here, how it works, and where it is heading.">
+    <title>The AI Revolution | Mustafa Al Ali</title>
+    <link rel="stylesheet" href="ai-article.css">
+</head>
+<body>
+<div class="progress" aria-hidden="true"></div>
+
+<nav class="top">
+    <a href="../../css/introduction/index.html">&larr; Back to my website</a>
+    <a href="#contents">Contents</a>
+</nav>
+
+<header class="hero" id="top">
+    <p class="kicker">Article &middot; Artificial Intelligence</p>
+    <h1>The AI <span>Revolution</span></h1>
+    <p class="deck">Machines that learn from data are changing how we work, study, create, and solve problems. Here is how we got here and what comes next.</p>
+    <p class="byline">By <strong>Mustafa Al Ali</strong> &middot; BSc in Artificial Intelligence &middot; <span>6 min read</span></p>
+
+    <figure class="net" aria-label="Animated diagram of a neural network">
+        <svg viewBox="0 0 600 220" role="img" aria-labelledby="nt">
+            <title id="nt">A simple neural network with an input layer, two hidden layers and an output layer</title>
+            <g class="links">
+                <!-- layer 1 to 2 -->
+                <path d="M80 40L220 30M80 40L220 90M80 40L220 150M80 40L220 200"/>
+                <path d="M80 110L220 30M80 110L220 90M80 110L220 150M80 110L220 200"/>
+                <path d="M80 180L220 30M80 180L220 90M80 180L220 150M80 180L220 200"/>
+                <!-- layer 2 to 3 -->
+                <path d="M220 30L380 30M220 30L380 90M220 30L380 150M220 30L380 200"/>
+                <path d="M220 90L380 30M220 90L380 90M220 90L380 150M220 90L380 200"/>
+                <path d="M220 150L380 30M220 150L380 90M220 150L380 150M220 150L380 200"/>
+                <path d="M220 200L380 30M220 200L380 90M220 200L380 150M220 200L380 200"/>
+                <!-- layer 3 to 4 -->
+                <path d="M380 30L520 70M380 30L520 150M380 90L520 70M380 90L520 150M380 150L520 70M380 150L520 150M380 200L520 70M380 200L520 150"/>
+            </g>
+            <g class="nodes">
+                <circle cx="80" cy="40" r="11"/><circle cx="80" cy="110" r="11"/><circle cx="80" cy="180" r="11"/>
+                <circle cx="220" cy="30" r="11"/><circle cx="220" cy="90" r="11"/><circle cx="220" cy="150" r="11"/><circle cx="220" cy="200" r="11"/>
+                <circle cx="380" cy="30" r="11"/><circle cx="380" cy="90" r="11"/><circle cx="380" cy="150" r="11"/><circle cx="380" cy="200" r="11"/>
+                <circle class="out" cx="520" cy="70" r="13"/><circle class="out" cx="520" cy="150" r="13"/>
+            </g>
+        </svg>
+        <figcaption>Figure 1. A neural network passes signals through layers, adjusting connection strengths as it learns.</figcaption>
+    </figure>
+</header>
+
+<div class="layout">
+
+    <aside id="contents">
+        <h2>Contents</h2>
+        <ol>
+            <li><a href="#what">What is the AI revolution?</a></li>
+            <li><a href="#timeline">A short history</a></li>
+            <li><a href="#how">How modern AI learns</a></li>
+            <li><a href="#impact">Where it is changing life</a></li>
+            <li><a href="#risks">Risks and responsibility</a></li>
+            <li><a href="#future">What comes next</a></li>
+            <li><a href="#faq">Quick questions</a></li>
+        </ol>
+    </aside>
+
+    <main>
+
+        <section id="what">
+            <h2>What is the AI revolution?</h2>
+            <p class="lead">Every few generations, a technology reshapes daily life: the steam engine, electricity, the internet. Artificial intelligence is the latest candidate, and it is arriving faster than most.</p>
+            <p>Artificial intelligence is the field of building systems that perform tasks which normally need human intelligence, such as recognising images, understanding language, and making predictions. What makes this moment a <em>revolution</em> is a combination of three things: far more data, much faster hardware, and better learning methods. Together they moved AI from research labs into phones, hospitals, classrooms, and workplaces.</p>
+            <blockquote>
+                <p>Software used to follow instructions. Now it can learn patterns from examples.</p>
+            </blockquote>
+        </section>
+
+        <section id="timeline">
+            <h2>A short history</h2>
+            <p>The idea is older than many people expect. These milestones show how steady research turned into sudden public impact.</p>
+            <ol class="tl">
+                <li><time datetime="1950">1950</time><h3>The Turing test</h3><p>Alan Turing asks whether machines can think and proposes a way to test it.</p></li>
+                <li><time datetime="1956">1956</time><h3>The field is named</h3><p>The Dartmouth workshop brings researchers together and popularises the term &ldquo;artificial intelligence&rdquo;.</p></li>
+                <li><time datetime="1997">1997</time><h3>Deep Blue beats Kasparov</h3><p>A computer defeats the reigning world chess champion in a match.</p></li>
+                <li><time datetime="2012">2012</time><h3>Deep learning takes off</h3><p>AlexNet wins an image recognition contest by a wide margin, showing the power of deep neural networks and GPUs.</p></li>
+                <li><time datetime="2016">2016</time><h3>AlphaGo beats Lee Sedol</h3><p>An AI masters Go, a game long considered too complex for brute force.</p></li>
+                <li><time datetime="2017">2017</time><h3>The Transformer</h3><p>The paper &ldquo;Attention Is All You Need&rdquo; introduces the architecture behind today&rsquo;s language models.</p></li>
+                <li><time datetime="2022">2022</time><h3>AI reaches everyone</h3><p>Conversational assistants such as ChatGPT bring generative AI to the general public.</p></li>
+            </ol>
+        </section>
+
+        <section id="how">
+            <h2>How modern AI learns</h2>
+            <p>Traditional programs follow rules a developer writes by hand. Machine learning flips that: the developer provides examples, and the system finds the rules itself.</p>
+            <table>
+                <caption>Traditional programming vs. machine learning</caption>
+                <thead><tr><th></th><th>Traditional programming</th><th>Machine learning</th></tr></thead>
+                <tbody>
+                    <tr><th scope="row">Input</th><td>Data + hand-written rules</td><td>Data + correct answers</td></tr>
+                    <tr><th scope="row">Output</th><td>Answers</td><td>A trained model (the rules)</td></tr>
+                    <tr><th scope="row">Best for</th><td>Clear, fixed logic</td><td>Patterns too complex to describe</td></tr>
+                </tbody>
+            </table>
+            <p>Inside a neural network (Figure 1), each connection has a weight. Training repeatedly compares the network&rsquo;s guess with the right answer and nudges those weights to reduce the error. After millions of small corrections, the network becomes good at the task.</p>
+            <aside class="note">
+                <strong>Key idea:</strong> Generative AI, such as models that write text or create images, uses the same principle but learns to produce new content that resembles its training data.
+            </aside>
+        </section>
+
+        <section id="impact">
+            <h2>Where it is changing life</h2>
+            <div class="cards">
+                <article><span class="ic">+</span><h3>Healthcare</h3><p>Computer vision helps doctors spot patterns in scans, and models assist with drug discovery.</p></article>
+                <article><span class="ic">&#9998;</span><h3>Education</h3><p>Tutors that adapt to each learner and tools that explain ideas in many ways.</p></article>
+                <article><span class="ic">&#9881;</span><h3>Work</h3><p>Assistants handle routine drafting, coding, and analysis, freeing people for judgment and creativity.</p></article>
+                <article><span class="ic">&#9733;</span><h3>Safety</h3><p>Vision systems can help monitor crowds and spot hazards, an idea behind my own concept, Muraqib.</p></article>
+            </div>
+        </section>
+
+        <section id="risks">
+            <h2>Risks and responsibility</h2>
+            <p>Powerful tools need careful use. The main concerns are well known:</p>
+            <ul class="checks">
+                <li><strong>Bias:</strong> models can repeat unfair patterns found in their training data.</li>
+                <li><strong>Misinformation:</strong> generated text and images can be convincing but wrong.</li>
+                <li><strong>Privacy:</strong> data used for training and monitoring must be handled with consent and care.</li>
+                <li><strong>Jobs:</strong> some tasks will change or disappear, so reskilling matters.</li>
+            </ul>
+            <p>The answer is not to stop building, but to build with transparency, human oversight, and clear accountability.</p>
+        </section>
+
+        <section id="future">
+            <h2>What comes next</h2>
+            <p>The next chapter is likely to be <strong>AI agents</strong>: systems that do not only answer questions but plan steps, use tools, and complete tasks. Alongside them, models are becoming multimodal, understanding text, images, audio, and video together.</p>
+            <p>For students and developers, the opportunity is to learn the fundamentals, practise building, and stay curious. As I wrote on my own roadmap: master the web basics, connect AI models to real applications, and build tools that deliver practical value.</p>
+        </section>
+
+        <section id="faq">
+            <h2>Quick questions</h2>
+            <details>
+                <summary>Is AI the same as machine learning?</summary>
+                <p>Not exactly. Machine learning is a major branch of AI. Deep learning is a branch of machine learning that uses large neural networks.</p>
+            </details>
+            <details>
+                <summary>Will AI replace developers?</summary>
+                <p>It is changing the work rather than ending it. Developers who understand fundamentals and use AI tools well are in a strong position.</p>
+            </details>
+            <details>
+                <summary>Where should a beginner start?</summary>
+                <p>Learn Python, basic statistics, and the core ideas of machine learning, then build small projects.</p>
+            </details>
+        </section>
+
+        <footer class="end">
+            <p><strong>Written by Mustafa Al Ali.</strong> Explore more on my <a href="../../css/introduction/index.html">website</a>, or reach out by <a href="mailto:Mustafaosama32@gmail.com">email</a>.</p>
+            <p><a href="#top">&uarr; Back to top</a></p>
+        </footer>
+
+    </main>
+</div>
+
+</body>
+</html>
