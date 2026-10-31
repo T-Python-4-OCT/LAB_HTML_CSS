@@ -1,0 +1,339 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+background-color: #f7f3fc;
+color: #30243d;
+line-height: 1.8;
+}
+
+header {
+background: linear-gradient(135deg, #59367d, #a77bd0);
+color: white;
+text-align: center;
+padding: 65px 20px;
+}
+
+header h1 {
+font-size: 42px;
+margin-bottom: 10px;
+}
+
+header p {
+font-size: 19px;
+}
+
+nav {
+background-color: #ffffff;
+padding: 15px;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 25px;
+position: sticky;
+top: 0;
+z-index: 10;
+box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+nav a {
+color: #59367d;
+text-decoration: none;
+font-weight: bold;
+transition: color 0.3s;
+}
+
+nav a:hover {
+color: #b16ee0;
+}
+
+.intro-section {
+
+ max-width: 10000px;
+    margin-right: 45px auto;
+    text-align: center;
+    padding: 35px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(89, 54, 125, 0.2);
+}
+
+.intro-section h2,
+.applications-section h2,
+.benefits-section h2,
+.future-section h2 {
+color: #59367d;
+text-align: center;
+font-size: 30px;
+margin-bottom: 20px;
+}
+
+.intro-section p {
+font-size: 17px;
+text-align: center;
+margin-bottom: 15px;
+}
+
+.applications-section {
+padding: 45px 20px;
+text-align: center;
+background-color: #eee4f8;
+}
+
+.section-intro {
+margin-bottom: 25px;
+}
+
+.cards-container {
+display: flex;
+gap: 25px;
+justify-content: center;
+flex-wrap: wrap;
+padding: 20px;
+}
+
+.flip-card {
+background-color: transparent;
+width: 250px;
+height: 300px;
+perspective: 1000px;
+}
+
+.flip-card-inner {
+position: relative;
+width: 100%;
+height: 100%;
+text-align: center;
+transition: transform 0.7s;
+transform-style: preserve-3d;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+border-radius: 15px;
+}
+
+.flip-card:hover .flip-card-inner,
+.flip-card:focus .flip-card-inner,
+.flip-card:focus-within .flip-card-inner {
+transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+-webkit-backface-visibility: hidden;
+border-radius: 15px;
+overflow: hidden;
+}
+
+.flip-card-front {
+background-color: #d7c1eb;
+color: #59367d;
+}
+
+.flip-card-front img {
+width: 100%;
+height: 78%;
+object-fit: cover;
+}
+
+.flip-card-front h3 {
+padding: 8px;
+font-size: 19px;
+}
+
+.flip-card-back {
+background: linear-gradient(135deg, #59367d, #9467b9);
+color: white;
+transform: rotateY(180deg);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 22px;
+}
+
+.flip-card-back h3 {
+margin-bottom: 15px;
+font-size: 21px;
+}
+
+.flip-card-back p {
+font-size: 15px;
+}
+
+.benefits-section {
+padding: 50px 20px;
+}
+
+.benefits-container {
+max-width: 1000px;
+margin: auto;
+display: flex;
+justify-content: center;
+gap: 25px;
+flex-wrap: wrap;
+}
+
+.info-card {
+flex: 1 1 300px;
+padding: 25px;
+border-radius: 15px;
+background-color: white;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.info-card h3 {
+font-size: 23px;
+margin-bottom: 15px;
+}
+
+.info-card ul {
+padding-right: 25px;
+}
+
+.info-card li {
+margin-bottom: 10px;
+}
+
+.benefits-card {
+border-top: 5px solid #7a4aa5;
+}
+
+.benefits-card h3 {
+color: #59367d;
+}
+
+.challenges-card {
+border-top: 5px solid #c47b9b;
+}
+
+.challenges-card h3 {
+color: #a44d76;
+}
+
+.future-section {
+padding: 50px 20px;
+text-align: center;
+background-color: #eee4f8;
+}
+
+.future-intro {
+margin-bottom: 35px;
+font-size: 17px;
+}
+
+.timeline {
+max-width: 750px;
+margin: auto;
+position: relative;
+}
+
+.timeline::before {
+content: "";
+position: absolute;
+width: 4px;
+background-color: #a77bd0;
+top: 0;
+bottom: 0;
+right: 50%;
+transform: translateX(50%);
+}
+
+.timeline-item {
+position: relative;
+width: 50%;
+padding: 15px 30px;
+}
+
+.timeline-item:nth-child(odd) {
+right: 0;
+}
+
+.timeline-item:nth-child(even) {
+right: 50%;
+}
+
+.timeline-content {
+background-color: white;
+padding: 22px;
+border-radius: 12px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.timeline-content h3 {
+color: #70469a;
+margin-bottom: 10px;
+}
+
+footer {
+background-color: #59367d;
+color: white;
+text-align: center;
+padding: 25px;
+}
+
+footer a {
+display: inline-block;
+color: white;
+margin-top: 10px;
+text-decoration: none;
+}
+
+footer a:hover {
+text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+
+header h1 {
+    font-size: 30px;
+}
+}
+nav {
+    gap: 10px;
+}
+
+nav a {
+    font-size: 14px;
+}
+
+.intro-section {
+    margin: 20px 12px;
+    padding: 22px;
+}
+
+.intro-section h2,
+.applications-section h2,
+.benefits-section h2,
+.future-section h2 {
+    font-size: 24px;
+}
+
+.flip-card {
+    width: 100%;
+    max-width: 320px;
+}
+
+.timeline::before {
+    right: 15px;
+}
+
+.timeline-item,
+.timeline-item:nth-child(even),
+.timeline-item:nth-child(odd) {
+    width: 100%;
+    right: 0;
+    padding-right: 40px;
+    padding-left: 5px;
+    text-align: right;
+}

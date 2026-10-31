@@ -1,0 +1,70 @@
+
+        body {
+            background-color: #f4f7fb;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: #172554;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #172554, #2563eb);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            font-weight: bold;
+        }
+
+        .guide-card {
+            border: none;
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+
+        .guide-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .guide-icon {
+            font-size: 40px;
+            color: #2563eb;
+        }
+
+        .project-img {
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .section-title {
+            color: #172554;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #172554;
+            color: white;
+        }
+
+        .custom-btn {
+            background-color: #2563eb;
+            color: white;
+            border-radius: 25px;
+            padding: 10px 25px;
+            transition: 0.3s;
+        }
+
+        .custom-btn:hover {
+            background-color: #172554;
+            color: white;
+            transform: scale(1.05);
+        }

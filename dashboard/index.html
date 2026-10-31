@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistics Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body class="bg-light">
+
+<div class="container-fluid bg-white min-vh-100">
+    <div class="row min-vh-100">
+
+        <aside class="col-12 col-lg-2 bg-body-tertiary border-end p-3 d-flex flex-column">
+
+            <div class="d-flex align-items-center gap-2 mb-4">
+                <span class="bg-danger text-white rounded-circle p-2">
+                    <i class="bi bi-box-seam"></i>
+                </span>
+                <h5 class="mb-0">Logistics</h5>
+            </div>
+
+            <nav class="nav flex-column gap-1">
+                <a href="#" class="nav-link text-secondary"><i class="bi bi-grid me-2"></i>Control Tower</a>
+                <a href="#" class="nav-link text-secondary"><i class="bi bi-stars me-2"></i>Generate Quote</a>
+                <a href="#" class="nav-link text-secondary"><i class="bi bi-truck me-2"></i>Track Shipments</a>
+                <a href="#" class="nav-link text-secondary"><i class="bi bi-robot me-2"></i>AI Console</a>
+                <a href="#" class="nav-link text-secondary"><i class="bi bi-people me-2"></i>Customer Portal</a>
+
+                <small class="text-secondary mt-4 mb-2">INSIGHT &amp; CONTROL</small>
+
+                <a href="#" class="nav-link text-secondary"><i class="bi bi-file-earmark-text me-2"></i>Documents</a>
+                <a href="#" class="nav-link text-secondary"><i class="bi bi-bar-chart me-2"></i>Analytics</a>
+                <a href="#" class="nav-link active bg-white text-dark border rounded"><i class="bi bi-diagram-3 me-2"></i>Integrations</a>
+            </nav>
+
+            <div class="mt-auto pt-4">
+                <a href="#" class="nav-link text-secondary"><i class="bi bi-gear me-2"></i>Settings</a>
+                <a href="#" class="nav-link text-secondary"><i class="bi bi-headset me-2"></i>Get Help</a>
+
+                <hr>
+
+                <div class="dropup">
+                    <button class="btn btn-link text-decoration-none text-dark p-0 w-100 d-flex align-items-center gap-2"
+                            type="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+                        <div class="bg-secondary-subtle rounded-circle p-2">
+                            <i class="bi bi-person"></i>
+                        </div>
+
+                        <div class="text-start">
+                            <div class="fw-semibold">Mohammed</div>
+                            <small class="text-secondary">Acme Logistics</small>
+                        </div>
+
+                        <i class="bi bi-chevron-expand ms-auto"></i>
+                    </button>
+
+                    <ul class="dropdown-menu dropdown-menu-end w-100 shadow border-0 rounded-3">
+                        <li><a class="dropdown-item py-2" href="#"><i class="bi bi-person me-2"></i>My Profile</a></li>
+                        <li><a class="dropdown-item py-2" href="#"><i class="bi bi-gear me-2"></i>Account Settings</a></li>
+                        <li><a class="dropdown-item py-2" href="#"><i class="bi bi-question-circle me-2"></i>Help Center</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item py-2 text-danger" href="#"><i class="bi bi-box-arrow-right me-2"></i>Log Out</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </aside>
+
+        <main class="col-12 col-lg-10 p-0">
+
+            <header class="d-flex flex-wrap justify-content-between align-items-center gap-3 border-bottom p-3">
+
+                <div class="d-flex align-items-center gap-2">
+                    <span class="text-secondary">Dashboard</span>
+                    <i class="bi bi-chevron-right small"></i>
+                    <strong>Integrations</strong>
+                </div>
+
+                <div class="input-group rounded-pill border overflow-hidden" style="max-width: 300px;">
+                    <span class="input-group-text bg-white border-0">
+                        <i class="bi bi-search"></i>
+                    </span>
+                    <input type="search" class="form-control border-0 shadow-none"
+                           placeholder="Search by cargo, shipping, user id etc">
+                </div>
+
+                <div class="d-flex align-items-center gap-2">
+                    <a href="dark.html" class="btn btn-outline-secondary rounded-pill btn-sm">
+                        Night mode <i class="bi bi-stars ms-1"></i>
+                    </a>
+
+                    <button class="btn btn-light rounded-circle">
+                        <i class="bi bi-bell"></i>
+                    </button>
+                </div>
+
+            </header>
+
+            <div class="p-3 p-xl-4">
+
+                <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+                    <div>
+                        <h2 class="fw-semibold mb-1">Integrations</h2>
+                        <p class="text-secondary mb-0">Connect your freight operations with existing systems</p>
+                    </div>
+
+                    <button class="btn btn-warning rounded-pill text-dark">
+                        <i class="bi bi-plus-lg me-1"></i>Add New
+                    </button>
+                </div>
+
+                <div class="row g-3 mb-3">
+
+                    <div class="col-6 col-xl-3">
+                        <div class="card border rounded-4 h-100">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <span class="text-secondary">Connected</span>
+                                    <i class="bi bi-link-45deg text-secondary"></i>
+                                </div>
+                                <h2 class="mb-0">45</h2>
+                                <span class="small">Active integrations</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-xl-3">
+                        <div class="card border rounded-4 h-100">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <span class="text-secondary">Syncing</span>
+                                    <i class="bi bi-arrow-repeat text-secondary"></i>
+                                </div>
+                                <h2 class="mb-0">5</h2>
+                                <span class="small">In Progress</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-xl-3">
+                        <div class="card border rounded-4 h-100">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <span class="text-secondary">Errors</span>
+                                    <i class="bi bi-exclamation-circle text-secondary"></i>
+                                </div>
+                                <h2 class="mb-0">1</h2>
+                                <span class="small text-danger">Needs attention</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-xl-3">
+                        <div class="card border rounded-4 h-100">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <span class="text-secondary">Available</span>
+                                    <i class="bi bi-window-stack text-secondary"></i>
+                                </div>
+                                <h2 class="mb-0">54</h2>
+                                <span class="small">More to add</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <section class="card border rounded-4 mb-3">
+                    <div class="card-body">
+
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5 class="mb-0">Carrier APIs</h5>
+                            <button class="btn btn-light border rounded-pill btn-sm">View All</button>
+                        </div>
+
+                        <div class="row g-3">
+                            <div class="col-12 col-xl-4">
+                                <div class="card h-100 rounded-4">
+                                    <div class="card-body">
+
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="bg-primary-subtle rounded-circle p-2">
+                                                <i class="bi bi-truck fs-5 text-primary"></i>
+                                            </div>
+                                            <span class="badge text-bg-success rounded-pill p-2">
+                                                <i class="bi bi-check-circle me-1"></i>Connected
+                                            </span>
+                                        </div>
+
+                                        <h6 class="mt-3 mb-2">Maersk Line</h6>
+                                        <p class="text-secondary small mb-0">
+                                            AI-powered document generation and management
+                                        </p>
+
+                                    </div>
+
+                                    <div class="card-footer bg-white d-flex justify-content-between align-items-center p-3">
+                                        <button class="btn btn-light border rounded-pill btn-sm">View Integration</button>
+                                        <i class="bi bi-gear text-secondary"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section class="card border rounded-4">
+                    <div class="card-body">
+
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5 class="mb-0">System Integrations</h5>
+
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-light border rounded-circle btn-sm"><i class="bi bi-funnel"></i></button>
+                                <button class="btn btn-light border rounded-circle btn-sm"><i class="bi bi-grid"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="list-group list-group-flush">
+
+                            <div class="list-group-item py-3">
+                                <div class="row align-items-center g-3">
+                                    <div class="col-auto">
+                                        <div class="bg-info-subtle rounded-circle p-2">
+                                            <i class="bi bi-cloud text-info fs-5"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <h6 class="mb-1">Salesforce CRM</h6>
+                                        <small class="text-secondary">Customer relationship management</small>
+                                    </div>
+                                    <div class="col-auto">
+                                        <span class="badge bg-light text-secondary rounded-pill">CRM</span>
+                                    </div>
+                                    <div class="col-auto">
+                                        <span class="badge text-bg-success rounded-pill p-2">Connected</span>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button class="btn btn-light border rounded-pill btn-sm">Configure</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="list-group-item py-3">
+                                <div class="row align-items-center g-3">
+                                    <div class="col-auto">
+                                        <div class="bg-primary-subtle rounded-circle p-2">
+                                            <i class="bi bi-truck text-primary fs-5"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <h6 class="mb-1">SAP TMS</h6>
+                                        <small class="text-secondary">Transportation management system</small>
+                                    </div>
+                                    <div class="col-auto">
+                                        <span class="badge bg-light text-secondary rounded-pill">TMS</span>
+                                    </div>
+                                    <div class="col-auto">
+                                        <span class="badge text-bg-success rounded-pill p-2">Connected</span>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button class="btn btn-light border rounded-pill btn-sm">Configure</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="list-group-item py-3">
+                                <div class="row align-items-center g-3">
+                                    <div class="col-auto">
+                                        <div class="bg-danger-subtle rounded-circle p-2">
+                                            <i class="bi bi-database text-danger fs-5"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <h6 class="mb-1">Oracle ERP</h6>
+                                        <small class="text-secondary">Enterprise resource planning</small>
+                                    </div>
+                                    <div class="col-auto">
+                                        <span class="badge bg-light text-secondary rounded-pill">ERP</span>
+                                    </div>
+                                    <div class="col-auto">
+                                        <span class="badge text-bg-primary rounded-pill p-2">Syncing</span>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button class="btn btn-light border rounded-pill btn-sm">Configure</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="list-group-item py-3">
+                                <div class="row align-items-center g-3">
+                                    <div class="col-auto">
+                                        <div class="bg-success-subtle rounded-circle p-2">
+                                            <i class="bi bi-bag text-success fs-5"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <h6 class="mb-1">Shopify</h6>
+                                        <small class="text-secondary">E-commerce platform</small>
+                                    </div>
+                                    <div class="col-auto">
+                                        <span class="badge bg-light text-secondary rounded-pill">E-commerce</span>
+                                    </div>
+                                    <div class="col-auto">
+                                        <span class="badge text-bg-success rounded-pill p-2">Connected</span>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button class="btn btn-light border rounded-pill btn-sm">Configure</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
