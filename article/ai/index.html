@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ثورة الذكاء الاصطناعي</title>
+  <meta name="description" content="مقال يشرح كيف تحوّل الذكاء الاصطناعي من فكرة أكاديمية إلى أداة يومية.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&family=Readex+Pro:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#content">انتقل إلى المحتوى</a>
+
+  <header class="site-header">
+    <button class="menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="main-nav">
+      القائمة الرئيسية
+    </button>
+    <nav id="main-nav" aria-label="التنقل الرئيسي" hidden>
+      <ul>
+        <li><a href="#history">الرحلة</a></li>
+        <li><a href="#uses">الاستخدامات</a></li>
+        <li><a href="#challenges">التحديات</a></li>
+        <li><a href="#conclusion">الخاتمة</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="content">
+    <article class="article">
+      <header class="hero">
+        <div class="hero-text">
+          <h1>ثورة الذكاء الاصطناعي</h1>
+          <p class="lead">قبل سنوات قليلة كان الذكاء الاصطناعي موضوعًا في المحاضرات الجامعية اليوم يكتب معنا ويترجم ويشخّص الصور ويساعدنا في تعلّم البرمجة.</p>
+        </div>
+
+        <figure class="hero-art">
+          <svg viewBox="0 0 320 260" role="img" aria-labelledby="net-title net-desc">
+            <title id="net-title">شبكة عصبية مبسطة</title>
+            <desc id="net-desc">ثلاث طبقات من العقد تتصل ببعضها وتنبض الإشارات بينها.</desc>
+            <g class="links">
+              <line x1="50" y1="50" x2="160" y2="30"/><line x1="50" y1="50" x2="160" y2="130"/><line x1="50" y1="50" x2="160" y2="230"/>
+              <line x1="50" y1="130" x2="160" y2="30"/><line x1="50" y1="130" x2="160" y2="130"/><line x1="50" y1="130" x2="160" y2="230"/>
+              <line x1="50" y1="210" x2="160" y2="30"/><line x1="50" y1="210" x2="160" y2="130"/><line x1="50" y1="210" x2="160" y2="230"/>
+              <line x1="160" y1="30" x2="270" y2="90"/><line x1="160" y1="130" x2="270" y2="90"/><line x1="160" y1="230" x2="270" y2="90"/>
+              <line x1="160" y1="30" x2="270" y2="170"/><line x1="160" y1="130" x2="270" y2="170"/><line x1="160" y1="230" x2="270" y2="170"/>
+            </g>
+            <g class="nodes">
+              <circle cx="50" cy="50" r="12"/><circle cx="50" cy="130" r="12"/><circle cx="50" cy="210" r="12"/>
+              <circle cx="160" cy="30" r="12"/><circle cx="160" cy="130" r="12"/><circle cx="160" cy="230" r="12"/>
+              <circle cx="270" cy="90" r="12"/><circle cx="270" cy="170" r="12"/>
+            </g>
+          </svg>
+          <figcaption>رسم مبسّط لشبكة عصبية: مدخلات، طبقة مخفية، ومخرجات.</figcaption>
+        </figure>
+      </header>
+
+      <div class="layout">
+        <aside class="toc" aria-label="في هذا المقال">
+          <h2>في هذا المقال</h2>
+          <ol>
+            <li><a href="#history">من الفكرة إلى المنتج</a></li>
+            <li><a href="#uses">أين نراه اليوم</a></li>
+            <li><a href="#challenges">أسئلة لم تُحسم</a></li>
+            <li><a href="#conclusion">ماذا بعد</a></li>
+          </ol>
+        </aside>
+
+        <div class="body">
+          <section id="history">
+            <h2>من الفكرة إلى المنتج</h2>
+            <p>لم يظهر الذكاء الاصطناعي فجأة. مرّ بعقود من الأفكار والإخفاقات، ثم جاءت قفزات متتالية في البيانات وقوة الحوسبة والخوارزميات.</p>
+
+            <ol class="timeline">
+              <li><strong>1950</strong> نشر آلان تورينج ورقته التي سأل فيها: هل تستطيع الآلات التفكير؟</li>
+              <li><strong>1956</strong> أُطلق مصطلح «الذكاء الاصطناعي» في ورشة دارتموث.</li>
+              <li><strong>1997</strong> هزم الحاسوب Deep Blue بطل الشطرنج غاري كاسباروف.</li>
+              <li><strong>2012</strong> حقّقت الشبكة AlexNet قفزة كبيرة في التعرّف على الصور.</li>
+              <li><strong>2017</strong> قدّم باحثو غوغل بنية «المحوّل» (Transformer) التي تقوم عليها النماذج اللغوية اليوم.</li>
+              <li><strong>2022</strong> وصلت المحادثة مع النماذج اللغوية إلى ملايين المستخدمين.</li>
+            </ol>
+
+            <!-- لإضافة فيديو: ضع ملفك في المجلد ثم فعّل الكود التالي
+            <figure>
+              <video controls preload="metadata" poster="poster.jpg">
+                <source src="intro-ai.mp4" type="video/mp4">
+                <track kind="captions" src="captions-ar.vtt" srclang="ar" label="العربية">
+              </video>
+              <figcaption>مقدمة مرئية عن الذكاء الاصطناعي.</figcaption>
+            </figure>
+            -->
+          </section>
+
+          <section id="uses">
+            <h2>أين نراه اليوم</h2>
+            <div class="cards">
+              <article>
+                <h3>الصحة</h3>
+                <p>يساعد الأطباء في قراءة صور الأشعة وتحديد الحالات التي تحتاج مراجعة عاجلة.</p>
+              </article>
+              <article>
+                <h3>التعليم</h3>
+                <p>يشرح الدرس بأكثر من طريقة ويصحّح التمارين فور الانتهاء منها.</p>
+              </article>
+              <article>
+                <h3>العمل</h3>
+                <p>يلخّص الاجتماعات ويصيغ المسودات ويكتب أجزاء من الشيفرة البرمجية.</p>
+              </article>
+            </div>
+          </section>
+
+          <section id="challenges">
+            <h2>أسئلة لم تُحسم</h2>
+            <blockquote>
+              <p>الأداة قوية بقدر وضوح السؤال الذي نطرحه عليها، وبقدر حرصنا على مراجعة جوابها.</p>
+            </blockquote>
+            <ul class="checks">
+              <li>الدقة: قد تبدو الإجابة واثقة وهي خاطئة، لذا تلزم المراجعة.</li>
+              <li>الخصوصية: ما نُدخله من بيانات يحتاج إلى حذر.</li>
+              <li>الوظائف: تتغيّر المهام قبل أن تختفي المهن.</li>
+              <li>العدالة: تتأثر النتائج بالبيانات التي تدرّبت عليها النماذج.</li>
+            </ul>
+          </section>
+
+          <section id="conclusion">
+            <h2>الخاتمة</h2>
+            <p>الذكاء الاصطناعي ليس سحرًا ولا خطرًا جاهزًا، بل أداة تتشكّل نتائجها بطريقة استخدامنا لها. بين ورقة تورينج عام 1950 والنماذج اللغوية اليوم، تغيّرت الأجهزة والخوارزميات، وتغيّرت معها طريقة تعلّمنا وعملنا.</p>
+            <p>الأدوات ستتطور بسرعة، لكن بعض المهارات تبقى نافعة مهما تغيّرت:</p>
+            <ul class="checks">
+              <li>اسأل بوضوح، فجودة الجواب تبدأ من جودة السؤال.</li>
+              <li>تحقّق من المعلومة المهمة قبل الاعتماد عليها.</li>
+              <li>احمِ بياناتك، ولا تُدخل ما لا تريد مشاركته.</li>
+            </ul>
+            <p>من يجمع بين الفضول والمراجعة الواعية سيكون شريكًا للتقنية، لا مجرد متفرّج على ثورتها.</p>
+          </section>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>مشروع القسم الثالث — Advanced HTML & CSS</p>
+    <p><small>© 2026 جميع الحقوق محفوظة.</small></p>
+  </footer>
+
+  <script>
+    const btn = document.getElementById("menu-btn");
+    const nav = document.getElementById("main-nav");
+
+    function setMenu(open) {
+      btn.setAttribute("aria-expanded", open);
+      nav.hidden = !open;
+    }
+
+    btn.addEventListener("click", () => setMenu(nav.hidden));
+    nav.addEventListener("click", (e) => { if (e.target.closest("a")) setMenu(false); });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !nav.hidden) { setMenu(false); btn.focus(); }
+    });
+  </script>
+</body>
+</html>

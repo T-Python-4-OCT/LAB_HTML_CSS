@@ -1,0 +1,188 @@
+/* ---------- 1. المتغيرات ---------- */
+:root {
+  --bg: #eef2f7;
+  --surface: #ffffff;
+  --ink: #0f1d33;
+  --muted: #4b5a73;
+  --line: #d3dbe7;
+  --accent: #1c4fd6;
+  --signal: #ffc857;
+  --radius: 10px;
+  --font-body: "IBM Plex Sans Arabic", Tahoma, sans-serif;
+  --font-head: "Readex Pro", "IBM Plex Sans Arabic", Tahoma, sans-serif;
+}
+
+/* ---------- 2. أساسيات ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-block-start: 5rem; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 1.0625rem/1.9 var(--font-body);
+}
+h1, h2, h3 { font-family: var(--font-head); line-height: 1.3; margin: 0 0 .6em; }
+p { margin: 0 0 1.1em; }
+a { color: var(--accent); text-underline-offset: .2em; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+/* رابط التخطي لإمكانية الوصول */
+.skip {
+  position: absolute; inset-block-start: -4rem; inset-inline-start: 1rem;
+  background: var(--ink); color: #fff; padding: .6rem 1rem; border-radius: 6px;
+  transition: inset-block-start .2s;
+}
+.skip:focus { inset-block-start: 1rem; }
+
+/* ---------- 3. الرأس وزر القائمة ---------- */
+.site-header {
+  position: sticky; inset-block-start: 0; z-index: 10;
+  padding: .7rem clamp(1rem, 4vw, 3rem);
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(8px);
+  border-block-end: 1px solid var(--line);
+}
+.menu-btn {
+  display: inline-flex; align-items: center; gap: .6rem;
+  font: 700 1.05rem var(--font-head); color: var(--ink);
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: .55rem 1.1rem; cursor: pointer;
+  transition: background .2s, border-color .2s;
+}
+.menu-btn:hover { border-color: var(--accent); }
+.menu-btn[aria-expanded="true"] { background: var(--ink); color: #fff; border-color: var(--ink); }
+.menu-btn::after {                      /* سهم صغير يدور عند الفتح */
+  content: ""; width: .5rem; height: .5rem;
+  border-inline-end: 2px solid currentColor; border-block-end: 2px solid currentColor;
+  transform: rotate(45deg) translateY(-2px);
+  transition: transform .2s;
+}
+.menu-btn[aria-expanded="true"]::after { transform: rotate(225deg) translateY(-2px); }
+
+#main-nav {                             /* القائمة المنسدلة */
+  position: absolute; inset-block-start: calc(100% + .4rem);
+  inset-inline-start: clamp(1rem, 4vw, 3rem);
+  min-width: 14rem; padding: .5rem;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(15, 29, 51, .12);
+}
+#main-nav[hidden] { display: none; }
+#main-nav ul { list-style: none; margin: 0; padding: 0; }
+#main-nav a {
+  display: block; padding: .6rem .9rem; border-radius: 6px;
+  color: var(--ink); text-decoration: none; transition: background .2s, color .2s;
+}
+#main-nav a:hover { background: var(--bg); color: var(--accent); }
+
+/* ---------- 4. الواجهة العلوية ---------- */
+.hero {
+  display: grid; gap: 2rem; align-items: center;
+  grid-template-columns: 1.2fr 1fr;
+  max-width: 72rem; margin-inline: auto;
+  padding: clamp(2rem, 6vw, 5rem) clamp(1rem, 4vw, 3rem) 2rem;
+}
+.meta { color: var(--muted); font-size: .95rem; margin-block-end: .8rem; }
+.hero h1 { font-size: clamp(2.4rem, 7vw, 4.6rem); font-weight: 700; margin-block-end: .35em; }
+.lead { font-size: 1.25rem; color: var(--muted); max-width: 34rem; }
+
+.hero-art { margin: 0; }
+.hero-art svg { width: 100%; height: auto; }
+.hero-art figcaption { font-size: .85rem; color: var(--muted); text-align: center; margin-block-start: .5rem; }
+.links line { stroke: var(--line); stroke-width: 1.5; }
+.nodes circle { fill: var(--accent); }
+.nodes circle:nth-child(3n) { fill: var(--ink); }
+
+/* الحركة الوحيدة في الصفحة: نبض العقد (@keyframes) */
+@keyframes pulse {
+  0%, 100% { r: 12; fill: var(--accent); }
+  50%      { r: 16; fill: var(--signal); }
+}
+.nodes circle { animation: pulse 3.2s ease-in-out infinite; }
+.nodes circle:nth-child(2n) { animation-delay: .6s; }
+.nodes circle:nth-child(3n) { animation-delay: 1.2s; }
+
+/* ---------- 5. تخطيط المقال ---------- */
+.layout {
+  display: grid; gap: 3rem;
+  grid-template-columns: 14rem minmax(0, 1fr);
+  max-width: 72rem; margin-inline: auto;
+  padding: 2rem clamp(1rem, 4vw, 3rem) 4rem;
+}
+.toc { position: sticky; inset-block-start: 5.5rem; align-self: start; font-size: .95rem; }
+.toc h2 { font-size: 1rem; }
+.toc ol { margin: 0; padding-inline-start: 1.2rem; }
+.toc li { margin-block-end: .5rem; }
+.toc a { color: var(--muted); text-decoration: none; transition: color .2s; }
+.toc a:hover { color: var(--accent); }
+
+.body { max-width: 42rem; }
+.body section { margin-block-end: 3.5rem; }
+.body h2 { font-size: 1.9rem; }
+
+/* ---------- 6. الخط الزمني: محددات متقدمة ---------- */
+.timeline { list-style: none; margin: 2rem 0; padding: 0; border-inline-start: 3px solid var(--line); }
+.timeline li { position: relative; padding-block: 0 1.4rem; padding-inline: 1.5rem 0; }
+.timeline li::before {               /* ::before: نقطة على الخط */
+  content: ""; position: absolute; inset-inline-start: -.55rem; inset-block-start: .65rem;
+  width: .85rem; height: .85rem; border-radius: 50%;
+  background: var(--bg); border: 3px solid var(--accent);
+  transition: background .2s, transform .2s;
+}
+.timeline li:hover::before { background: var(--signal); transform: scale(1.25); }
+.timeline li:last-child::before { background: var(--accent); }   /* :last-child */
+.timeline strong { display: block; font: 700 1.2rem var(--font-head); color: var(--accent); }
+
+/* ---------- 7. البطاقات ---------- */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 1rem; }
+.cards article {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 1.2rem 1.3rem; border-block-start: 4px solid var(--accent);
+  transition: transform .2s, border-color .2s;
+}
+.cards article:nth-child(2) { border-block-start-color: var(--signal); }   /* :nth-child */
+.cards article:nth-child(3) { border-block-start-color: var(--ink); }
+.cards article:hover { transform: translateY(-4px); }
+.cards h3 { font-size: 1.15rem; }
+.cards p { margin: 0; font-size: .98rem; color: var(--muted); }
+
+/* ---------- 8. الاقتباس والقوائم ---------- */
+blockquote {
+  margin: 1.5rem 0; padding: 1rem 1.5rem;
+  border-inline-start: 5px solid var(--signal); background: var(--surface);
+  font: 500 1.3rem/1.7 var(--font-head);
+}
+blockquote p { margin: 0; }
+
+.checks { list-style: none; padding: 0; margin: 0 0 1.5rem; }
+.checks li { position: relative; padding-inline-start: 1.8rem; margin-block-end: .6rem; }
+.checks li::before {
+  content: ""; position: absolute; inset-inline-start: 0; inset-block-start: .65rem;
+  width: .9rem; height: .9rem; border-radius: 3px; background: var(--accent);
+}
+
+/* محدد السمة: الروابط الخارجية فقط */
+a[href^="https"]::after { content: " ↗"; font-size: .8em; }
+a[target="_blank"] { font-weight: 500; }
+
+/* ---------- 9. التذييل ---------- */
+.site-footer { padding: 2rem; text-align: center; color: var(--muted); border-block-start: 1px solid var(--line); }
+.site-footer p { margin: 0; }
+.site-footer p + p { margin-block-start: .3rem; }
+
+/* ---------- 10. التصميم المتجاوب (Media Queries) ---------- */
+@media (max-width: 56rem) {
+  .hero { grid-template-columns: 1fr; }
+  .layout { grid-template-columns: 1fr; gap: 1.5rem; }
+  .toc { position: static; padding: 1rem 1.2rem; background: var(--surface); border-radius: var(--radius); }
+}
+@media (max-width: 36rem) {
+  body { font-size: 1rem; }
+  .lead { font-size: 1.1rem; }
+}
+
+/* احترام تفضيل تقليل الحركة */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
