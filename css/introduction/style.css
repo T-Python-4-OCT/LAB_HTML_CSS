@@ -1,0 +1,219 @@
+:root {
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --primary: #46e561;
+  --primary-dark: #5aa330;
+  --th-bg: #46e566;
+  --border: #e5e7eb;
+  --radius: 14px;
+  --shadow: 0 6px 20px rgba(31, 41, 55, 0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --primary: #818cf8;
+    --primary-dark: #a5b4fc;
+    --th-bg: #38ca38;
+    --border: #4a5533;
+    --shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, "Segoe UI", Tahoma, Arial, sans-serif;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+}
+
+a {
+  color: var(--primary);
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+a:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+
+header {
+  background: linear-gradient(135deg, #75de74, #295123);
+  color: #ffffff;
+  text-align: center;
+  padding: 3rem 1rem 2.5rem;
+}
+
+header h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+}
+
+header p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+}
+
+nav a {
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+
+nav a:hover {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+main {
+  max-width: 860px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+section {
+  background: var(--card);
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  scroll-margin-top: 4.5rem; /* so the sticky menu does not cover the title */
+}
+
+section h2 {
+  margin-top: 0;
+  padding-bottom: 0.5rem;
+  color: var(--primary);
+  border-bottom: 2px solid var(--border);
+}
+
+.video-wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #000000;
+}
+
+.video-wrapper iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.table-wrapper {
+  overflow-x: auto; /* scroll sideways on small phones */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+caption {
+  caption-side: top;
+  text-align: left;
+  padding-bottom: 0.5rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+th,
+td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+thead th {
+  background: var(--th-bg);
+  color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+  background: rgba(79, 70, 229, 0.07);
+}
+
+tbody tr:hover {
+  background: rgba(79, 70, 229, 0.15);
+}
+
+ul.links {
+  display: grid;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul.links a {
+  display: block;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.15s, border-color 0.15s, box-shadow 0.15s;
+}
+
+ul.links a::after {
+  content: " ↗";
+}
+
+ul.links a:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary);
+  box-shadow: var(--shadow);
+}
+
+footer {
+  padding: 1.5rem 1rem 2.5rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition: none !important;
+  }
+}
