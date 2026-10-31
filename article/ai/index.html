@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A practical introduction to language models, their uses, and the checks their answers need."
+      data-ar-content="مقدمة عملية إلى النماذج اللغوية واستخداماتها وكيفية التحقق من إجاباتها."
+    />
+    <title data-ar="النماذج اللغوية | دفتر المعرفة">
+      Language models | Field Journal
+    </title>
+    <link rel="stylesheet" href="../../assets/site.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="../../assets/site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#article" data-ar="انتقل إلى المقال"
+      >Skip to article</a
+    >
+    <header class="masthead page-width">
+      <a class="wordmark" href="../../index.html"
+        ><svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M4 4h6c2 0 2 1 2 1s0-1 2-1h6v15h-6c-2 0-2 1-2 1s0-1-2-1H4zM12 5v15"
+          /></svg
+        ><span data-ar="دفتر المعرفة">Field Journal</span></a
+      >
+      <nav aria-label="Project navigation" data-ar-label="التنقل بين المشاريع">
+        <a href="../../index.html" data-ar="كل المشاريع">All projects</a>
+      </nav>
+      <div
+        class="language-switch"
+        role="group"
+        aria-label="Language"
+        data-ar-label="اللغة"
+      >
+        <button type="button" data-language="en" lang="en">EN</button
+        ><button type="button" data-language="ar" lang="ar">العربية</button>
+      </div>
+    </header>
+    <main id="article" class="page-width">
+      <article>
+        <header class="article-header">
+          <p class="eyebrow" data-ar="تقنية · مقال توضيحي">
+            Technology · An explainer
+          </p>
+          <div class="headline-row">
+            <h1 data-ar="فهم<br><em>النماذج اللغوية.</em>">
+              Understanding<br /><em>language models.</em>
+            </h1>
+            <p
+              class="standfirst"
+              data-ar="كيف تعمل، وأين تفيد، ولماذا تحتاج إجاباتها إلى المراجعة."
+            >
+              How they work, where they help, and why their answers need
+              checking.
+            </p>
+          </div>
+          <div class="article-meta">
+            <span data-ar="من سلسلة مقالات المختبر"
+              >From the lab reading series</span
+            ><span data-ar="قراءة في ٤ دقائق">4 minute read</span
+            ><span dir="ltr">HTML + CSS</span>
+          </div>
+        </header>
+        <figure class="hero-figure">
+          <img
+            src="model-flow.svg"
+            data-ar-src="model-flow.ar.svg"
+            alt="Five connected stages: a prompt, tokens, a trained model, a draft, and a person reviewing it."
+            data-ar-alt="خمس مراحل مترابطة: الطلب، والوحدات النصية، والنموذج المدرّب، والمسودة، ومراجعة بشرية."
+            width="1200"
+            height="360"
+          />
+          <ol
+            class="flow-legend"
+            aria-label="From prompt to reviewed answer"
+            data-ar-label="من الطلب إلى الإجابة المراجعة"
+          >
+            <li data-ar="الطلب">Prompt</li>
+            <li data-ar="الوحدات النصية">Tokens</li>
+            <li data-ar="النموذج المدرّب">Trained model</li>
+            <li data-ar="المسودة">Draft</li>
+            <li data-ar="المراجعة البشرية">Human review</li>
+          </ol>
+          <figcaption
+            data-ar="مسار مبسط لإنتاج إجابة. المراجعة البشرية خطوة مستقلة عن توليد النص."
+          >
+            A simplified path to an answer. Human review is a separate step from
+            text generation.
+          </figcaption>
+        </figure>
+        <div class="reading-layout">
+          <aside
+            class="contents"
+            aria-label="On this page"
+            data-ar-label="في هذه الصفحة"
+          >
+            <p class="eyebrow" data-ar="في هذا المقال">In this article</p>
+            <nav aria-label="Article contents" data-ar-label="محتويات المقال">
+              <a href="#how-it-works" data-ar="كيف تعمل">How it works</a
+              ><a href="#useful-work" data-ar="استخدامات مفيدة">Useful work</a
+              ><a href="#the-limits" data-ar="حدود النماذج">The limits</a
+              ><a href="#put-it-to-work" data-ar="قبل استخدام الإجابة"
+                >Before using an answer</a
+              >
+            </nav>
+            <p
+              class="margin-note"
+              data-ar="تعامل مع الإجابة بوصفها مسودة تحتاج إلى التحقق."
+            >
+              Treat an answer as a draft you can investigate.
+            </p>
+          </aside>
+          <div class="article-body">
+            <p
+              class="opening"
+              data-ar="تجعل نافذة المحادثة استخدام الذكاء الاصطناعي يبدو بسيطًا. لكن خلفها نموذج تعلّم أنماطًا من البيانات. يساعدك فهم هذه الفكرة على صياغة أسئلة أوضح وتحديد ما يحتاج إلى التحقق في الإجابة."
+            >
+              A chat box makes AI feel simple. Behind it sits a model trained to
+              recognize patterns in data. Understanding this helps you ask
+              clearer questions and decide which parts of an answer need
+              checking.
+            </p>
+            <section id="how-it-works" aria-labelledby="how-heading">
+              <p class="section-label" data-ar="آلية العمل">The mechanism</p>
+              <h2 id="how-heading" data-ar="من الأنماط إلى التوقعات">
+                From patterns to predictions
+              </h2>
+              <p
+                data-ar="أثناء التدريب، يعدّل النموذج اللغوي معاملاته بالتدرّب على توقع النص. يُقسَّم النص إلى <em>وحدات نصية</em> قد تكون كلمات كاملة أو أجزاء كلمات أو علامات ترقيم. وعند الاستخدام، يعتمد النموذج المدرّب على السياق المتاح لتوليد إجابة."
+              >
+                During training, a language model adjusts its parameters by
+                practicing predictions on text. Text is split into
+                <em>tokens</em>, which may be whole words, word fragments, or
+                punctuation. When you use it, the trained model uses the
+                available context to generate a response.
+              </p>
+              <p
+                data-ar="قدّمت <a href='https://arxiv.org/abs/1706.03762'>ورقة المحوّل المنشورة عام ٢٠١٧</a> بنية تعتمد على الانتباه. يتيح الانتباه للنموذج إعطاء أوزان مختلفة للعلاقات بين الوحدات النصية، مما يساعده على ربط الكلمة بسياقها. يشرح <a href='https://developers.google.com/machine-learning/crash-course/llm/transformers'>دليل Google للنماذج اللغوية</a> هذه الآلية وحدودها."
+              >
+                The
+                <a href="https://arxiv.org/abs/1706.03762"
+                  >2017 Transformer paper</a
+                >
+                introduced an architecture built around attention. Attention
+                lets a model weigh relationships between tokens, connecting a
+                word with the context that gives it meaning.
+                <a
+                  href="https://developers.google.com/machine-learning/crash-course/llm/transformers"
+                  >Google’s language model guide</a
+                >
+                explains the process and its limits.
+              </p>
+            </section>
+            <section id="useful-work" aria-labelledby="useful-heading">
+              <p class="section-label" data-ar="استخدامات يومية">
+                Everyday uses
+              </p>
+              <h2 id="useful-heading" data-ar="ابدأ بمهمة يمكنك التحقق منها">
+                Start with work you can check
+              </h2>
+              <p
+                data-ar="جرّب تلخيص مستند قرأته، أو إعداد مخطط أولي، أو اقتراح صياغات بديلة. حدّد المهمة والسياق وشكل النتيجة المطلوبة، ثم قارن الإجابة بالمادة الأصلية."
+              >
+                Try summarizing a document you have read, making a first
+                outline, or generating alternative wording. Give the model a
+                clear task, relevant context, and the format you need. Compare
+                the result with the original material.
+              </p>
+              <p
+                data-ar="في تمرين برمجي، اطلب شرح دالة واحدة. اقرأ الشيفرة بنفسك وشغّلها واختبر حالة غير معتادة. يصبح الشرح مفيدًا عندما تتمكن من ربط كل معلومة بسلوك يمكن ملاحظته."
+              >
+                For a coding exercise, ask for an explanation of one function.
+                Read the code yourself, run it, and test an edge case. The
+                explanation becomes useful when you can connect each claim to
+                something observable.
+              </p>
+            </section>
+            <aside
+              class="pull-note"
+              aria-label="Key idea"
+              data-ar-label="فكرة أساسية"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 3 2 21h20L12 3zM12 9v5M12 17v1" />
+              </svg>
+              <p data-ar="وضوح الصياغة<br><em>لا يضمن صحة الإجابة.</em>">
+                A fluent answer can still<br /><em>be a wrong answer.</em>
+              </p>
+            </aside>
+            <section id="the-limits" aria-labelledby="limits-heading">
+              <p class="section-label" data-ar="دور الإنسان">The human role</p>
+              <h2 id="limits-heading" data-ar="راجع الإجابة بعين ناقدة">
+                Keep judgment in the loop
+              </h2>
+              <p
+                data-ar="قد تنتج النماذج اللغوية معلومات خاطئة أو تعكس تحيزات. نبرة الثقة ليست دليلًا على الصحة، وحتى المرجع الذي يبدو مقنعًا يحتاج إلى فتحه وفحصه. تعتمد المراجعة المناسبة على جودة المصادر وطبيعة المهمة وعواقب الخطأ."
+              >
+                Language models can produce factual errors and reflect biases. A
+                confident tone is not proof, and a plausible citation still
+                needs to be opened. Source quality, the task, and the
+                consequences of an error all matter.
+              </p>
+              <p
+                data-ar="يقدّم <a href='https://www.nist.gov/itl/ai-risk-management-framework'>إطار <bdi dir='ltr'>NIST</bdi> لإدارة مخاطر الذكاء الاصطناعي</a> نهجًا طوعيًا لإدارة المخاطر أثناء التصميم والتطوير والاستخدام والتقييم. وفي مشروع شخصي صغير، ابدأ بتحديد النتيجة المقبولة ثم ابحث عن حالات الفشل."
+              >
+                The
+                <a href="https://www.nist.gov/itl/ai-risk-management-framework"
+                  >NIST AI Risk Management Framework</a
+                >
+                offers a voluntary approach to managing AI risks across design,
+                development, use, and evaluation. For a small personal project,
+                begin by defining what a good result looks like and checking for
+                failures.
+              </p>
+            </section>
+            <section id="put-it-to-work" aria-labelledby="checklist-heading">
+              <p class="section-label" data-ar="تطبيق عملي">A short practice</p>
+              <h2 id="checklist-heading" data-ar="قبل استخدام الإجابة">
+                Before using an answer
+              </h2>
+              <ol class="checklist">
+                <li
+                  data-ar="<strong>حدّد المهمة.</strong> وضّح الجمهور والسياق والنتيجة المتوقعة."
+                >
+                  <strong>Set the task.</strong> State the audience, context,
+                  and expected result.
+                </li>
+                <li
+                  data-ar="<strong>افحص الأدلة.</strong> افتح المصادر وقارنها بكل ادعاء."
+                >
+                  <strong>Inspect the evidence.</strong> Open sources and
+                  compare them with each claim.
+                </li>
+                <li
+                  data-ar="<strong>اختبر حالة فشل.</strong> جرّب معلومة ناقصة أو مدخلًا غير معتاد."
+                >
+                  <strong>Try a failure case.</strong> Test a missing detail or
+                  an unusual input.
+                </li>
+                <li
+                  data-ar="<strong>اتخذ القرار النهائي.</strong> حرّر المسودة وتحمّل مسؤولية ما تستخدمه."
+                >
+                  <strong>Make the final call.</strong> Edit the draft and take
+                  responsibility for what you use.
+                </li>
+              </ol>
+            </section>
+          </div>
+        </div>
+        <footer class="article-end">
+          <span data-ar="نهاية المقال">End of article</span
+          ><a href="#article" data-ar="العودة إلى الأعلى">Back to top</a>
+        </footer>
+      </article>
+    </main>
+    <footer class="site-footer page-width">
+      <p
+        data-ar="دفتر المعرفة · من مختبر <bdi dir='ltr'>HTML</bdi> و<bdi dir='ltr'>CSS</bdi>"
+      >
+        Field Journal · An HTML and CSS study
+      </p>
+      <a href="../../careers/cv/index.html" data-ar="استكشف السيرة الذاتية"
+        >Explore the CV</a
+      >
+    </footer>
+  </body>
+</html>

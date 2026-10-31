@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="64" viewBox="0 0 320 64" lang="ar" role="img" aria-labelledby="title">
+  <title id="title">اضغط لفتح الموقع</title>
+  <rect x="1" y="1" width="318" height="62" rx="12" fill="#172536" stroke="#d7b77d" stroke-width="2"/>
+  <text x="180" y="40" text-anchor="middle" direction="rtl" fill="#fffcf7" font-family="Tahoma, Arial, sans-serif" font-size="22" font-weight="600">اضغط لفتح الموقع</text>
+  <path d="M35 23h13v13m0-13L30 41m0-14h-4v17h17v-4" fill="none" stroke="#d7b77d" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
