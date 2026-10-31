@@ -1,141 +1,229 @@
 <!DOCTYPE html>
+
+<html lang="en">
 <head>
-    <style>
-        header{
-            background-color: aqua;
-            position: fixed;
-            top: 0px;
-            left: 0px;
-            width: 100%;
-            text-align: center;
-            font-size: 20px;
-            border-radius: 40px;
-             border: 2px solid black;
-            
-        }
-        body{
-            background-color: wheat;
-            text-decoration: 20px;
-            text-align: center;
-        }
-        h1{
-            margin-top: 20%;
-        }
-        .images {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }.images img {
-            width: 300px;
-            height: auto;
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Madrid</title>
 
-        button{
-            color: chartreuse;
-            border: 2px solid seagreen;
-            background-color: black;
-            width: 100px;
-            height: 40px;
-            
-        }
-        button:hover{
-            background-color: aliceblue;
-            color: black;
-        }
-        a{
-            background-color: aliceblue;
-            border: 2px solid black;
-            width: 80px;
-            text-decoration: none;
-            
-        }
-        a:hover{
-            background-color: black;
-            color: aliceblue;
-        }
-    </style>
-    <title>
-        Mohammed
-    </title>
-</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #f4f4f4;
+        color: #222;
+    }
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Mohammed</title>
-    <style>
-        header {
-            background-color: aqua;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            text-align: center;
-            font-size: 20px;
-            border-radius: 40px;
-            border: 2px solid black;
-            padding: 10px 0;
-        }
+    header {
+        background-color: #10264d;
+        color: white;
+        text-align: center;
+        padding: 25px;
+    }
 
-        body {
-            background-color: wheat;
-            text-align: center;
-        }
+    nav {
+        background-color: #d6b45a;
+        padding: 15px;
+        text-align: center;
+    }
 
-        h1 {
-            margin-top: 20%;
-        }
+    nav a {
+        color: #10264d;
+        text-decoration: none;
+        margin: 15px;
+        font-weight: bold;
+    }
 
-        .images {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin: 30px;
-        }
+    section {
+        background-color: white;
+        margin: 20px;
+        padding: 20px;
+        border-radius: 10px;
+    }
 
-        .card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-        }
+    h2 {
+        color: #10264d;
+    }
 
-        .card img {
-            width: 300px;
-            height: auto;
-        }
+    img {
+        max-width: 100%;
+        border-radius: 10px;
+    }
 
-        button {
-            color: chartreuse;
-            border: 2px solid seagreen;
-            background-color: black;
-            width: 100px;
-            height: 40px;
-            cursor: pointer;
-        }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
 
-        button:hover {
-            background-color: aliceblue;
-            color: black;
-        }
-    </style>
+    th, td {
+        border: 1px solid #999;
+        padding: 10px;
+        text-align: center;
+    }
+
+    th {
+        background-color: #10264d;
+        color: white;
+    }
+
+    form input, form select, form textarea {
+        display: block;
+        width: 95%;
+        padding: 10px;
+        margin: 10px 0;
+    }
+
+    button {
+        background-color: #10264d;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+    footer {
+        background-color: #10264d;
+        color: white;
+        text-align: center;
+        padding: 15px;
+    }
+</style>
+```
+
 </head>
 
 <body>
-    <header>Mohammed cv</header>
 
-    <h1>Task 1: Create the same as this. You can see the buttons.</h1>
+```
+<header>
+    <h1>Real Madrid CF</h1>
+    <p>Hala Madrid!</p>
+</header>
 
-    <div class="images">
-        <div class="card">
-            <a href="../../dashboard/index.html" class="btn btn-primary">Click here</a>
-            <img src="../../assets/dahsboard.png" alt="Right image">
-        </div>
+<nav>
+    <a href="#about">About</a>
+    <a href="#history">History</a>
+    <a href="#players">Players</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#contact">Contact</a>
+</nav>
 
-        <div class="card">
-            <a href="../../article/ai/index.html" class="btn btn-primary">Click here</a>
-            <img src="../../article/ai/amges/Ai.jpg" alt="Left image">
-        </div>
-    </div>
+<section id="about">
+    <h2>About Real Madrid</h2>
+
+    <p>
+        <b>Real Madrid Club de Fútbol</b> is a famous football club
+        from Madrid, Spain.
+    </p>
+
+    <p>
+        The club is known for its history, achievements, and
+        <i>passionate fans</i> around the world.
+    </p>
+
+    <img src="https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg"
+         alt="Real Madrid Logo" width="180">
+
+    <p>
+        Official Website:
+        <a href="https://www.realmadrid.com/" target="_blank">
+            Visit Real Madrid
+        </a>
+    </p>
+</section>
+
+<section id="history">
+    <h2>Club History</h2>
+
+    <p>
+        Real Madrid was founded in 1902.
+        It is one of the most successful football clubs in history.
+    </p>
+
+    <h3>Important Facts</h3>
+
+    <ul>
+        <li>Founded in 1902</li>
+        <li>Based in Madrid, Spain</li>
+        <li>Home Stadium: Santiago Bernabéu</li>
+        <li>Nickname: Los Blancos</li>
+    </ul>
+</section>
+
+<section id="players">
+    <h2>Famous Players</h2>
+
+    <ol>
+        <li>Cristiano Ronaldo</li>
+        <li>Zinedine Zidane</li>
+        <li>Karim Benzema</li>
+        <li>Luka Modrić</li>
+        <li>Vinícius Júnior</li>
+    </ol>
+</section>
+
+<section id="achievements">
+    <h2>Club Achievements</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Competition</th>
+                <th>Achievement</th>
+                <th>Importance</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>UEFA Champions League</td>
+                <td>Multiple Titles</td>
+                <td>European</td>
+            </tr>
+
+            <tr>
+                <td>La Liga</td>
+                <td>Multiple Titles</td>
+                <td>National</td>
+            </tr>
+
+            <tr>
+                <td>Copa del Rey</td>
+                <td>Multiple Titles</td>
+                <td>National</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section id="contact">
+    <h2>Real Madrid Fan Form</h2>
+
+    <form>
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name">
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+
+        <label for="player">Your Favorite Player:</label>
+        <select id="player" name="player">
+            <option value="ronaldo">Cristiano Ronaldo</option>
+            <option value="zidane">Zinedine Zidane</option>
+            <option value="modric">Luka Modrić</option>
+            <option value="vinicius">Vinícius Júnior</option>
+        </select>
+
+        <label for="message">Why do you support Real Madrid?</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<footer>
+    <p>©2026 Real Madrid Fan Page | Hala Madrid!</p>
+</footer>
+
 </body>
 </html>
