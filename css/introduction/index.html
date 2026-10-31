@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- المشروع الثاني: نفس صفحة html/introduction لكن بتنسيق CSS (ملف style.css) -->
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>صفحتي الشخصية (منسّقة)</title>
+
+  <!-- خط Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- ربط ملف التنسيق -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hero">
+    <img class="avatar" src="assets/avatar.svg" alt="صورتي الشخصية" width="140" height="140">
+    <h1>مرحباً، أنا اسمك الكامل</h1> <!-- ✏️ عدّل اسمك -->
+    <h2>طالب برمجة وهاوي تقنية</h2>
+    <p>
+      أهلاً بك في صفحتي! أنا <b>طالب في معسكر بايثون</b>، وأحب <i>تعلّم أشياء جديدة</i>
+      وتحويل الأفكار إلى برامج.
+    </p>
+  </header>
+
+  <main class="container">
+
+    <section class="box">
+      <h2>هواياتي</h2>
+      <ul class="tags">
+        <li>البرمجة</li>
+        <li>القراءة</li>
+        <li>كرة القدم</li>
+        <li>السفر</li>
+      </ul>
+
+      <h3>خطوات تعلّمي للبرمجة</h3>
+      <ol class="steps">
+        <li>تعلّم أساسيات بايثون</li>
+        <li>بناء مشروع صغير</li>
+        <li>تعلّم HTML وCSS</li>
+        <li>رفع المشاريع على GitHub</li>
+      </ol>
+    </section>
+
+    <section class="box">
+      <h2>جدولي الأسبوعي</h2>
+      <div class="table-wrap">
+        <table>
+          <caption>جدول المذاكرة</caption>
+          <thead>
+            <tr><th>اليوم</th><th>المادة</th><th>المدة</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>الأحد</td><td>بايثون</td><td>ساعتان</td></tr>
+            <tr><td>الاثنين</td><td>HTML</td><td>ساعتان</td></tr>
+            <tr><td>الثلاثاء</td><td>CSS</td><td>ساعتان</td></tr>
+            <tr><td>الأربعاء</td><td>مشروع تطبيقي</td><td>٣ ساعات</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="box">
+      <h2>روابطي المفضلة</h2>
+      <ul class="links">
+        <li><a href="https://developer.mozilla.org/ar/" target="_blank" rel="noopener">MDN Web Docs</a></li>
+        <li><a href="https://www.w3schools.com/html/" target="_blank" rel="noopener">W3Schools</a></li>
+        <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="../../html/introduction/index.html">النسخة غير المنسّقة</a></li>
+      </ul>
+    </section>
+
+    <section class="box">
+      <h2>تواصل معي</h2>
+      <form action="#" method="post">
+        <div class="field">
+          <label for="name">الاسم</label>
+          <input type="text" id="name" name="name" placeholder="اكتب اسمك" required>
+        </div>
+        <div class="field">
+          <label for="email">البريد الإلكتروني</label>
+          <input type="email" id="email" name="email" placeholder="name@example.com" required>
+        </div>
+        <div class="field">
+          <label for="topic">الموضوع</label>
+          <select id="topic" name="topic">
+            <option value="question">سؤال</option>
+            <option value="project">فكرة مشروع</option>
+            <option value="other">أخرى</option>
+          </select>
+        </div>
+        <div class="inline">
+          <span>نوع الرد المفضّل:</span>
+          <label><input type="radio" name="reply" value="mail" checked> بريد</label>
+          <label><input type="radio" name="reply" value="phone"> اتصال</label>
+          <label><input type="checkbox" name="news"> أرغب بتلقي الجديد</label>
+        </div>
+        <div class="field">
+          <label for="msg">رسالتك</label>
+          <textarea id="msg" name="msg" rows="5" placeholder="اكتب رسالتك هنا"></textarea>
+        </div>
+        <div class="buttons">
+          <button type="submit" class="btn">إرسال</button>
+          <button type="reset" class="btn btn--ghost">مسح</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="foot">© ٢٠٢٦ — صفحتي الأولى بلغة HTML وCSS</footer>
+</body>
+</html>

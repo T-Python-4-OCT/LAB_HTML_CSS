@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>السيرة الذاتية | هايل البلوي</title>
+  <meta name="description" content="السيرة الذاتية لمطوّر برمجيات طموح: التعليم والمشاريع والمهارات.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">تخطَّ إلى المحتوى</a>
+
+  <header class="top">
+    <a class="brand" href="#home">السيرة الذاتية</a>
+    <nav aria-label="أقسام الصفحة">
+      <ul>
+        <li><a href="#about">نبذة</a></li>
+        <li><a href="#education">التعليم</a></li>
+        <li><a href="#projects">المشاريع</a></li>
+        <li><a href="#skills">المهارات</a></li>
+        <li><a href="#experience">الخبرات</a></li>
+        <li><a href="#contact">تواصل</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ===== الواجهة: صورة الخلفية + المقولة ===== -->
+    <section class="hero" id="home">
+      <div class="hero__inner">
+        <img class="avatar" src="assets/avatar.svg" alt="صورتي الشخصية" width="150" height="150">
+        <p class="eyebrow">مطوّر برمجيات طموح</p>
+        <h1>هايل فايز البلوي</h1> 
+        <p class="lead">أتعلّم البرمجة بلغة بايثون وأبني مشاريع حقيقية، وأطمح لأن أصنع برمجيات تخدم الناس وتواكب رؤية وطني.</p>
+        <div class="actions">
+          <a class="btn btn--gold" href="#projects">شاهد مشاريعي</a>
+          <a class="btn btn--ghost" href="#contact">تواصل معي</a>
+        </div>
+
+      </div>
+    </section>
+
+    <figure class="quote">
+      <blockquote>
+        <p>«همّة السعوديين مثل جبل طويق، ولن تنكسر إلا إذا انهدّ هذا الجبل وتساوى بالأرض»</p>
+      </blockquote>
+      <figcaption>
+        صاحب السمو الملكي الأمير محمد بن سلمان، ولي العهد رئيس مجلس الوزراء
+        <span>مبادرة مستقبل الاستثمار، الرياض ٢٠١٨</span>
+      </figcaption>
+    </figure>
+
+    <div class="wrap">
+      <section id="about" aria-labelledby="about-title">
+        <h2 id="about-title">نبذة عنّي</h2>
+        <p>
+          طالب في معسكر برمجة بلغة بايثون، أحب تحويل الأفكار إلى برامج تعمل فعلاً. بنيت مؤخراً نظاماً كاملاً
+          لإدارة الإمداد وقت الأزمات يعمل من سطر الأوامر، وأتعلّم الآن تطوير صفحات الويب بـ HTML وCSS.
+          أهتم بجودة الكود والأمان وتجربة المستخدم، وأسعى لأن أتطور كل يوم.
+        </p>
+        <ul class="facts">
+          <li><strong>الموقع</strong> المملكة العربية السعودية</li> <!-- ✏️ عدّل مدينتك -->
+          <li><strong>اللغات</strong> العربية · الإنجليزية</li>
+          <li><strong>التركيز</strong> Python · الويب</li>
+        </ul>
+      </section>
+
+      <section id="education" aria-labelledby="edu-title">
+        <h2 id="edu-title">التعليم</h2>
+        <ul class="timeline">
+          <li>
+            <h3>معسكر تطوير بلغة بايثون</h3>
+            <p class="meta">اسم الجهة · ٢٠٢٦</p> <!-- ✏️ عدّل اسم الجهة -->
+            <p>أساسيات بايثون، البرمجة الكائنية، التعامل مع الملفات وJSON، Git وGitHub، وHTML وCSS.</p>
+          </li>
+          <li>
+            <h3>بكالوريوس </h3>
+            <p class="meta">جامعة تبوك سنة 2025</p> <!-- ✏️ عدّل -->
+            <p>علوم حاسب تقدير جيد</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="projects" aria-labelledby="proj-title">
+        <h2 id="proj-title">المشاريع</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>إمداد: محاكي إدارة الأزمات والخدمات اللوجستية</h3>
+            <p>
+              نظام يعمل من التيرمنال يربط بين المشرف الميداني والمرسل وضابط الأسطول والمدير: طلب عاجل ثم شحنة ثم مركبة
+              ثم تسليم، مع طقس مباشر وفحص سعة المركبات.
+            </p>
+            <ul class="tags" aria-label="التقنيات المستخدمة">
+              <li>Python</li><li>Rich</li><li>JSON</li><li>scrypt</li><li>unittest</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>مقال عن ثورة الذكاء الاصطناعي</h3>
+            <p>صفحة مقال متجاوبة بتصميم عربي، تستخدم عناصر HTML الدلالية وتأثيرات CSS وإمكانية الوصول.</p>
+            <ul class="tags" aria-label="التقنيات المستخدمة">
+              <li>HTML5</li><li>CSS3</li><li>Responsive</li>
+            </ul>
+            <a class="more" href="../../article/ai/index.html">اقرأ المقال ←</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" aria-labelledby="skills-title">
+        <h2 id="skills-title">المهارات</h2>
+        <ul class="chips">
+          <li>Python</li><li>Git &amp; GitHub</li><li>HTML5</li><li>CSS3</li><li>JSON</li>
+          <li>تشفير كلمات المرور</li><li>حل المشكلات</li><li>العمل ضمن فريق</li>
+        </ul>
+      </section>
+
+      <section id="experience" aria-labelledby="exp-title">
+        <h2 id="exp-title">الخبرات والإنجازات</h2>
+        <ul class="timeline">
+          <li>
+            <h3>مشروع في معسكر طويق</h3>
+            <p class="meta">٢٠٢٦</p>
+            <p>تصميم وبناء نظام متكامل بأدوار متعددة وواجهة تيرمنال تفاعلية بالأسهم، وكتابة اختبارات له.</p>
+          </li>
+          <li>
+            
+      </section>
+
+      <section id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">تواصل معي</h2>
+        <ul class="contact">
+          <li><span>البريد</span> <a href="asawaq135@gmail.com">name@example.com</a></li> <!-- ✏️ -->
+          <li><span>GitHub</span> <a href="https://github.com/hddi2312" target="_blank" rel="noopener">github.com/your-username</a></li> <!-- ✏️ -->
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <p>صُمِّمت بشغف وطموح · ٢٠٢٦</p>
+  </footer>
+</body>
+</html>

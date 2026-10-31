@@ -1,0 +1,141 @@
+/* ===== 1) المتغيّرات (ألوان بـ HEX و RGB و HSL) ===== */
+:root {
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --primary: #0f766e;            /* HEX */
+  --primary-dark: rgb(11, 90, 84); /* RGB */
+  --accent: hsl(38, 92%, 55%);   /* HSL */
+  --ink: #17313a;
+  --muted: #5b7078;
+  --line: #dbe6ea;
+}
+
+/* ===== 2) أساسيات (محدد عام *) ===== */
+* { box-sizing: border-box; }        /* صندوق الحجم: يشمل padding و border في العرض */
+body {
+  margin: 0;
+  font-family: "Cairo", "Segoe UI", Tahoma, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--ink);
+  background: var(--bg);
+}
+img { max-width: 100%; }
+a { color: var(--primary); }
+
+/* ===== 3) الواجهة العلوية: خلفية متدرجة + محاذاة بالـ Flexbox ===== */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 1.25rem 5rem;
+  color: #fff;
+  background: linear-gradient(135deg, #0f766e, #134e4a 60%, #1e3a5f);
+}
+.hero h1 { margin: 1rem 0 0; font-size: clamp(2rem, 5vw, 3rem); }
+.hero h2 { margin: 0; font-size: 1.2rem; font-weight: 600; color: #fde68a; }
+.hero p { max-width: 36rem; margin: 1rem 0 0; color: #e2f3f1; }
+.avatar {
+  width: 140px; height: 140px;
+  border: 4px solid var(--accent);
+  border-radius: 50%;
+  background: #134e4a;
+  object-fit: cover;
+}
+
+/* ===== 4) الحاوية والبطاقات (margin / padding / border / shadow) ===== */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 820px;
+  margin: -3rem auto 0;          /* تتداخل البطاقة الأولى مع الواجهة */
+  padding: 0 1.25rem 3rem;
+}
+.box {
+  padding: 1.6rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(23, 49, 58, .08);
+}
+.box h2 {
+  margin: 0 0 1rem;
+  padding-right: .8rem;
+  font-size: 1.5rem;
+  border-right: 5px solid var(--accent);
+}
+.box h3 { margin: 1.4rem 0 .5rem; color: var(--primary-dark); }
+
+/* ===== 5) القوائم ===== */
+.tags { display: flex; flex-wrap: wrap; gap: .6rem; margin: 0; padding: 0; list-style: none; }
+.tags li {
+  padding: .2rem 1.1rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  background: #d9f2ee;
+  border-radius: 99px;
+}
+.steps { margin: 0; padding-right: 1.4rem; }
+.steps li::marker { font-weight: 800; color: var(--primary); }
+.links { margin: 0; padding: 0; list-style: none; display: grid; gap: .5rem; }
+.links a {
+  display: block;                /* display: block */
+  padding: .5rem 1rem;
+  text-decoration: none;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.links a:hover { color: #fff; background: var(--primary); }
+
+/* ===== 6) الجدول ===== */
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+caption { padding-bottom: .5rem; text-align: start; font-weight: 700; color: var(--muted); }
+th, td { padding: .6rem 1rem; text-align: start; border-bottom: 1px solid var(--line); }
+thead th { color: #fff; background: var(--primary); }
+tbody tr:nth-child(even) { background: #f1f8f7; }
+
+/* ===== 7) النموذج ===== */
+.field { display: flex; flex-direction: column; gap: .25rem; margin-bottom: 1rem; }
+label { font-weight: 600; }
+input[type="text"], input[type="email"], select, textarea {
+  width: 100%;
+  padding: .6rem .9rem;
+  font: inherit;
+  color: inherit;
+  background: #fff;
+  border: 1.5px solid var(--line);
+  border-radius: 12px;
+  transition: border-color .2s, box-shadow .2s;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(15, 118, 110, .15);
+}
+.inline { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1.2rem; margin-bottom: 1rem; }
+.inline label { font-weight: 400; }
+.buttons { display: flex; gap: .75rem; }
+.btn {
+  padding: .6rem 1.8rem;
+  font: inherit; font-weight: 700;
+  color: #1c1200;
+  background: var(--accent);
+  border: 2px solid var(--accent);
+  border-radius: 99px;
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(245, 158, 11, .4); }
+.btn--ghost { color: var(--primary); background: transparent; border-color: var(--primary); }
+.btn--ghost:hover { box-shadow: none; }
+
+.foot { padding: 1.4rem; text-align: center; color: #cfe5e2; background: #134e4a; }
+
+/* ===== 8) شاشات صغيرة ===== */
+@media (max-width: 600px) {
+  .box { padding: 1.2rem; }
+  .buttons { flex-direction: column; }
+}
