@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Logistics Dashboard</title>
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+       
+        <aside class="sidebar">
+
+            <h4 class="logo">
+                <i class="bi bi-box-seam"></i>
+                Logistics
+            </h4>
+
+            <nav class="sidebar-menu">
+
+                <a href="#overview">
+                    <i class="bi bi-grid"></i>
+                    Control Tower
+                </a>
+
+                <a href="#carriers">
+                    <i class="bi bi-calculator"></i>
+                    Generate Quote
+                </a>
+
+                <a href="#systems">
+                    <i class="bi bi-truck"></i>
+                    Track Shipments
+                </a>
+
+                <a href="#overview">
+                    <i class="bi bi-robot"></i>
+                    AI Console
+                </a>
+
+                <a href="#systems">
+                    <i class="bi bi-people"></i>
+                    Customer Portal
+                </a>
+
+                <p class="menu-label">INSIGHT & CONTROL</p>
+
+                <a href="#systems">
+                    <i class="bi bi-file-earmark-text"></i>
+                    Documents
+                </a>
+
+                <a href="#overview">
+                    <i class="bi bi-bar-chart"></i>
+                    Analytics
+                </a>
+
+                <a href="#carriers" class="active">
+                    <i class="bi bi-diagram-3"></i>
+                    Integrations
+                </a>
+
+                <a href="#systems">
+                    <i class="bi bi-mortarboard"></i>
+                    AI Training
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+                <p><i class="bi bi-gear"></i> Settings</p>
+                <p><i class="bi bi-question-circle"></i> Get Help</p>
+                <p><i class="bi bi-arrow-repeat"></i> Updates</p>
+
+                <div class="user">
+                    <i class="bi bi-person-circle"></i>
+                    <span>Abdullah | Acme Logistics</span>
+                </div>
+            </div>
+
+        </aside>
+
+        
+        <main class="main-content">
+
+           
+            <header class="topbar">
+
+                <div class="breadcrumb-text">
+                    Dashboard <i class="bi bi-chevron-right"></i>
+                    <strong>Integrations</strong>
+                </div>
+
+                <div class="top-actions">
+
+                    <input
+                        type="search"
+                        class="form-control search-input"
+                        placeholder="Search integrations..."
+                    >
+
+                    <button class="btn btn-outline-dark">
+                        Get AI Insight
+                    </button>
+
+                    <button class="icon-btn" aria-label="Notifications">
+                        <i class="bi bi-bell"></i>
+                    </button>
+
+                </div>
+
+            </header>
+
+            
+            <section class="page-heading" id="overview">
+
+                <div>
+                    <h1>Integrations</h1>
+                    <p>Connect your freight operations with existing systems</p>
+                </div>
+
+               
+                <button
+                    class="btn add-btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#addModal"
+                >
+                    <i class="bi bi-plus-lg"></i>
+                    Add New
+                </button>
+
+            </section>
+
+          
+            <section class="stats-grid">
+
+                <div class="stat-card">
+                    <p>Connected</p>
+                    <h2>45 <small>Active integrations</small></h2>
+                    <i class="bi bi-link-45deg"></i>
+                </div>
+
+                <div class="stat-card">
+                    <p>Syncing</p>
+                    <h2>5 <small>In Progress</small></h2>
+                    <i class="bi bi-arrow-repeat"></i>
+                </div>
+
+                <div class="stat-card">
+                    <p>Errors</p>
+                    <h2>1 <small class="text-danger">Needs attention</small></h2>
+                    <i class="bi bi-exclamation-circle"></i>
+                </div>
+
+                <div class="stat-card">
+                    <p>Available</p>
+                    <h2>54 <small>More to add</small></h2>
+                    <i class="bi bi-cloud-plus"></i>
+                </div>
+
+            </section>
+
+            
+            <section class="content-box" id="carriers">
+
+                <div class="section-heading">
+                    <h3>Carrier APIs</h3>
+                    <a href="#systems">View All <i class="bi bi-arrow-right"></i></a>
+                </div>
+
+                <div class="carrier-grid">
+
+                    <div class="carrier-card">
+                        <div class="carrier-top">
+                            <span class="carrier-icon">🚢</span>
+                            <span class="status connected">Connected</span>
+                        </div>
+
+                        <h4>Maersk Line</h4>
+                        <p>AI-powered document generation and management</p>
+
+                        <button
+                            class="view-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#detailsModal"
+                        >
+                            View Integration
+                        </button>
+                    </div>
+
+                    <div class="carrier-card">
+                        <div class="carrier-top">
+                            <span class="carrier-icon">✈️</span>
+                            <span class="status syncing">Syncing</span>
+                        </div>
+
+                        <h4>Maersk Line</h4>
+                        <p>AI-powered document generation and management</p>
+
+                        <button
+                            class="view-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#detailsModal"
+                        >
+                            View Integration
+                        </button>
+                    </div>
+
+                    <div class="carrier-card">
+                        <div class="carrier-top">
+                            <span class="carrier-icon">🚢</span>
+                            <span class="status errors">Errors</span>
+                        </div>
+
+                        <h4>Maersk Line</h4>
+                        <p>AI-powered document generation and management</p>
+
+                        <button
+                            class="view-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#detailsModal"
+                        >
+                            View Integration
+                        </button>
+                    </div>
+
+                </div>
+
+            </section>
+
+           
+            <section class="content-box" id="systems">
+
+                <div class="section-heading">
+                    <h3>System Integrations</h3>
+
+                    <div class="dropdown">
+                        <button
+                            class="btn btn-light dropdown-toggle"
+                            data-bs-toggle="dropdown"
+                        >
+                            Filter
+                        </button>
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#systems">All</a></li>
+                            <li><a class="dropdown-item" href="#systems">Connected</a></li>
+                            <li><a class="dropdown-item" href="#systems">Syncing</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="integration-list">
+
+                    <div class="integration-row">
+                        <div>
+                            <h4>Salesforce CRM</h4>
+                            <p>Customer relationship management</p>
+                        </div>
+                        <span class="status connected">Connected</span>
+                        <button class="configure-btn" data-bs-toggle="modal" data-bs-target="#detailsModal">Configure</button>
+                    </div>
+
+                    <div class="integration-row">
+                        <div>
+                            <h4>SAP TMS</h4>
+                            <p>Transportation management system</p>
+                        </div>
+                        <span class="status connected">Connected</span>
+                        <button class="configure-btn" data-bs-toggle="modal" data-bs-target="#detailsModal">Configure</button>
+                    </div>
+
+                    <div class="integration-row">
+                        <div>
+                            <h4>Oracle ERP</h4>
+                            <p>Enterprise resource planning</p>
+                        </div>
+                        <span class="status syncing">Syncing</span>
+                        <button class="configure-btn" data-bs-toggle="modal" data-bs-target="#detailsModal">Configure</button>
+                    </div>
+
+                    <div class="integration-row">
+                        <div>
+                            <h4>Microsoft Dynamics</h4>
+                            <p>Business applications</p>
+                        </div>
+                        <span class="status errors">Errors</span>
+                        <button class="configure-btn" data-bs-toggle="modal" data-bs-target="#detailsModal">Configure</button>
+                    </div>
+
+                    <div class="integration-row">
+                        <div>
+                            <h4>Slack</h4>
+                            <p>Team communication</p>
+                        </div>
+                        <span class="status connected">Connected</span>
+                        <button class="configure-btn" data-bs-toggle="modal" data-bs-target="#detailsModal">Configure</button>
+                    </div>
+
+                    <div class="integration-row">
+                        <div>
+                            <h4>Shopify</h4>
+                            <p>E-commerce platform</p>
+                        </div>
+                        <span class="status connected">Connected</span>
+                        <button class="configure-btn" data-bs-toggle="modal" data-bs-target="#detailsModal">Configure</button>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <div class="modal fade" id="addModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Add New Integration</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <label class="form-label">Integration Name</label>
+                    <input type="text" class="form-control" placeholder="Enter integration name">
+
+                    <label class="form-label mt-3">Integration Type</label>
+                    <select class="form-select">
+                        <option>CRM</option>
+                        <option>ERP</option>
+                        <option>Carrier API</option>
+                    </select>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="modal fade" id="detailsModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Integration Details</h5>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <p>This integration is part of the Logistics Dashboard.</p>
+                    <p>You can manage its settings here.</p>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
