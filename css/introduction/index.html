@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A personal learning portfolio by Saleh Alshegeha, exploring HTML, CSS, and responsive web design." />
+    <meta name="theme-color" content="#101827" />
+    <title>Saleh Alshegeha | Front-End Learning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="logo" href="#home" aria-label="Saleh home">S.</a>
+        <nav aria-label="Main navigation">
+          <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+        </nav>
+        <a class="header-link" href="#projects">Explore my work <span aria-hidden="true">↘</span></a>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <p class="kicker"><span class="availability-dot"></span> Front-end learner · Riyadh, Saudi Arabia</p>
+            <h1>Learning to build<br />for the <span>open web.</span></h1>
+            <p class="hero-description">I’m Saleh, learning HTML and CSS by building real pages. I enjoy shaping clear layouts, trying new ideas, and making each project work across screen sizes.</p>
+            <div class="cta-row">
+              <a class="primary-btn" href="#projects">View my projects <span aria-hidden="true">↗</span></a>
+              <a class="secondary-btn" href="https://github.com/saleh95450" target="_blank" rel="noreferrer">GitHub profile</a>
+            </div>
+            <div class="hero-footnote"><span>Currently learning</span><strong>HTML · CSS · Responsive design</strong></div>
+          </div>
+          <figure class="profile-card">
+            <div class="visual-glow"></div>
+            <img src="../../careers/cv/assets/mockup-1.png" alt="Travel Budget app home screen designed as a personal project" />
+            <figcaption><span class="caption-dot"></span><span><strong>Learning through projects</strong><small>One page at a time</small></span></figcaption>
+            <span class="floating-note">A project in progress <span aria-hidden="true">✳</span></span>
+          </figure>
+        </div>
+      </section>
+
+      <section id="about" class="section about-section">
+        <div class="container about-layout">
+          <div class="section-heading">
+            <p class="eyebrow">01 / About</p>
+            <h2>Curious by nature.<br /><span>Learning by building.</span></h2>
+          </div>
+          <div class="about-copy">
+            <p>I’m exploring front-end development through small, practical projects. Each page helps me understand how structure, visual design, and responsive layouts work together.</p>
+            <p>This portfolio is part of that process: a place to practice the fundamentals, keep improving, and share what I’ve made so far.</p>
+            <a class="inline-link" href="#skills">See what I’m learning <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section skills-section">
+        <div class="container">
+          <div class="section-heading section-heading-row">
+            <div><p class="eyebrow">02 / Foundations</p><h2>What I’m learning</h2></div>
+            <p>Core building blocks I’m practicing in each project.</p>
+          </div>
+          <div class="skills-grid">
+            <article class="skill-card"><span class="skill-number">01</span><div><h3>HTML</h3><p>Semantic structure, content, links, and forms.</p></div><span class="skill-symbol">&lt;/&gt;</span></article>
+            <article class="skill-card"><span class="skill-number">02</span><div><h3>CSS</h3><p>Selectors, colors, typography, and the box model.</p></div><span class="skill-symbol">#</span></article>
+            <article class="skill-card"><span class="skill-number">03</span><div><h3>Layout</h3><p>Flexbox, grid, spacing, and visual hierarchy.</p></div><span class="skill-symbol">▦</span></article>
+            <article class="skill-card"><span class="skill-number">04</span><div><h3>Responsive design</h3><p>Layouts that adapt to different screen sizes.</p></div><span class="skill-symbol">◫</span></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section projects-section">
+        <div class="container">
+          <div class="section-heading section-heading-row">
+            <div><p class="eyebrow">03 / Selected work</p><h2>Projects I’ve built</h2></div>
+            <p>Small projects that help me put the fundamentals into practice.</p>
+          </div>
+          <div class="project-grid">
+            <a class="project-card" href="../../html/introduction/index.html"><span class="project-label">01 · HTML</span><h3>My Hobbies</h3><p>A first webpage practicing headings, lists, links, images, and a contact form.</p><span class="project-link">View project <span aria-hidden="true">↗</span></span></a>
+            <a class="project-card" href="../../article/ai/index.html"><span class="project-label">02 · HTML &amp; CSS</span><h3>The AI Revolution</h3><p>A responsive article page using semantic sections, imagery, and readable typography.</p><span class="project-link">View project <span aria-hidden="true">↗</span></span></a>
+            <a class="project-card featured-project" href="../../careers/cv/index.html"><span class="project-label">03 · Personal project</span><h3>Travel Budget</h3><p>A mobile app concept for organizing travel budgets, trips, and expenses.</p><span class="project-link">View project <span aria-hidden="true">↗</span></span></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section">
+        <div class="container contact-box">
+          <div><p class="eyebrow">04 / Contact</p><h2>Let’s connect.</h2><p>See more of my learning projects on GitHub.</p></div>
+          <a href="https://github.com/saleh95450" class="contact-btn" target="_blank" rel="noreferrer">Visit my GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div class="container"><a class="footer-brand" href="#home">S.</a><p>Saleh Alshegeha · Learning and building for the web</p><a href="#home">Back to top ↑</a></div></footer>
+  </body>
+</html>
