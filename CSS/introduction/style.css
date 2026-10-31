@@ -1,0 +1,294 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f4f6f9;
+    background-image: url("image/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: #222222;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 30px;
+}
+
+/* HEADINGS AND TEXT */
+h1 {
+    background-color: #1e3a8a;
+    color: white;
+    font-size: 36px;
+    text-align: center;
+    padding: 25px;
+    margin: 0 0 30px;
+    border-radius: 12px;
+}
+
+h2 {
+    color: #2563eb;
+    font-size: 26px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #dbeafe;
+    padding-bottom: 8px;
+}
+
+h3 {
+    color: #1e40af;
+    font-size: 21px;
+}
+
+p {
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+b {
+    color: #1d4ed8;
+}
+
+i {
+    color: #64748b;
+}
+
+/* HORIZONTAL LINE */
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #d1d5db;
+    margin: 30px 0;
+}
+
+/* PROFILE IMAGE */
+
+img {
+    display: block;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #2563eb;
+    padding: 4px;
+    background-color: white;
+    margin: 20px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* LISTS */
+
+ul,
+ol {
+    background-color: white;
+    padding: 20px 20px 20px 45px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+}
+
+li {
+    margin: 8px 0;
+    font-size: 17px;
+}
+
+li::marker {
+    color: #2563eb;
+}
+
+/*  LINKS */
+
+a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #1e3a8a;
+    text-decoration: underline;
+}
+
+a:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 4px;
+}
+
+/* SKILLS TABLE */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+th {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-size: 17px;
+}
+
+td {
+    padding: 14px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+tr:nth-child(even) {
+    background-color: #f1f5f9;
+}
+
+tbody tr:hover {
+    background-color: #dbeafe;
+}
+
+/* CONTACT FORM */
+
+form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+}
+
+label {
+    display: inline-block;
+    font-weight: bold;
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    font-family: inherit;
+    font-size: 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background-color: white;
+    margin-bottom: 8px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #2563eb;
+    outline: 2px solid #bfdbfe;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* BUTTONS */
+
+button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 20px;
+    margin: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #1e40af;
+    transform: translateY(-2px);
+}
+
+button[type="reset"] {
+    background-color: #64748b;
+}
+
+button[type="reset"]:hover {
+    background-color: #475569;
+}
+
+button:focus-visible {
+    outline: 3px solid #93c5fd;
+    outline-offset: 3px;
+}
+
+/* FOOTER*/
+
+footer {
+    background-color: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 26px;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    p,
+    li {
+        font-size: 16px;
+    }
+
+    img {
+        width: 160px;
+        height: 160px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}

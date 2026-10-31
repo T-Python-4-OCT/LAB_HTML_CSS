@@ -1,0 +1,504 @@
+
+/* ======================================
+   AI REVOLUTION - MINI PROJECT 3
+   HTML5 + CSS3 ONLY
+====================================== */
+
+/* GENERAL RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #080f20;
+    color: #e2e8f0;
+    line-height: 1.7;
+    min-height: 100vh;
+}
+
+/* ======================================
+   HEADER
+====================================== */
+
+header {
+    background: linear-gradient(
+        135deg,
+        #08152f,
+        #172554,
+        #312e81
+    );
+
+    text-align: center;
+    padding: 60px 20px 0;
+    border-bottom: 1px solid #334155;
+}
+
+header h1 {
+    font-size: 48px;
+    color: #ffffff;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    animation: fadeIn 1s ease;
+}
+
+header > p {
+    color: #bfdbfe;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+/* ======================================
+   NAVIGATION
+====================================== */
+
+nav {
+    background: rgba(8, 15, 32, 0.85);
+    padding: 18px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+nav a {
+    color: #e2e8f0;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #60a5fa;
+}
+
+/* ======================================
+   MAIN CONTENT
+====================================== */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 25px;
+}
+
+section {
+    background: #111c33;
+    margin-bottom: 35px;
+    padding: 40px;
+    border: 1px solid #263551;
+    border-radius: 16px;
+}
+
+section h2,
+aside h2 {
+    font-size: 30px;
+    color: #93c5fd;
+    margin-bottom: 20px;
+}
+
+section h3 {
+    font-size: 21px;
+    color: #c4b5fd;
+    margin-bottom: 12px;
+}
+
+p {
+    margin-bottom: 18px;
+}
+
+section > p {
+    max-width: 900px;
+}
+
+/* ======================================
+   HERO SECTION
+====================================== */
+
+.hero {
+    text-align: center;
+    padding: 55px 35px;
+    background: linear-gradient(
+        145deg,
+        #142752,
+        #111c33,
+        #1e1b4b
+    );
+}
+
+.hero h2 {
+    font-size: 38px;
+    color: #ffffff;
+}
+
+.hero p {
+    max-width: 760px;
+    margin: 0 auto 25px;
+    color: #cbd5e1;
+}
+
+.hero figure {
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 14px;
+    border: 1px solid #475569;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+}
+
+figcaption {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+/* HERO BUTTON */
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(
+        90deg,
+        #2563eb,
+        #7c3aed
+    );
+
+    color: white;
+    padding: 14px 28px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: bold;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(96, 165, 250, 0.35);
+}
+
+/* ======================================
+   AI APPLICATION CARDS
+====================================== */
+
+.article-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.article-card {
+    background-color: #17243d;
+    border: 1px solid #334155;
+    border-radius: 14px;
+    padding: 25px;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-7px);
+    background-color: #1c3050;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.article-card h3 {
+    color: #93c5fd;
+    font-size: 22px;
+}
+
+.article-card p {
+    font-size: 16px;
+    color: #cbd5e1;
+}
+
+.article-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+/* ADVANCED SELECTORS */
+
+.article-card:nth-child(even) {
+    border-color: #51448b;
+}
+
+.article-card h3::before {
+    content: "✦ ";
+    color: #a78bfa;
+}
+
+/* ======================================
+   LISTS
+====================================== */
+
+section ul,
+section ol,
+aside ul {
+    padding-left: 30px;
+    margin: 20px 0;
+}
+
+li {
+    margin-bottom: 12px;
+}
+
+li::marker {
+    color: #60a5fa;
+}
+
+#benefits ol {
+    background: #17243d;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 25px 25px 25px 55px;
+}
+
+/* ======================================
+   FUTURE SECTION
+====================================== */
+
+#future {
+    background: linear-gradient(
+        135deg,
+        #172554,
+        #1e1b4b
+    );
+}
+
+blockquote {
+    background-color: rgba(96, 165, 250, 0.1);
+    border-left: 4px solid #60a5fa;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 8px;
+    font-style: italic;
+    color: #e0e7ff;
+}
+
+blockquote p {
+    margin: 0;
+}
+
+/* ======================================
+   AI FACTS - ASIDE
+====================================== */
+
+.ai-facts {
+    background-color: #17243d;
+    border: 1px solid #475569;
+    border-radius: 16px;
+    padding: 35px;
+    margin-bottom: 35px;
+}
+
+.ai-facts h3 {
+    color: #c4b5fd;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.ai-facts a,
+#conclusion a {
+    color: #93c5fd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.ai-facts a:hover,
+#conclusion a:hover {
+    color: #c4b5fd;
+    text-decoration: underline;
+}
+
+/* ======================================
+   ACCESSIBILITY
+====================================== */
+
+a:focus-visible {
+    outline: 3px solid #93c5fd;
+    outline-offset: 4px;
+    border-radius: 3px;
+}
+
+/* ======================================
+   FOOTER
+====================================== */
+
+footer {
+    background-color: #050b18;
+    text-align: center;
+    padding: 35px 20px;
+    border-top: 1px solid #334155;
+}
+
+footer p {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+/* ======================================
+   ANIMATIONS
+====================================== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero {
+    animation: fadeIn 0.9s ease;
+}
+
+/* ======================================
+   RESPONSIVE DESIGN - TABLETS
+====================================== */
+
+@media (max-width: 900px) {
+
+    header h1 {
+        font-size: 38px;
+    }
+
+    main {
+        padding: 25px 15px;
+    }
+
+    section {
+        padding: 30px;
+    }
+
+    .article-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+}
+
+/* ======================================
+   RESPONSIVE DESIGN - MOBILE
+====================================== */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 35px 12px 0;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    header > p {
+        font-size: 15px;
+    }
+
+    nav ul {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    main {
+        padding: 15px 10px;
+    }
+
+    section {
+        padding: 22px 18px;
+        margin-bottom: 20px;
+    }
+
+    section h2,
+    aside h2 {
+        font-size: 24px;
+    }
+
+    section h3 {
+        font-size: 19px;
+    }
+
+    .hero {
+        padding: 30px 18px;
+    }
+
+    .hero h2 {
+        font-size: 27px;
+    }
+
+    .article-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .article-card {
+        padding: 20px;
+    }
+
+    .article-card img {
+        height: auto;
+    }
+
+    .ai-facts {
+        padding: 22px;
+    }
+
+    .btn {
+        padding: 12px 18px;
+        font-size: 14px;
+    }
+}
+
+/* REDUCED MOTION ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
