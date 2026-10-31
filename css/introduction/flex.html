@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Flexbox</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        background: #fafafa;
+        color: #111;
+        line-height: 1.7;
+      }
+      main {
+        width: min(100% - 32px, 900px);
+        margin: 24px auto;
+      }
+      section {
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        border-radius: 10px;
+        padding: 16px;
+        margin-bottom: 16px;
+      }
+      .row {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 12px;
+      }
+      .item {
+        width: 80px;
+        height: 80px;
+        background: #3b82f6;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        font-weight: 700;
+      }
+      pre {
+        background: #0b1020;
+        color: #e5e7eb;
+        padding: 10px;
+        border-radius: 8px;
+        overflow-x: auto;
+      }
+      .btn {
+        display: inline-block;
+        margin-top: 12px;
+        padding: 8px 14px;
+        background: #2563eb;
+        color: white;
+        border-radius: 8px;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Flexbox</h1>
+      <p>Arrange elements easily with flexible containers.</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>Basic Example</h2>
+        <div class="row">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+        </div>
+        <pre>.container { display: flex; gap: 10px; }</pre>
+      </section>
+
+      <section>
+        <h2>Direction and Wrap</h2>
+        <div class="row" style="flex-direction: column">
+          <div class="item">A</div>
+          <div class="item">B</div>
+          <div class="item">C</div>
+        </div>
+        <pre>
+flex-direction: row | column;
+flex-wrap: wrap;</pre
+        >
+      </section>
+
+      <section>
+        <h2>Justify and Align</h2>
+        <div class="row" style="justify-content: space-between">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+        </div>
+        <pre>
+justify-content: center | space-between | space-around;
+align-items: center | flex-start | flex-end;</pre
+        >
+      </section>
+
+      <section>
+        <h2>Flex Growth</h2>
+        <div class="row">
+          <div class="item" style="flex: 1">Grow</div>
+          <div class="item" style="flex: 2">Grow More</div>
+          <div class="item">Fixed</div>
+        </div>
+        <pre>.item { flex: 1; }  /* allows flexible growth */</pre>
+      </section>
+
+      <div style="text-align: center">
+        <a href="./index.html" class="btn">⬅ Back</a>
+      </div>
+    </main>
+  </body>
+</html>

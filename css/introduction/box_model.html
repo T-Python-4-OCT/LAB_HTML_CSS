@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Box Model</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        line-height: 1.7;
+        background: #fafafa;
+        color: #111;
+      }
+      main {
+        width: min(100% - 32px, 900px);
+        margin: 24px auto;
+      }
+      section {
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        border-radius: 10px;
+        padding: 16px;
+        margin-bottom: 16px;
+      }
+      .box {
+        width: 200px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 5px solid #3b82f6;
+        background: #e0f2fe;
+        border-radius: 10px;
+        text-align: center;
+      }
+      pre {
+        background: #0b1020;
+        color: #e5e7eb;
+        padding: 10px;
+        border-radius: 8px;
+        overflow-x: auto;
+      }
+      .btn {
+        display: inline-block;
+        margin-top: 12px;
+        padding: 8px 14px;
+        background: #2563eb;
+        color: white;
+        border-radius: 8px;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>CSS Box Model</h1>
+      <p>Every element is a box — learn its structure.</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>Structure</h2>
+        <p>
+          The box model includes: <b>Content → Padding → Border → Margin</b>.
+        </p>
+        <div class="box">Box Example</div>
+        <pre>
+.box {
+  width: 200px;
+  margin: 20px;
+  padding: 20px;
+  border: 5px solid blue;
+}</pre
+        >
+      </section>
+
+      <section>
+        <h2>Box-Sizing</h2>
+        <p>
+          By default, <code>box-sizing</code> is <b>content-box</b>. Use
+          <b>border-box</b> to include padding and border inside the width.
+        </p>
+        <pre>* { box-sizing: border-box; }</pre>
+      </section>
+
+      <section>
+        <h2>Margin Collapse</h2>
+        <p>
+          Vertical margins between elements may collapse. Use padding or borders
+          on the parent to avoid unexpected spacing.
+        </p>
+      </section>
+
+      <div style="text-align: center">
+        <a href="./index.html" class="btn">⬅ Back</a>
+      </div>
+    </main>
+  </body>
+</html>

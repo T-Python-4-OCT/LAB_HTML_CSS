@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Colors</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        background: #fafafa;
+        color: #111;
+        line-height: 1.7;
+      }
+      main {
+        width: min(100% - 32px, 900px);
+        margin: 24px auto;
+      }
+      section {
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        border-radius: 10px;
+        padding: 16px;
+        margin-bottom: 16px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 12px;
+      }
+      .swatch {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        color: #fff;
+        font-weight: 700;
+      }
+      pre {
+        background: #0b1020;
+        color: #e5e7eb;
+        padding: 10px;
+        border-radius: 8px;
+        overflow-x: auto;
+      }
+      .btn {
+        display: inline-block;
+        margin-top: 12px;
+        padding: 8px 14px;
+        background: #2563eb;
+        color: white;
+        border-radius: 8px;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Colors in CSS</h1>
+      <p>Understanding HEX, RGB, HSL, and gradients.</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>Basic Color Formats</h2>
+        <div class="grid">
+          <div class="swatch" style="background: red">red</div>
+          <div class="swatch" style="background: #3b82f6">#3b82f6</div>
+          <div class="swatch" style="background: rgb(34, 197, 94)">
+            rgb(34,197,94)
+          </div>
+          <div
+            class="swatch"
+            style="background: hsl(45, 90%, 55%); color: #111"
+          >
+            hsl(45,90%,55%)
+          </div>
+          <div
+            class="swatch"
+            style="background: linear-gradient(90deg, #06b6d4, #3b82f6)"
+          >
+            gradient
+          </div>
+        </div>
+        <pre>body { color: #111827; background-color: hsl(210 100% 97%); }</pre>
+      </section>
+
+      <section>
+        <h2>Text and Background Colors</h2>
+        <p style="color: #1d4ed8">This text is blue (#1d4ed8).</p>
+        <p style="background: #fde68a; display: inline-block; padding: 6px">
+          Yellow background
+        </p>
+        <p
+          style="border: 3px solid #22c55e; padding: 8px; display: inline-block"
+        >
+          Green border
+        </p>
+      </section>
+
+      <section>
+        <h2>Contrast</h2>
+        <p>
+          Always ensure readable contrast between text and background for
+          accessibility.
+        </p>
+        <p
+          style="
+            background: #000;
+            color: #fff;
+            display: inline-block;
+            padding: 6px;
+          "
+        >
+          High contrast example
+        </p>
+      </section>
+
+      <div style="text-align: center">
+        <a href="./index.html" class="btn">⬅ Back</a>
+      </div>
+    </main>
+  </body>
+</html>
