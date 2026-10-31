@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Logistics – Integrations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="i-check-circle" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-4.2-7.6"/><path d="m8 12 3 3 8-9"/></symbol>
+    <symbol id="i-clock-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8.5 12 2.5 2.5 4.5-5"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5.5M12 16.2v.1"/></symbol>
+    <symbol id="i-ext" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1Z"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1.5"/><rect x="14" y="4" width="6" height="6" rx="1.5"/><rect x="4" y="14" width="6" height="6" rx="1.5"/><rect x="14" y="14" width="6" height="6" rx="1.5"/></symbol>
+    <symbol id="i-chev-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-chev-up" viewBox="0 0 24 24"><path d="m6 15 6-6 6 6"/></symbol>
+  </defs>
+</svg>
+
+<div class="stage" id="stage"><div class="shell" id="shell">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M1.992 21.5c1.5 0 2.55-1 3.5-1s2.158 1.011 3 1c1.01.009 2.36-1 3.5-1s2.49 1.009 3.5 1c.842.011 2.05-1 3-1s2 1 3.5 1m-16.5-1l-.973-2.14c-.724-1.595-1.087-2.392-.842-3.134c.245-.743 1.01-1.168 2.541-2.018l3.832-2.129c.95-.527 1.424-.791 1.942-.791s.993.264 1.943.791l3.831 2.129c1.531.85 2.297 1.275 2.541 2.018c.245.742-.117 1.54-.842 3.133l-.973 2.14"/><path d="M5.992 13.264v-2.028c0-1.203 0-1.804.299-2.287c.299-.484.837-.753 1.912-1.29l2-1c.878-.44 1.317-.659 1.79-.659c.471 0 .91.22 1.788.658l2 1c1.076.538 1.614.807 1.912 1.29c.3.484.3 1.085.3 2.288v2.028"/><path d="M9.992 6.5v-2c0-.465 0-.697.051-.888a1.5 1.5 0 0 1 1.061-1.06c.19-.052.423-.052.888-.052s.698 0 .888.051a1.5 1.5 0 0 1 1.061 1.06c.051.192.051.424.051.889v2"/></g></svg></div>
+      <b>Logistics</b>
+      <svg class="i collapse" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M10 4v16"/></svg>
+    </div>
+
+    <div class="nav">
+      <div class="item"><svg class="i" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="square" stroke-linejoin="round" stroke-width="1.5" d="M13.69 19.457c-.19-.46-.19-1.042-.19-2.207s0-1.747.19-2.207a2.5 2.5 0 0 1 1.353-1.353c.46-.19 1.042-.19 2.207-.19s1.747 0 2.207.19a2.5 2.5 0 0 1 1.353 1.353c.19.46.19 1.042.19 2.207s0 1.747-.19 2.207a2.5 2.5 0 0 1-1.353 1.353c-.46.19-1.042.19-2.207.19s-1.747 0-2.207-.19a2.5 2.5 0 0 1-1.353-1.353Zm0-10.5c-.19-.46-.19-1.042-.19-2.207s0-1.747.19-2.207a2.5 2.5 0 0 1 1.353-1.353C15.503 3 16.085 3 17.25 3s1.747 0 2.207.19a2.5 2.5 0 0 1 1.353 1.353c.19.46.19 1.042.19 2.207s0 1.747-.19 2.207a2.5 2.5 0 0 1-1.353 1.353c-.46.19-1.042.19-2.207.19s-1.747 0-2.207-.19a2.5 2.5 0 0 1-1.353-1.353Zm-10.5 10.5C3 18.997 3 18.415 3 17.25s0-1.747.19-2.207a2.5 2.5 0 0 1 1.353-1.353c.46-.19 1.042-.19 2.207-.19s1.747 0 2.207.19a2.5 2.5 0 0 1 1.353 1.353c.19.46.19 1.042.19 2.207s0 1.747-.19 2.207a2.5 2.5 0 0 1-1.353 1.353c-.46.19-1.042.19-2.207.19s-1.747 0-2.207-.19a2.5 2.5 0 0 1-1.353-1.353Zm0-10.5C3 8.497 3 7.915 3 6.75s0-1.747.19-2.207A2.5 2.5 0 0 1 4.543 3.19C5.003 3 5.585 3 6.75 3s1.747 0 2.207.19a2.5 2.5 0 0 1 1.353 1.353c.19.46.19 1.042.19 2.207s0 1.747-.19 2.207a2.5 2.5 0 0 1-1.353 1.353c-.46.19-1.042.19-2.207.19s-1.747 0-2.207-.19A2.5 2.5 0 0 1 3.19 8.957Z"/></svg>Control Tower</div>
+
+      <div x-data="{open:true}">
+        <div class="item" @click="open=!open" :aria-expanded="open"><svg class="i" viewBox="0 0 24 24"><path d="M10 6Q11 13 18 14Q11 15 10 22Q9 15 2 14Q9 13 10 6Z"/><path d="M18.200 2.800Q18.600 5.200 21 5.600Q18.600 6 18.200 8.400Q17.800 6 15.400 5.600Q17.800 5.200 18.200 2.800Z"/></svg>Generate Quote<svg class="i chev" :class="{rot:!open}"><use href="#i-chev-down"/></svg></div>
+        <div x-show="open" x-collapse>
+          <div class="item"><svg class="i" viewBox="0 0 24 24"><path d="M9 10H6a2 2 0 0 0-2 2v6a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-6a2 2 0 0 0-2-2h-3"/><path d="M7.500 16.200h9" stroke-dasharray="1.700 1.900"/><path d="M12 11.500S9 8.800 9 6.500a3 3 0 0 1 6 0c0 2.300-3 5-3 5z"/><circle cx="12" cy="6.500" r=".7"/></svg>Track Shipments</div>
+          <div class="item"><svg class="i" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"><path d="M14.17 20.89c4.184-.277 7.516-3.657 7.79-7.9c.053-.83.053-1.69 0-2.52c-.274-4.242-3.606-7.62-7.79-7.899a33 33 0 0 0-4.34 0c-4.184.278-7.516 3.657-7.79 7.9a20 20 0 0 0 0 2.52c.1 1.545.783 2.976 1.588 4.184c.467.845.159 1.9-.328 2.823c-.35.665-.526.997-.385 1.237c.14.24.455.248 1.084.263c1.245.03 2.084-.322 2.75-.813c.377-.279.566-.418.696-.434s.387.09.899.3c.46.19.995.307 1.485.34c1.425.094 2.914.094 4.342 0Z"/><path stroke-linecap="round" d="m7.5 15l1.842-5.526a.694.694 0 0 1 1.316 0L12.5 15m3-6v6m-7-2h3"/></g></svg>AI Console</div>
+          <div class="item"><svg class="i" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M8.5 3.708A2.5 2.5 0 0 0 6 8m-2.625 8.5C2.615 16.5 2 15.859 2 15.068c0-1.61 1.667-3.219 4.5-3.528m9-7.832A2.5 2.5 0 0 1 18 8m2.625 8.5c.76 0 1.375-.642 1.375-1.433c0-1.609-1.666-3.218-4.5-3.527"/><circle cx="12" cy="8.5" r="3"/><path d="M12 14.5c-3.75 0-6 2.143-6 4.286c0 .947.672 1.714 1.5 1.714h9c.828 0 1.5-.767 1.5-1.714c0-2.143-2.25-4.286-6-4.286"/></g></svg>Customer Portal</div>
+        </div>
+      </div>
+
+      <div x-data="{open:true}">
+        <button class="grp-head" @click="open=!open" :aria-expanded="open">Insight &amp; Control<svg class="i" :class="{rot:!open}"><use href="#i-chev-up"/></svg></button>
+        <div x-show="open" x-collapse>
+          <div class="item"><svg class="i" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M20.5 10.5V10c0-3.771 0-5.657-1.172-6.828S16.271 2 12.5 2h-1C7.729 2 5.843 2 4.672 3.172S3.5 6.229 3.5 10v4.5c0 3.287 0 4.931.908 6.038q.25.304.554.554C6.07 22 7.712 22 11 22M7.5 7h9m-9 5h6"/><path d="M20.5 20v-3c0-1.43-1.343-3-3-3s-3 1.57-3 3v3.5a1.5 1.5 0 0 0 3 0V17"/></g></svg>Documents</div>
+          <div class="item"><svg class="i" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M7 18v-2m5 2v-3m5 3v-5M2.5 12c0-4.478 0-6.718 1.391-8.109S7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109S16.479 21.5 12 21.5c-4.478 0-6.718 0-8.109-1.391S2.5 16.479 2.5 12"/><path d="M5.992 11.486c2.155.072 7.042-.253 9.822-4.665m-1.822-.533l1.876-.302c.228-.029.564.152.647.367l.495 1.638"/></g></svg>Analytics</div>
+          <div class="item active"><svg class="i" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 5.5c0-1.65 0-2.475.513-2.987C3.525 2 4.35 2 6 2s2.475 0 2.987.513C9.5 3.025 9.5 3.85 9.5 5.5s0 2.475-.513 2.987C8.475 9 7.65 9 6 9s-2.475 0-2.987-.513C2.5 7.975 2.5 7.15 2.5 5.5Zm1.157 10.157C4.76 14.552 5.314 14 6 14s1.239.552 2.343 1.657C9.448 16.76 10 17.314 10 18s-.552 1.239-1.657 2.343C7.24 21.448 6.686 22 6 22s-1.239-.552-2.343-1.657C2.552 19.24 2 18.686 2 18s.552-1.239 1.657-2.343Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M6 9v5m4 4h5"/><path d="M15 18c0-1.65 0-2.475.513-2.987c.512-.513 1.337-.513 2.987-.513s2.475 0 2.987.513C22 15.525 22 16.35 22 18s0 2.475-.513 2.987c-.512.513-1.337.513-2.987.513s-2.475 0-2.987-.513C15 20.475 15 19.65 15 18Z"/></g></svg>Integrations</div>
+          <div class="item"><svg class="i" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M20.5 16.929V10c0-3.771 0-5.657-1.172-6.828S16.271 2 12.5 2h-1C7.729 2 5.843 2 4.672 3.172S3.5 6.229 3.5 10v9.5"/><path d="M20.5 17H6a2.5 2.5 0 0 0 0 5h14.5"/><path d="M20.5 22a2.5 2.5 0 0 1 0-5"/><path stroke-linejoin="round" d="m12.308 12l-1.461-4.521A.72.72 0 0 0 10.154 7a.72.72 0 0 0-.693.479L8 12m7-5v5m-6.462-1.5h3.231"/></g></svg>AI Training</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom" x-data="{open:true}">
+      <div x-show="open" x-collapse>
+        <div class="bpad">
+          <div class="item"><svg class="i"><use href="#i-gear"/></svg>Setting</div>
+          <div class="item"><svg class="i" viewBox="0 0 24 24"><path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2z"/><path d="M21 16v2a4 4 0 0 1-4 4h-5"/></svg>Get Help</div>
+          <div class="item"><svg class="i" viewBox="0 0 24 24"><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09"/><path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05"/></svg>Updates</div>
+        </div>
+      </div>
+      <div class="profile">
+        <div class="avatar"><img src="img/avatar.png" alt="Wessam"></div>
+        <div><div class="name">Wessam</div><div class="org">Acme Logistics</div></div>
+        <button class="upd" @click="open=!open" :aria-expanded="open"><svg class="i" viewBox="0 0 24 24" style="width:16px;height:16px"><path d="m8 9 4-4 4 4M8 15l4 4 4-4"/></svg></button>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="header">
+      <div class="crumbs">Dashboard<span class="sep"></span><b>Integrations</b></div>
+      <div class="search"><svg class="i" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="m16 16.5l4 4m-2-9a7 7 0 1 1-7-7"/><path d="m15.5 3.5l.258.697c.338.914.507 1.371.84 1.704c.334.334.791.503 1.705.841L19 7l-.697.258c-.914.338-1.371.507-1.704.84c-.334.334-.503.791-.841 1.705l-.258.697l-.258-.697c-.338-.914-.507-1.371-.84-1.704c-.334-.334-.791-.503-1.705-.841L12 7l.697-.258c.914-.338 1.371-.507 1.704-.84c.334-.334.503-.791.841-1.705z"/></g></svg>Search by cargo, shipping, user id etc</div>
+      <div class="insight"><span>Get Ai Insight<svg viewBox="0 0 24 24" width="22" height="22"><defs><linearGradient id="gs" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#7c3aed"/><stop offset=".5" stop-color="#e8325a"/><stop offset="1" stop-color="#f59e0b"/></linearGradient></defs><path fill="none" stroke="url(#gs)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.427 8.084C12.801 5.843 12.323 4 11 4S9.2 5.843 8.573 8.084c-.254.91-.382 1.366-.753 1.737c-.37.37-.826.498-1.736.752C3.843 11.2 2 11.677 2 13s1.843 1.8 4.084 2.427c.91.254 1.366.381 1.736.752c.371.371.499.826.753 1.737C9.2 20.157 9.678 22 11 22s1.8-1.843 2.427-4.084c.255-.91.382-1.366.753-1.737c.37-.37.826-.498 1.736-.752C18.157 14.8 20 14.323 20 13s-1.843-1.8-4.084-2.427c-.91-.254-1.366-.382-1.736-.752c-.371-.371-.498-.826-.753-1.737M19.5 2.938V4.5m0 0v1.563m0-1.563h-1.25m1.25 0h1.25m1.25 0l-.452-.15c-.698-.233-1.047-.35-1.298-.6c-.25-.25-.367-.6-.6-1.298L19.5 2l-.15.452c-.233.698-.35 1.047-.6 1.298c-.25.25-.6.367-1.298.6L17 4.5l.452.15c.698.233 1.047.35 1.298.6c.25.25.367.6.6 1.298L19.5 7l.15-.452c.233-.698.35-1.047.6-1.298c.25-.25.6-.367 1.298-.6z"/></svg></span></div>
+      <div class="round" style="left:1331px"><svg class="i" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M19 11v1.756a3 3 0 0 0 .879 2.121l.603.603a1.77 1.77 0 0 1-1.25 3.02H4.768a1.769 1.769 0 0 1-1.25-3.02l.602-.603A3 3 0 0 0 5 12.756V10a7 7 0 0 1 7-7m3.5 15.5a3.5 3.5 0 1 1-7 0"/><path d="M21 5a3 3 0 1 0-6 0a3 3 0 0 0 6 0"/></g></svg></div>
+      <div class="round" style="left:1382px"><svg class="i" viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 1 3.500 6.600L4 20l1.200-3.600A8 8 0 0 1 4 12z"/><path d="M9 11h6M9 14h4"/></svg><span class="dot"></span></div>
+    </header>
+
+    <div class="title"><h1>Integrations</h1><p>Connect your freight operations with existing systems</p></div>
+    <button class="add"><svg class="i" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>Add New</button>
+
+    <section class="stats">
+      <div class="stat"><div class="lbl">Connected</div><div class="val"><b>45</b><span>Active integrations</span></div><div class="ic"><svg class="i" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M4.513 19.487c2.512 2.392 5.503 1.435 6.7.466c.618-.501.897-.825 1.136-1.065c.837-.777.784-1.555.24-2.177c-.219-.249-1.616-1.591-2.956-2.967c-.694-.694-1.172-1.184-1.582-1.58c-.547-.546-1.026-1.172-1.744-1.154c-.658 0-1.136.58-1.735 1.179c-.688.688-1.196 1.555-1.375 2.333c-.539 2.273.299 3.888 1.316 4.965Zm0 0L2 21.999M19.487 4.515c-2.513-2.394-5.494-1.42-6.69-.45c-.62.502-.898.826-1.138 1.066c-.837.778-.784 1.556-.239 2.178c.078.09.31.32.635.644m7.432-3.438c1.017 1.077 1.866 2.71 1.327 4.985c-.18.778-.688 1.645-1.376 2.334c-.598.598-1.077 1.179-1.735 1.179c-.718.018-1.09-.502-1.639-1.048m3.423-7.45L22 2m-5.936 9.964c-.41-.395-.994-.993-1.688-1.687c-.858-.882-1.74-1.75-2.321-2.325m4.009 4.012l-1.562 1.525m-3.99-3.984l1.543-1.553"/></svg></div></div>
+      <div class="stat"><div class="lbl">Syncing</div><div class="val"><b>5</b><span>In Progress</span></div><div class="ic"><svg class="i"><use href="#i-clock-check"/></svg></div></div>
+      <div class="stat"><div class="lbl">Errore</div><div class="val"><b>1</b><span class="err">Needs attention</span></div><div class="ic"><svg class="i"><use href="#i-alert"/></svg></div></div>
+      <div class="stat"><div class="lbl">Available</div><div class="val"><b>54</b><span>More to add</span></div><div class="ic"><svg class="i" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12.5 21H9C5.2 21 3 19.4 3 16V8c0-3.4 2.2-5 6-5h6c3.800 0 6 1.600 6 5v3.500M7 14.500l3-3 2.200 2L16.500 9.500"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.500 15c.35 1.900 1.100 2.650 3 3-1.900.35-2.650 1.100-3 3-.35-1.900-1.100-2.650-3-3 1.900-.35 2.650-1.100 3-3z"/></svg></div></div>
+    </section>
+
+    <section class="panel carrier">
+      <h2>Carrier APIs</h2>
+      <button class="viewall">View All<svg class="i"><use href="#i-arrow"/></svg></button>
+      <div class="ccards">
+
+        <div class="ccard">
+          <div class="avatar-c"><img class="ship" src="img/ship.svg" alt="Ship"></div>
+          <span class="badge ok"><svg class="i"><use href="#i-check-circle"/></svg>Connected</span>
+          <div class="name">Maersk Line<u>Maersk line.com</u><svg class="i"><use href="#i-ext"/></svg></div>
+          <div class="desc">AI-powered document generation and management</div>
+          <div class="sep"></div><div class="foot"><button class="vbtn">View Integration</button><span class="gear"><svg class="i"><use href="#i-gear"/></svg></span></div>
+        </div>
+
+        <div class="ccard">
+          <div class="avatar-c"><img class="plane" src="img/plane.svg" alt="Plane"></div>
+          <span class="badge sync"><svg class="i"><use href="#i-clock-check"/></svg>Syncing</span>
+          <div class="name">Maersk Line<u>Maersk line.com</u><svg class="i"><use href="#i-ext"/></svg></div>
+          <div class="desc">AI-powered document generation and management</div>
+          <div class="sep"></div><div class="foot"><button class="vbtn">View Integration</button><span class="gear"><svg class="i"><use href="#i-gear"/></svg></span></div>
+        </div>
+
+        <div class="ccard">
+          <div class="avatar-c"><img class="ship" src="img/ship.svg" alt="Ship"></div>
+          <span class="badge err"><svg class="i"><use href="#i-alert"/></svg>Errors</span>
+          <div class="name">Maersk Line<u>Maersk line.com</u><svg class="i"><use href="#i-ext"/></svg></div>
+          <div class="desc">AI-powered document generation and management</div>
+          <div class="sep"></div><div class="foot"><button class="vbtn">View Integration</button><span class="gear"><svg class="i"><use href="#i-gear"/></svg></span></div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="panel system">
+      <h2>System Integrations</h2>
+      <div class="tools">
+        <button><svg class="i" viewBox="0 0 24 24"><path d="M4 5h16l-6 7v6l-4 2v-8z"/></svg></button>
+        <button><svg class="i"><use href="#i-grid"/></svg></button>
+        <button><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="5" r="1" fill="currentColor"/><circle cx="12" cy="12" r="1" fill="currentColor"/><circle cx="12" cy="19" r="1" fill="currentColor"/></svg></button>
+      </div>
+
+      <div class="list">
+        <div class="row" style="top:0">
+          <div class="lg"><img src="img/salesforce.svg" alt="Salesforce" style="width:29px;height:auto"></div>
+          <div class="nm">Salesforce CRM</div><div class="ds">Customer relationship management</div>
+          <span class="cat" style="right:285px">CRM</span>
+          <span class="badge ok"><svg class="i"><use href="#i-check-circle"/></svg>Connected</span>
+          <button class="cfg">Configure</button>
+        </div>
+        <div class="row" style="top:89.3px">
+          <div class="lg"><img src="img/sap.svg" alt="SAP" style="width:32px;height:auto"></div>
+          <div class="nm">SAP TMS</div><div class="ds">Transportation management system</div>
+          <span class="cat" style="right:285px">TMS</span>
+          <span class="badge ok"><svg class="i"><use href="#i-check-circle"/></svg>Connected</span>
+          <button class="cfg">Configure</button>
+        </div>
+        <div class="row" style="top:178.6px">
+          <div class="lg"><img src="img/oracle.png" alt="Oracle" style="width:28px;height:auto"></div>
+          <div class="nm">Oracle ERP</div><div class="ds">Enterprise resource planning</div>
+          <span class="cat" style="right:285px">ERP</span>
+          <span class="badge sync"><svg class="i"><use href="#i-clock-check"/></svg>Syncing</span>
+          <button class="cfg">Configure</button>
+        </div>
+        <div class="row" style="top:267.9px">
+          <div class="lg"><img src="img/dynamics.png" alt="Microsoft Dynamics" style="width:26px;height:auto"></div>
+          <div class="nm">Microsoft Dynamics</div><div class="ds">Business applications</div>
+          <span class="cat" style="right:285px">ERP</span>
+          <span class="badge err"><svg class="i"><use href="#i-alert"/></svg>Errors</span>
+          <button class="cfg">Configure</button>
+        </div>
+        <div class="row" style="top:357.2px">
+          <div class="lg"><img src="img/slack.svg" alt="Slack" style="width:21px;height:auto"></div>
+          <div class="nm">Slack</div><div class="ds">Team communication</div>
+          <span class="cat" style="right:285px">Communication</span>
+          <span class="badge ok"><svg class="i"><use href="#i-check-circle"/></svg>Connected</span>
+          <button class="cfg">Configure</button>
+        </div>
+        <div class="row" style="top:446.5px;height:87px">
+          <div class="lg" style="top:19px"><img src="img/shopify.svg" alt="Shopify" style="width:24px;height:auto"></div>
+          <div class="nm" style="top:14px">Shopify</div><div class="ds" style="top:46px">E-commerce platform</div>
+          <span class="cat" style="right:285px;top:24px">E-commerce</span>
+          <span class="badge ok" style="top:23px"><svg class="i"><use href="#i-check-circle"/></svg>Connected</span>
+          <button class="cfg" style="top:24px">Configure</button>
+        </div>
+      </div>
+    </section>
+  </main>
+</div></div>
+
+<script>
+(function(){
+  var W=1785,H=1341,stage=document.getElementById('stage'),shell=document.getElementById('shell');
+  function fit(){
+    var vw=document.documentElement.clientWidth,vh=window.innerHeight;
+    var s=Math.min(vw/W,vh/H);
+    shell.style.transform='scale('+s+')';
+    stage.style.width=(W*s)+'px';
+    stage.style.height=(H*s)+'px';
+    stage.style.margin=Math.max(0,(vh-H*s)/2)+'px auto';
+  }
+  fit();window.addEventListener('resize',fit);
+})();
+</script>
+</body>
+</html>

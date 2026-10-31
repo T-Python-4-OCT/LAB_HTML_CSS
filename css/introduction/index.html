@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameZone - ألعابي المفضلة</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+  <header class="header" id="hero">
+    <div class="header-box">
+      <h1>GameZone</h1>
+      <h2 class="subtitle">عالمي في الألعاب</h2>
+      <h3>مرحباً بك في GameZone</h3>
+      <h4>مبنية بـ HTML و CSS</h4>
+      <h5>المشروع المصغر الثاني</h5>
+      <h6>مقدمة في CSS</h6>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="card">
+      <h2>لعبتي المفضلة</h2>
+      <p>
+        لعبتي المفضلة حالياً هي <b>Resident Evil 4 Remake</b>، لأنها تجمع بين
+        <i>الرعب</i> و<i>الأكشن</i> وقصة <i>ليون كينيدي</i>.
+      </p>
+    </section>
+
+    <section class="card img-card">
+      <h2>اللعبة: Resident Evil 4 Remake</h2>
+      <div class="img-wrap">
+        <img class="game-img" src="img/re4-cover.png" alt="غلاف لعبة Resident Evil 4 Remake" width="460">
+        <span class="rating-badge">10/10</span>
+      </div>
+      <p>
+        اللعبة من تطوير شركة <b>كابكوم</b>، وهي إعادة بناء كاملة للعبة الرعب الشهيرة.
+        اقرأ المزيد عنها في
+        <a class="btn" href="https://www.residentevil.com/re4/" target="_blank" rel="noopener noreferrer">الموقع الرسمي من كابكوم (Capcom)</a>
+      </p>
+    </section>
+
+    <div class="flex-container">
+      <section class="box">
+        <h2>مواقع أزورها باستمرار</h2>
+        <ul class="styled-list">
+          <li><a href="https://www.alahlifc.sa/" target="_blank" rel="noopener noreferrer">النادي الأهلي السعودي</a></li>
+          <li><a href="https://tuwaiq.edu.sa/" target="_blank" rel="noopener noreferrer">أكاديمية طويق</a></li>
+        </ul>
+      </section>
+
+      <section class="box">
+        <h2>هواياتي</h2>
+        <ul class="styled-list">
+          <li>مشاهدة مباريات كرة القدم</li>
+          <li>لعب ألعاب البلايستيشن</li>
+          <li>تعلّم البرمجة</li>
+        </ul>
+      </section>
+    </div>
+
+    <section class="card">
+      <h2>أفضل 4 ألعاب عندي</h2>
+      <ol class="styled-list">
+        <li>Resident Evil 4 Remake</li>
+        <li>EA Sports FC</li>
+        <li>Grand Theft Auto V</li>
+        <li>The Last of Us</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>جدول الألعاب</h2>
+      <table class="styled-table">
+        <caption>ألعابي وتقييمها</caption>
+        <thead>
+          <tr>
+            <th>اللعبة</th>
+            <th>النوع</th>
+            <th>المنصة</th>
+            <th>التقييم</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Resident Evil 4 Remake</td>
+            <td>رعب وأكشن</td>
+            <td>بلايستيشن / كمبيوتر / إكس بوكس</td>
+            <td>10/10</td>
+          </tr>
+          <tr>
+            <td>EA Sports FC</td>
+            <td>رياضية</td>
+            <td>بلايستيشن / كمبيوتر</td>
+            <td>9/10</td>
+          </tr>
+          <tr>
+            <td>Grand Theft Auto V</td>
+            <td>أكشن وعالم مفتوح</td>
+            <td>بلايستيشن / كمبيوتر / إكس بوكس</td>
+            <td>10/10</td>
+          </tr>
+          <tr>
+            <td>The Last of Us</td>
+            <td>أكشن ومغامرة</td>
+            <td>بلايستيشن / كمبيوتر</td>
+            <td>10/10</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>تواصل معي</h2>
+      <form action="#" method="post">
+        <div class="form-group">
+          <label for="name">اسمك:</label>
+          <input type="text" id="name" name="name" placeholder="اسم اللاعب">
+        </div>
+        <div class="form-group">
+          <label for="email">البريد الإلكتروني:</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com">
+        </div>
+        <div class="form-group">
+          <label for="platform">منصتك المفضلة:</label>
+          <select id="platform" name="platform">
+            <option value="pc">كمبيوتر</option>
+            <option value="ps">بلايستيشن</option>
+            <option value="xbox">إكس بوكس</option>
+            <option value="switch">نينتندو سويتش</option>
+            <option value="mobile">جوال</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">رسالتك:</label>
+          <textarea id="message" name="message" rows="4" placeholder="اكتب لي لعبتك المفضلة"></textarea>
+        </div>
+        <button class="submit-btn" type="submit">إرسال</button>
+      </form>
+    </section>
+
+  </main>
+
+  <a class="top-link" href="#top">↑ للأعلى</a>
+
+</body>
+</html>

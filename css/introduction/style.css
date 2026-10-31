@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  font-size: 16px;
+  background-color: #121212;
+  color: white;
+  min-height: 100vh;
+}
+
+#hero {
+  background-color: #1a1a1a;
+  background-image: url("img/re4-cover.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-bottom: 3px solid hsl(134, 61%, 41%);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.header-box {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 20px 40px;
+}
+
+.header h1 {
+  color: hsl(134, 61%, 41%);
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: #cccccc;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.header h3 { font-size: 1.1rem; }
+.header h4 { font-size: 1rem; font-weight: 400; }
+.header h5 { font-size: 0.9rem; font-weight: 400; }
+.header h6 { font-size: 0.8rem; font-weight: 400; color: #888888; }
+
+.container {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.card {
+  position: relative;
+  background-color: rgb(30, 30, 30);
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #333333;
+}
+
+.card h2,
+.box h2 {
+  color: hsl(134, 61%, 41%);
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #333333;
+  padding-bottom: 5px;
+}
+
+.game-img {
+  display: block;
+  width: 460px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.img-wrap {
+  position: relative;
+  width: 460px;
+}
+
+.rating-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: hsl(134, 61%, 41%);
+  color: white;
+  font-weight: 700;
+  padding: 5px 12px;
+}
+
+a {
+  color: hsl(134, 61%, 41%);
+}
+
+.btn {
+  display: inline-block;
+  background-color: hsl(134, 61%, 41%);
+  color: white;
+  padding: 8px 15px;
+  margin-top: 10px;
+}
+
+.top-link {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: hsl(134, 61%, 41%);
+  color: white;
+  padding: 10px 16px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.box {
+  width: 48%;
+  background-color: rgb(30, 30, 30);
+  padding: 20px;
+  border: 1px solid #333333;
+}
+
+.styled-list li {
+  margin-bottom: 8px;
+  margin-right: 20px;
+  padding: 8px;
+  background-color: #2a2a2a;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.styled-table th,
+.styled-table td {
+  border: 1px solid #444444;
+  padding: 12px;
+  text-align: right;
+}
+
+.styled-table th {
+  background-color: hsl(134, 61%, 41%);
+  color: white;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #bbbbbb;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  background-color: #2a2a2a;
+  color: white;
+  border: 1px solid #444444;
+  font-family: 'Cairo', sans-serif;
+}
+
+.submit-btn {
+  background-color: hsl(134, 61%, 41%);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-family: 'Cairo', sans-serif;
+}
