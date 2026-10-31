@@ -1,0 +1,440 @@
+/* =========================================================
+   Integrations dashboard - style.css
+   Order: 1 Variables, 2 Base, 3 Shell, 4 Sidebar, 5 Top bar,
+          6 Buttons, 7 Stats, 8 Panels, 9 Status pills,
+          10 Animations, 11 Accessibility, 12 Responsive
+   ========================================================= */
+ 
+/* 1. Variables */
+:root {
+  --bg: #efeff1;
+  --surface: #f7f7f8;
+  --white: #ffffff;
+  --ink: #17171a;
+  --muted: #6c6c76;
+  --line: #e8e8ec;
+  --gradient: linear-gradient(90deg, #6d3df5 0%, #e8315a 55%, #ffb300 100%);
+ 
+  --green: #0a7a4a;  --green-bg: #effaf4;  --green-line: #2bb673;
+  --blue: #0b4f9e;   --blue-bg: #eef4ff;   --blue-line: #2563eb;
+  --red: #d4183d;    --red-bg: #fff2f3;    --red-line: #f04438;
+}
+ 
+/* 2. Base */
+* { box-sizing: border-box; }
+ 
+body {
+  margin: 0;
+  padding: 24px;
+  font-family: "Segoe UI", system-ui, Arial, sans-serif;
+  font-size: .95rem;
+  line-height: 1.5;
+  color: var(--ink);
+  background: var(--bg);
+}
+ 
+h1, h2, h3, p { margin: 0; }
+ul { margin: 0; padding: 0; list-style: none; }
+a { color: inherit; }
+ 
+.icon {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.push { margin-inline-start: auto; transition: rotate .2s ease; }
+ 
+/* Expandable menus built with <details> and <summary> (no JavaScript) */
+summary { cursor: pointer; list-style: none; }
+summary::-webkit-details-marker { display: none; }
+ 
+/* The arrow flips when a menu opens */
+.menu[open] > summary .push { rotate: 180deg; }
+.group:not([open]) > summary .push { rotate: 180deg; }
+ 
+.submenu {
+  display: grid;
+  gap: 2px;
+  margin: 4px 0 6px;
+  margin-inline-start: 22px;
+  padding-inline-start: 14px;
+  border-inline-start: 2px solid var(--line);
+}
+.submenu a {
+  display: block;
+  padding: 7px 12px;
+  color: #55555e;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background .2s ease, color .2s ease;
+}
+.submenu a:hover { color: var(--ink); background: rgba(255, 255, 255, .8); }
+details[open] > .submenu { animation: fade-up .25s ease both; }
+ 
+/* Lesson 4: attribute selector styles external links */
+a[target="_blank"] {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-inline-start: 6px;
+  font-size: .85rem;
+  font-weight: 400;
+  color: var(--muted);
+  text-decoration: underline;
+}
+a[target="_blank"] .icon { width: 14px; height: 14px; }
+ 
+/* 3. Shell */
+.app {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  max-width: 1480px;
+  margin: 0 auto;
+  background: var(--surface);
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(20, 20, 30, .08);
+  overflow: hidden;
+}
+ 
+.content { padding: 0 20px 28px; }
+main { display: grid; gap: 16px; }
+ 
+/* 4. Sidebar */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 18px 14px;
+  background: #f1f1f4;
+}
+ 
+.brand { display: flex; align-items: center; gap: 10px; padding: 0 6px 6px; font-size: 1.1rem; }
+.brand .icon-btn { margin-inline-start: auto; }
+ 
+.logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: conic-gradient(from 200deg, #e8315a, #ffb300, #6d3df5, #e8315a);
+}
+ 
+.nav-list { display: grid; gap: 4px; }
+ 
+.nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 12px;
+  color: #3b3b44;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background .2s ease, color .2s ease;
+}
+.nav-item:hover { background: rgba(255, 255, 255, .7); color: var(--ink); }
+ 
+/* Lesson 4: attribute selector + ::after glow on the active page */
+.nav-item[aria-current="page"] { color: var(--ink); background: var(--white); box-shadow: 0 1px 3px rgba(0, 0, 0, .06); }
+.nav-item[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  inset-inline-end: 0;
+  width: 70px;
+  height: 14px;
+  border-start-end-radius: 10px;
+  background: radial-gradient(closest-side, rgba(232, 49, 90, .45), transparent);
+}
+ 
+.nav-label {
+  display: flex;
+  align-items: center;
+  margin: 10px 12px 0;
+  font-size: .75rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+ 
+.side-bottom { display: grid; gap: 14px; margin-top: auto; padding: 10px; background: #f7f7f8; border-radius: 12px; }
+ 
+.user { display: flex; align-items: center; gap: 12px; padding: 4px 6px; border-radius: 10px; }
+.user:hover { background: rgba(255, 255, 255, .7); }
+.user strong { display: block; line-height: 1.2; }
+.user span:not(.avatar) { font-size: .85rem; color: var(--muted); }
+ 
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  font-weight: 700;
+  color: var(--white);
+  background: var(--gradient);
+  border-radius: 50%;
+}
+ 
+/* 5. Top bar */
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+ 
+.crumbs { display: flex; align-items: center; margin-inline-end: auto; color: var(--muted); }
+.crumbs a { text-decoration: none; }
+.crumbs a:hover { color: var(--ink); }
+ 
+/* Lesson 4: ::after draws the separator between breadcrumb items */
+.crumbs a::after { content: "\203A"; margin: 0 10px; }
+.crumbs [aria-current] { font-weight: 600; color: var(--ink); }
+ 
+.search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: min(100%, 440px);
+  padding: 0 16px;
+  color: var(--muted);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+.search input { flex: 1; min-width: 0; padding: 10px 0; font: inherit; color: var(--ink); background: transparent; border: 0; }
+.search input:focus { outline: none; }
+.search:focus-within { border-color: #8b6cf6; box-shadow: 0 0 0 3px rgba(109, 61, 245, .15); }
+ 
+/* 6. Buttons */
+button { font: inherit; color: inherit; cursor: pointer; }
+ 
+.icon-btn {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  transition: background .2s ease, transform .2s ease;
+}
+.icon-btn:hover { background: #f0f0f3; transform: translateY(-1px); }
+.icon-btn.plain { background: transparent; border-color: transparent; }
+ 
+.btn-insight {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  font-weight: 600;
+  background: var(--white);
+  border: 1.5px solid transparent;
+  border-radius: 999px;
+  background-image: linear-gradient(var(--white), var(--white)), var(--gradient);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+ 
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  font-weight: 600;
+  color: var(--white);
+  background: var(--gradient);
+  border: 0;
+  border-radius: 999px;
+  box-shadow: 0 6px 16px rgba(232, 49, 90, .3);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(232, 49, 90, .35); }
+ 
+.btn-soft {
+  padding: 7px 16px;
+  color: #4a4a54;
+  text-decoration: none;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  transition: background .2s ease;
+}
+.btn-soft:hover { background: #ececf0; }
+ 
+/* 7. Page heading and stats */
+.page-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding: 22px 0 6px; }
+.page-head h1 { font-size: 1.9rem; line-height: 1.2; }
+.page-head p { color: var(--muted); }
+ 
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+ 
+.stat {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 18px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.stat h2 { font-size: 1rem; font-weight: 400; color: #3b3b44; }
+.stat p { margin-top: 6px; color: #3b3b44; }
+.stat strong { margin-inline-end: 4px; font-size: 2.2rem; font-weight: 400; line-height: 1; color: var(--ink); }
+ 
+.stat-icon {
+  display: grid;
+  place-items: center;
+  align-self: flex-start;
+  width: 42px;
+  height: 42px;
+  color: #55555e;
+  background: var(--surface);
+  border-radius: 50%;
+}
+ 
+/* Lesson 4: attribute selector picks the "error" card */
+.stat[data-tone="error"] p { color: var(--red); }
+ 
+/* 8. Panels */
+.panel { padding: 16px; background: var(--white); border: 1px solid var(--line); border-radius: 12px; }
+.panel-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+.panel-head h2 { font-size: 1.1rem; font-weight: 500; }
+.tools { display: flex; gap: 8px; }
+ 
+.chip-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  font-size: .9rem;
+  color: #55555e;
+  text-decoration: none;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+ 
+/* Carrier cards */
+.carriers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+ 
+.carrier {
+  padding: 16px 16px 0;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.carrier:hover { transform: translateY(-4px); box-shadow: 0 10px 22px rgba(20, 20, 30, .08); }
+ 
+.carrier-top { display: flex; align-items: center; justify-content: space-between; }
+.carrier h3 { display: flex; flex-wrap: wrap; align-items: center; margin-top: 14px; font-size: 1rem; font-weight: 500; }
+.carrier p { margin-top: 6px; font-size: .9rem; color: #55555e; }
+ 
+.carrier-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 16px -16px 0;
+  padding: 14px 16px;
+  border-top: 1px solid var(--line);
+}
+ 
+.logo-circle {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 46px;
+  height: 46px;
+  font-size: .9rem;
+  font-weight: 700;
+  color: var(--white);
+  background: var(--c, #888);
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 3px rgba(255, 255, 255, .35);
+}
+ 
+/* System integration rows */
+.rows { border: 1px solid var(--line); border-radius: 12px; }
+ 
+.row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 14px; padding: 12px 14px; transition: background .2s ease; }
+.row + .row { border-top: 1px solid var(--line); }
+.row:hover { background: var(--surface); }
+ 
+.row-text { flex: 1 1 200px; }
+.row-text h3 { font-size: 1rem; font-weight: 500; }
+.row-text p { font-size: .88rem; color: var(--muted); }
+ 
+.row-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.tag { padding: 4px 12px; font-size: .88rem; color: #55555e; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; }
+ 
+/* 9. Status pills (Lesson 4: attribute selectors) */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  font-size: .9rem;
+  border: 1px solid;
+  border-radius: 999px;
+}
+.pill[data-status="connected"] { color: var(--green); background: var(--green-bg); border-color: var(--green-line); }
+.pill[data-status="syncing"]   { color: var(--blue);  background: var(--blue-bg);  border-color: var(--blue-line); }
+.pill[data-status="errors"]    { color: var(--red);   background: var(--red-bg);   border-color: var(--red-line); }
+.pill .icon { width: 16px; height: 16px; }
+ 
+/* 10. Animations (Lesson 3) */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+ 
+.stat, .panel { animation: fade-up .5s ease both; }
+.stat:nth-child(2) { animation-delay: .06s; }
+.stat:nth-child(3) { animation-delay: .12s; }
+.stat:nth-child(4) { animation-delay: .18s; }
+.panel:nth-of-type(2) { animation-delay: .2s; }
+.panel:nth-of-type(3) { animation-delay: .3s; }
+ 
+.pill[data-status="syncing"] .icon { animation: spin 3s linear infinite; }
+ 
+/* 11. Accessibility (Lesson 6) */
+.skip-link { position: absolute; left: -999px; top: 8px; z-index: 20; padding: 8px 14px; color: var(--white); background: var(--ink); border-radius: 6px; }
+.skip-link:focus { left: 8px; }
+ 
+:focus-visible { outline: 3px solid #8b6cf6; outline-offset: 2px; }
+ 
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+ 
+/* 12. Responsive (Lesson 2) */
+@media (max-width: 1100px) {
+  .stats { grid-template-columns: repeat(2, 1fr); }
+}
+ 
+@media (max-width: 900px) {
+  body { padding: 0; }
+  .app { grid-template-columns: 1fr; border-radius: 0; }
+  .sidebar { gap: 10px; padding: 12px; }
+  .sidebar .nav-list { display: flex; flex-wrap: wrap; }
+  .nav-label, .push { display: none; }
+  .side-bottom { margin-top: 0; background: transparent; padding: 0; }
+  .carriers { grid-template-columns: 1fr; }
+  .topbar { flex-wrap: wrap; }
+  .crumbs { flex: 1 1 100%; }
+  .search { flex: 1 1 240px; }
+}
+ 
+@media (max-width: 560px) {
+  .stats { grid-template-columns: 1fr; }
+  .page-head { flex-direction: column; }
+  .content { padding: 0 12px 24px; }
+}
+ 
