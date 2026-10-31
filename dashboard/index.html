@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bonus-page">
+      <h1 class="bonus-title">BONUS</h1>
+
+      <div class="note-box">
+        <ul>
+          <li>Do a page for a dashboard looking like the following image.</li>
+          <li>Path: <span>"dashboard/"</span></li>
+        </ul>
+      </div>
+
+      <div class="dashboard-shell">
+        <aside class="sidebar">
+          <div class="brand-row">
+            <div class="brand-mark">◫</div>
+            <span>Logistics</span>
+          </div>
+
+          <nav class="sidebar-nav">
+            <div class="nav-item"><span class="icon">▣</span>Control Tower</div>
+            <div class="nav-item"><span class="icon">⟲</span>Generate Quote</div>
+            <div class="nav-item"><span class="icon">⎈</span>Track Shipments</div>
+            <div class="nav-item"><span class="icon">◍</span>AI Console</div>
+            <div class="nav-item"><span class="icon">▤</span>Customer Portal</div>
+          </nav>
+
+          <div class="sidebar-section">
+            <div class="section-label">INSIGHT &amp; CONTROL</div>
+            <div class="nav-item muted"><span class="icon">▣</span>Documents</div>
+            <div class="nav-item muted"><span class="icon">◌</span>Analytics</div>
+            <div class="nav-item active"><span class="icon">◎</span>Integrations</div>
+            <div class="nav-item muted"><span class="icon">◐</span>AI Training</div>
+          </div>
+
+          <div class="bottom-menu">
+            <div class="nav-item muted"><span class="icon">⚙</span>Setting</div>
+            <div class="nav-item muted"><span class="icon">?</span>Get Help</div>
+            <div class="nav-item muted"><span class="icon">⇡</span>Updates</div>
+          </div>
+
+          <div class="user-box">
+            <div class="avatar small">A</div>
+            <div>
+              <div class="name">Alex</div>
+              <div class="role">Acme Logistics</div>
+            </div>
+          </div>
+        </aside>
+
+        <main class="main-panel">
+          <header class="topbar">
+            <div class="tabs">
+              <span class="tab-pill">Dashboard</span>
+              <span class="tab active">Integrations</span>
+            </div>
+
+            <div class="toolbar">
+              <div class="search-box">Search by company, mapping, etc</div>
+              <button class="ghost-btn">Get AI insight</button>
+              <span class="mini-icon">◔</span>
+              <span class="mini-icon">◍</span>
+            </div>
+          </header>
+
+          <section class="panel-header">
+            <div>
+              <h2>Integrations</h2>
+              <p>Connect your freight operations with existing systems</p>
+            </div>
+            <button class="primary-btn">+ Add New</button>
+          </section>
+
+          <section class="summary-row">
+            <article class="stat-card">
+              <div class="stat-top">
+                <span class="label">Connected</span>
+                <span class="badge soft">◌</span>
+              </div>
+              <div class="value-row">
+                <strong>45</strong>
+                <span>Active integrations</span>
+              </div>
+            </article>
+
+            <article class="stat-card">
+              <div class="stat-top">
+                <span class="label">Syncing</span>
+                <span class="badge accent">◌</span>
+              </div>
+              <div class="value-row">
+                <strong>5</strong>
+                <span>In progress</span>
+              </div>
+            </article>
+
+            <article class="stat-card">
+              <div class="stat-top">
+                <span class="label">Error</span>
+                <span class="badge danger">◌</span>
+              </div>
+              <div class="value-row">
+                <strong>1</strong>
+                <span>Needs attention</span>
+              </div>
+            </article>
+
+            <article class="stat-card">
+              <div class="stat-top">
+                <span class="label">Available</span>
+                <span class="badge info">◌</span>
+              </div>
+              <div class="value-row">
+                <strong>54</strong>
+                <span>More to add</span>
+              </div>
+            </article>
+          </section>
+
+          <section class="api-section">
+            <div class="section-row">
+              <h3>Carrier APIs</h3>
+              <a href="#">View All</a>
+            </div>
+
+            <div class="api-grid">
+              <article class="api-card connected">
+                <div class="api-head">
+                  <span class="status-pill green">Connected</span>
+                  <span class="dot-icon">◍</span>
+                </div>
+                <div class="api-body">
+                  <div class="avatar brand1">M</div>
+                  <div>
+                    <h4>Maersk Line</h4>
+                    <p>Maersk Line.com</p>
+                  </div>
+                </div>
+                <div class="api-meta"><span>View Integration</span><span>◌</span></div>
+              </article>
+
+              <article class="api-card syncing">
+                <div class="api-head">
+                  <span class="status-pill blue">Syncing</span>
+                  <span class="dot-icon">◍</span>
+                </div>
+                <div class="api-body">
+                  <div class="avatar brand2">M</div>
+                  <div>
+                    <h4>Maersk Line</h4>
+                    <p>Maersk Line.com</p>
+                  </div>
+                </div>
+                <div class="api-meta"><span>View Integration</span><span>◌</span></div>
+              </article>
+
+              <article class="api-card error">
+                <div class="api-head">
+                  <span class="status-pill red">Error</span>
+                  <span class="dot-icon">◍</span>
+                </div>
+                <div class="api-body">
+                  <div class="avatar brand3">M</div>
+                  <div>
+                    <h4>Maersk Line</h4>
+                    <p>Maersk Line.com</p>
+                  </div>
+                </div>
+                <div class="api-meta"><span>View Integration</span><span>◌</span></div>
+              </article>
+            </div>
+          </section>
+
+          <section class="system-section">
+            <div class="section-row system-header">
+              <h3>System Integrations</h3>
+              <div class="tiny-tools">
+                <span>▣</span>
+                <span>◧</span>
+                <span>⟲</span>
+              </div>
+            </div>
+
+            <div class="system-list">
+              <div class="system-item">
+                <div class="company-box">
+                  <div class="logo soft-blue">CRM</div>
+                  <div>
+                    <div class="company-name">Salesforce CRM</div>
+                    <div class="company-detail">Customer relationship management</div>
+                  </div>
+                </div>
+                <div class="right-actions">
+                  <span class="status-pill green">Connected</span>
+                  <button class="configure-btn">Configure</button>
+                </div>
+              </div>
+
+              <div class="system-item">
+                <div class="company-box">
+                  <div class="logo soft-yellow">TMS</div>
+                  <div>
+                    <div class="company-name">SAP TMS</div>
+                    <div class="company-detail">Transportation management system</div>
+                  </div>
+                </div>
+                <div class="right-actions">
+                  <span class="status-pill green">Connected</span>
+                  <button class="configure-btn">Configure</button>
+                </div>
+              </div>
+
+              <div class="system-item">
+                <div class="company-box">
+                  <div class="logo soft-purple">ERP</div>
+                  <div>
+                    <div class="company-name">Oracle ERP</div>
+                    <div class="company-detail">Enterprise resource planning</div>
+                  </div>
+                </div>
+                <div class="right-actions">
+                  <span class="status-pill blue">Syncing</span>
+                  <button class="configure-btn">Configure</button>
+                </div>
+              </div>
+
+              <div class="system-item">
+                <div class="company-box">
+                  <div class="logo soft-red">ERP</div>
+                  <div>
+                    <div class="company-name">Microsoft Dynamics</div>
+                    <div class="company-detail">Business applications</div>
+                  </div>
+                </div>
+                <div class="right-actions">
+                  <span class="status-pill red">Error</span>
+                  <button class="configure-btn">Configure</button>
+                </div>
+              </div>
+
+              <div class="system-item">
+                <div class="company-box">
+                  <div class="logo soft-green">Slack</div>
+                  <div>
+                    <div class="company-name">Slack</div>
+                    <div class="company-detail">Team communication</div>
+                  </div>
+                </div>
+                <div class="right-actions">
+                  <span class="status-pill green">Connected</span>
+                  <button class="configure-btn">Configure</button>
+                </div>
+              </div>
+
+              <div class="system-item">
+                <div class="company-box">
+                  <div class="logo soft-pink">Shopify</div>
+                  <div>
+                    <div class="company-name">Shopify</div>
+                    <div class="company-detail">E-commerce platform</div>
+                  </div>
+                </div>
+                <div class="right-actions">
+                  <span class="status-pill green">Connected</span>
+                  <button class="configure-btn">Configure</button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
