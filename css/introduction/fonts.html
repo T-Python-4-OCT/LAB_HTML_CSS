@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Fonts</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        line-height: 1.7;
+        background: #fafafa;
+        color: #111;
+      }
+      main {
+        width: min(100% - 32px, 900px);
+        margin: 24px auto;
+      }
+      section {
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        border-radius: 10px;
+        padding: 16px;
+        margin-bottom: 16px;
+      }
+      pre {
+        background: #0b1020;
+        color: #e5e7eb;
+        padding: 10px;
+        border-radius: 8px;
+        overflow-x: auto;
+      }
+      .demo {
+        margin: 12px 0;
+        padding: 8px;
+        border: 1px dashed #ccc;
+        border-radius: 6px;
+      }
+      .serif {
+        font-family: "Times New Roman", serif;
+      }
+      .sans {
+        font-family: Arial, sans-serif;
+      }
+      .mono {
+        font-family: "Courier New", monospace;
+      }
+      .btn {
+        display: inline-block;
+        margin-top: 12px;
+        padding: 8px 14px;
+        background: #2563eb;
+        color: white;
+        border-radius: 8px;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Fonts in CSS</h1>
+      <p>
+        Learn how to style and control text using fonts and typography
+        properties.
+      </p>
+    </header>
+
+    <main>
+      <section>
+        <h2>Font Families</h2>
+        <p>
+          The <code>font-family</code> property defines which typeface is used
+          for text.
+        </p>
+        <div class="demo serif">This is a serif font example.</div>
+        <div class="demo sans">This is a sans-serif font example.</div>
+        <div class="demo mono">This is a monospace font example.</div>
+        <pre>p { font-family: "Arial", sans-serif; }</pre>
+      </section>
+
+      <section>
+        <h2>Font Size</h2>
+        <p>
+          Use units like <code>px</code>, <code>rem</code>, or
+          <code>em</code> to set font size.
+        </p>
+        <div class="demo" style="font-size: 14px">14px font</div>
+        <div class="demo" style="font-size: 1rem">1rem font</div>
+        <div class="demo" style="font-size: 1.5em">1.5em font</div>
+        <pre>h1 { font-size: 2rem; }  p { font-size: 1rem; }</pre>
+      </section>
+
+      <section>
+        <h2>Font Weight and Style</h2>
+        <div class="demo" style="font-weight: 400">Normal text</div>
+        <div class="demo" style="font-weight: 700">Bold text</div>
+        <div class="demo" style="font-style: italic">Italic text</div>
+        <pre>p { font-weight: bold; font-style: italic; }</pre>
+      </section>
+
+      <section>
+        <h2>Line Height and Text Transform</h2>
+        <p>
+          Line height controls the spacing between lines; text-transform changes
+          case.
+        </p>
+        <div class="demo" style="line-height: 1">Line height 1</div>
+        <div class="demo" style="line-height: 1.5">Line height 1.5</div>
+        <div class="demo" style="text-transform: uppercase">uppercase</div>
+        <div class="demo" style="text-transform: capitalize">
+          capitalize each word
+        </div>
+      </section>
+
+      <div style="text-align: center">
+        <a href="./index.html" class="btn">⬅ Back</a>
+      </div>
+    </main>
+  </body>
+</html>
