@@ -1,188 +1,150 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Moataz Almutairi | Portfolio</title>
-    <meta
-      name="description"
-      content="Moataz Almutairi, Computer Science student and custom tool developer based in Madinah, Saudi Arabia."
-    />
-    <meta name="theme-color" content="#07090e" />
-    <meta property="og:title" content="Moataz Almutairi | Portfolio" />
-    <meta
-      property="og:description"
-      content="Computer Science student and custom tool developer."
-    />
-    <meta property="og:type" content="website" />
-    <link
-      rel="icon"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2307090e'/%3E%3Cpath d='M8 22L16 8l8 14' fill='none' stroke='%2300f2fe' stroke-width='3'/%3E%3C/svg%3E"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <!-- Three.js is optional: the page works without it -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
-      defer
-    ></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>THE MAKER’S EDITION — Moataz Almutairi</title>
+    <meta name="description" content="A personal and academic magazine CV by Moataz Almutairi. Computer Science, web development, weight training, gaming culture, and a collection of course projects.">
+    <meta name="theme-color" content="#f4f0e7">
+    <link rel="icon" href="assets/maker-mark.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <!-- Bootstrap supplies the responsive project grid, utilities, and form controls.
+         The editorial styles load last. No Bootstrap JavaScript is needed. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
   </head>
-  <body>
-    <a class="skip-link" href="#content">Skip to content</a>
+  <body id="top">
+    <a class="skip-link" href="#main">Skip to the magazine</a>
 
-    <div id="canvas-container" aria-hidden="true"></div>
+    <header class="masthead page-width">
+      <div class="edition-strip">
+        <a class="wordmark" href="#top" aria-label="The Maker’s Edition — cover"><span class="maker-mark" aria-hidden="true">✳</span> An independent personal journal</a>
+        <span class="edition-owner">Moataz Almutairi</span>
+        <span class="issue-label">Vol. 04 <span aria-hidden="true">/</span> The CV issue</span>
+      </div>
+      <h1 class="masthead-title">THE MAKER’S <span class="masthead-bottom"><span>EDITION<span class="title-dot">.</span></span><span class="masthead-note">A life in learning.<br>A mind in motion.<span class="note-star" aria-hidden="true">✳</span></span></span></h1>
+      <div class="masthead-meta"><span>A personal &amp; academic CV</span><span>Code <span aria-hidden="true">/</span> Discipline <span aria-hidden="true">/</span> Play</span></div>
+    </header>
 
-    <div class="cv-wrapper">
-      <header class="cv-hero card" data-tilt>
-        <div class="hero-top">
-          <div class="hero-identity">
-            <h1>Moataz Almutairi</h1>
-            <p class="role">
-              Computer Science Student &amp; Custom Tool Developer
-            </p>
-          </div>
-          <span class="badge-pill">📍 Madinah, Saudi Arabia</span>
+    <nav class="contents-nav" aria-label="Magazine contents">
+      <div class="page-width nav-inner">
+        <span class="nav-label">Inside the edition <span aria-hidden="true">↘</span></span>
+        <ul class="contents-links list-unstyled">
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#code-lab">Code Lab</a></li>
+          <li><a href="#discipline">Discipline</a></li>
+          <li><a href="#gaming">Gaming</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main id="main" class="page-width" tabindex="-1">
+      <section class="cover" aria-labelledby="cover-title">
+        <div class="cover-story">
+          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> The cover story</p>
+          <h2 id="cover-title">Curiosity.<br>Discipline.<br><em>Something new.</em></h2>
+          <p class="cover-deck">An interest in building for the web, a respect for the work behind progress, and a love of games. This is my world, in a few pages.</p>
+          <div class="cover-byline"><span class="byline-rule" aria-hidden="true"></span><div><strong>Moataz Almutairi</strong><span>Computer Science student · Web development learner</span></div></div>
+          <a class="text-link cover-link" href="#about">Turn the first page <span aria-hidden="true">↗</span></a>
         </div>
+        <figure class="cover-art">
+          <div class="art-topline"><span>Field notes / 001</span><span aria-hidden="true">+ &nbsp; + &nbsp; +</span></div>
+          <img src="assets/cover-study.svg" width="600" height="530" alt="Abstract orange circle interwoven with navy brackets and cream lines, bringing three different shapes into one composition." fetchpriority="high">
+          <figcaption><span>Different interests. One curious mind.</span><span aria-hidden="true">Fig. 01</span></figcaption>
+          <span class="art-stamp" aria-hidden="true">Always<br><i>in progress.</i></span>
+        </figure>
+      </section>
 
-        <p class="bio">
-          Web developer with a specialized TVTC diploma, currently finalizing a
-          Bachelor's degree in Computer Science. Passionate about building
-          custom software tools, interactive utilities, and specialized game
-          modifications, alongside maintaining strong physical discipline.
-        </p>
+      <div class="section-divider" aria-hidden="true"><span>A closer look</span><span>Keep learning. Keep making.</span><span>01—07</span></div>
 
-        <div class="hero-links">
-          <a class="btn btn-primary" href="cv.html">View CV</a>
-          <a class="btn" href="mailto:your-email@example.com">Email</a>
-          <a
-            class="btn"
-            href="https://github.com/your-username"
-            target="_blank"
-            rel="noopener noreferrer"
-            >GitHub</a
-          >
+      <section id="about" class="editorial-section about-section" aria-labelledby="about-title">
+        <div class="section-heading" data-reveal><p class="eyebrow">01 / About the maker</p><h2 id="about-title">More than<br><em>one interest.</em></h2></div>
+        <div class="about-copy" data-reveal>
+          <p class="lead-copy">I’m <strong>Moataz Almutairi</strong>, a Computer Science student with a diploma in Programming and Web Development.</p>
+          <p>Programming, weight training, and video games are the interests that shape this edition. My academic work gives me a place to practice web development; my personal interests keep me curious about what to explore next.</p>
+          <p>I’m interested in <strong>game-related utilities and tool development</strong>, alongside AI-powered tools and workflows. These are areas of personal exploration and learning.</p>
+          <aside class="margin-note"><span class="eyebrow">A personal outlook</span><p>“There is always another<br><em>way to get better.</em>”</p></aside>
         </div>
-      </header>
+      </section>
 
-      <nav class="filters" aria-label="Filter sections">
-        <button
-          class="filter-btn is-active"
-          type="button"
-          data-filter="all"
-          aria-pressed="true"
-        >
-          ⚡ All
-        </button>
-        <button
-          class="filter-btn"
-          type="button"
-          data-filter="academic"
-          aria-pressed="false"
-        >
-          🎓 Academic &amp; Tech
-        </button>
-        <button
-          class="filter-btn"
-          type="button"
-          data-filter="hobbies"
-          aria-pressed="false"
-        >
-          🎮 Hobbies &amp; Lifestyle
-        </button>
-      </nav>
+      <section id="education" class="education-section" aria-labelledby="education-title">
+        <div class="section-top" data-reveal><div><p class="eyebrow">02 / Education</p><h2 id="education-title">The foundations.</h2></div><p class="section-note">A practical starting point.<br>An academic path still unfolding.</p></div>
+        <table class="education-table" data-reveal>
+          <caption>Academic background and current study</caption>
+          <thead><tr><th scope="col">Qualification / field</th><th scope="col">Institution &amp; status</th></tr></thead>
+          <tbody>
+            <tr><th scope="row"><span class="table-index" aria-hidden="true">I.</span><span>Computer Science</span></th><td><strong>Arab Open University</strong><span class="study-status"><span class="status-dot" aria-hidden="true"></span> Currently studying</span></td></tr>
+            <tr><th scope="row"><span class="table-index" aria-hidden="true">II.</span><span>Diploma in Programming<br>and Web Development</span></th><td><strong>Technical College</strong><span class="study-status">Diploma completed</span></td></tr>
+          </tbody>
+        </table>
+      </section>
 
-      <main id="content" class="grid">
-        <!-- Academic & Tech -->
-        <article class="card" data-tilt data-cat="academic">
-          <p class="card-subtitle">Education</p>
-          <h2 class="card-header">
-            <span aria-hidden="true">🎓</span> Academic Journey
-          </h2>
-          <ul class="list-items">
-            <li>Bachelor of Science in Computer Science (near completion)</li>
-            <li>Diploma in Programming &amp; Web Development (TVTC)</li>
-          </ul>
-        </article>
+      <section id="code-lab" class="code-section" aria-labelledby="code-title">
+        <div class="code-copy" data-reveal>
+          <p class="eyebrow">03 / Programming &amp; Code Lab</p>
+          <h2 id="code-title">From a blank file<br>to a <em>working idea.</em></h2>
+          <p>Web development turns ideas into something I can see, use, and improve. My course projects are a place to practice structure, visual design, and small interactions.</p>
+          <ul class="code-topics list-unstyled"><li><span>01</span> HTML &amp; meaningful structure</li><li><span>02</span> CSS &amp; responsive layouts</li><li><span>03</span> JavaScript &amp; useful interactions</li></ul>
+          <a class="text-link" href="#projects">Explore the course projects <span aria-hidden="true">↗</span></a>
+        </div>
+        <figure class="code-note" data-reveal>
+          <div class="code-note-top"><span>Notebook / index.html</span><span aria-hidden="true">&lt;/&gt;</span></div>
+          <pre><code><span class="code-muted">&lt;!-- A small starting point. --&gt;</span>
+<span class="code-orange">&lt;main&gt;</span>
+  <span class="code-orange">&lt;section</span> <span class="code-light">id=</span><span class="code-green">"next-idea"</span><span class="code-orange">&gt;</span>
+    <span class="code-orange">&lt;h1&gt;</span>Make. Learn. Repeat.<span class="code-orange">&lt;/h1&gt;</span>
+    <span class="code-orange">&lt;p&gt;</span>Start with curiosity.<span class="code-orange">&lt;/p&gt;</span>
+  <span class="code-orange">&lt;/section&gt;</span>
+<span class="code-orange">&lt;/main&gt;</span></code></pre>
+          <figcaption><span class="status-dot" aria-hidden="true"></span> An illustrative study snippet</figcaption>
+          <p class="notebook-footer">One idea. A few lines.<br><em>Room to keep learning.</em></p>
+        </figure>
+      </section>
 
-        <article class="card" data-tilt data-cat="academic">
-          <p class="card-subtitle">Engineering focus</p>
-          <h2 class="card-header">
-            <span aria-hidden="true">⚙️</span> Custom Tools &amp; Systems
-          </h2>
-          <ul class="list-items">
-            <li>Custom software tools development</li>
-            <li>Interactive system utilities</li>
-            <li>Game modification &amp; reverse engineering concepts</li>
-          </ul>
-        </article>
+      <section id="discipline" class="discipline-section" aria-labelledby="discipline-title">
+        <div class="discipline-art" data-reveal><p class="eyebrow">04 / Weight training &amp; discipline</p><h2 id="discipline-title">SHOW UP.<br>BUILD.<br><span>REPEAT.</span></h2><div class="barbell" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div><p class="discipline-art-label">The work between the milestones.</p></div>
+        <div class="discipline-copy" data-reveal><p class="eyebrow">Beyond the screen</p><h3>A different kind<br>of <em>building.</em></h3><p>Weight training and bodybuilding are part of my personal interests. I’m drawn to the process: returning to the basics and giving progress time.</p><p>It is a mindset I value in learning, too. Practice, reflect, make a small adjustment, and come back to the work.</p><ul class="discipline-values list-unstyled"><li><b>Consistency</b><span>A reason to return.</span></li><li><b>Patience</b><span>Space to improve.</span></li><li><b>Focus</b><span>Attention to the process.</span></li></ul></div>
+      </section>
 
-        <article class="card wide" data-tilt data-cat="academic">
-          <p class="card-subtitle">Technical proficiency</p>
-          <h2 class="card-header">
-            <span aria-hidden="true">💻</span> Technical Stack
-          </h2>
-          <p class="card-desc">
-            Building robust applications and custom utilities with modern
-            technologies and disciplined version control.
-          </p>
-          <ul class="skills-grid" aria-label="Skills">
-            <li class="skill-tag">Python</li>
-            <li class="skill-tag">JavaScript (ES6+)</li>
-            <li class="skill-tag">HTML5 / CSS3</li>
-            <li class="skill-tag">SQL</li>
-            <li class="skill-tag">Git &amp; GitHub</li>
-            <li class="skill-tag">Custom tooling</li>
-          </ul>
-        </article>
+      <section id="gaming" class="gaming-section" aria-labelledby="gaming-title">
+        <div class="section-top" data-reveal><div><p class="eyebrow">05 / Gaming culture</p><h2 id="gaming-title">Off the clock.<br><em>In another world.</em></h2></div><p class="section-note">Three favorites.<br>Three very different kinds of play.</p></div>
+        <div class="game-grid">
+          <article class="game-feature" data-reveal><figure class="game-poster overwatch-poster"><span class="poster-index" aria-hidden="true">01 / TEAMPLAY</span><img src="assets/teamplay.svg" alt="An original abstract study of five cream shapes linked around an orange circle." width="400" height="420" loading="lazy"><figcaption>OVER<br>WATCH<span aria-hidden="true">®</span></figcaption></figure><h3>Overwatch</h3><p class="game-theme">Teamwork / Timing / Adaptation</p><p>A favorite for its team-based play, different roles, and the energy of a well-timed moment.</p></article>
+          <article class="game-feature" data-reveal><figure class="game-poster souls-poster"><span class="poster-index" aria-hidden="true">02 / PERSISTENCE</span><img src="assets/persistence.svg" alt="An original geometric sword above a small orange flame against a dark field." width="400" height="420" loading="lazy"><figcaption>DARK<br><em>SOULS</em></figcaption></figure><h3>Dark Souls</h3><p class="game-theme">Patience / Discovery / Persistence</p><p>An interest in atmospheric worlds, careful exploration, and the satisfaction of trying again.</p></article>
+          <article class="game-feature" data-reveal><figure class="game-poster cod-poster"><span class="poster-index" aria-hidden="true">03 / MOMENTUM</span><img src="assets/momentum.svg" alt="An original orange circular target with offset cream lines and navy geometric shapes." width="400" height="420" loading="lazy"><figcaption>CALL OF<br>DUTY<span aria-hidden="true">®</span></figcaption></figure><h3>Call of Duty</h3><p class="game-theme">Focus / Pace / Coordination</p><p>A favorite for fast-paced matches, quick decisions, and the rhythm of competitive play.</p></article>
+        </div>
+        <p class="art-credit">A personal lens on three favorite games. Original graphic studies; no official game artwork.</p>
+      </section>
 
-        <!-- Hobbies & Lifestyle -->
-        <article class="card" data-tilt data-cat="hobbies">
-          <p class="card-subtitle">Gaming &amp; mechanics</p>
-          <h2 class="card-header">
-            <span aria-hidden="true">🎮</span> PC Gaming &amp; Tooling
-          </h2>
-          <p class="card-desc">
-            Active player of Fortnite, Red Dead Redemption 2 / RedM, ARC Raiders
-            and Overwatch, with an interest in how game mechanics work and how
-            they can be explored through scripting and tooling.
-          </p>
-        </article>
+      <section id="projects" class="projects-section" aria-labelledby="projects-title">
+        <div class="section-top" data-reveal><div><p class="eyebrow">06 / Academic projects</p><h2 id="projects-title">The course collection<span class="title-dot">.</span></h2></div><p class="section-note">Four student web labs.<br>Learning, one page at a time.</p></div>
+        <form id="project-search" class="project-search" role="search" aria-label="Search the course projects" hidden>
+          <div class="search-input-group"><label for="project-query">Find a lab</label><input id="project-query" class="form-control" name="q" type="search" placeholder="Try HTML, CSS, AI, or CV" autocomplete="off" aria-controls="project-list"><button class="btn search-button" type="submit">Find <span aria-hidden="true">↗</span></button><button class="reset-button" type="reset">Clear</button></div>
+          <p id="project-count" class="search-result-count" role="status" aria-live="polite" aria-atomic="true">Showing all 4 course projects.</p>
+        </form>
+        <div id="project-list" class="row row-cols-1 row-cols-md-2 g-0 project-grid">
+          <article class="col project-card" data-project data-keywords="html introduction basics semantic headings links lists tables hobbies"><div class="project-number" aria-hidden="true">01</div><div class="project-info"><p class="eyebrow">Student lab / HTML</p><h3><a href="../../html/introduction/">HTML Introduction <span aria-hidden="true">↗</span></a></h3><p>A personal interests page, practicing HTML structure, text, links, lists, and tables.</p><ul class="project-tags list-unstyled"><li>HTML</li><li>Structure</li></ul></div></article>
+          <article class="col project-card" data-project data-keywords="css fundamentals introduction styling selectors layout responsive hobbies"><div class="project-number" aria-hidden="true">02</div><div class="project-info"><p class="eyebrow">Student lab / CSS</p><h3><a href="../../css/introduction/">CSS Fundamentals <span aria-hidden="true">↗</span></a></h3><p>A styled personal page, exploring typography, color, selectors, and layout.</p><ul class="project-tags list-unstyled"><li>CSS</li><li>Visual design</li></ul></div></article>
+          <article class="col project-card" data-project data-keywords="ai revolution article computer vision cnn yolo javascript responsive bootstrap"><div class="project-number" aria-hidden="true">03</div><div class="project-info"><p class="eyebrow">Student lab / Article</p><h3><a href="../../article/ai/">AI Revolution Article <span aria-hidden="true">↗</span></a></h3><p>An educational article on computer vision, with responsive sections and interactive examples.</p><ul class="project-tags list-unstyled"><li>AI</li><li>Responsive web</li></ul></div></article>
+          <article class="col project-card current-project" data-project data-keywords="magazine cv makers edition personal academic html css javascript bootstrap accessibility responsive"><div class="project-number" aria-hidden="true">04</div><div class="project-info"><p class="eyebrow">Student lab / You’re reading it</p><h3><a href="#top">Magazine CV <span aria-hidden="true">↑</span></a></h3><p>A personal and academic CV, bringing the lab’s HTML and CSS learning into one editorial edition.</p><ul class="project-tags list-unstyled"><li>HTML / CSS / JS</li><li>Editorial design</li></ul></div></article>
+        </div>
+        <p id="no-projects" class="no-projects" hidden>No matching labs. Try “HTML”, “CSS”, “AI”, or “CV”, or clear your search.</p>
+      </section>
 
-        <article class="card" data-tilt data-cat="hobbies">
-          <p class="card-subtitle">Physical discipline</p>
-          <h2 class="card-header">
-            <span aria-hidden="true">🏋️</span> Fitness &amp; Bodybuilding
-          </h2>
-          <p class="card-desc">
-            Strength training on a strict Push / Pull / Legs split, with daily
-            cardio tracking and disciplined nutrition.
-          </p>
-        </article>
+      <section id="skills" class="skills-section" aria-labelledby="skills-title">
+        <div class="section-heading" data-reveal><p class="eyebrow">07 / Skills &amp; technical interests</p><h2 id="skills-title">A toolkit.<br><em>A work in progress.</em></h2><p class="section-note">Study, practice, and personal exploration.</p></div>
+        <dl class="skills-index" data-reveal><div><dt><span aria-hidden="true">01</span> Web foundations</dt><dd><strong>Academic practice</strong><p>HTML, CSS, responsive layouts, and small JavaScript interactions through course projects.</p></dd></div><div><dt><span aria-hidden="true">02</span> Game-related utilities</dt><dd><strong>Personal technical interest</strong><p>Exploring game-related tools and utility development, with curiosity about how software can support play and learning.</p></dd></div><div><dt><span aria-hidden="true">03</span> AI tools &amp; workflows</dt><dd><strong>Personal exploration</strong><p>Trying AI-powered tools as part of learning, idea development, and practical technical workflows.</p></dd></div><div><dt><span aria-hidden="true">04</span> Computer Science</dt><dd><strong>Current study</strong><p>Continuing my academic learning at Arab Open University, building on a programming and web development diploma.</p></dd></div></dl>
+      </section>
+    </main>
 
-        <article class="card" data-tilt data-cat="hobbies">
-          <p class="card-subtitle">Visual culture</p>
-          <h2 class="card-header">
-            <span aria-hidden="true">🎨</span> Art &amp; Aesthetics
-          </h2>
-          <p class="card-desc">
-            Admirer of 1999-era retro anime, Studio Ghibli, and clean dark UI
-            design.
-          </p>
-        </article>
-      </main>
-
-      <footer class="cv-footer">
-        <p>
-          &copy; <span id="year">2026</span> Moataz Almutairi. All rights
-          reserved.
-        </p>
-      </footer>
-    </div>
+    <footer class="site-footer">
+      <div class="page-width"><div class="footer-main"><div><p class="eyebrow">End of this edition. Start of the next idea.</p><p class="footer-message">Still learning.<br><em>Still making.</em><span class="footer-star" aria-hidden="true">✳</span></p></div><a class="back-to-cover" href="#top"><span aria-hidden="true">↑</span>Back to the cover</a></div><div class="footer-colophon"><span>THE MAKER’S EDITION <span aria-hidden="true">/</span> Moataz Almutairi</span><span>Personal &amp; academic CV · HTML/CSS Lab 04</span><button id="print-edition" class="print-button" type="button" hidden>Print this edition <span aria-hidden="true">↗</span></button></div></div>
+    </footer>
   </body>
 </html>

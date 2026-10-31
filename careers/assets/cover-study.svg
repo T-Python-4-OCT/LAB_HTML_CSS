@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 530" fill="none">
+  <defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0v40" stroke="#182a35" stroke-opacity=".09"/></pattern><clipPath id="circle"><circle cx="300" cy="260" r="207"/></clipPath></defs>
+  <path fill="url(#grid)" d="M30 0h540v520H30z"/>
+  <circle cx="300" cy="260" r="207" fill="#e76f40"/>
+  <g clip-path="url(#circle)"><path d="m69 357 330-330M89 392 434 47M123 419 464 78M153 448 496 105M186 478 524 140" stroke="#f4f0e7" stroke-width="7"/></g>
+  <path d="m243 120-117 140 117 140M357 120l117 140-117 140" stroke="#182a35" stroke-width="43" stroke-linejoin="miter"/>
+  <path d="m334 98-68 324" stroke="#f4f0e7" stroke-width="31"/>
+  <circle cx="483" cy="104" r="39" fill="#182a35"/><path d="M462 104h42m-21-21v42" stroke="#f4f0e7" stroke-width="3"/>
+  <path d="M44 45h25M56.5 32.5v25M531 464h25m-12.5-12.5v25" stroke="#182a35" stroke-width="2"/>
+  <circle cx="96" cy="440" r="4" fill="#182a35"/><path d="M96 440h76" stroke="#182a35"/>
+  <path d="M433 28h110v111M58 380v111h111" stroke="#182a35" stroke-opacity=".3"/>
+</svg>
