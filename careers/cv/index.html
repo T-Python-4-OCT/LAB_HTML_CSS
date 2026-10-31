@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nasser's personal CV and software development projects.">
+    <title>My CV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="navbar container">
+            <a href="#home" class="logo">My<span>CV.</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero -->
+        <section class="hero container" id="home">
+            <div class="hero-content">
+                <p class="subtitle">WELCOME TO MY PORTFOLIO</p>
+                <h1>Hi, I'm <span>Nasser</span></h1>
+                <h2>Full-stack Web Developer</h2>
+                <p class="hero-description">
+                    I'm passionate about programming, web development,
+                    and artificial intelligence. I enjoy learning new
+                    technologies and turning ideas into practical projects.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        View My Projects
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+            <div class="hero-card">
+                <div class="profile-icon">N</div>
+                <h3>Nasser Almuzaini</h3>
+                <p>Full-stack Web Developer</p>
+                <div class="profile-divider"></div>
+                <p class="profile-detail">Python</p>
+                <p class="profile-detail">Web Development</p>
+                <p class="profile-detail">Problem Solving</p>
+            </div>
+        </section>
+        <!-- About -->
+        <section class="section section-light" id="about">
+            <div class="container">
+                <p class="section-label">GET TO KNOW ME</p>
+                <h2 class="section-title">About Me</h2>
+                <p class="about-text">
+                    I am a Full-stack Web Developer interested in
+                    building useful applications and interactive websites.
+                    I have been learning Python, HTML, and CSS through
+                    hands-on projects. I also use Git and GitHub to manage
+                    my code and track project changes. My goal is to
+                    improve my programming skills and build more advanced
+                    software applications.
+                </p>
+            </div>
+        </section>
+        <!-- Skills -->
+        <section class="section container" id="skills">
+            <p class="section-label">WHAT I WORK WITH</p>
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <div class="skill-icon">&lt;/&gt;</div>
+                    <h3>Programming</h3>
+                    <p>Python</p>
+                    <p>Object-Oriented Programming</p>
+                    <p>Problem Solving</p>
+                </article>
+                <article class="skill-card">
+                    <div class="skill-icon">#</div>
+                    <h3>Web Development</h3>
+                    <p>HTML5</p>
+                    <p>CSS3</p>
+                    <p>Responsive Design</p>
+                </article>
+                <article class="skill-card">
+                    <div class="skill-icon">⌘</div>
+                    <h3>Tools & Technologies</h3>
+                    <p>Git & GitHub</p>
+                    <p>VS Code</p>
+                    <p>Terminal & JSON</p>
+                </article>
+            </div>
+        </section>
+        <!-- Projects -->
+        <section class="section section-light" id="projects">
+            <div class="container">
+                <p class="section-label">WHAT I'VE BEEN BUILDING</p>
+                <h2 class="section-title">My Projects</h2>
+                <p class="projects-intro">
+                    Explore my projects and hover over each card to view
+                    project screenshots.
+                </p>
+                <div class="projects-grid">
+                    <!-- Madina Medical -->
+                    <article class="project-card">
+                        <div class="project-number">01 / WEB DEVELOPMENT</div>
+                        <h3>Madina Medical</h3>
+                        <p class="project-description">
+                            A medical website project designed to organize
+                            doctors, departments, and appointments, with
+                            plans for AI-powered medical image analysis.
+                        </p>
+                        <div class="tags">
+                            <span>PHP</span>
+                            <span>Laravel</span>
+                            <span>MySQL</span>
+                            <span>HTML & CSS</span>
+                        </div>
+                        <!-- Medical Image Gallery -->
+                        <div class="project-gallery">
+                            <p class="gallery-title">PROJECT GALLERY</p>
+                            <div class="gallery-grid">
+                                <figure>
+                                    <img
+                                        src="home.png"
+                                        alt="Madina Medical homepage"
+                                        loading="lazy">
+                                    <figcaption>Homepage</figcaption>
+                                </figure>
+                                <figure>
+                                    <img
+                                        src="Ai Diagnostics.png"
+                                        alt="Madina Medical Ai Diagnostics"
+                                        loading="lazy">
+                                    <figcaption>Ai Diagnostics</figcaption>
+                                </figure>
+                                <figure>
+                                    <img
+                                        src="Appointment.png"
+                                        alt="Madina Medical appointments page"
+                                        loading="lazy">
+                                    <figcaption>Appointments</figcaption>
+                                </figure>
+                                <figure>
+                                    <img
+                                        src="Interface.png"
+                                        alt="Madina Medical website interface"
+                                        loading="lazy">
+                                    <figcaption>Interface</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <p class="gallery-hint">
+                            Hover to explore the gallery
+                        </p>
+                    </article>
+                    <!-- Smart Garage -->
+                    <article class="project-card">
+                        <div class="project-number">02 / PYTHON DEVELOPMENT</div>
+                        <h3>Smart Garage</h3>
+                        <p class="project-description">
+                            A car maintenance management system built
+                            with Python. It stores vehicle information,
+                            searches license plates, and manages
+                            maintenance history and upcoming services.
+                        </p>
+                        <div class="tags">
+                            <span>Python</span>
+                            <span>JSON</span>
+                            <span>Apple Vision</span>
+                            <span>Git</span>
+                        </div>
+                        <!-- Smart Garage Image -->
+                        <div class="project-gallery">
+                            <p class="gallery-title">PROJECT GALLERY</p>
+                            <div class="garage-gallery">
+                                <figure>
+                                    <img
+                                        src="Garage.png"
+                                        alt="Smart Garage application"
+                                        loading="lazy">
+                                    <figcaption>Smart Garage System</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <p class="gallery-hint">
+                            Hover to explore the gallery
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- Education -->
+        <section class="section container" id="education">
+            <p class="section-label">MY LEARNING JOURNEY</p>
+            <h2 class="section-title">Education & Learning</h2>
+            <div class="education-card">
+                <div class="education-marker"></div>
+                <div>
+                    <h3>High School Diploma</h3>
+                    <p class="education-place">General Education</p>
+                    <p>
+                        Building a foundation for my journey in
+                        software development and technology.
+                    </p>
+                </div>
+            </div>
+            <div class="education-card">
+                <div class="education-marker"></div>
+                <div>
+                    <h3>Programming & Web Development</h3>
+                    <p class="education-place">
+                        Self-Directed Learning & Practical Projects
+                    </p>
+                    <p>
+                        Learning Python, HTML, CSS, Git, and software
+                        development through practical exercises
+                        and personal projects.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- Contact -->
+        <section class="section contact-section" id="contact">
+            <div class="container">
+                <p class="section-label">LET'S CONNECT</p>
+                <h2 class="section-title">Contact Me</h2>
+                <p class="contact-text">
+                    Feel free to connect with me or explore my work.
+                </p>
+                <div class="contact-links">
+                    <a href="mailto:nasser.a.almuzaini@gmail.com">Email</a>
+
+                    <a
+                      href="https://github.com/Nasser-Almuzaini-4o"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        GitHub
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/%D9%86%D8%A7%D8%B5%D8%B1-%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D9%86%D9%8A-91b36542b/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Nasser. Built with HTML & CSS.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Logistics - Integrations</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Icons: defined once here, reused everywhere with <use href="#icon-name"> -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="icon-grid" viewBox="0 0 24 24"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/></symbol>
+      <symbol id="icon-star" viewBox="0 0 24 24"><path d="M12 3l2.5 6 6.5.5-5 4.2 1.7 6.3L12 16.5 6.3 20l1.7-6.3-5-4.2 6.5-.5z"/></symbol>
+      <symbol id="icon-box" viewBox="0 0 24 24"><path d="M3 8l9-5 9 5v8l-9 5-9-5zM3 8l9 5 9-5M12 13v8"/></symbol>
+      <symbol id="icon-ai" viewBox="0 0 24 24"><path d="M8 4h8a4 4 0 014 4v8a4 4 0 01-4 4H8a4 4 0 01-4-4V8a4 4 0 014-4zM9 15l3-6 3 6"/></symbol>
+      <symbol id="icon-user" viewBox="0 0 24 24"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zM4 21a8 8 0 0116 0"/></symbol>
+      <symbol id="icon-doc" viewBox="0 0 24 24"><path d="M7 3h7l5 5v13H7zM14 3v5h5"/></symbol>
+      <symbol id="icon-chart" viewBox="0 0 24 24"><path d="M4 20V4M4 20h16M8 16v-5M12 16V8M16 16v-3"/></symbol>
+      <symbol id="icon-plug" viewBox="0 0 24 24"><path d="M9 7a3 3 0 11-6 0 3 3 0 016 0zM21 17a3 3 0 11-6 0 3 3 0 016 0zM8 9l8 6"/></symbol>
+      <symbol id="icon-gear" viewBox="0 0 24 24"><path d="M12 15a3 3 0 100-6 3 3 0 000 6zM12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></symbol>
+      <symbol id="icon-help" viewBox="0 0 24 24"><path d="M12 21a9 9 0 100-18 9 9 0 000 18zM9.5 9.5a2.5 2.5 0 115 0c0 1.5-2.5 2-2.5 3.5M12 17v.01"/></symbol>
+      <symbol id="icon-upload" viewBox="0 0 24 24"><path d="M12 3v13M6 10l6-6 6 6M5 21h14"/></symbol>
+      <symbol id="icon-search" viewBox="0 0 24 24"><path d="M11 18a7 7 0 100-14 7 7 0 000 14zM21 21l-5-5"/></symbol>
+      <symbol id="icon-bell" viewBox="0 0 24 24"><path d="M6 16v-5a6 6 0 1112 0v5l2 2H4zM10 21h4"/></symbol>
+      <symbol id="icon-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24"><path d="M12 21a9 9 0 100-18 9 9 0 000 18zM8 12l3 3 5-6"/></symbol>
+      <symbol id="icon-clock" viewBox="0 0 24 24"><path d="M12 21a9 9 0 100-18 9 9 0 000 18zM12 7v5l3 2"/></symbol>
+      <symbol id="icon-alert" viewBox="0 0 24 24"><path d="M12 21a9 9 0 100-18 9 9 0 000 18zM12 8v5M12 16v.01"/></symbol>
+      <symbol id="icon-filter" viewBox="0 0 24 24"><path d="M3 5h18l-7 8v6l-4-2v-4z"/></symbol>
+      <symbol id="icon-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+      <symbol id="icon-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v6H4V6h6"/></symbol>
+      <symbol id="icon-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+      <symbol id="icon-panel" viewBox="0 0 24 24"><path d="M4 5h16v14H4zM9 5v14"/></symbol>
+      <symbol id="icon-add-box" viewBox="0 0 24 24"><path d="M4 4h16v16H4zM12 8v8M8 12h8"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- Hidden checkbox: collapses the sidebar (and opens it on mobile) -->
+  <input type="checkbox" id="sidebar-toggle" class="hidden-input">
+
+  <div class="layout">
+
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="sidebar">
+
+      <div class="brand">
+        <span class="brand-logo">L</span>
+        <b class="brand-name">Logistics</b>
+        <label for="sidebar-toggle" class="collapse-btn" title="Collapse sidebar">
+          <svg class="icon"><use href="#icon-panel"/></svg>
+        </label>
+      </div>
+
+      <a class="nav-item">
+        <svg class="icon"><use href="#icon-grid"/></svg>
+        <span class="nav-label">Control Tower</span>
+      </a>
+
+      <!-- Generate Quote with a dropdown submenu -->
+      <input type="checkbox" id="quote-toggle" class="hidden-input">
+      <label for="quote-toggle" class="nav-item">
+        <svg class="icon"><use href="#icon-star"/></svg>
+        <span class="nav-label">Generate Quote</span>
+        <svg class="icon chevron"><use href="#icon-chevron"/></svg>
+      </label>
+      <div class="submenu">
+        <a href="#">New Quote</a>
+        <a href="#">Quote History</a>
+        <a href="#">Rate Calculator</a>
+      </div>
+
+      <a class="nav-item">
+        <svg class="icon"><use href="#icon-box"/></svg>
+        <span class="nav-label">Track Shipments</span>
+      </a>
+      <a class="nav-item">
+        <svg class="icon"><use href="#icon-ai"/></svg>
+        <span class="nav-label">AI Console</span>
+      </a>
+      <a class="nav-item">
+        <svg class="icon"><use href="#icon-user"/></svg>
+        <span class="nav-label">Customer Portal</span>
+      </a>
+
+      <!-- Collapsible group -->
+      <input type="checkbox" id="section-toggle" class="hidden-input">
+      <label for="section-toggle" class="section-title">
+        <span>INSIGHT &amp; CONTROL</span>
+        <svg class="icon chevron"><use href="#icon-chevron"/></svg>
+      </label>
+      <div class="nav-group">
+        <a class="nav-item">
+          <svg class="icon"><use href="#icon-doc"/></svg>
+          <span class="nav-label">Documents</span>
+        </a>
+        <a class="nav-item">
+          <svg class="icon"><use href="#icon-chart"/></svg>
+          <span class="nav-label">Analytics</span>
+        </a>
+        <a class="nav-item active">
+          <svg class="icon"><use href="#icon-plug"/></svg>
+          <span class="nav-label">Integrations</span>
+        </a>
+        <a class="nav-item">
+          <svg class="icon"><use href="#icon-ai"/></svg>
+          <span class="nav-label">AI Training</span>
+        </a>
+      </div>
+
+      <div class="sidebar-footer">
+        <a class="nav-item">
+          <svg class="icon"><use href="#icon-gear"/></svg>
+          <span class="nav-label">Setting</span>
+        </a>
+        <a class="nav-item">
+          <svg class="icon"><use href="#icon-help"/></svg>
+          <span class="nav-label">Get Help</span>
+        </a>
+        <a class="nav-item">
+          <svg class="icon"><use href="#icon-upload"/></svg>
+          <span class="nav-label">Updates</span>
+        </a>
+
+        <div class="user-card">
+          <span class="avatar">A</span>
+          <div class="user-info">
+            <b>Alex</b><br>
+            <small>Acme Logistics</small>
+          </div>
+          <svg class="icon"><use href="#icon-chevron"/></svg>
+        </div>
+      </div>
+    </aside>
+
+
+    <!-- ============ MAIN CONTENT ============ -->
+    <main class="main">
+
+      <!-- Top bar -->
+      <div class="topbar">
+        <label for="sidebar-toggle" class="icon-btn menu-btn">
+          <svg class="icon"><use href="#icon-panel"/></svg>
+        </label>
+
+        <div class="breadcrumb">Dashboard &nbsp;›&nbsp; <b>Integrations</b></div>
+
+        <label class="search-box">
+          <svg class="icon"><use href="#icon-search"/></svg>
+          <input type="text" placeholder="Search by cargo, shipping, user id etc">
+        </label>
+
+        <a class="ai-btn" href="#"><span>Get AI Insight</span> ✨</a>
+
+        <!-- Notifications dropdown -->
+        <div class="dropdown-wrap">
+          <input type="checkbox" id="bell-toggle" class="hidden-input">
+          <label for="bell-toggle" class="icon-btn has-badge">
+            <svg class="icon"><use href="#icon-bell"/></svg>
+          </label>
+          <div class="dropdown">
+            <a href="#modal-dynamics">Microsoft Dynamics sync failed<small>2 min ago</small></a>
+            <a href="#modal-oracle">Oracle ERP sync in progress<small>72% complete</small></a>
+            <a href="#modal-slack">Slack alerts connected<small>1 hr ago</small></a>
+          </div>
+        </div>
+
+        <a class="icon-btn has-badge" href="#">
+          <svg class="icon"><use href="#icon-chat"/></svg>
+        </a>
+      </div>
+
+      <!-- Page title -->
+      <div class="page-header">
+        <div>
+          <h1>Integrations</h1>
+          <p>Connect your freight operations with existing systems</p>
+        </div>
+        <a class="add-btn" href="#modal-add">
+          <svg class="icon"><use href="#icon-plus"/></svg>
+          Add New
+        </a>
+      </div>
+
+      <!-- Stat cards -->
+      <div class="stats-grid">
+        <a class="stat-card" href="#system-integrations">
+          <span class="stat-label">Connected</span>
+          <span class="stat-icon"><svg class="icon"><use href="#icon-plug"/></svg></span>
+          <div><b class="stat-number">45</b>Active integrations</div>
+        </a>
+        <a class="stat-card" href="#modal-oracle">
+          <span class="stat-label">Syncing</span>
+          <span class="stat-icon"><svg class="icon"><use href="#icon-clock"/></svg></span>
+          <div><b class="stat-number">5</b>In Progress</div>
+        </a>
+        <a class="stat-card stat-error" href="#modal-dynamics">
+          <span class="stat-label">Errors</span>
+          <span class="stat-icon"><svg class="icon"><use href="#icon-alert"/></svg></span>
+          <div><b class="stat-number">1</b><span class="stat-note">Needs attention</span></div>
+        </a>
+        <a class="stat-card" href="#modal-add">
+          <span class="stat-label">Available</span>
+          <span class="stat-icon"><svg class="icon"><use href="#icon-add-box"/></svg></span>
+          <div><b class="stat-number">54</b>More to add</div>
+        </a>
+      </div>
+
+      <!-- Carrier APIs -->
+      <section class="panel">
+        <div class="panel-header">
+          Carrier APIs
+          <a class="view-all" href="#">
+            View All
+            <svg class="icon" style="width:13px;height:13px"><use href="#icon-external"/></svg>
+          </a>
+        </div>
+
+        <div class="carrier-grid">
+
+          <div class="carrier-card">
+            <div class="carrier-body">
+              <div class="carrier-top">
+                <i class="logo-circle" style="background:#2b9fd6">M</i>
+                <span class="badge badge-connected"><svg class="icon"><use href="#icon-check"/></svg>Connected</span>
+              </div>
+              <b>Maersk Line</b><u>maersk.com ↗</u>
+              <p>Vessel schedules, container tracking and booking API</p>
+            </div>
+            <div class="carrier-footer">
+              <a class="view-btn" href="#modal-maersk">View Integration</a>
+              <a class="gear-btn" href="#modal-maersk"><svg class="icon"><use href="#icon-gear"/></svg></a>
+            </div>
+          </div>
+
+          <div class="carrier-card">
+            <div class="carrier-body">
+              <div class="carrier-top">
+                <i class="logo-circle" style="background:#e5b800;color:#c00">D</i>
+                <span class="badge badge-syncing"><svg class="icon"><use href="#icon-clock"/></svg>Syncing</span>
+              </div>
+              <b>DHL Air Freight</b><u>dhl.com ↗</u>
+              <p>Air waybill tracking, rates and customs documents</p>
+            </div>
+            <div class="carrier-footer">
+              <a class="view-btn" href="#modal-dhl">View Integration</a>
+              <a class="gear-btn" href="#modal-dhl"><svg class="icon"><use href="#icon-gear"/></svg></a>
+            </div>
+          </div>
+
+          <div class="carrier-card">
+            <div class="carrier-body">
+              <div class="carrier-top">
+                <i class="logo-circle" style="background:#d4202c">C</i>
+                <span class="badge badge-error"><svg class="icon"><use href="#icon-alert"/></svg>Errors</span>
+              </div>
+              <b>CMA CGM</b><u>cma-cgm.com ↗</u>
+              <p>Sailing schedules, demurrage and detention alerts</p>
+            </div>
+            <div class="carrier-footer">
+              <a class="view-btn" href="#modal-cma">View Integration</a>
+              <a class="gear-btn" href="#modal-cma"><svg class="icon"><use href="#icon-gear"/></svg></a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- System Integrations -->
+      <section class="panel system-panel" id="system-integrations">
+
+        <!-- Hidden inputs that power the filter and the grid/list view -->
+        <input type="radio" name="filter" id="filter-all" class="hidden-input" checked>
+        <input type="radio" name="filter" id="filter-crm" class="hidden-input">
+        <input type="radio" name="filter" id="filter-erp" class="hidden-input">
+        <input type="radio" name="filter" id="filter-tms" class="hidden-input">
+        <input type="radio" name="filter" id="filter-communication" class="hidden-input">
+        <input type="radio" name="filter" id="filter-ecommerce" class="hidden-input">
+        <input type="checkbox" id="grid-toggle" class="hidden-input">
+
+        <div class="panel-header">
+          System Integrations
+
+          <div class="toolbar">
+            <!-- Filter dropdown -->
+            <div class="dropdown-wrap">
+              <input type="checkbox" id="filter-toggle" class="hidden-input">
+              <label for="filter-toggle" class="icon-btn"><svg class="icon"><use href="#icon-filter"/></svg></label>
+              <div class="dropdown">
+                <label for="filter-all">All systems</label>
+                <label for="filter-crm">CRM</label>
+                <label for="filter-erp">ERP</label>
+                <label for="filter-tms">TMS</label>
+                <label for="filter-communication">Communication</label>
+                <label for="filter-ecommerce">E-commerce</label>
+              </div>
+            </div>
+
+            <!-- Grid / list switch -->
+            <label for="grid-toggle" class="icon-btn" title="Grid / list">
+              <svg class="icon"><use href="#icon-grid"/></svg>
+            </label>
+
+            <!-- More options -->
+            <div class="dropdown-wrap">
+              <input type="checkbox" id="more-toggle" class="hidden-input">
+              <label for="more-toggle" class="icon-btn" style="font-size:20px">⋮</label>
+              <div class="dropdown">
+                <a href="#toast">Sync all now</a>
+                <a href="#toast">Export list (CSV)</a>
+                <a href="#modal-add">Manage API keys</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="system-list">
+
+          <div class="system-row" data-category="crm">
+            <i class="logo-circle" style="background:#00a1e0">SF</i>
+            <div class="system-info"><b>Salesforce CRM</b><small>Customer relationship management</small></div>
+            <span class="category-tag">CRM</span>
+            <span class="badge badge-connected"><svg class="icon"><use href="#icon-check"/></svg>Connected</span>
+            <a class="configure-btn" href="#modal-salesforce">Configure</a>
+          </div>
+
+          <div class="system-row" data-category="tms">
+            <i class="logo-circle" style="background:#0a6ed1">SAP</i>
+            <div class="system-info"><b>SAP TMS</b><small>Transportation management system</small></div>
+            <span class="category-tag">TMS</span>
+            <span class="badge badge-connected"><svg class="icon"><use href="#icon-check"/></svg>Connected</span>
+            <a class="configure-btn" href="#modal-sap">Configure</a>
+          </div>
+
+          <div class="system-row" data-category="erp">
+            <i class="logo-circle" style="background:#c74634">Or</i>
+            <div class="system-info"><b>Oracle ERP</b><small>Enterprise resource planning</small></div>
+            <span class="category-tag">ERP</span>
+            <span class="badge badge-syncing"><svg class="icon"><use href="#icon-clock"/></svg>Syncing</span>
+            <a class="configure-btn" href="#modal-oracle">Configure</a>
+          </div>
+
+          <div class="system-row" data-category="erp">
+            <i class="logo-circle" style="background:#2557b7">MS</i>
+            <div class="system-info"><b>Microsoft Dynamics</b><small>Business applications</small></div>
+            <span class="category-tag">ERP</span>
+            <span class="badge badge-error"><svg class="icon"><use href="#icon-alert"/></svg>Errors</span>
+            <a class="configure-btn" href="#modal-dynamics">Configure</a>
+          </div>
+
+          <div class="system-row" data-category="communication">
+            <i class="logo-circle" style="background:#611f69">Sl</i>
+            <div class="system-info"><b>Slack</b><small>Team communication</small></div>
+            <span class="category-tag">Communication</span>
+            <span class="badge badge-connected"><svg class="icon"><use href="#icon-check"/></svg>Connected</span>
+            <a class="configure-btn" href="#modal-slack">Configure</a>
+          </div>
+
+          <div class="system-row" data-category="ecommerce">
+            <i class="logo-circle" style="background:#5e8e3e">Sh</i>
+            <div class="system-info"><b>Shopify</b><small>E-commerce platform</small></div>
+            <span class="category-tag">E-commerce</span>
+            <span class="badge badge-connected"><svg class="icon"><use href="#icon-check"/></svg>Connected</span>
+            <a class="configure-btn" href="#modal-shopify">Configure</a>
+          </div>
+
+        </div>
+      </section>
+    </main>
+  </div>
+
+
+  <!-- ============ MODALS (opened with :target) ============ -->
+
+  <section class="modal" id="modal-salesforce">
+    <a class="modal-backdrop" href="#"></a>
+    <div class="modal-box">
+      <h3>Salesforce CRM</h3>
+      <p>Sync customers, leads and quotes with freight bookings.</p>
+      <label class="switch-row">Two-way account sync <input type="checkbox" checked></label>
+      <label class="switch-row">Create shipment from won deals <input type="checkbox" checked></label>
+      <label class="switch-row">Push tracking status to opportunities <input type="checkbox"></label>
+      <select>
+        <option>Real-time</option>
+        <option>Every 15 minutes</option>
+        <option>Hourly</option>
+      </select>
+      <div class="info-row"><span>Last sync</span>3 min ago</div>
+      <div class="modal-actions">
+        <a class="btn-danger" href="#">Disconnect</a>
+        <a href="#">Cancel</a>
+        <a class="btn-primary" href="#">Save</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="modal" id="modal-sap">
+    <a class="modal-backdrop" href="#"></a>
+    <div class="modal-box">
+      <h3>SAP TMS</h3>
+      <p>Plan loads, carriers and freight orders from one place.</p>
+      <label class="switch-row">Import freight orders <input type="checkbox" checked></label>
+      <label class="switch-row">Auto-assign carriers <input type="checkbox" checked></label>
+      <label class="switch-row">Export delivery confirmations <input type="checkbox" checked></label>
+      <select>
+        <option>Every 15 minutes</option>
+        <option>Real-time</option>
+        <option>Daily</option>
+      </select>
+      <div class="info-row"><span>Last sync</span>8 min ago</div>
+      <div class="modal-actions">
+        <a class="btn-danger" href="#">Disconnect</a>
+        <a href="#">Cancel</a>
+        <a class="btn-primary" href="#">Save</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="modal" id="modal-oracle">
+    <a class="modal-backdrop" href="#"></a>
+    <div class="modal-box">
+      <h3>Oracle ERP</h3>
+      <p>Invoices, purchase orders and cost centers.</p>
+      <div class="info-row"><span>Status</span><span class="badge badge-syncing">Syncing 72%</span></div>
+      <div class="progress"><i></i></div>
+      <label class="switch-row">Sync invoices <input type="checkbox" checked></label>
+      <label class="switch-row">Sync purchase orders <input type="checkbox" checked></label>
+      <div class="modal-actions">
+        <a href="#">Pause</a>
+        <a class="btn-primary" href="#">Close</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="modal" id="modal-dynamics">
+    <a class="modal-backdrop" href="#"></a>
+    <div class="modal-box">
+      <h3>Microsoft Dynamics</h3>
+      <div class="alert">Authentication token expired. Invoice sync stopped 2 min ago.</div>
+      <label class="switch-row">Retry automatically <input type="checkbox" checked></label>
+      <label class="switch-row">Notify admins in Slack <input type="checkbox" checked></label>
+      <select>
+        <option>Production</option>
+        <option>Sandbox</option>
+      </select>
+      <div class="info-row"><span>Failed records</span>14</div>
+      <div class="modal-actions">
+        <a href="#">View logs</a>
+        <a class="btn-primary" href="#">Reconnect</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="modal" id="modal-slack">
+    <a class="modal-backdrop" href="#"></a>
+    <div class="modal-box">
+      <h3>Slack</h3>
+      <p>Send shipment alerts to your team channels.</p>
+      <label class="switch-row">Delay alerts <input type="checkbox" checked></label>
+      <label class="switch-row">Customs hold alerts <input type="checkbox" checked></label>
+      <label class="switch-row">Daily summary <input type="checkbox"></label>
+      <select>
+        <option>#operations</option>
+        <option>#customer-support</option>
+        <option>#finance</option>
+      </select>
+      <div class="modal-actions">
+        <a class="btn-danger" href="#">Disconnect</a>
+        <a class="btn-primary" href="#">Save</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="modal" id="modal-shopify">
+    <a class="modal-backdrop" href="#"></a>
+    <div class="modal-box">
+      <h3>Shopify</h3>
+      <p>Pull online orders and push fulfilment and tracking.</p>
+      <label class="switch-row">Import new orders <input type="checkbox" checked></label>
+      <label class="switch-row">Send tracking to customers <input type="checkbox" checked></label>
+      <label class="switch-row">Live shipping rates at checkout <input type="checkbox"></label>
+      <div class="info-row"><span>Orders today</span>128</div>
+      <div class="modal-actions">
+        <a class="btn-danger" href="#">Disconnect</a>
+        <a class="btn-primary" href="#">Save</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="modal" id="modal-maersk">
+    <a class="modal-backdrop" href="#"></a>
+    <div class="modal-box">
+      <h3>Maersk Line</h3>
+      <p>Connected. Schedules and tracking are live.</p>
+      <div class="info-row"><span>Requests today</span>2,431</div>
+      <div class="info-row"><span>Uptime</span>99.9%</div>
+      <div class="info-row"><span>Last sync</span>1 min ago</div>
+      <div class="modal-actions"><a class="btn-primary" href="#">Close</a></div>
+    </div>
+  </section>
+
+  <section class="modal" id="modal-dhl">
+    <a class="modal-backdrop" href="#"></a>
+    <div class="modal-box">
+      <h3>DHL Air Freight</h3>
+      <p>Syncing air waybills and rates.</p>
+      <div class="progress"><i></i></div>
+      <div class="info-row"><span>AWBs imported</span>860</div>
+      <div class="info-row"><span>Uptime</span>99.4%</div>
+      <div class="modal-actions"><a class="btn-primary" href="#">Close</a></div>
+    </div>
+  </section>
+
+  <section class="modal" id="modal-cma">
+    <a class="modal-backdrop" href="#"></a>
+    <div class="modal-box">
+      <h3>CMA CGM</h3>
+      <div class="alert">API key rejected (401). Update your credentials.</div>
+      <div class="info-row"><span>Last success</span>5 hrs ago</div>
+      <div class="modal-actions"><a class="btn-primary" href="#">Update key</a></div>
+    </div>
+  </section>
+
+  <section class="modal" id="modal-add">
+    <a class="modal-backdrop" href="#"></a>
+    <div class="modal-box">
+      <h3>Add integration</h3>
+      <p>54 more available.</p>
+      <div class="catalog-grid">
+        <a href="#">NetSuite</a>
+        <a href="#">QuickBooks</a>
+        <a href="#">FedEx</a>
+        <a href="#">MSC</a>
+        <a href="#">Zapier</a>
+        <a href="#">HubSpot</a>
+      </div>
+      <div class="modal-actions"><a href="#">Cancel</a></div>
+    </div>
+  </section>
+
+  <!-- Small message shown by the "Sync all now" / "Export" links -->
+  <div id="toast">Sync started for 6 systems <a href="#"><b>✕</b></a></div>
+
+</body>
+</html>
