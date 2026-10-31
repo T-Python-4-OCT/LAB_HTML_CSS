@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The AI Toolbox - AI tools recommended for developers and designers. Built with Tailwind CSS.">
+    <title>The AI Toolbox | Morad Alshehri</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ink: '#06060c',
+                        neon: { cyan: '#22d3ee', violet: '#8b5cf6', pink: '#f472b6' }
+                    },
+                    fontFamily: {
+                        display: ['Poppins', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif']
+                    },
+                    keyframes: {
+                        drift: {
+                            '0%':   { transform: 'translate(0, 0) scale(1)' },
+                            '100%': { transform: 'translate(120px, 90px) scale(1.15)' }
+                        },
+                        flow: {
+                            to: { backgroundPosition: '300% 0' }
+                        },
+                        rise: {
+                            from: { opacity: '0', transform: 'translateY(30px)' }
+                        }
+                    },
+                    animation: {
+                        drift: 'drift 18s ease-in-out infinite alternate',
+                        flow: 'flow 6s linear infinite',
+                        rise: 'rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) backwards'
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+<body class="min-h-screen overflow-x-hidden bg-ink font-sans text-slate-100 antialiased selection:bg-neon-violet">
+
+    <div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden" aria-hidden="true">
+        <div class="absolute -left-32 -top-32 h-[520px] w-[520px] animate-drift rounded-full bg-neon-violet/40 blur-[100px]"></div>
+        <div class="absolute -right-40 top-1/3 h-[560px] w-[560px] animate-drift rounded-full bg-neon-cyan/20 blur-[100px] [animation-delay:-6s]"></div>
+        <div class="absolute -bottom-40 left-1/3 h-[460px] w-[460px] animate-drift rounded-full bg-neon-pink/20 blur-[100px] [animation-delay:-12s]"></div>
+    </div>
+
+    <header class="sticky top-4 z-50 mx-auto mt-4 flex w-[min(1180px,calc(100%-32px))] items-center justify-between rounded-2xl border border-white/15 bg-white/5 px-4 py-3 backdrop-blur-xl">
+        <a href="../../index.html" class="flex h-11 w-11 animate-flow items-center justify-center rounded-xl bg-gradient-to-r from-neon-cyan via-neon-violet to-neon-pink bg-[length:300%_100%] font-display font-bold text-white transition hover:-rotate-6 hover:scale-105" aria-label="All projects">MA</a>
+        <nav aria-label="Toolbox categories" class="hidden md:block">
+            <ul class="flex gap-1 text-sm font-medium text-slate-400">
+                <li><a href="#assistants" class="rounded-lg px-4 py-2 transition hover:bg-white/10 hover:text-white">Assistants</a></li>
+                <li><a href="#coding" class="rounded-lg px-4 py-2 transition hover:bg-white/10 hover:text-white">Coding</a></li>
+                <li><a href="#design" class="rounded-lg px-4 py-2 transition hover:bg-white/10 hover:text-white">Design</a></li>
+                <li><a href="#compare" class="rounded-lg px-4 py-2 transition hover:bg-white/10 hover:text-white">Compare</a></li>
+            </ul>
+        </nav>
+        <a href="index.html" class="rounded-xl bg-gradient-to-br from-neon-violet to-neon-pink px-4 py-2 text-sm font-medium shadow-[0_0_24px_rgba(139,92,246,0.45)] transition hover:-translate-y-0.5 hover:scale-105">&larr; Back to article</a>
+    </header>
+
+    <main class="mx-auto max-w-6xl px-6">
+        <section class="py-24 text-center md:py-32">
+            <p class="inline-flex animate-rise items-center gap-2 rounded-full border border-white/15 bg-white/5 py-1.5 pl-1.5 pr-4 text-sm text-slate-400">
+                <span class="rounded-full bg-gradient-to-r from-neon-cyan to-neon-violet px-3 py-0.5 text-xs font-semibold text-white">Tailwind CSS</span>
+                Companion page to &ldquo;The AI Revolution&rdquo;
+            </p>
+            <h1 class="mt-7 animate-rise font-display text-5xl font-bold leading-none tracking-tight [animation-delay:100ms] sm:text-6xl md:text-7xl">
+                The AI
+                <span class="animate-flow bg-gradient-to-r from-neon-cyan via-neon-violet to-neon-pink bg-[length:300%_100%] bg-clip-text text-transparent">Toolbox</span>
+            </h1>
+            <p class="mx-auto mt-6 max-w-2xl animate-rise text-lg text-slate-400 [animation-delay:200ms]">
+                Ten AI tools I recommend for developers and designers &mdash; this whole page is styled with
+                <strong class="font-medium text-slate-200">Tailwind CSS utility classes</strong>, with no custom stylesheet.
+            </p>
+            <div class="mt-10 flex animate-rise flex-wrap justify-center gap-3 [animation-delay:300ms]">
+                <a href="#assistants" class="rounded-full border border-white/15 px-5 py-2 text-sm transition hover:border-neon-cyan hover:text-neon-cyan">Assistants</a>
+                <a href="#coding" class="rounded-full border border-white/15 px-5 py-2 text-sm transition hover:border-neon-violet hover:text-neon-violet">Coding</a>
+                <a href="#design" class="rounded-full border border-white/15 px-5 py-2 text-sm transition hover:border-neon-pink hover:text-neon-pink">Design &amp; Video</a>
+            </div>
+        </section>
+
+        <section id="assistants" class="scroll-mt-28 py-12">
+            <div class="mb-8 flex items-end justify-between gap-4">
+                <div>
+                    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-neon-cyan">01 &middot; Assistants</p>
+                    <h2 class="mt-2 font-display text-3xl font-bold md:text-4xl">Chat &amp; research</h2>
+                </div>
+                <span class="hidden rounded-full bg-white/5 px-3 py-1 text-xs text-slate-400 sm:block">4 tools</span>
+            </div>
+            <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+                <a href="https://chatgpt.com/" target="_blank" rel="noopener" class="group rounded-3xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur transition duration-500 hover:-translate-y-2 hover:border-neon-cyan/50 hover:shadow-[0_20px_50px_-15px_rgba(34,211,238,0.45)]">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-500/15 font-display text-lg font-bold text-emerald-400 transition duration-500 group-hover:rotate-12 group-hover:scale-110">C</div>
+                    <h3 class="mt-5 font-display text-xl font-semibold">ChatGPT</h3>
+                    <p class="text-xs text-slate-500">OpenAI</p>
+                    <p class="mt-3 text-sm text-slate-400">General-purpose assistant for writing, brainstorming and explaining code.</p>
+                    <span class="mt-5 inline-flex items-center gap-1 text-sm font-medium text-neon-cyan">Visit <span class="transition group-hover:translate-x-1">&rarr;</span></span>
+                </a>
+                <a href="https://claude.ai/" target="_blank" rel="noopener" class="group rounded-3xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur transition duration-500 hover:-translate-y-2 hover:border-neon-cyan/50 hover:shadow-[0_20px_50px_-15px_rgba(34,211,238,0.45)]">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-orange-500/15 font-display text-lg font-bold text-orange-400 transition duration-500 group-hover:rotate-12 group-hover:scale-110">A</div>
+                    <h3 class="mt-5 font-display text-xl font-semibold">Claude</h3>
+                    <p class="text-xs text-slate-500">Anthropic</p>
+                    <p class="mt-3 text-sm text-slate-400">Strong at long documents, careful reasoning and writing clean code.</p>
+                    <span class="mt-5 inline-flex items-center gap-1 text-sm font-medium text-neon-cyan">Visit <span class="transition group-hover:translate-x-1">&rarr;</span></span>
+                </a>
+                <a href="https://gemini.google.com/" target="_blank" rel="noopener" class="group rounded-3xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur transition duration-500 hover:-translate-y-2 hover:border-neon-cyan/50 hover:shadow-[0_20px_50px_-15px_rgba(34,211,238,0.45)]">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-500/15 font-display text-lg font-bold text-blue-400 transition duration-500 group-hover:rotate-12 group-hover:scale-110">G</div>
+                    <h3 class="mt-5 font-display text-xl font-semibold">Gemini</h3>
+                    <p class="text-xs text-slate-500">Google</p>
+                    <p class="mt-3 text-sm text-slate-400">Multimodal assistant connected to the Google ecosystem.</p>
+                    <span class="mt-5 inline-flex items-center gap-1 text-sm font-medium text-neon-cyan">Visit <span class="transition group-hover:translate-x-1">&rarr;</span></span>
+                </a>
+                <a href="https://www.perplexity.ai/" target="_blank" rel="noopener" class="group rounded-3xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur transition duration-500 hover:-translate-y-2 hover:border-neon-cyan/50 hover:shadow-[0_20px_50px_-15px_rgba(34,211,238,0.45)]">
+                    <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-teal-500/15 font-display text-lg font-bold text-teal-300 transition duration-500 group-hover:rotate-12 group-hover:scale-110">P</div>
+                    <h3 class="mt-5 font-display text-xl font-semibold">Perplexity</h3>
+                    <p class="text-xs text-slate-500">Perplexity AI</p>
+                    <p class="mt-3 text-sm text-slate-400">AI search engine that answers with sources you can check.</p>
+                    <span class="mt-5 inline-flex items-center gap-1 text-sm font-medium text-neon-cyan">Visit <span class="transition group-hover:translate-x-1">&rarr;</span></span>
+                </a>
+            </div>
+        </section>
+
+        <section id="coding" class="scroll-mt-28 py-12">
+            <div class="mb-8">
+                <p class="text-sm font-semibold uppercase tracking-[0.2em] text-neon-violet">02 &middot; Coding</p>
+                <h2 class="mt-2 font-display text-3xl font-bold md:text-4xl">Write code faster</h2>
+            </div>
+            <div class="grid gap-5 md:grid-cols-2">
+                <a href="https://github.com/features/copilot" target="_blank" rel="noopener" class="group relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-neon-violet/20 to-transparent p-8 transition duration-500 hover:-translate-y-2 hover:border-neon-violet/60">
+                    <div class="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-neon-violet/30 blur-3xl transition duration-700 group-hover:scale-150"></div>
+                    <div class="relative">
+                        <span class="rounded-full bg-white/10 px-3 py-1 text-xs text-slate-300">IDE extension</span>
+                        <h3 class="mt-5 font-display text-2xl font-semibold">GitHub Copilot</h3>
+                        <p class="mt-2 text-slate-400">Suggests whole lines and functions while you type in VS Code and Visual Studio &mdash; great for C# and Angular.</p>
+                        <span class="mt-6 inline-flex items-center gap-1 font-medium text-neon-violet">Visit <span class="transition group-hover:translate-x-1">&rarr;</span></span>
+                    </div>
+                </a>
+                <a href="https://cursor.com/" target="_blank" rel="noopener" class="group relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-neon-cyan/20 to-transparent p-8 transition duration-500 hover:-translate-y-2 hover:border-neon-cyan/60">
+                    <div class="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-neon-cyan/30 blur-3xl transition duration-700 group-hover:scale-150"></div>
+                    <div class="relative">
+                        <span class="rounded-full bg-white/10 px-3 py-1 text-xs text-slate-300">Code editor</span>
+                        <h3 class="mt-5 font-display text-2xl font-semibold">Cursor</h3>
+                        <p class="mt-2 text-slate-400">An AI-first code editor that can read your whole project and edit several files at once.</p>
+                        <span class="mt-6 inline-flex items-center gap-1 font-medium text-neon-cyan">Visit <span class="transition group-hover:translate-x-1">&rarr;</span></span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section id="design" class="scroll-mt-28 py-12">
+            <div class="mb-8">
+                <p class="text-sm font-semibold uppercase tracking-[0.2em] text-neon-pink">03 &middot; Design &amp; Video</p>
+                <h2 class="mt-2 font-display text-3xl font-bold md:text-4xl">Create visuals &amp; motion</h2>
+            </div>
+            <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+                <a href="https://www.adobe.com/products/firefly.html" target="_blank" rel="noopener" class="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] transition duration-500 hover:-translate-y-2 hover:border-neon-pink/50">
+                    <div class="h-28 bg-gradient-to-br from-rose-500 to-orange-400 transition duration-700 group-hover:scale-110"></div>
+                    <div class="p-6">
+                        <h3 class="font-display text-xl font-semibold">Adobe Firefly</h3>
+                        <p class="mt-2 text-sm text-slate-400">Generative fill and image generation inside Photoshop.</p>
+                    </div>
+                </a>
+                <a href="https://www.midjourney.com/" target="_blank" rel="noopener" class="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] transition duration-500 hover:-translate-y-2 hover:border-neon-pink/50">
+                    <div class="h-28 bg-gradient-to-br from-indigo-500 to-sky-400 transition duration-700 group-hover:scale-110"></div>
+                    <div class="p-6">
+                        <h3 class="font-display text-xl font-semibold">Midjourney</h3>
+                        <p class="mt-2 text-sm text-slate-400">Artistic image generation for concepts and mood boards.</p>
+                    </div>
+                </a>
+                <a href="https://runwayml.com/" target="_blank" rel="noopener" class="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] transition duration-500 hover:-translate-y-2 hover:border-neon-pink/50">
+                    <div class="h-28 bg-gradient-to-br from-fuchsia-500 to-purple-600 transition duration-700 group-hover:scale-110"></div>
+                    <div class="p-6">
+                        <h3 class="font-display text-xl font-semibold">Runway</h3>
+                        <p class="mt-2 text-sm text-slate-400">AI video generation and editing &mdash; a motion designer's playground.</p>
+                    </div>
+                </a>
+                <a href="https://www.canva.com/" target="_blank" rel="noopener" class="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] transition duration-500 hover:-translate-y-2 hover:border-neon-pink/50">
+                    <div class="h-28 bg-gradient-to-br from-cyan-400 to-violet-500 transition duration-700 group-hover:scale-110"></div>
+                    <div class="p-6">
+                        <h3 class="font-display text-xl font-semibold">Canva</h3>
+                        <p class="mt-2 text-sm text-slate-400">Quick social posts and presentations with built-in AI tools.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section id="compare" class="scroll-mt-28 py-12">
+            <div class="mb-8">
+                <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">04 &middot; Compare</p>
+                <h2 class="mt-2 font-display text-3xl font-bold md:text-4xl">Which tool for which job?</h2>
+            </div>
+            <div class="overflow-x-auto rounded-3xl border border-white/10 bg-white/[0.03]">
+                <table class="w-full min-w-[560px] text-left text-sm">
+                    <thead class="border-b border-white/10 text-xs uppercase tracking-wider text-slate-400">
+                        <tr>
+                            <th scope="col" class="px-6 py-4 font-medium">Task</th>
+                            <th scope="col" class="px-6 py-4 font-medium">Best pick</th>
+                            <th scope="col" class="px-6 py-4 font-medium">Why</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-white/5">
+                        <tr class="transition hover:bg-white/5">
+                            <td class="px-6 py-4 text-slate-300">Explain a concept</td>
+                            <td class="px-6 py-4"><span class="rounded-full bg-neon-cyan/15 px-3 py-1 font-medium text-neon-cyan">Claude / ChatGPT</span></td>
+                            <td class="px-6 py-4 text-slate-400">Clear step-by-step explanations</td>
+                        </tr>
+                        <tr class="transition hover:bg-white/5">
+                            <td class="px-6 py-4 text-slate-300">Research with sources</td>
+                            <td class="px-6 py-4"><span class="rounded-full bg-teal-400/15 px-3 py-1 font-medium text-teal-300">Perplexity</span></td>
+                            <td class="px-6 py-4 text-slate-400">Every answer links to its sources</td>
+                        </tr>
+                        <tr class="transition hover:bg-white/5">
+                            <td class="px-6 py-4 text-slate-300">Autocomplete code</td>
+                            <td class="px-6 py-4"><span class="rounded-full bg-neon-violet/15 px-3 py-1 font-medium text-violet-300">GitHub Copilot</span></td>
+                            <td class="px-6 py-4 text-slate-400">Works inside the editor you already use</td>
+                        </tr>
+                        <tr class="transition hover:bg-white/5">
+                            <td class="px-6 py-4 text-slate-300">Edit photos</td>
+                            <td class="px-6 py-4"><span class="rounded-full bg-rose-400/15 px-3 py-1 font-medium text-rose-300">Adobe Firefly</span></td>
+                            <td class="px-6 py-4 text-slate-400">Built into Photoshop</td>
+                        </tr>
+                        <tr class="transition hover:bg-white/5">
+                            <td class="px-6 py-4 text-slate-300">Motion &amp; video</td>
+                            <td class="px-6 py-4"><span class="rounded-full bg-neon-pink/15 px-3 py-1 font-medium text-neon-pink">Runway</span></td>
+                            <td class="px-6 py-4 text-slate-400">Pairs well with After Effects workflows</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="mt-4 text-xs text-slate-500">Tool names belong to their respective owners. Recommendations reflect my personal experience.</p>
+        </section>
+
+        <section class="py-20">
+            <div class="relative overflow-hidden rounded-[2rem] border border-white/15 bg-gradient-to-br from-neon-violet/25 via-ink to-neon-cyan/20 p-10 text-center md:p-16">
+                <div class="absolute left-1/2 top-0 h-40 w-2/3 -translate-x-1/2 rounded-full bg-neon-pink/25 blur-3xl"></div>
+                <h2 class="relative font-display text-3xl font-bold md:text-5xl">AI is a tool. <span class="text-neon-cyan">You</span> are the craftsman.</h2>
+                <p class="relative mx-auto mt-4 max-w-xl text-slate-400">Learn the fundamentals first &mdash; then let AI make you faster, not lazier.</p>
+                <div class="relative mt-8 flex flex-wrap justify-center gap-3">
+                    <a href="index.html" class="rounded-xl bg-gradient-to-r from-neon-cyan via-neon-violet to-neon-pink px-7 py-3 font-display font-semibold text-white shadow-[0_10px_40px_-10px_rgba(139,92,246,0.8)] transition hover:-translate-y-1 hover:scale-105">Read the article</a>
+                    <a href="../../careers/cv/index.html" class="rounded-xl border border-white/20 bg-white/5 px-7 py-3 font-display font-semibold transition hover:-translate-y-1 hover:border-neon-cyan">About the author</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="mx-auto flex max-w-6xl flex-col gap-2 border-t border-white/10 px-6 py-8 text-sm text-slate-500 sm:flex-row sm:justify-between">
+        <p>&copy; 2026 Morad Alshehri</p>
+        <p>Styled with <span class="text-neon-cyan">Tailwind CSS</span> &middot; HTML/CSS Lab</p>
+    </footer>
+</body>
+</html>

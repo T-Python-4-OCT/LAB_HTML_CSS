@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HTML/CSS Lab - a collection of web projects by Morad Alshehri.">
+    <title>Morad Alshehri | HTML/CSS Lab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        @property --angle {
+            syntax: "<angle>";
+            initial-value: 0deg;
+            inherits: false;
+        }
+
+        :root {
+            --bg: #06060c;
+            --glass: rgba(255, 255, 255, 0.04);
+            --line: rgba(255, 255, 255, 0.08);
+            --line-strong: rgba(255, 255, 255, 0.16);
+            --text: #f4f4f8;
+            --muted: #9898a8;
+            --cyan: #22d3ee;
+            --violet: #8b5cf6;
+            --pink: #f472b6;
+            --gradient: linear-gradient(90deg, var(--cyan), var(--violet), var(--pink), var(--cyan));
+            --display: 'Poppins', system-ui, sans-serif;
+            --ease: cubic-bezier(0.22, 1, 0.36, 1);
+            --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: 'Inter', system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .bg {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            animation: drift 20s ease-in-out infinite alternate;
+        }
+
+        .b1 { top: -15%; left: -10%; width: 560px; height: 560px; background: var(--violet); opacity: 0.45; }
+        .b2 { top: 20%; right: -15%; width: 620px; height: 620px; background: var(--cyan); opacity: 0.25; animation-delay: -7s; }
+        .b3 { bottom: -25%; left: 25%; width: 520px; height: 520px; background: var(--pink); opacity: 0.25; animation-delay: -14s; }
+
+        .grid-lines {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(var(--line) 1px, transparent 1px),
+                linear-gradient(90deg, var(--line) 1px, transparent 1px);
+            background-size: 64px 64px;
+            -webkit-mask-image: radial-gradient(ellipse 70% 55% at 50% 0%, #000 30%, transparent 75%);
+            mask-image: radial-gradient(ellipse 70% 55% at 50% 0%, #000 30%, transparent 75%);
+        }
+
+        @keyframes drift {
+            0%   { transform: translate(0, 0) scale(1); }
+            50%  { transform: translate(140px, 90px) scale(1.15); }
+            100% { transform: translate(-70px, 170px) scale(0.9); }
+        }
+
+        @keyframes flow {
+            to { background-position: 300% 0; }
+        }
+
+        @keyframes rise {
+            from { opacity: 0; transform: translateY(40px); filter: blur(8px); }
+            to   { opacity: 1; transform: none; filter: none; }
+        }
+
+        @keyframes rotate {
+            to { --angle: 360deg; }
+        }
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: min(1180px, calc(100% - 32px));
+            margin: 18px auto 0;
+            padding: 12px 14px 12px 14px;
+            border: 1px solid var(--line-strong);
+            border-radius: 18px;
+            background: rgba(12, 12, 22, 0.6);
+            backdrop-filter: blur(18px);
+            animation: rise 0.9s var(--ease) backwards;
+        }
+
+        .logo {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 12px;
+            background: var(--gradient);
+            background-size: 300% 100%;
+            font-family: var(--display);
+            font-weight: 700;
+            color: #fff;
+            white-space: nowrap;
+            animation: flow 6s linear infinite;
+            transition: transform 0.5s var(--spring);
+        }
+
+        .logo:hover {
+            transform: rotate(-8deg) scale(1.08);
+        }
+
+        .top-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.88rem;
+            color: var(--muted);
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #4ade80;
+            box-shadow: 0 0 12px #4ade80;
+        }
+
+        .top-cta {
+            padding: 10px 18px;
+            border-radius: 11px;
+            background: linear-gradient(135deg, var(--violet), var(--pink));
+            font-weight: 500;
+            font-size: 0.9rem;
+            box-shadow: 0 0 24px rgba(139, 92, 246, 0.45);
+            transition: transform 0.4s var(--spring), box-shadow 0.4s;
+        }
+
+        .top-cta:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 0 40px rgba(244, 114, 182, 0.6);
+        }
+
+        header {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 110px 24px 70px;
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 7px 16px 7px 7px;
+            border: 1px solid var(--line-strong);
+            border-radius: 40px;
+            background: var(--glass);
+            font-size: 0.88rem;
+            color: var(--muted);
+            animation: rise 1s 0.1s var(--ease) backwards;
+        }
+
+        .badge b {
+            padding: 3px 10px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, var(--cyan), var(--violet));
+            font-size: 0.75rem;
+            color: #fff;
+        }
+
+        h1 {
+            margin: 28px 0 22px;
+            font-family: var(--display);
+            font-weight: 700;
+            font-size: clamp(3rem, 9vw, 7.2rem);
+            line-height: 0.95;
+            letter-spacing: -1.5px;
+            animation: rise 1s 0.2s var(--ease) backwards;
+        }
+
+        h1 span {
+            background: var(--gradient);
+            background-size: 300% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: flow 6s linear infinite;
+        }
+
+        .lead {
+            max-width: 620px;
+            margin: 0 auto;
+            font-size: 1.15rem;
+            color: var(--muted);
+            animation: rise 1s 0.3s var(--ease) backwards;
+        }
+
+        .stack {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 34px;
+            list-style: none;
+            animation: rise 1s 0.4s var(--ease) backwards;
+        }
+
+        .stack li {
+            padding: 6px 14px;
+            border: 1px solid var(--line-strong);
+            border-radius: 20px;
+            font-size: 0.82rem;
+            color: var(--muted);
+            animation: bob 3s ease-in-out infinite;
+        }
+
+        .stack li:nth-child(2) { animation-delay: 0.2s; }
+        .stack li:nth-child(3) { animation-delay: 0.4s; }
+        .stack li:nth-child(4) { animation-delay: 0.6s; }
+        .stack li:nth-child(5) { animation-delay: 0.8s; }
+        .stack li:nth-child(6) { animation-delay: 1s; }
+
+        @keyframes bob {
+            0%, 100% { transform: translateY(0); }
+            50%      { transform: translateY(-6px); }
+        }
+
+        main {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 24px 120px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            grid-column: span 2;
+            overflow: hidden;
+            border-radius: 26px;
+            background: rgba(14, 14, 26, 0.75);
+            border: 1px solid var(--line);
+            animation: rise 1s var(--ease) backwards;
+            transition: transform 0.6s var(--spring), border-color 0.3s, box-shadow 0.5s;
+        }
+
+        .card.wide { grid-column: span 4; }
+        .card.half { grid-column: span 3; }
+
+        .card:nth-child(1) { animation-delay: 0.45s; }
+        .card:nth-child(2) { animation-delay: 0.55s; }
+        .card:nth-child(3) { animation-delay: 0.65s; }
+        .card:nth-child(4) { animation-delay: 0.75s; }
+        .card:nth-child(5) { animation-delay: 0.85s; }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            padding: 1.5px;
+            border-radius: 26px;
+            background: conic-gradient(from var(--angle), var(--cyan), var(--violet), var(--pink), transparent 55%, var(--cyan));
+            -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+            mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s;
+            animation: rotate 3s linear infinite paused;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 70px -20px rgba(139, 92, 246, 0.55);
+        }
+
+                .card:hover::before {
+            opacity: 1;
+            animation-play-state: running;
+        }
+
+        .visual {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+            display: grid;
+            place-items: center;
+        }
+
+        .wide .visual { height: 260px; }
+
+        .v-cv {
+            background:
+                radial-gradient(circle at 25% 30%, rgba(34, 211, 238, 0.55), transparent 40%),
+                radial-gradient(circle at 75% 70%, rgba(244, 114, 182, 0.5), transparent 40%),
+                linear-gradient(135deg, #1a1036, #0b1a2e);
+        }
+
+        .v-html { background: linear-gradient(135deg, #3b1d0b, #7c2d12); }
+        .v-css  { background: linear-gradient(135deg, #0c1e3d, #1e40af); }
+        .v-ai   { background: linear-gradient(135deg, #2e1065, #831843); }
+        .v-dash { background: linear-gradient(135deg, #052e2b, #0e7490); }
+
+        .v-cv .big {
+            position: relative;
+            z-index: 1;
+            font-family: var(--display);
+            font-size: clamp(2.4rem, 5vw, 4rem);
+            font-weight: 700;
+            letter-spacing: -1px;
+            text-shadow: 0 0 40px rgba(139, 92, 246, 0.9);
+            transition: transform 0.6s var(--spring);
+        }
+
+        .card:hover .v-cv .big {
+            transform: scale(1.1) rotate(-3deg);
+        }
+
+        .orbit {
+            position: absolute;
+            border: 1px dashed rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: spin 18s linear infinite;
+        }
+
+        .o1 { width: 220px; height: 220px; }
+        .o2 { width: 340px; height: 340px; animation-direction: reverse; animation-duration: 26s; }
+
+        .orbit::before {
+            content: "";
+            position: absolute;
+            top: -6px;
+            left: 50%;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--cyan);
+            box-shadow: 0 0 20px var(--cyan);
+        }
+
+        .o2::before {
+            background: var(--pink);
+            box-shadow: 0 0 20px var(--pink);
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .code {
+            width: 78%;
+            padding: 18px;
+            border-radius: 14px;
+            background: rgba(0, 0, 0, 0.45);
+            font-family: Consolas, monospace;
+            font-size: 0.85rem;
+            color: #fdba74;
+        }
+
+        .code span {
+            display: block;
+            width: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: type 6s steps(22) infinite;
+        }
+
+        .code span:nth-child(2) { animation-delay: 0.6s; color: #fff; padding-left: 16px; }
+        .code span:nth-child(3) { animation-delay: 1.2s; color: #fff; padding-left: 16px; }
+        .code span:nth-child(4) { animation-delay: 1.8s; }
+
+        @keyframes type {
+            0%       { width: 0; }
+            30%, 85% { width: 100%; }
+            100%     { width: 0; }
+        }
+
+        .shape {
+            width: 110px;
+            height: 110px;
+            background: linear-gradient(135deg, var(--cyan), var(--violet));
+            animation: morph 6s ease-in-out infinite;
+            box-shadow: 0 0 50px rgba(34, 211, 238, 0.5);
+        }
+
+        @keyframes morph {
+            0%, 100% { border-radius: 50%; transform: rotate(0deg); }
+            33%      { border-radius: 20%; transform: rotate(120deg) scale(0.9); }
+            66%      { border-radius: 40% 60% 30% 70%; transform: rotate(240deg) scale(1.1); }
+        }
+
+        .neural {
+            display: grid;
+            grid-template-columns: repeat(5, 14px);
+            gap: 18px;
+        }
+
+        .neural i {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--pink);
+            animation: blink 2.4s ease-in-out infinite;
+        }
+
+        .neural i:nth-child(3n)   { animation-delay: 0.4s; background: var(--violet); }
+        .neural i:nth-child(3n+1) { animation-delay: 0.8s; background: var(--cyan); }
+        .neural i:nth-child(4n)   { animation-delay: 1.2s; }
+
+        @keyframes blink {
+            0%, 100% { opacity: 0.25; transform: scale(0.7); }
+            50%      { opacity: 1; transform: scale(1.2); box-shadow: 0 0 16px currentColor; }
+        }
+
+        .bars {
+            display: flex;
+            align-items: flex-end;
+            gap: 12px;
+            height: 120px;
+        }
+
+        .bars i {
+            width: 22px;
+            border-radius: 6px 6px 2px 2px;
+            background: linear-gradient(180deg, var(--cyan), rgba(34, 211, 238, 0.2));
+            animation: grow 2.4s ease-in-out infinite alternate;
+        }
+
+        .bars i:nth-child(1) { height: 40%; }
+        .bars i:nth-child(2) { height: 75%; animation-delay: 0.3s; }
+        .bars i:nth-child(3) { height: 55%; animation-delay: 0.6s; }
+        .bars i:nth-child(4) { height: 95%; animation-delay: 0.9s; }
+        .bars i:nth-child(5) { height: 65%; animation-delay: 1.2s; }
+        .bars i:nth-child(6) { height: 85%; animation-delay: 1.5s; }
+
+        @keyframes grow {
+            from { transform: scaleY(0.4); transform-origin: bottom; }
+            to   { transform: scaleY(1); transform-origin: bottom; }
+        }
+
+        .body {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 24px 26px 26px;
+        }
+
+        .meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .num {
+            font-family: var(--display);
+            font-weight: 700;
+            color: var(--violet);
+        }
+
+        .tag {
+            padding: 3px 12px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.07);
+            font-size: 0.75rem;
+            color: var(--muted);
+        }
+
+        .tag.hot {
+            background: linear-gradient(135deg, var(--violet), var(--pink));
+            color: #fff;
+        }
+
+        .body h2 {
+            font-family: var(--display);
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+
+        .wide .body h2 {
+            font-size: 2rem;
+        }
+
+        .body p {
+            margin: 6px 0 18px;
+            font-size: 0.92rem;
+            color: var(--muted);
+        }
+
+        .open {
+            margin-top: auto;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            font-size: 0.92rem;
+            color: var(--cyan);
+        }
+
+        .open::after {
+            content: "\2192";
+            transition: transform 0.4s var(--spring);
+        }
+
+        .card:hover .open::after {
+            transform: translateX(6px);
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 28px 24px;
+            border-top: 1px solid var(--line);
+            font-size: 0.88rem;
+            color: var(--muted);
+        }
+
+        @media (max-width: 980px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .card,
+            .card.half {
+                grid-column: span 1;
+            }
+
+            .card.wide {
+                grid-column: span 2;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .top-label {
+                display: none;
+            }
+
+            header {
+                padding-top: 80px;
+            }
+
+            h1 {
+                letter-spacing: -1.5px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card,
+            .card.wide,
+            .card.half {
+                grid-column: span 1;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 6px;
+                text-align: center;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg" aria-hidden="true">
+        <span class="blob b1"></span>
+        <span class="blob b2"></span>
+        <span class="blob b3"></span>
+        <span class="grid-lines"></span>
+    </div>
+
+    <div class="top">
+        <a href="careers/cv/index.html" class="logo" aria-label="Morad Alshehri">MA</a>
+        <span class="top-label"><span class="dot"></span> HTML/CSS Lab</span>
+        <a href="careers/cv/index.html" class="top-cta">About me</a>
+    </div>
+
+    <header>
+        <p class="badge"><b>5 projects</b> Built with pure HTML &amp; CSS</p>
+        <h1>Morad&rsquo;s <span>Web Lab</span></h1>
+        <p class="lead">Developer by day, designer at heart. Here's everything I built while leveling up my HTML &amp; CSS &mdash; from raw markup to a full SaaS dashboard.</p>
+        <ul class="stack">
+            <li>HTML5</li><li>CSS3</li><li>Flexbox</li><li>Grid</li><li>Animations</li><li>Responsive</li>
+        </ul>
+    </header>
+
+    <main>
+        <div class="grid">
+            <a class="card wide" href="careers/cv/index.html">
+                <div class="visual v-cv" aria-hidden="true">
+                    <span class="orbit o1"></span>
+                    <span class="orbit o2"></span>
+                    <span class="big">Morad Alshehri</span>
+                </div>
+                <div class="body">
+                    <div class="meta"><span class="num">01</span><span class="tag hot">Featured</span></div>
+                    <h2>Personal Website &amp; CV</h2>
+                    <p>Experience, expertise, selected work and credentials &mdash; all in one animated page.</p>
+                    <span class="open">Open project</span>
+                </div>
+            </a>
+
+            <a class="card" href="dashboard/index.html">
+                <div class="visual v-dash" aria-hidden="true">
+                    <div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                </div>
+                <div class="body">
+                    <div class="meta"><span class="num">05</span><span class="tag">Bonus</span></div>
+                    <h2>Logistics Dashboard</h2>
+                    <p>Faithful SaaS interface built with Grid &amp; Flexbox.</p>
+                    <span class="open">Open project</span>
+                </div>
+            </a>
+
+            <a class="card" href="html/introduction/index.html">
+                <div class="visual v-html" aria-hidden="true">
+                    <div class="code">
+                        <span>&lt;section id="about"&gt;</span>
+                        <span>&lt;h2&gt;About Me&lt;/h2&gt;</span>
+                        <span>&lt;p&gt;Hi, I'm Morad&lt;/p&gt;</span>
+                        <span>&lt;/section&gt;</span>
+                    </div>
+                </div>
+                <div class="body">
+                    <div class="meta"><span class="num">02</span><span class="tag">HTML</span></div>
+                    <h2>About Me &mdash; HTML</h2>
+                    <p>Semantic structure, tables, lists and forms in pure HTML.</p>
+                    <span class="open">Open project</span>
+                </div>
+            </a>
+
+            <a class="card" href="css/introduction/index.html">
+                <div class="visual v-css" aria-hidden="true">
+                    <div class="shape"></div>
+                </div>
+                <div class="body">
+                    <div class="meta"><span class="num">03</span><span class="tag">CSS</span></div>
+                    <h2>About Me &mdash; Styled</h2>
+                    <p>Typography, box model, positioning and Flexbox.</p>
+                    <span class="open">Open project</span>
+                </div>
+            </a>
+
+            <a class="card" href="article/ai/index.html">
+                <div class="visual v-ai" aria-hidden="true">
+                    <div class="neural">
+                        <i></i><i></i><i></i><i></i><i></i>
+                        <i></i><i></i><i></i><i></i><i></i>
+                        <i></i><i></i><i></i><i></i><i></i>
+                    </div>
+                </div>
+                <div class="body">
+                    <div class="meta"><span class="num">04</span><span class="tag">Advanced</span></div>
+                    <h2>The AI Revolution</h2>
+                    <p>Editorial long-read with responsive layout and motion.</p>
+                    <span class="open">Open project</span>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Morad Alshehri</p>
+        <p>Designed &amp; built with HTML and CSS</p>
+    </footer>
+</body>
+</html>
