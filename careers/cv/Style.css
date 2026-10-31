@@ -1,0 +1,326 @@
+
+
+/* ========== Variables ========== */
+:root {
+    --ink: #0f172a;
+    --text: #334155;
+    --muted: #64748b;
+    --bg: #f8fafc;
+    --surface: #ffffff;
+    --line: #e2e8f0;
+    --accent: #0d9488;
+    --accent-soft: #ccfbf1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: "Inter", Arial, sans-serif;
+    line-height: 1.7;
+}
+
+/* ========== Header ========== */
+.cv-header {
+    background: linear-gradient(135deg, #0f172a, #134e4a);
+    color: #ffffff;
+    padding: 70px 0 50px;
+}
+
+.kicker {
+    color: #5eead4;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+}
+
+.cv-header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    animation: fadeUp 0.8s ease-out;
+}
+
+.lede {
+    max-width: 620px;
+    color: #cbd5e1;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    color: #e2e8f0;
+    font-size: 0.95rem;
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* ========== Sections ========== */
+main {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+section {
+    background-color: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 28px;
+    margin-bottom: 28px;
+}
+
+section h2 {
+    color: var(--ink);
+    font-weight: 800;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--accent-soft);
+}
+
+.sub-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+/* ========== Timeline (الخبرات والتعليم) ========== */
+.timeline {
+    border-left: 2px solid var(--line);
+    padding-left: 24px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -31px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    box-shadow: 0 0 0 4px var(--accent-soft);
+}
+
+.timeline-item h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 2px;
+}
+
+.meta {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.timeline-item ul {
+    padding-left: 18px;
+    margin-bottom: 0;
+}
+
+/* ========== Skills: نعدّل لون badge حق Bootstrap ========== */
+.skill {
+    background-color: var(--accent-soft);
+    color: #115e59;
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 8px 14px;
+    margin: 0 6px 8px 0;
+    border-radius: 999px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.skill:hover {
+    background-color: var(--accent);
+    color: #ffffff;
+}
+
+.skill.soft {
+    background-color: #f1f5f9;
+    color: var(--text);
+}
+
+/* ========== Projects: نعدّل card حق Bootstrap ========== */
+.project {
+    height: 100%;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgba(13, 148, 136, 0.15);
+}
+
+.project .card-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-top: 10px;
+}
+
+.project .card-text {
+    font-size: 0.92rem;
+    color: var(--muted);
+}
+
+.status {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+}
+
+.status.done {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.status.personal {
+    background-color: #e0e7ff;
+    color: #3730a3;
+}
+
+/* ========== Courses table ========== */
+.courses-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.courses-table th,
+.courses-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+}
+
+.courses-table th {
+    background-color: var(--ink);
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* :nth-child  صف ورا صف بلون مختلف */
+.courses-table tr:nth-child(even) td {
+    background-color: #f8fafc;
+}
+
+/* ========== Certificates ========== */
+.cert-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cert-list li {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 4px 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.cert-list li:last-child {
+    border-bottom: none;
+}
+
+.cert-list span {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+/* ========== Footer ========== */
+.cv-footer {
+    text-align: center;
+    color: var(--muted);
+    padding: 20px;
+}
+
+/* ========== Attribute selector: روابط تفتح في تبويب جديد ========== */
+a[target="_blank"]::after {
+    content: " ↗";
+}
+
+/* ========== Animation ========== */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+    .cv-header {
+        padding: 45px 0 35px;
+    }
+
+    .cv-header h1 {
+        font-size: 2.2rem;
+    }
+
+    section {
+        padding: 20px;
+    }
+}
+
+@media print {
+    .cv-header {
+        background: none;
+        color: var(--ink);
+    }
+
+    .contact-buttons {
+        display: none;
+    }
+
+    section {
+        border: none;
+        page-break-inside: avoid;
+    }
+}
+
+/* ========== Accessibility ========== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}

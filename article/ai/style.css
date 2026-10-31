@@ -1,0 +1,260 @@
+/* ========== Variables: الألوان في مكان واحد ========== */
+:root {
+    --bg: #0f172a;
+    --surface: #1e293b;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --accent: #38bdf8;
+    --accent-2: #a78bfa;
+}
+
+/* ========== Reset ========== */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* نزول ناعم لما تضغط روابط الـ nav */
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: "Inter", Arial, sans-serif;
+    line-height: 1.7;
+}
+
+/* ========== Header ========== */
+header {
+    text-align: center;
+    padding: 60px 20px 20px;
+    background: linear-gradient(135deg, var(--surface), var(--bg));
+    position: sticky; /* يثبت فوق وأنت تنزل */
+    top: 0;
+    z-index: 10;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: fadeUp 1s ease-out; /* Animation */
+}
+
+.tagline {
+    color: var(--muted);
+    margin: 8px 0 20px;
+    animation: fadeUp 1s ease-out 0.3s backwards;
+}
+
+/* ========== Nav ========== */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+/* ::after خط يكبر تحت الرابط عند الـ hover */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent);
+    transition: width 0.3s ease; /* Transition */
+}
+
+nav a:hover::after,
+nav a:focus-visible::after {
+    width: 100%;
+}
+
+/* ========== Layout ========== */
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+article {
+    flex: 3;
+}
+
+aside {
+    flex: 1;
+    background-color: var(--surface);
+    border-left: 4px solid var(--accent-2);
+    border-radius: 12px;
+    padding: 20px;
+    position: sticky;
+    top: 200px;
+}
+
+aside h3 {
+    margin-top: 0;
+    color: var(--accent-2);
+}
+
+aside li {
+    margin-bottom: 10px;
+    color: var(--muted);
+}
+
+/* ========== Sections ========== */
+section {
+    background-color: var(--surface);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    scroll-margin-top: 220px; /* عشان العنوان ما يختفي تحت الـ header الثابت */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.15);
+}
+
+/* :nth-child  الأقسام الزوجية لها حد بلون مختلف */
+section:nth-child(odd) {
+    border-left: 4px solid var(--accent);
+}
+
+section:nth-child(even) {
+    border-left: 4px solid var(--accent-2);
+}
+
+/* ::before رمز قبل كل عنوان قسم */
+section h2::before {
+    content: "▸ ";
+    color: var(--accent);
+}
+
+section h2 {
+    margin-top: 0;
+}
+
+/* ========== Image ========== */
+figure {
+    margin: 20px 0 0;
+}
+
+figure img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+figcaption {
+    color: var(--muted);
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* ========== Uses list (chips) ========== */
+.uses {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.uses li {
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    padding: 4px 14px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.uses li:hover {
+    background-color: var(--accent);
+    color: var(--bg);
+}
+
+/* ========== Footer ========== */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--muted);
+    border-top: 1px solid var(--surface);
+}
+
+/* ========== Attribute selector: الروابط اللي تبدأ بـ # ========== */
+a[href^="#"]:focus-visible {
+    outline: 2px dashed var(--accent);
+    outline-offset: 4px;
+}
+
+/* ========== Keyframes ========== */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========== Responsive: الشاشات الصغيرة ========== */
+@media (max-width: 768px) {
+    header {
+        position: static; /* على الجوال ما يثبت عشان ما ياخذ الشاشة */
+        padding-top: 30px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    main {
+        flex-direction: column; /* المقال والـ aside تحت بعض */
+    }
+
+    aside {
+        position: static;
+        width: 100%;
+    }
+
+    section {
+        scroll-margin-top: 20px;
+    }
+}
+
+/* ========== Accessibility: للي يفضلون حركة أقل ========== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
