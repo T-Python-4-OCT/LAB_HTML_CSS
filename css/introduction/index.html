@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My Hobbies & Interests – Personal Webpage CSS Introduction Project">
+    <title>My Hobbies & Interests – Personal Webpage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="main-header" class="header-fixed">
+        <div class="header-content">
+            <h1>My Hobbies & Interests</h1>
+            <h2>Personal Webpage – CSS Introduction Project</h2>
+            <nav class="nav-bar">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#hobbies" class="nav-link">Hobbies</a>
+                <a href="#resources" class="nav-link">Resources</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="about" class="card">
+            <h2>About Me</h2>
+            <p>
+                I am passionate about technology, programming, web development, fitness, and video games. I enjoy learning new skills, building websites, working out at the gym, and playing video games in my free time.
+            </p>
+            <p class="text-emphasis">
+                <b>Coding</b> and <i>learning</i> are essential parts of my daily routine.
+            </p>
+        </section>
+
+        <section id="hobbies" class="card">
+            <h2>My Hobbies</h2>
+            <div class="hobbies-grid">
+                <div class="hobby-card">
+                    <h3>1. Coding</h3>
+                    <p>Building websites and practicing programming.</p>
+                </div>
+                <div class="hobby-card">
+                    <h3>2. Reading</h3>
+                    <p>Reading technology articles and books.</p>
+                </div>
+                <div class="hobby-card">
+                    <h3>3. Weight Training</h3>
+                    <p>Going to the gym and lifting weights.</p>
+                </div>
+                <div class="hobby-card">
+                    <h3>4. Video Gaming</h3>
+                    <p>Playing video games.</p>
+                </div>
+                <div class="hobby-card">
+                    <h3>5. Exploring Technology</h3>
+                    <p>Discovering new software and technology tools.</p>
+                </div>
+            </div>
+
+            <h3>Weekly Activity Schedule</h3>
+            <ol class="schedule-list">
+                <li>Morning workout and weight training</li>
+                <li>Coding practice and web development projects</li>
+                <li>Reading tech articles in the afternoon</li>
+                <li>Exploring new software tools in the evening</li>
+                <li>Relaxing with video games on weekends</li>
+            </ol>
+        </section>
+
+        <section id="resources" class="card">
+            <h2>Favorite Resources & Links</h2>
+            <p>Check out some helpful websites:</p>
+            <ul class="activity-list">
+                <li>
+                    <a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a>
+                </li>
+                <li>
+                    <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </li>
+            </ul>
+        </section>
+
+        <section id="gallery" class="card">
+            <h2>Featured Image</h2>
+            <p>Here is an image representing my workspace and interests:</p>
+            <div class="image-container">
+                <img
+                  src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80"
+                  alt="Coding workspace with laptop and code on screen"
+                  width="500"
+                />
+                <span class="img-badge">Workspace</span>
+            </div>
+            <div class="utility-hidden">Hidden demo element for display: none</div>
+        </section>
+
+        <section id="skills" class="card">
+            <h2>Skills & Proficiency Table</h2>
+            <table class="styled-table">
+                <caption>Technical Skills Overview</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Category</th>
+                        <th scope="col">Skills</th>
+                        <th scope="col">Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Web Development</td>
+                        <td>HTML, CSS</td>
+                        <td>Beginner</td>
+                    </tr>
+                    <tr>
+                        <td>Programming</td>
+                        <td>Python, JavaScript</td>
+                        <td>Intermediate</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="contact" class="card">
+            <h2>Contact Me</h2>
+            <form action="#" method="get" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="topic">Subject Topic:</label>
+                    <select id="topic" name="topic">
+                        <option value="general">General Inquiry</option>
+                        <option value="coding">Coding & Web Dev</option>
+                        <option value="fitness">Fitness & Gym</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="4" required placeholder="Type your message here..."></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer id="main-footer">
+        <p>&copy; 2026 My Hobbies & Interests Personal Webpage. All rights reserved.</p>
+    </footer>
+</body>
+</html>
