@@ -1,0 +1,329 @@
+/* General Settings */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* Header */
+
+header {
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    margin: 0 0 15px;
+    font-size: 36px;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.contact a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact a:hover {
+    color: #60a5fa;
+}
+
+
+/* Navigation */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 15px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #1f2937;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #2563eb;
+}
+
+
+/* Main */
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+
+/* Sections */
+
+section {
+    background-color: white;
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 10px;
+    border-right: 5px solid #2563eb;
+    box-shadow: 0 3px 15px rgba(37, 99, 235, 0.30);
+    transition: 0.3s;
+}
+
+section:hover {
+    transform: translateY(-3px);
+}
+
+section h2 {
+    margin-top: 0;
+    color: #1f2937;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 10px;
+}
+
+
+/* Articles */
+
+article {
+    padding: 10px;
+}
+
+article h3 {
+    color: #2563eb;
+    margin-bottom: 5px;
+}
+
+
+/* Lists */
+
+ul {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+
+/* Technical Skills */
+
+#technical-skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 0;
+    list-style: none;
+}
+
+#technical-skills li {
+    background-color: #2563eb;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+#technical-skills li:hover {
+    background-color: #1f2937;
+    transform: translateY(-3px);
+}
+
+
+/* Education & Experience */
+
+.education-card,
+.experience-card {
+    padding: 15px;
+    border-left: 4px solid #2563eb;
+}
+
+.education-header,
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.education-header h3,
+.experience-header h3 {
+    margin: 0;
+    color: #2563eb;
+}
+
+.education-header span,
+.experience-header span {
+    color: #666;
+    font-weight: bold;
+}
+
+.degree,
+.job-title {
+    font-weight: bold;
+    color: #1f2937;
+}
+
+.degree {
+    margin-top: 10px;
+}
+
+.job-title {
+    margin: 8px 0;
+}
+
+
+/* Certifications */
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.certificate-card {
+    background-color: #f8fafc;
+    padding: 18px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.certificate-card h3 {
+    margin-top: 0;
+    color: #2563eb;
+}
+
+.certificate-card p {
+    margin-bottom: 0;
+    color: #555;
+}
+
+.certificate-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Personal Skills */
+
+.personal-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.personal-skills span {
+    background-color: #e0f2fe;
+    color: #1f2937;
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.personal-skills span:hover {
+    background-color: #2563eb;
+    color: white;
+    transform: translateY(-3px);
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 30px 15px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    .contact {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    main {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    section h2 {
+        font-size: 22px;
+    }
+
+    .education-header,
+    .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Header Contact Effects */
+
+header h1 {
+    transition: 0.4s;
+}
+
+header h1:hover {
+    color: #60a5fa;
+    transform: scale(1.05);
+}
+
+.contact span {
+    transition: 0.3s;
+}
+
+.contact span:hover {
+    color: #60a5fa;
+    transform: translateY(-3px);
+}

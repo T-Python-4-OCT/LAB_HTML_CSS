@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+h1 {
+    text-align: center;
+    color: #1f2937;
+}
+h1 {
+    text-align: center;
+    color: #1f2937;
+    animation: fadeIn 1.5s ease-in-out;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+header p {
+    text-align: center;
+    color: #555;
+    font-size: 18px;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 15px;
+    background-color: #1f2937;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+}
+nav a:hover {
+    color: #60a5fa;
+}
+section {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+
+section h2 {
+    color: #1f2937;
+    margin-bottom: 10px;
+}
+section h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    margin-top: 8px;
+    background-color: #60a5fa;
+}
+article {
+    background-color: #e5e7eb;
+    padding: 25px;
+    margin: 20px;
+    border-radius: 10px;
+}
+img {
+    width: 250px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+aside {
+    background-color: #dbeafe;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #1f2937;
+    color: white;
+    margin-top: 20px;
+}
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section,
+    article,
+    aside {
+        margin: 10px;
+    }
+
+ img {
+    max-width: 100%;
+    height: auto;
+ }
+ video {
+    width: 100% !important;
+    height: auto;
+  }
+}
+
+section:hover {
+    transform: translateY(-4px);
+}
+video {
+    width: 400px ;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+section {
+    border-right: 4px solid;
+    border-image: linear-gradient(to bottom, #60a5fa, #a78bfa) 1;
+}
+article {
+    border-right: 4px solid;
+    border-image: linear-gradient(to bottom, #60a5fa, #a78bfa) 1;
+}

@@ -1,0 +1,155 @@
+
+h1 {
+    color: rgb(50, 0, 30);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+.description {
+    color: rgb(29, 195, 29);
+}
+h1 {
+    text-align: center;
+}
+p{
+    color: #0f4042;
+    font-size: 18px;
+    line-height: 1.5;
+    padding: 15px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid#ccc;
+    width: px;
+    border-radius: 8px;
+    position: relative;
+    top: 20px;
+    right: 20px;
+    bottom: 20px;
+
+}
+body {
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+
+}
+h1 {
+    margin-bottom: 30px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+.skills  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+
+}
+.arrow {
+    text-align: center;
+    font-size: 24px;
+    margin: 5px 0;
+}
+p:nth-of-type(1) {
+    background-color: #eef2ff;
+}
+
+p:nth-of-type(2) {
+    background-color: #e0f2fe;
+}
+
+p:nth-of-type(3) {
+    background-color: #ecfdf5;
+}
+
+p:nth-of-type(4) {
+    background-color: #fef3c7;
+}
+
+p:nth-of-type(5) {
+    background-color: #fce7f3;
+}
+
+p:nth-of-type(6) {
+    background-color: #ede9fe;
+}
+
+p:nth-of-type(7) {
+    background-color: #cffafe;
+}
+.skill-box {
+    width: 400px;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.skill-box h3 {
+    border: 1px solid #e63535;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 0;
+}
+.skill-box:nth-child(1) h3 {
+    background-color: #eef2ff;
+}
+
+.skill-box:nth-child(2) h3 {
+    background-color: #ecfdf5;
+}
+
+.skill-box:nth-child(3) h3 {
+    background-color: #fef3c7;
+}
+.skill-box:nth-child(1) p {
+    background-color: #83858e;
+}
+
+.skill-box:nth-child(2) p {
+    background-color: #82ab94;
+}
+
+.skill-box:nth-child(3) p {
+    background-color: #b5afa4;
+}
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+}
+footer h2 {
+    color: #782c36d3;
+    font-size: 24px;
+}
+
+footer p {
+    width: auto;
+    border: none;
+    background-color: transparent;
+}
+.skill-box {
+    transition: transform 0.3s;
+}
+
+.skill-box:hover {
+    transform: translateY(-5px);
+}
+h1 {
+    transition: transform 0.3s;
+}
+
+h1:hover {
+    transform: scale(1.05);
+}
