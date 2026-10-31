@@ -1,0 +1,194 @@
+/* =========================================================
+   CV page - style.css
+   Order: 1 Variables, 2 Base, 3 Header and nav, 4 Layout,
+          5 Components, 6 Animations, 7 Accessibility,
+          8 Responsive, 9 Print
+   ========================================================= */
+
+/* 1. Variables */
+:root {
+  --ink: #1b2433;
+  --paper: #f3f4f6;
+  --white: #ffffff;
+  --accent: #b45309;
+  --accent-soft: #fdf0e3;
+  --accent-dark: #7c3a06;
+  --muted: #5b6676;
+  --line: #d9dde3;
+}
+
+/* 2. Base */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+img { max-width: 100%; display: block; }
+a { color: var(--accent); }
+
+h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; line-height: 1.25; }
+h2 { margin: 0 0 14px; font-size: 1.35rem; }
+h3 { margin: 0; font-size: 1.1rem; }
+
+/* Lesson 4: attribute selectors */
+a[href^="mailto:"]::before { content: "\2709  "; }
+a[target="_blank"]::after { content: " \2197"; font-size: .85em; }
+
+/* 3. Header and nav */
+.top { color: var(--white); background: var(--ink); border-bottom: 5px solid var(--accent); }
+
+.top-inner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+
+.top h1 { margin: 0; font-size: clamp(2rem, 5vw, 3rem); }
+.role { margin: 4px 0 0; font-size: 1.2rem; color: #f3d3b3; }
+
+.tabs {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  padding: 12px;
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+}
+
+.tabs a { position: relative; color: var(--ink); font-weight: 600; text-decoration: none; }
+
+/* Lesson 3 + 4: ::after underline grows on hover */
+.tabs a::after {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transition: transform .25s ease;
+}
+.tabs a:hover::after,
+.tabs a:focus-visible::after { transform: scaleX(1); }
+
+/* 4. Layout */
+.page { padding-top: 32px; padding-bottom: 48px; }
+
+/* 5. Components */
+.side section,
+.block {
+  margin-bottom: 20px;
+  padding: 20px 24px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.contact, .plain, .chips { margin: 0; padding: 0; list-style: none; }
+.contact li + li, .plain li + li { margin-top: 8px; }
+.contact li { overflow-wrap: anywhere; }
+
+/* Skill chips */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips li {
+  padding: 4px 12px;
+  font-size: .95rem;
+  color: var(--accent-dark);
+  background: var(--accent-soft);
+  border-radius: 999px;
+  transition: background .2s ease, color .2s ease;
+}
+.chips li:hover { color: var(--white); background: var(--accent); }
+.chips li:nth-child(odd) { font-weight: 600; }
+
+/* Timeline entries */
+.entry {
+  position: relative;
+  padding: 0 0 18px 0;
+  padding-inline-start: 22px;
+  border-inline-start: 2px solid var(--line);
+}
+.entry:last-child { padding-bottom: 0; }
+
+.entry::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: -7px;
+  top: 7px;
+  width: 12px;
+  height: 12px;
+  background: var(--accent);
+  border-radius: 50%;
+  transition: transform .2s ease;
+}
+.entry:hover::before { transform: scale(1.4); }
+
+.entry p, .entry ul { margin: 4px 0 0; }
+.entry ul { padding-inline-start: 20px; }
+.meta { font-size: .95rem; color: var(--muted); }
+
+.footer {
+  padding: 22px;
+  text-align: center;
+  color: var(--white);
+  background: var(--ink);
+  font-size: .95rem;
+}
+.footer p { margin: 0; }
+
+/* 6. Animations (Lesson 3) */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.top-inner > * { animation: fade-up .7s ease both; }
+
+.block { animation: fade-up .6s ease both; }
+.block:nth-of-type(2) { animation-delay: .1s; }
+.block:nth-of-type(3) { animation-delay: .2s; }
+.block:nth-of-type(4) { animation-delay: .3s; }
+
+/* 7. Accessibility (Lesson 6) */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 8px;
+  z-index: 20;
+  padding: 8px 14px;
+  color: var(--white);
+  background: var(--ink);
+}
+.skip-link:focus { left: 8px; }
+
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* 8. Responsive (Lesson 2) */
+@media (max-width: 575px) {
+  .top-inner { text-align: center; }
+  .tabs { flex-wrap: wrap; gap: 14px; font-size: .95rem; }
+  .side section, .block { padding: 16px; }
+}
+
+/* 9. Print: so the CV can be saved as PDF */
+@media print {
+  .tabs, .skip-link { display: none; }
+  body { background: var(--white); }
+  .block, .side section { break-inside: avoid; border: 0; }
+}

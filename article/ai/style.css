@@ -1,0 +1,248 @@
+/* =========================================================
+   The AI Revolution - style.css
+   Order: 1 Variables, 2 Base, 3 Layout, 4 Components,
+          5 Animations, 6 Accessibility, 7 Responsive
+   ========================================================= */
+
+/* 1. Variables */
+:root {
+  --ink: #0f1b2d;
+  --paper: #f5f7f9;
+  --white: #ffffff;
+  --accent: #0f766e;
+  --accent-light: #2dd4bf;
+  --muted: #55667a;
+  --line: #d5dde4;
+}
+
+/* 2. Base */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.15rem;
+  line-height: 1.85;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+img { max-width: 100%; display: block; }
+a { color: var(--accent); }
+
+h2, h3 { font-family: "Segoe UI", Arial, sans-serif; line-height: 1.25; }
+
+/* Lesson 4: pseudo-element ::before adds a small marker before each h2 */
+h2::before {
+  content: "";
+  display: inline-block;
+  width: .45em;
+  height: .45em;
+  margin-right: .5em;
+  background: var(--accent-light);
+}
+
+/* Lesson 4: attribute selector marks links that open in a new tab */
+a[target="_blank"]::after {
+  content: " \2197";
+  font-size: .8em;
+}
+
+/* 3. Layout */
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 40px;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 32px 20px 56px;
+}
+
+.article { max-width: 700px; }
+
+/* Hero */
+.hero { position: relative; background: var(--ink); }
+.hero img { width: 100%; height: 340px; object-fit: cover; opacity: .85; }
+
+.hero-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 8%;
+  color: var(--white);
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+.hero-text h1 { margin: 0 0 8px; font-size: clamp(2rem, 6vw, 3.8rem); line-height: 1.1; }
+.hero-text p { margin: 0; max-width: 520px; font-size: 1.2rem; color: #d4eef2; }
+
+/* Navigation */
+.toc {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  padding: 14px;
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.toc a {
+  position: relative;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Lesson 3 + 4: ::after underline that grows with a transition */
+.toc a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transition: transform .25s ease;
+}
+.toc a:hover::after,
+.toc a:focus-visible::after { transform: scaleX(1); }
+
+/* 4. Components */
+.byline { color: var(--muted); font-family: "Segoe UI", Arial, sans-serif; font-size: .95rem; }
+.lead { font-size: 1.35rem; font-weight: 400; line-height: 1.7; }
+
+h2 { margin-top: 2em; }
+
+/* Table */
+.table-wrap { overflow-x: auto; }
+
+table {
+  width: 100%;
+  margin: 24px 0;
+  border-collapse: collapse;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  background: var(--white);
+}
+caption { padding: 8px 0; color: var(--ink); font-weight: 700; text-align: left; }
+th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--line); }
+th { color: var(--white); background: var(--ink); }
+td:first-child { width: 70px; font-weight: 700; color: var(--accent); }
+
+/* Lesson 4: :nth-child zebra stripes and :hover */
+tbody tr:nth-child(even) { background: #eef3f6; }
+tbody tr { transition: background .2s ease; }
+tbody tr:hover { background: #d9f1ee; }
+
+/* Figure and quote */
+figure { margin: 28px 0; }
+figure img { border-radius: 10px; }
+figcaption { margin-top: 8px; font-size: .95rem; color: var(--muted); text-align: center; }
+
+blockquote {
+  margin: 32px 0;
+  padding: 8px 24px;
+  font-size: 1.4rem;
+  font-style: italic;
+  border-left: 5px solid var(--accent);
+}
+
+/* Topic cards (inside Bootstrap columns) */
+.topic {
+  height: 100%;
+  padding: 18px;
+  font-size: 1rem;
+  line-height: 1.6;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--accent);
+  border-radius: 6px;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.topic:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(15, 27, 45, .12);
+}
+.topic h3 { margin-top: 0; }
+
+video { width: 100%; margin-top: 24px; border-radius: 10px; }
+
+/* Sidebar */
+.facts {
+  align-self: start;
+  position: sticky;
+  top: 70px;
+  padding: 18px 20px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.facts h2 { margin: 0 0 8px; font-size: 1.15rem; }
+.facts ul { margin: 0; padding-left: 20px; }
+.facts li + li { margin-top: 8px; }
+
+/* Footer */
+.footer {
+  padding: 24px;
+  text-align: center;
+  color: var(--white);
+  background: var(--ink);
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: .95rem;
+}
+.footer p { margin: 0; }
+
+/* 5. Animations (Lesson 3) */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-text h1 { animation: fade-up .8s ease both; }
+.hero-text p  { animation: fade-up .8s ease .25s both; }
+
+/* 6. Accessibility (Lesson 6) */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 8px;
+  padding: 8px 14px;
+  color: var(--white);
+  background: var(--ink);
+  z-index: 20;
+}
+.skip-link:focus { left: 8px; }
+
+a:focus-visible {
+  outline: 3px solid var(--accent-light);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* 7. Responsive (Lesson 2) */
+@media (max-width: 860px) {
+  .layout { grid-template-columns: 1fr; }
+  .facts { position: static; }
+}
+
+@media (max-width: 640px) {
+  body { font-size: 1.05rem; }
+  .hero img { height: 260px; }
+  .toc { gap: 16px; font-size: .9rem; }
+}

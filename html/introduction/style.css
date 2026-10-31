@@ -1,0 +1,143 @@
+/* ===== الألوان والمتغيرات ===== */
+:root {
+  --black: #111111;
+  --white: #ffffff;
+  --grey: #eeeeee;
+  --line: #cccccc;
+}
+
+/* ===== إعدادات عامة ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.7;
+  color: var(--black);
+  background: var(--grey);
+}
+
+/* ===== الهيدر: خطوط يوفنتوس بالأبيض والأسود ===== */
+.site-header {
+  padding: 64px 20px;
+  text-align: center;
+  color: var(--white);
+  background: repeating-linear-gradient(
+    90deg,
+    var(--black) 0,
+    var(--black) 40px,
+    var(--white) 40px,
+    var(--white) 80px
+  );
+}
+
+.site-header h1 {
+  display: inline-block;
+  margin: 0;
+  padding: 8px 28px;
+  font-size: 2.5rem;
+  background: var(--black);
+}
+
+.subtitle {
+  display: inline-block;
+  margin: 12px 0 0;
+  padding: 4px 16px;
+  color: var(--black);
+  background: var(--white);
+}
+
+/* ===== شريط التنقل ===== */
+.site-nav {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 14px;
+  background: var(--black);
+}
+
+.site-nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  text-decoration: underline;
+}
+
+/* ===== المحتوى والبطاقات ===== */
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 8px 20px 40px;
+}
+
+.card {
+  margin-top: 24px;
+  padding: 20px 24px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-left: 6px solid var(--black);
+  border-radius: 4px;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+/* ===== النموذج ===== */
+label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  width: 100%;
+  margin-top: 4px;
+  padding: 10px;
+  font: inherit;
+  border: 1px solid var(--black);
+  border-radius: 4px;
+}
+
+.btn {
+  margin-top: 16px;
+  padding: 10px 28px;
+  font: inherit;
+  font-weight: 600;
+  color: var(--white);
+  background: var(--black);
+  border: 2px solid var(--black);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: var(--black);
+  background: var(--white);
+}
+
+input:focus-visible,
+textarea:focus-visible,
+.btn:focus-visible {
+  outline: 3px solid #888888;
+  outline-offset: 2px;
+}
+
+/* ===== الفوتر ===== */
+.site-footer {
+  padding: 20px;
+  text-align: center;
+  color: var(--white);
+  background: var(--black);
+}
+
+.site-footer p {
+  margin: 0;
+}
