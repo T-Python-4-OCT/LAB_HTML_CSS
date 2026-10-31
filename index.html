@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Five small projects for learning HTML, CSS, and JavaScript, available in English and Arabic."
+      data-ar-content="خمسة مشاريع صغيرة لتعلّم HTML وCSS وJavaScript، بالإنجليزية والعربية."
+    />
+    <title data-ar="مختبر HTML وCSS | مجموعة المشاريع">
+      HTML / CSS lab | Project collection
+    </title>
+    <link rel="stylesheet" href="assets/site.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="assets/site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#projects" data-ar="انتقل إلى المشاريع"
+      >Skip to projects</a
+    >
+    <div class="page">
+      <header class="masthead">
+        <a
+          class="wordmark"
+          href="index.html"
+          aria-label="HTML and CSS lab home"
+          data-ar-label="الصفحة الرئيسية لمختبر HTML وCSS"
+          ><span class="mark" aria-hidden="true">&lt;/&gt;</span
+          ><span dir="ltr"
+            >HTML / CSS <span class="wordmark-light">lab</span></span
+          ></a
+        >
+        <div class="masthead-tools">
+          <span class="edition" data-ar="تعلّم بالممارسة">Learn by making</span>
+          <div
+            class="language-switch"
+            role="group"
+            aria-label="Language"
+            data-ar-label="اللغة"
+          >
+            <button
+              type="button"
+              data-language="en"
+              lang="en"
+              aria-pressed="true"
+            >
+              EN</button
+            ><button
+              type="button"
+              data-language="ar"
+              lang="ar"
+              aria-pressed="false"
+            >
+              العربية
+            </button>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section class="intro" aria-labelledby="title">
+          <div class="intro-copy">
+            <p class="eyebrow" data-ar="مختبر تطوير الواجهات">
+              A front-end learning lab
+            </p>
+            <h1
+              id="title"
+              data-ar="ابدأ بالأساسيات.<br><span>وابنِ شيئًا.</span>"
+            >
+              Start with the basics.<br /><span>Make something.</span>
+            </h1>
+            <p
+              class="lead"
+              data-ar="من صفحة HTML بسيطة إلى لوحة تحكم تفاعلية. خمسة مشاريع لاستكشاف بنية الويب وتنسيقه وسلوكه."
+            >
+              From a first HTML page to an interactive dashboard. Five projects
+              to explore structure, style, and behavior.
+            </p>
+            <a class="start-link" href="html/introduction/index.html"
+              ><span data-ar="ابدأ بمقدمة HTML">Start with HTML</span
+              ><svg
+                class="icon direction-icon"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+              >
+                <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+            ></a>
+            <p
+              class="intro-note"
+              data-ar="HTML وCSS وJavaScript فقط. بلا خطوة بناء."
+            >
+              Plain HTML, CSS, and JavaScript. No build step.
+            </p>
+          </div>
+          <div class="workbench" aria-hidden="true">
+            <div class="workbench-label">
+              <svg class="icon" viewBox="0 0 24 24">
+                <path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-13-2 16" /></svg
+              ><span data-ar="من الشيفرة إلى الصفحة"
+                >From source to screen</span
+              >
+            </div>
+            <div class="code-window" dir="ltr">
+              <div class="window-chrome">
+                <span>index.html</span><span class="file-dot"></span>
+              </div>
+              <pre><code><span class="code-tag">&lt;main&gt;</span>
+  <span class="code-tag">&lt;h1&gt;</span><span data-ar="مرحبًا بالويب.">Hello, web.</span><span class="code-tag">&lt;/h1&gt;</span>
+  <span class="code-tag">&lt;p&gt;</span><span data-ar="ابدأ بشيء بسيط.">Start small.</span><span class="code-tag">&lt;/p&gt;</span>
+<span class="code-tag">&lt;/main&gt;</span></code></pre>
+            </div>
+            <div class="preview-window">
+              <span class="preview-label" data-ar="النتيجة في المتصفح"
+                >Browser preview</span
+              ><span class="preview-heading" data-ar="مرحبًا بالويب."
+                >Hello, web.</span
+              ><span class="preview-copy" data-ar="ابدأ بشيء بسيط."
+                >Start small.</span
+              >
+              <div class="preview-rule"></div>
+            </div>
+            <div class="process">
+              <span data-ar="البنية">Structure</span
+              ><svg class="icon direction-icon" viewBox="0 0 24 24">
+                <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+              ><span data-ar="التنسيق">Style</span
+              ><svg class="icon direction-icon" viewBox="0 0 24 24">
+                <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+              ><span data-ar="التفاعل">Interaction</span>
+            </div>
+          </div>
+        </section>
+        <section class="projects" id="projects" aria-labelledby="project-title">
+          <div class="section-label">
+            <h2 id="project-title" data-ar="استكشف المشاريع">
+              Explore the projects
+            </h2>
+            <span data-ar="أربعة تمارين ولوحة تحكم"
+              >Four exercises + a dashboard</span
+            >
+          </div>
+          <a class="project-row" href="html/introduction/index.html"
+            ><span class="project-icon"
+              ><svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+                <path
+                  d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8Zm0 0v5h5M8 12h8m-8 4h5"
+                /></svg
+            ></span>
+            <div>
+              <span class="project-tag" data-ar="مقدمة HTML"
+                >HTML introduction</span
+              >
+              <h3 data-ar="من القصيم إلى الرياض">From Qassim to Riyadh</h3>
+              <p
+                data-ar="ملاحظات شخصية عن الانتقال إلى المدينة وبناء عادات جديدة لعطلة الأسبوع."
+              >
+                Personal notes on moving to the city and finding new weekend
+                habits.
+              </p>
+            </div>
+            <span class="project-tech" data-ar="بنية الصفحة"
+              >Document structure</span
+            ><svg
+              class="icon direction-icon project-arrow"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+            >
+              <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+          ></a>
+          <a class="project-row" href="css/introduction/index.html"
+            ><span class="project-icon"
+              ><svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+                <path
+                  d="m14 4 6 6M3 21l4-1L20 7a2.8 2.8 0 0 0-4-4L3 16Zm0-5 4 4"
+                /></svg
+            ></span>
+            <div>
+              <span class="project-tag" data-ar="مقدمة CSS"
+                >CSS introduction</span
+              >
+              <h3 data-ar="القصة نفسها بتصميم جديد">The same story, styled</h3>
+              <p data-ar="المحتوى نفسه مع تصميم متجاوب وألوان وتنسيق للنصوص.">
+                The same content with a responsive layout, color, and
+                typography.
+              </p>
+            </div>
+            <span class="project-tech" data-ar="التخطيط والتنسيق"
+              >Layout &amp; styling</span
+            ><svg
+              class="icon direction-icon project-arrow"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+            >
+              <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+          ></a>
+          <a class="project-row" href="article/ai/index.html"
+            ><span class="project-icon"
+              ><svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M4 4h16v16H4Zm4 4h8m-8 4h8m-8 4h5" /></svg
+            ></span>
+            <div>
+              <span class="project-tag" data-ar="مقال">Editorial article</span>
+              <h3 data-ar="فهم النماذج اللغوية">
+                Understanding language models
+              </h3>
+              <p
+                data-ar="مقال عن النماذج اللغوية واستخداماتها وأهمية مراجعة نتائجها."
+              >
+                An introduction to language models, their uses, and the need for
+                review.
+              </p>
+            </div>
+            <span class="project-tech" data-ar="HTML دلالي">Semantic HTML</span
+            ><svg
+              class="icon direction-icon project-arrow"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+            >
+              <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+          ></a>
+          <a class="project-row" href="careers/cv/index.html"
+            ><span class="project-icon"
+              ><svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+                <rect x="4" y="3" width="16" height="18" rx="2" />
+                <circle cx="12" cy="9" r="2.5" />
+                <path d="M8 16c0-3 8-3 8 0m-8 2h8" /></svg
+            ></span>
+            <div>
+              <span class="project-tag" data-ar="سيرة ذاتية مهنية"
+                >Professional CV</span
+              >
+              <h3 data-ar="سليمان صالح التويجري">Suliman Saleh Altwaijry</h3>
+              <p
+                data-ar="الخبرات المهنية والتعليم والمشاريع المختارة في هندسة أنظمة تقنية المعلومات."
+              >
+                IT systems engineering experience, education, and selected
+                projects.
+              </p>
+            </div>
+            <span class="project-tech" data-ar="الخبرات والمشاريع"
+              >Experience &amp; projects</span
+            ><svg
+              class="icon direction-icon project-arrow"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+            >
+              <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+          ></a>
+          <a class="project-row" href="dashboard/index.html"
+            ><span class="project-icon"
+              ><svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+                <rect x="3" y="3" width="7" height="7" rx="1" />
+                <rect x="14" y="3" width="7" height="7" rx="1" />
+                <rect x="3" y="14" width="7" height="7" rx="1" />
+                <rect x="14" y="14" width="7" height="7" rx="1" /></svg
+            ></span>
+            <div>
+              <span class="project-tag" data-ar="لوحة تحكم لوجستية"
+                >Logistics dashboard</span
+              >
+              <h3 data-ar="إدارة عمليات الربط">Manage the connections</h3>
+              <p
+                data-ar="جرّب البحث والتصفية وإعداد عمليات ربط تجريبية في المتصفح."
+              >
+                Search, filter, and configure sample integrations in your
+                browser.
+              </p>
+            </div>
+            <span class="project-tech" data-ar="JavaScript تفاعلي"
+              >Interactive JavaScript</span
+            ><svg
+              class="icon direction-icon project-arrow"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+            >
+              <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+          ></a>
+        </section>
+      </main>
+      <footer>
+        <span data-ar="مختبر HTML وCSS. تعلّم خطوة بخطوة."
+          >HTML / CSS lab. A little practice at a time.</span
+        ><a href="README.md" data-readme-link data-ar="دليل المشروع"
+          >Project guide</a
+        >
+      </footer>
+    </div>
+  </body>
+</html>

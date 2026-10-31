@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Moving from Qassim's countryside to Riyadh and finding new weekend habits. An HTML-only practice page."
+    />
+    <title>From Qassim to Riyadh | HTML practice</title>
+  </head>
+  <body>
+    <a href="#main">Skip to content</a>
+    <header>
+      <nav aria-label="Project navigation">
+        <a href="../../index.html?lang=en">Lab home</a> ·
+        <a href="../../css/introduction/index.html?lang=en">Styled version</a> ·
+        <a href="#note">Suggest a place</a>
+      </nav>
+      <nav aria-label="Language">
+        <a href="index.html" lang="en" aria-current="page">EN</a> ·
+        <a href="index.ar.html" lang="ar" dir="rtl">العربية</a>
+      </nav>
+      <p>Riyadh weekends</p>
+      <h1>From Qassim to Riyadh.</h1>
+      <p>
+        I moved from the countryside in Qassim to Riyadh. I'm still getting used
+        to the pace of the city and figuring out how I want to spend my
+        weekends.
+      </p>
+    </header>
+    <main id="main">
+      <figure>
+        <img
+          src="field-notes.svg"
+          alt="Suliman, wearing glasses and a white Saudi thobe, stands on a path between Qassim’s fields, Buraydah Water Tower and Riyadh’s skyline."
+          width="216"
+          height="144"
+        />
+        <figcaption>
+          A familiar way of living. A new routine to build.
+        </figcaption>
+      </figure>
+      <section aria-labelledby="interests">
+        <h2 id="interests">From rural life to city life</h2>
+        <p>The move means getting used to <b>a different daily rhythm</b>.</p>
+        <ul>
+          <li>
+            <b>Life in Qassim:</b> I was used to a quieter pace and more open
+            space.
+          </li>
+          <li>
+            <b>Life in Riyadh:</b> the city feels busier, with more places to
+            explore and a different rhythm to get used to.
+          </li>
+          <li>
+            <b>My weekends now:</b> I want to walk more, visit somewhere new,
+            and find places I enjoy.
+          </li>
+        </ul>
+        <p>
+          I don't need a packed schedule. I just want to feel more
+          <i>at home</i> here.
+        </p>
+      </section>
+      <section aria-labelledby="walk">
+        <h2 id="walk">New habits, one weekend at a time</h2>
+        <ol>
+          <li>
+            Go for a walk. Try a weekend walk at
+            <bdi lang="ar" dir="rtl">المسار الرياضي</bdi>.
+          </li>
+          <li>
+            Explore a new place. Make time for
+            <bdi lang="ar" dir="rtl">عالم البوليفارد</bdi> on a future weekend.
+          </li>
+          <li>Keep a short list. Note the places I'd like to revisit.</li>
+        </ol>
+      </section>
+      <section aria-labelledby="plan">
+        <h2 id="plan">Weekend ideas</h2>
+        <table>
+          <caption>
+            My weekend wish list
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">When</th>
+              <th scope="col">Place</th>
+              <th scope="col">Plan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">A quiet morning</th>
+              <td><bdi lang="ar" dir="rtl">المسار الرياضي</bdi></td>
+              <td>Go for a walk</td>
+            </tr>
+            <tr>
+              <th scope="row">An evening out</th>
+              <td><bdi lang="ar" dir="rtl">عالم البوليفارد</bdi></td>
+              <td>Try somewhere new</td>
+            </tr>
+            <tr>
+              <th scope="row">A free afternoon</th>
+              <td>A different area</td>
+              <td>Learn the streets</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <aside aria-labelledby="links">
+        <h2 id="links">Places to try</h2>
+        <ul>
+          <li>
+            <a href="https://sportsboulevard.sa/ar/"
+              ><bdi lang="ar" dir="rtl">المسار الرياضي</bdi> · Sports
+              Boulevard</a
+            >
+            · Official visitor information.
+          </li>
+          <li>
+            <a href="https://blvdworld.sa/"
+              ><bdi lang="ar" dir="rtl">عالم البوليفارد</bdi> · Boulevard
+              World</a
+            >
+            · Official visitor information.
+          </li>
+          <li>
+            <a href="#note">Suggest another place</a> for a future weekend.
+          </li>
+        </ul>
+      </aside>
+      <section aria-labelledby="note">
+        <h2 id="note">Suggest a place</h2>
+        <p id="form-help">
+          HTML practice form. Nothing is sent or saved. This page has no
+          scripts, so suggestion preview is unavailable here.
+        </p>
+        <p>
+          <a href="../../css/introduction/index.html?lang=en#note"
+            >Use the styled version to preview a suggestion.</a
+          >
+        </p>
+        <form aria-describedby="form-help">
+          <p>
+            <label for="name">Name</label><br /><input
+              id="name"
+              name="name"
+              dir="auto"
+              autocomplete="name"
+              required
+              minlength="2"
+              maxlength="80"
+            />
+          </p>
+          <p>
+            <label for="email">Email</label><br /><input
+              id="email"
+              name="email"
+              type="email"
+              dir="ltr"
+              autocomplete="email"
+              required
+            />
+          </p>
+          <p>
+            <label for="topic">What would you suggest?</label><br /><select
+              id="topic"
+              name="topic"
+              required
+            >
+              <option value="">Choose a topic</option>
+              <option>A place to walk</option>
+              <option>A weekend destination</option>
+              <option>A habit to try</option>
+            </select>
+          </p>
+          <p>
+            <label for="message">Your suggestion</label><br /><textarea
+              id="message"
+              name="message"
+              dir="auto"
+              rows="4"
+              cols="30"
+              minlength="10"
+              maxlength="500"
+              required
+            ></textarea>
+          </p>
+          <button type="submit" disabled>Preview unavailable here</button>
+          <button type="reset">Clear form</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>Riyadh weekends · Still learning my way around.</p>
+      <a href="#main">Back to top</a>
+    </footer>
+  </body>
+</html>

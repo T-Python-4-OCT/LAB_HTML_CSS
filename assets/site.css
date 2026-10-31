@@ -1,0 +1,203 @@
+@font-face {
+  font-family: Urbanist;
+  src: url("../dashboard/assets/urbanist-latin-variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Sans Arabic";
+  src: url("fonts/noto-sans-arabic-variable.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  color-scheme: light;
+  --font-arabic: "Noto Sans Arabic", Tahoma, Arial, sans-serif;
+  --font-sans: Urbanist, Arial, Helvetica, sans-serif;
+  --color-paper: #f5f4ee;
+  --color-surface: #fffefa;
+  --color-ink: #192b2a;
+  --color-muted: #596661;
+  --color-line: #d4d8cf;
+  --color-accent: #24594e;
+  --color-accent-soft: #e6ede5;
+  --color-clay: #ae4a2c;
+  --color-focus: #7850a3;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-6: 3rem;
+  --radius: 0.375rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-padding-block-start: 1.5rem;
+}
+html:lang(ar) {
+  --font-sans: var(--font-arabic);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--font-sans);
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+a {
+  text-underline-offset: 0.2em;
+}
+:is(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 4px;
+}
+img,
+svg {
+  max-inline-size: 100%;
+}
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+[id] {
+  scroll-margin-block-start: 1.5rem;
+}
+[hidden] {
+  display: none !important;
+}
+.icon {
+  inline-size: 1.5rem;
+  block-size: 1.5rem;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+[dir="rtl"] .direction-icon {
+  transform: scaleX(-1);
+}
+.language-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.125rem;
+  padding: 0.2rem;
+  border: 1px solid #a1ada5;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+  direction: ltr;
+  background: var(--color-surface);
+  color: var(--color-ink);
+}
+.language-switch button {
+  min-inline-size: 2.75rem;
+  min-block-size: 2.75rem;
+  padding: 0.3rem 0.65rem;
+  border: 0;
+  border-radius: 0.3rem;
+  background: transparent;
+  color: inherit;
+  font-size: 0.8125rem;
+  font-weight: 650;
+  line-height: 1.5;
+}
+.language-switch [data-language="en"] {
+  font-family: Urbanist, Arial, sans-serif;
+}
+.language-switch [data-language="ar"] {
+  font-family: var(--font-arabic);
+}
+.language-switch [aria-pressed="true"] {
+  background: var(--color-ink);
+  color: #fffefa;
+}
+.language-switch button:focus-visible {
+  outline-offset: -4px;
+}
+.language-switch button[aria-pressed="true"]:focus-visible {
+  outline-color: var(--color-surface);
+}
+.skip-link {
+  position: fixed;
+  inset-block-start: 0.75rem;
+  inset-inline-start: 0.75rem;
+  z-index: 100;
+  padding: 0.8rem 1.2rem;
+  background: var(--color-ink);
+  color: white;
+  transform: translateY(-200%);
+}
+.skip-link:focus {
+  transform: none;
+}
+.sr-only {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+html:lang(ar) body {
+  font-family: var(--font-arabic);
+}
+html:lang(ar) :is(h1, h2, h3, h4, .eyebrow) {
+  letter-spacing: normal;
+}
+html:lang(ar) :is(h1, h2, h3, h4) {
+  line-height: 1.5;
+}
+html:lang(ar) :is(input[type="email"], input[type="url"], code, pre) {
+  direction: ltr;
+  text-align: start;
+}
+@media (hover: hover) {
+  .language-switch button:not([aria-pressed="true"]):hover {
+    background: var(--color-accent-soft);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  button:not(:disabled):active {
+    scale: 0.96;
+    transition: scale 150ms ease-out;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+@media print {
+  .language-switch {
+    display: none !important;
+  }
+}
