@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistics - Integrations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <div class="logo">
+            <div class="logo-icon"><i class="fa-solid fa-truck-fast"></i></div>
+            <strong>Logistics</strong>
+            <i class="fa-solid fa-sidebar collapse"></i>
+        </div>
+
+        <nav>
+            <a href="#"><i class="fa-solid fa-border-all"></i>Control Tower</a>
+            <a href="#"><i class="fa-regular fa-sparkles"></i>Generate Quote<i class="fa-solid fa-chevron-down nav-arrow"></i></a>
+            <a href="#"><i class="fa-solid fa-truck"></i>Track Shipments</a>
+            <a href="#"><i class="fa-regular fa-circle-user"></i>AI Console</a>
+            <a href="#"><i class="fa-solid fa-users"></i>Customer Portal</a>
+            <div class="nav-section"><span>INSIGHT & CONTROL</span><i class="fa-solid fa-chevron-up"></i></div>
+            <a href="#"><i class="fa-regular fa-file-lines"></i>Documents</a>
+            <a href="#"><i class="fa-solid fa-chart-column"></i>Analytics</a>
+            <a href="#" class="active"><i class="fa-solid fa-diagram-project"></i>Integrations</a>
+            <a href="#"><i class="fa-solid fa-robot"></i>AI Training</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <details class="user-menu">
+                <summary>
+                    <div class="profile-avatar">A</div>
+                    <div class="profile-info">
+                        <strong>Alex</strong>
+                        <small>Acme Logistics</small>
+                    </div>
+                    <i class="fa-solid fa-chevron-up arrow"></i>
+                </summary>
+                <div class="user-options">
+                    <a href="#"><i class="fa-solid fa-gear"></i>Setting</a>
+                    <a href="#"><i class="fa-solid fa-headset"></i>Get Help</a>
+                    <a href="#"><i class="fa-solid fa-rocket"></i>Updates</a>
+                    <hr>
+                    <a href="#"><i class="fa-regular fa-user"></i>My Profile</a>
+                    <a href="#"><i class="fa-solid fa-right-from-bracket"></i>Log Out</a>
+                </div>
+            </details>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+            <div class="breadcrumb">
+                <span>Dashboard</span>
+                <i class="fa-solid fa-chevron-right"></i>
+                <strong>Integrations</strong>
+            </div>
+            <div class="top-actions">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search by cargo, shipping, user id etc">
+                </div>
+                <button class="ai-button">Get AI Insight <i class="fa-solid fa-wand-magic-sparkles"></i></button>
+                <button class="top-icon"><i class="fa-regular fa-bell"></i></button>
+                <button class="top-icon message"><i class="fa-regular fa-comment-dots"></i></button>
+            </div>
+        </header>
+
+        <section class="page-heading">
+            <div>
+                <h1>Integrations</h1>
+                <p>Connect your freight operations with existing systems</p>
+            </div>
+            <button class="add-button"><i class="fa-solid fa-plus"></i>Add New</button>
+        </section>
+
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-title">Connected<i class="fa-solid fa-link"></i></div>
+                <div class="stat-info"><strong>45</strong><span>Active integrations</span></div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-title">Syncing<i class="fa-regular fa-circle-check"></i></div>
+                <div class="stat-info"><strong>5</strong><span>In Progress</span></div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-title">Errors<i class="fa-regular fa-circle-exclamation"></i></div>
+                <div class="stat-info"><strong>1</strong><span class="error-text">Needs attention</span></div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-title">Available<i class="fa-regular fa-square-check"></i></div>
+                <div class="stat-info"><strong>54</strong><span>More to add</span></div>
+            </div>
+        </section>
+
+        <section class="carrier-section">
+            <div class="section-title">
+                <h2>Carrier APIs</h2>
+                <a href="#">View All <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="carrier-grid">
+                <div class="carrier-card">
+                    <div class="carrier-top">
+                        <div class="carrier-logo maersk-logo">M</div>
+                        <span class="status connected"><i class="fa-regular fa-circle-check"></i>Connected</span>
+                    </div>
+                    <h3>Maersk Line <a href="#">Maersk line.com <i class="fa-solid fa-arrow-up-right-from-square"></i></a></h3>
+                    <p>AI-powered document generation and management</p>
+                    <div class="carrier-bottom"><a href="#">View Integration</a><i class="fa-solid fa-gear"></i></div>
+                </div>
+                <div class="carrier-card">
+                    <div class="carrier-top">
+                        <div class="carrier-logo plane-logo"><i class="fa-solid fa-plane"></i></div>
+                        <span class="status syncing"><i class="fa-regular fa-circle-check"></i>Syncing</span>
+                    </div>
+                    <h3>Maersk Line <a href="#">Maersk line.com <i class="fa-solid fa-arrow-up-right-from-square"></i></a></h3>
+                    <p>AI-powered document generation and management</p>
+                    <div class="carrier-bottom"><a href="#">View Integration</a><i class="fa-solid fa-gear"></i></div>
+                </div>
+                <div class="carrier-card">
+                    <div class="carrier-top">
+                        <div class="carrier-logo maersk-logo">M</div>
+                        <span class="status errors"><i class="fa-regular fa-circle-exclamation"></i>Errors</span>
+                    </div>
+                    <h3>Maersk Line <a href="#">Maersk line.com <i class="fa-solid fa-arrow-up-right-from-square"></i></a></h3>
+                    <p>AI-powered document generation and management</p>
+                    <div class="carrier-bottom"><a href="#">View Integration</a><i class="fa-solid fa-gear"></i></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="system-section">
+            <div class="section-title">
+                <h2>System Integrations</h2>
+                <div class="table-actions">
+                    <button><i class="fa-solid fa-filter"></i></button>
+                    <button><i class="fa-solid fa-border-all"></i></button>
+                    <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </div>
+            </div>
+
+            <div class="integration-list">
+                <div class="integration-row">
+                    <div class="company-logo salesforce"><i class="fa-solid fa-cloud"></i></div>
+                    <div class="company-info"><strong>Salesforce CRM</strong><small>Customer relationship management</small></div>
+                    <span class="category">CRM</span>
+                    <span class="status connected"><i class="fa-regular fa-circle-check"></i>Connected</span>
+                    <button class="configure">Configure</button>
+                </div>
+                <div class="integration-row">
+                    <div class="company-logo sap">SAP</div>
+                    <div class="company-info"><strong>SAP TMS</strong><small>Transportation management system</small></div>
+                    <span class="category">TMS</span>
+                    <span class="status connected"><i class="fa-regular fa-circle-check"></i>Connected</span>
+                    <button class="configure">Configure</button>
+                </div>
+                <div class="integration-row">
+                    <div class="company-logo oracle"><span>ORACLE</span></div>
+                    <div class="company-info"><strong>Oracle ERP</strong><small>Enterprise resource planning</small></div>
+                    <span class="category">ERP</span>
+                    <span class="status syncing"><i class="fa-regular fa-circle-check"></i>Syncing</span>
+                    <button class="configure">Configure</button>
+                </div>
+                <div class="integration-row">
+                    <div class="company-logo microsoft"><i class="fa-brands fa-microsoft"></i></div>
+                    <div class="company-info"><strong>Microsoft Dynamics</strong><small>Business applications</small></div>
+                    <span class="category">ERP</span>
+                    <span class="status errors"><i class="fa-regular fa-circle-exclamation"></i>Errors</span>
+                    <button class="configure">Configure</button>
+                </div>
+                <div class="integration-row">
+                    <div class="company-logo slack"><i class="fa-brands fa-slack"></i></div>
+                    <div class="company-info"><strong>Slack</strong><small>Team communication</small></div>
+                    <span class="category">Communication</span>
+                    <span class="status connected"><i class="fa-regular fa-circle-check"></i>Connected</span>
+                    <button class="configure">Configure</button>
+                </div>
+                <div class="integration-row">
+                    <div class="company-logo shopify"><i class="fa-brands fa-shopify"></i></div>
+                    <div class="company-info"><strong>Shopify</strong><small>E-commerce platform</small></div>
+                    <span class="category">E-commerce</span>
+                    <span class="status connected"><i class="fa-regular fa-circle-check"></i>Connected</span>
+                    <button class="configure">Configure</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+</body>
+</html>
