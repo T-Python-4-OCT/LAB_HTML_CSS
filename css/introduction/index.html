@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A personal page about moving from Qassim to Riyadh and finding new weekend habits."
+      data-ar-content="صفحة شخصية عن الانتقال من القصيم إلى الرياض وبناء عادات جديدة لعطلة نهاية الأسبوع."
+    />
+    <title data-ar="عطلات الرياض | مقدمة في CSS">
+      Riyadh weekends | CSS introduction
+    </title>
+    <link rel="stylesheet" href="../../assets/site.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="../../assets/site.js" defer></script>
+    <script src="preview.js" defer></script>
+    <script src="journey.js" defer></script>
+  </head>
+  <body class="field-journal">
+    <a class="skip-link" href="#main" data-ar="انتقل إلى المحتوى"
+      >Skip to content</a
+    >
+    <div class="page-wrap">
+      <header class="site-header">
+        <a class="home-link" href="../../index.html"
+          ><svg
+            class="icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.75"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="m3 10 9-7 9 7v10H3z" />
+            <path d="M9 20v-7h6v7" /></svg
+          ><span data-ar="الرئيسية">Lab home</span></a
+        >
+        <nav aria-label="Page navigation" data-ar-label="التنقل في الصفحة">
+          <a href="../../html/introduction/index.html"
+            ><span data-ar="اعرض نسخة HTML">View HTML version</span></a
+          ><a href="#note"
+            ><span data-ar="اقترح مكانًا">Suggest a place</span></a
+          >
+        </nav>
+        <div
+          class="language-switch"
+          role="group"
+          aria-label="Language"
+          data-ar-label="اللغة"
+        >
+          <button
+            type="button"
+            data-language="en"
+            lang="en"
+            dir="ltr"
+            aria-pressed="true"
+          >
+            EN</button
+          ><button
+            type="button"
+            data-language="ar"
+            lang="ar"
+            dir="rtl"
+            aria-pressed="false"
+          >
+            العربية
+          </button>
+        </div>
+      </header>
+      <main id="main">
+        <section class="hero" aria-labelledby="title">
+          <div class="hero-copy">
+            <p data-ar="عطلات الرياض · مقدمة في CSS" class="eyebrow">
+              Riyadh weekends · CSS introduction
+            </p>
+            <h1
+              data-ar="من القصيم&lt;br&gt;إلى &lt;em&gt;الرياض.&lt;/em&gt;"
+              id="title"
+            >
+              From Qassim<br />to <em>Riyadh.</em>
+            </h1>
+            <p
+              data-ar="انتقلت من ريف القصيم إلى الرياض. ما زلت أعتاد إيقاع المدينة وأفكر في الطريقة التي أرغب في قضاء عطلاتي الأسبوعية بها."
+              class="lead"
+            >
+              I moved from the countryside in Qassim to Riyadh. I am still
+              getting used to the pace of the city and figuring out how I want
+              to spend my weekends.
+            </p>
+            <a class="button" href="#plan"
+              ><span data-ar="اطّلع على أفكار العطلة">See my weekend list</span
+              ><svg
+                class="icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+            ></a>
+          </div>
+          <figure class="journey-figure">
+            <button type="button" class="journey-animation" aria-label="Walking illustration" aria-describedby="journey-help" disabled>
+            <img
+              src="../../html/introduction/field-notes.svg"
+              width="960"
+              height="640"
+              alt="Suliman, wearing glasses and a white Saudi thobe, walks along a path from Qassim’s fields, house and Buraydah Water Tower toward Riyadh’s skyline."
+              data-ar-alt="سليمان، مرتديًا نظارة وثوبًا سعوديًا أبيض، يسير على طريق من حقول القصيم وبيتها الصغير وبرج مياه بريدة باتجاه أفق الرياض."
+            />
+            </button>
+            <span id="journey-help" class="sr-only" data-ar="اختر الرسم لإيقاف حركة المشي أو إعادة تشغيلها.">Select the illustration to stop or restart the walking animation.</span>
+            <figcaption>
+              <span data-ar="مشهد مألوف وروتين جديد."
+                >A familiar landscape. A new routine.</span
+              ><span aria-hidden="true"
+                ><svg
+                  class="icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.75"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M20 4C9 3 3 8 5 15c2 7 14 6 15-11Z" />
+                  <path d="M4 21 16 9" /></svg
+              ></span>
+            </figcaption>
+          </figure>
+        </section>
+        <section class="story-section" aria-labelledby="interests">
+          <div class="section-heading">
+            <p data-ar="الانتقال" class="eyebrow">The move</p>
+            <h2 data-ar="من الريف إلى المدينة" id="interests">
+              From rural life to city life
+            </h2>
+            <p data-ar="الانتقال يعني الاعتياد على إيقاع مختلف للحياة اليومية.">
+              The move means getting used to a different daily rhythm.
+            </p>
+          </div>
+          <ul class="story-list">
+            <li>
+              <svg
+                class="icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M20 4C9 3 3 8 5 15c2 7 14 6 15-11Z" />
+                <path d="M4 21 16 9" />
+              </svg>
+              <div>
+                <h3 data-ar="الحياة في القصيم">Life in Qassim</h3>
+                <p data-ar="اعتدت إيقاعًا أهدأ ومساحات أكثر اتساعًا.">
+                  I was used to a quieter pace and more open space.
+                </p>
+              </div>
+            </li>
+            <li>
+              <svg
+                class="icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path
+                  d="M3 21h18M5 21V9h6v12m2 0V3h6v18M7 12h2m-2 4h2m6-10h2m-2 4h2m-2 4h2"
+                />
+              </svg>
+              <div>
+                <h3 data-ar="الحياة في الرياض">Life in Riyadh</h3>
+                <p
+                  data-ar="المدينة أكثر حركة، وفيها أماكن أكثر أكتشفها وإيقاع مختلف أعتاد عليه."
+                >
+                  The city feels busier, with more places to explore and a
+                  different rhythm to get used to.
+                </p>
+              </div>
+            </li>
+            <li>
+              <svg
+                class="icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="9" />
+                <path d="m16 8-2 6-6 2 2-6z" />
+              </svg>
+              <div>
+                <h3 data-ar="عطلاتي الأسبوعية الآن">My weekends now</h3>
+                <p
+                  data-ar="أريد أن أمشي أكثر، وأزور أماكن جديدة، وأجد أماكن أحبها."
+                >
+                  I want to walk more, visit somewhere new, and find places I
+                  enjoy.
+                </p>
+              </div>
+            </li>
+          </ul>
+          <p
+            data-ar="لا أحتاج إلى جدول مزدحم. أريد فقط أن أشعر بالألفة هنا."
+            class="story-note"
+          >
+            I do not need a packed schedule. I just want to feel more at home
+            here.
+          </p>
+        </section>
+        <section class="habits-section" aria-labelledby="walk">
+          <div class="section-heading">
+            <p data-ar="خطط بسيطة" class="eyebrow">Small plans</p>
+            <h2 data-ar="عطلة بعد أخرى" id="walk">One weekend at a time</h2>
+            <p
+              data-ar="أبدأ بعادات بسيطة تساعدني على الخروج والتعرف على المدينة."
+            >
+              I am starting with a few habits that help me get out and learn my
+              way around.
+            </p>
+          </div>
+          <ol class="step-list">
+            <li>
+              <h3 data-ar="أخرج للمشي">Go for a walk</h3>
+              <p
+                data-ar="أجرب المشي في المسار الرياضي خلال عطلة نهاية الأسبوع."
+              >
+                Try a weekend walk at
+                <bdi lang="ar" dir="rtl">المسار الرياضي</bdi>.
+              </p>
+            </li>
+            <li>
+              <h3 data-ar="أكتشف مكانًا جديدًا">Explore a new place</h3>
+              <p data-ar="أخصص وقتًا لزيارة عالم البوليفارد في عطلة قادمة.">
+                Make time for <bdi lang="ar" dir="rtl">عالم البوليفارد</bdi> on
+                a future weekend.
+              </p>
+            </li>
+            <li>
+              <h3 data-ar="أدوّن قائمة قصيرة">Keep a short list</h3>
+              <p data-ar="أدوّن الأماكن التي أرغب في زيارتها مجددًا.">
+                Note the places I would like to revisit.
+              </p>
+            </li>
+          </ol>
+        </section>
+        <div class="planning-section">
+          <section aria-labelledby="plan">
+            <h2 data-ar="أفكار للعطلة" id="plan">Weekend ideas</h2>
+            <table>
+              <caption>
+                <span data-ar="قائمة أفكاري لعطلة نهاية الأسبوع"
+                  >My weekend wish list</span
+                >
+              </caption>
+              <thead>
+                <tr>
+                  <th data-ar="الوقت" scope="col">When</th>
+                  <th data-ar="المكان" scope="col">Place</th>
+                  <th data-ar="الخطة" scope="col">Plan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th data-ar="صباح هادئ" scope="row">A quiet morning</th>
+                  <td><bdi lang="ar" dir="rtl">المسار الرياضي</bdi></td>
+                  <td data-ar="المشي">Go for a walk</td>
+                </tr>
+                <tr>
+                  <th data-ar="أمسية خارج المنزل" scope="row">
+                    An evening out
+                  </th>
+                  <td><bdi lang="ar" dir="rtl">عالم البوليفارد</bdi></td>
+                  <td data-ar="تجربة مكان جديد">Try somewhere new</td>
+                </tr>
+                <tr>
+                  <th data-ar="فترة ما بعد الظهر" scope="row">
+                    A free afternoon
+                  </th>
+                  <td data-ar="حي مختلف">A different area</td>
+                  <td data-ar="التعرف على الشوارع">Learn the streets</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <aside aria-labelledby="links">
+            <svg
+              class="icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.75"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="9" />
+              <path d="m16 8-2 6-6 2 2-6z" />
+            </svg>
+            <h2 data-ar="أماكن أرغب في زيارتها" id="links">Places to try</h2>
+            <ul class="place-links">
+              <li>
+                <a href="https://sportsboulevard.sa/ar/"
+                  ><span data-ar="المسار الرياضي">Sports Boulevard</span
+                  ><svg
+                    class="icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.75"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14m-6-6 6 6-6 6" /></svg></a
+                ><small data-ar="معلومات الزيارة من الموقع الرسمي"
+                  >Official visitor information</small
+                >
+              </li>
+              <li>
+                <a href="https://blvdworld.sa/"
+                  ><span data-ar="عالم البوليفارد">Boulevard World</span
+                  ><svg
+                    class="icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.75"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14m-6-6 6 6-6 6" /></svg></a
+                ><small data-ar="معلومات الزيارة من الموقع الرسمي"
+                  >Official visitor information</small
+                >
+              </li>
+              <li>
+                <a href="#note"
+                  ><span data-ar="اقترح مكانًا آخر">Suggest another place</span
+                  ><svg
+                    class="icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.75"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14m-6-6 6 6-6 6" /></svg></a
+                ><small data-ar="فكرة لعطلة قادمة"
+                  >An idea for a future weekend</small
+                >
+              </li>
+            </ul>
+          </aside>
+        </div>
+        <section class="note-section" aria-labelledby="note">
+          <div class="section-heading">
+            <p data-ar="اقتراح من أهل المدينة" class="eyebrow">A local tip</p>
+            <h2 data-ar="اقترح مكانًا" id="note">Suggest a place</h2>
+            <p
+              data-ar="يمكنك معاينة اقتراح لزيارة مكان في الرياض. لن يُرسل أو يُحفظ شيء، وتُمسح المعاينة عند إعادة تحميل الصفحة."
+              id="form-help"
+            >
+              Preview a Riyadh tip here. Nothing is sent or stored. Reloading
+              clears the preview.
+            </p>
+          </div>
+          <form id="note-form" aria-describedby="form-help" novalidate>
+            <noscript
+              ><p>
+                Enable JavaScript to preview a suggestion.
+                <span lang="ar" dir="rtl">فعّل جافاسكربت لمعاينة اقتراحك.</span>
+              </p></noscript
+            >
+            <div class="form-row">
+              <div class="field">
+                <label data-ar="الاسم" for="name">Name</label
+                ><input
+                  id="name"
+                  name="name"
+                  dir="auto"
+                  autocomplete="name"
+                  required
+                  minlength="2"
+                  maxlength="80"
+                  aria-describedby="name-error"
+                />
+                <p class="field-error" id="name-error"></p>
+              </div>
+              <div class="field">
+                <label data-ar="البريد الإلكتروني" for="email">Email</label
+                ><input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  dir="ltr"
+                  required
+                  maxlength="254"
+                  placeholder="name@example.com"
+                  aria-describedby="email-error"
+                />
+                <p class="field-error" id="email-error"></p>
+              </div>
+            </div>
+            <div class="field">
+              <label data-ar="ما نوع اقتراحك؟" for="topic"
+                >What would you suggest?</label
+              ><select
+                id="topic"
+                name="topic"
+                required
+                aria-describedby="topic-error"
+              >
+                <option data-ar="اختر نوع الاقتراح" value="">
+                  Choose a topic
+                </option>
+                <option data-ar="مكان للمشي" value="walk">
+                  A place to walk
+                </option>
+                <option data-ar="وجهة لعطلة نهاية الأسبوع" value="destination">
+                  A weekend destination
+                </option>
+                <option data-ar="عادة أجربها" value="habit">
+                  A habit to try
+                </option>
+              </select>
+              <p class="field-error" id="topic-error"></p>
+            </div>
+            <div class="field">
+              <label data-ar="اقتراحك" for="message">Your suggestion</label
+              ><textarea
+                id="message"
+                name="message"
+                dir="auto"
+                rows="4"
+                minlength="10"
+                maxlength="500"
+                required
+                placeholder="Sports Boulevard for a weekend walk."
+                data-ar-placeholder="المشي في المسار الرياضي خلال عطلة نهاية الأسبوع."
+                aria-describedby="message-help message-error"
+              ></textarea
+              ><small data-ar="اكتب من ١٠ إلى ٥٠٠ حرف." id="message-help"
+                >Use 10–500 characters.</small
+              >
+              <p class="field-error" id="message-error"></p>
+            </div>
+            <button class="button" type="submit" disabled>
+              <span data-ar="عاين الاقتراح">Preview suggestion</span
+              ><svg
+                class="icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M5 12h14m-6-6 6 6-6 6" />
+              </svg>
+            </button>
+            <p id="form-status" role="status"></p>
+            <output id="note-preview" aria-live="polite"></output>
+          </form>
+        </section>
+      </main>
+      <footer class="site-footer">
+        <p data-ar="عطلات الرياض. ما زلت أتعرف على المدينة.">
+          Riyadh weekends. Still learning my way around.
+        </p>
+        <a href="../../html/introduction/index.html"
+          ><span data-ar="اعرض نسخة HTML">View HTML version</span></a
+        ><a href="#main"><span data-ar="عد إلى الأعلى">Back to top</span></a>
+      </footer>
+    </div>
+  </body>
+</html>
