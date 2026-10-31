@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Integrations | Logistics</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://code.iconify.design/iconify-icon/2.3.0/iconify-icon.min.js"></script>
+  <link rel="stylesheet" href="bonus.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="app">
+
+    <aside class="sidebar">
+      <div class="brand">
+        <a class="brand-link" href="#">
+          <span class="brand-mark">
+            <iconify-icon class="icon" icon="lucide:package" width="18" height="18" aria-hidden="true"></iconify-icon>
+          </span>
+          <span class="brand-name">Logistics</span>
+        </a>
+        <button class="icon-btn icon-btn--plain" type="button" aria-label="Collapse sidebar">
+          <iconify-icon class="icon" icon="lucide:panel-left" width="18" height="18" aria-hidden="true"></iconify-icon>
+        </button>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#"><iconify-icon class="icon" icon="lucide:layout-grid" aria-hidden="true"></iconify-icon>Control Tower</a></li>
+          <li>
+            <a class="nav-link" href="#">
+              <iconify-icon class="icon" icon="lucide:sparkles" aria-hidden="true"></iconify-icon>Generate Quote
+              <iconify-icon class="icon nav-chev" icon="lucide:chevron-down" aria-hidden="true"></iconify-icon>
+            </a>
+          </li>
+          <li><a class="nav-link" href="#"><iconify-icon class="icon" icon="lucide:package" aria-hidden="true"></iconify-icon>Track Shipments</a></li>
+          <li><a class="nav-link" href="#"><iconify-icon class="icon" icon="lucide:bot-message-square" aria-hidden="true"></iconify-icon>AI Console</a></li>
+          <li><a class="nav-link" href="#"><iconify-icon class="icon" icon="lucide:users" aria-hidden="true"></iconify-icon>Customer Portal</a></li>
+        </ul>
+
+        <p class="nav-group">
+          <span>Insight &amp; Control</span>
+          <iconify-icon class="icon" icon="lucide:chevron-up" width="16" height="16" aria-hidden="true"></iconify-icon>
+        </p>
+
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#"><iconify-icon class="icon" icon="lucide:file-text" aria-hidden="true"></iconify-icon>Documents</a></li>
+          <li><a class="nav-link" href="#"><iconify-icon class="icon" icon="lucide:chart-column" aria-hidden="true"></iconify-icon>Analytics</a></li>
+          <li><a class="nav-link is-active" href="#" aria-current="page"><iconify-icon class="icon" icon="lucide:workflow" aria-hidden="true"></iconify-icon>Integrations</a></li>
+          <li><a class="nav-link" href="#"><iconify-icon class="icon" icon="lucide:brain-circuit" aria-hidden="true"></iconify-icon>AI Training</a></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <input class="user-toggle visually-hidden" type="checkbox" id="user-menu" checked>
+
+        <div class="user-menu">
+          <ul class="nav-list nav-list--compact">
+            <li><a class="nav-link" href="#"><iconify-icon class="icon" icon="lucide:settings" aria-hidden="true"></iconify-icon>Setting</a></li>
+            <li><a class="nav-link" href="#"><iconify-icon class="icon" icon="lucide:headset" aria-hidden="true"></iconify-icon>Get Help</a></li>
+            <li><a class="nav-link" href="#"><iconify-icon class="icon" icon="lucide:rocket" aria-hidden="true"></iconify-icon>Updates</a></li>
+          </ul>
+        </div>
+
+        <label class="user" for="user-menu">
+          <span class="avatar" aria-hidden="true">A<small>Pro</small></span>
+          <span class="user-text">
+            <strong>Alex</strong>
+            <span>Acme Logistics</span>
+          </span>
+          <iconify-icon class="icon" icon="lucide:chevrons-up-down" width="18" height="18" aria-hidden="true"></iconify-icon>
+        </label>
+      </div>
+    </aside>
+
+    <div class="main">
+
+      <header class="topbar">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="#">Dashboard</a></li>
+            <li aria-current="page">Integrations</li>
+          </ol>
+        </nav>
+
+        <div class="search">
+          <iconify-icon class="icon" icon="lucide:search" width="18" height="18" aria-hidden="true"></iconify-icon>
+          <input type="search" placeholder="Search by cargo, shipping, user id etc" aria-label="Search by cargo, shipping, user id and more">
+        </div>
+
+        <button class="btn-insight" type="button">
+          Get Ai Insight
+          <iconify-icon icon="lucide:sparkles" width="18" height="18" style="color:#8b4df0" aria-hidden="true"></iconify-icon>
+        </button>
+
+        <button class="icon-btn has-dot" type="button" aria-label="Notifications">
+          <iconify-icon class="icon" icon="lucide:bell" width="18" height="18" aria-hidden="true"></iconify-icon>
+        </button>
+        <button class="icon-btn has-dot" type="button" aria-label="Messages">
+          <iconify-icon class="icon" icon="lucide:message-square-text" width="18" height="18" aria-hidden="true"></iconify-icon>
+        </button>
+      </header>
+
+      <main id="main">
+
+        <div class="page-head">
+          <div>
+            <h1>Integrations</h1>
+            <p>Connect your freight operations with existing systems</p>
+          </div>
+          <button class="btn-add" type="button">
+            <iconify-icon class="icon" icon="lucide:plus" width="18" height="18" aria-hidden="true"></iconify-icon>
+            Add New
+          </button>
+        </div>
+
+        <section class="stats" aria-label="Integration summary">
+          <article class="card stat">
+            <h2>Connected</h2>
+            <p class="stat-value"><strong>45</strong> <span>Active integrations</span></p>
+            <span class="stat-icon" aria-hidden="true"><iconify-icon class="icon" icon="lucide:link" width="18" height="18"></iconify-icon></span>
+          </article>
+
+          <article class="card stat">
+            <h2>Syncing</h2>
+            <p class="stat-value"><strong>5</strong> <span>In Progress</span></p>
+            <span class="stat-icon" aria-hidden="true"><iconify-icon class="icon" icon="lucide:circle-check" width="18" height="18"></iconify-icon></span>
+          </article>
+
+          <article class="card stat stat--error">
+            <h2>Errore</h2>
+            <p class="stat-value"><strong>1</strong> <span>Needs attention</span></p>
+            <span class="stat-icon" aria-hidden="true"><iconify-icon class="icon" icon="lucide:circle-alert" width="18" height="18"></iconify-icon></span>
+          </article>
+
+          <article class="card stat">
+            <h2>Available</h2>
+            <p class="stat-value"><strong>54</strong> <span>More to add</span></p>
+            <span class="stat-icon" aria-hidden="true"><iconify-icon class="icon" icon="lucide:package-check" width="18" height="18"></iconify-icon></span>
+          </article>
+        </section>
+
+        <section class="card panel" aria-labelledby="carrier-title">
+          <div class="panel-head">
+            <h2 id="carrier-title">Carrier APIs</h2>
+            <a class="btn-soft btn-soft--sm" href="#">View All
+              <iconify-icon class="icon" icon="lucide:arrow-up-right" width="14" height="14" aria-hidden="true"></iconify-icon>
+            </a>
+          </div>
+
+          <div class="carrier-grid">
+
+            <article class="carrier">
+              <div class="carrier-body">
+                <div class="carrier-top">
+                  <span class="logo logo--carrier"><iconify-icon class="logo-svg" icon="lucide:ship" width="26" height="26" aria-hidden="true" style="color:#c8362f"></iconify-icon></span>
+                  <span class="pill pill--ok"><iconify-icon class="icon" icon="lucide:circle-check" width="15" height="15" aria-hidden="true"></iconify-icon>Connected</span>
+                </div>
+                <h3>Maersk Line <a href="#">Maersk line.com <iconify-icon class="icon" icon="lucide:external-link" width="14" height="14" aria-hidden="true"></iconify-icon></a></h3>
+                <p>AI-powered document generation and management</p>
+              </div>
+              <div class="carrier-foot">
+                <a class="btn-soft" href="#">View Integration</a>
+                <button class="icon-btn icon-btn--plain" type="button" aria-label="Maersk Line settings"><iconify-icon class="icon" icon="lucide:settings" width="18" height="18" aria-hidden="true"></iconify-icon></button>
+              </div>
+            </article>
+
+            <article class="carrier">
+              <div class="carrier-body">
+                <div class="carrier-top">
+                  <span class="logo logo--carrier"><iconify-icon class="logo-svg" icon="lucide:plane" width="26" height="26" aria-hidden="true" style="color:#3b82f6"></iconify-icon></span>
+                  <span class="pill pill--sync"><iconify-icon class="icon" icon="lucide:clock" width="15" height="15" aria-hidden="true"></iconify-icon>Syncing</span>
+                </div>
+                <h3>Maersk Line <a href="#">Maersk line.com <iconify-icon class="icon" icon="lucide:external-link" width="14" height="14" aria-hidden="true"></iconify-icon></a></h3>
+                <p>AI-powered document generation and management</p>
+              </div>
+              <div class="carrier-foot">
+                <a class="btn-soft" href="#">View Integration</a>
+                <button class="icon-btn icon-btn--plain" type="button" aria-label="Maersk Line settings"><iconify-icon class="icon" icon="lucide:settings" width="18" height="18" aria-hidden="true"></iconify-icon></button>
+              </div>
+            </article>
+
+            <article class="carrier">
+              <div class="carrier-body">
+                <div class="carrier-top">
+                  <span class="logo logo--carrier"><iconify-icon class="logo-svg" icon="lucide:ship" width="26" height="26" aria-hidden="true" style="color:#c8362f"></iconify-icon></span>
+                  <span class="pill pill--err"><iconify-icon class="icon" icon="lucide:circle-alert" width="15" height="15" aria-hidden="true"></iconify-icon>Errors</span>
+                </div>
+                <h3>Maersk Line <a href="#">Maersk line.com <iconify-icon class="icon" icon="lucide:external-link" width="14" height="14" aria-hidden="true"></iconify-icon></a></h3>
+                <p>AI-powered document generation and management</p>
+              </div>
+              <div class="carrier-foot">
+                <a class="btn-soft" href="#">View Integration</a>
+                <button class="icon-btn icon-btn--plain" type="button" aria-label="Maersk Line settings"><iconify-icon class="icon" icon="lucide:settings" width="18" height="18" aria-hidden="true"></iconify-icon></button>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="card panel" aria-labelledby="system-title">
+          <div class="panel-head">
+            <h2 id="system-title">System Integrations</h2>
+            <div class="tools">
+              <button class="icon-btn" type="button" aria-label="Filter"><iconify-icon class="icon" icon="lucide:list-filter" width="17" height="17" aria-hidden="true"></iconify-icon></button>
+              <button class="icon-btn" type="button" aria-label="Grid view"><iconify-icon class="icon" icon="lucide:layout-grid" width="17" height="17" aria-hidden="true"></iconify-icon></button>
+              <button class="icon-btn" type="button" aria-label="More options"><iconify-icon class="icon" icon="lucide:ellipsis-vertical" width="17" height="17" aria-hidden="true"></iconify-icon></button>
+            </div>
+          </div>
+
+          <ul class="system-list">
+
+            <li>
+              <div class="sys-main">
+                <span class="logo"><iconify-icon class="logo-svg" icon="logos:salesforce" width="26" height="26" aria-hidden="true"></iconify-icon></span>
+                <div>
+                  <h3>Salesforce CRM</h3>
+                  <p>Customer relationship management</p>
+                </div>
+              </div>
+              <div class="sys-meta">
+                <span class="tag">CRM</span>
+                <span class="pill pill--ok"><iconify-icon class="icon" icon="lucide:circle-check" width="15" height="15" aria-hidden="true"></iconify-icon>Connected</span>
+                <a class="btn-soft" href="#">Configure</a>
+              </div>
+            </li>
+
+            <li>
+              <div class="sys-main">
+                <span class="logo"><iconify-icon class="logo-svg" icon="logos:sap" width="26" height="26" aria-hidden="true"></iconify-icon></span>
+                <div>
+                  <h3>SAP TMS</h3>
+                  <p>Transportation management system</p>
+                </div>
+              </div>
+              <div class="sys-meta">
+                <span class="tag">TMS</span>
+                <span class="pill pill--ok"><iconify-icon class="icon" icon="lucide:circle-check" width="15" height="15" aria-hidden="true"></iconify-icon>Connected</span>
+                <a class="btn-soft" href="#">Configure</a>
+              </div>
+            </li>
+
+            <li>
+              <div class="sys-main">
+                <span class="logo"><iconify-icon class="logo-svg" icon="logos:oracle" width="26" height="26" aria-hidden="true"></iconify-icon></span>
+                <div>
+                  <h3>Oracle ERP</h3>
+                  <p>Enterprise resource planning</p>
+                </div>
+              </div>
+              <div class="sys-meta">
+                <span class="tag">ERP</span>
+                <span class="pill pill--sync"><iconify-icon class="icon" icon="lucide:clock" width="15" height="15" aria-hidden="true"></iconify-icon>Syncing</span>
+                <a class="btn-soft" href="#">Configure</a>
+              </div>
+            </li>
+
+            <li>
+              <div class="sys-main">
+                <span class="logo"><iconify-icon class="logo-svg" icon="logos:microsoft-icon" width="26" height="26" aria-hidden="true"></iconify-icon></span>
+                <div>
+                  <h3>Microsoft Dynamics</h3>
+                  <p>Business applications</p>
+                </div>
+              </div>
+              <div class="sys-meta">
+                <span class="tag">ERP</span>
+                <span class="pill pill--err"><iconify-icon class="icon" icon="lucide:circle-alert" width="15" height="15" aria-hidden="true"></iconify-icon>Errors</span>
+                <a class="btn-soft" href="#">Configure</a>
+              </div>
+            </li>
+
+            <li>
+              <div class="sys-main">
+                <span class="logo"><iconify-icon class="logo-svg" icon="logos:slack-icon" width="26" height="26" aria-hidden="true"></iconify-icon></span>
+                <div>
+                  <h3>Slack</h3>
+                  <p>Team communication</p>
+                </div>
+              </div>
+              <div class="sys-meta">
+                <span class="tag">Communication</span>
+                <span class="pill pill--ok"><iconify-icon class="icon" icon="lucide:circle-check" width="15" height="15" aria-hidden="true"></iconify-icon>Connected</span>
+                <a class="btn-soft" href="#">Configure</a>
+              </div>
+            </li>
+
+            <li>
+              <div class="sys-main">
+                <span class="logo"><iconify-icon class="logo-svg" icon="logos:shopify" width="26" height="26" aria-hidden="true"></iconify-icon></span>
+                <div>
+                  <h3>Shopify</h3>
+                  <p>E-commerce platform</p>
+                </div>
+              </div>
+              <div class="sys-meta">
+                <span class="tag">E-commerce</span>
+                <span class="pill pill--ok"><iconify-icon class="icon" icon="lucide:circle-check" width="15" height="15" aria-hidden="true"></iconify-icon>Connected</span>
+                <a class="btn-soft" href="#">Configure</a>
+              </div>
+            </li>
+
+          </ul>
+        </section>
+
+      </main>
+    </div>
+  </div>
+</body>
+</html>
