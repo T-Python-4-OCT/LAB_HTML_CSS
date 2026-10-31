@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ثورة الذكاء الاصطناعي | مقال</title>
+  <meta name="description" content="مقال عن ثورة الذكاء الاصطناعي: كيف بدأ، وأين نراه اليوم، وما التحديات التي يفرضها.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#content">تخطَّ إلى المقال</a>
+  <div class="progress" aria-hidden="true"></div>
+
+  <!-- ===== رأس الصفحة (Semantic: header + nav) ===== -->
+  <header class="site-header">
+    <a class="logo" href="#top">مجلة التقنية</a>
+    <nav aria-label="الأقسام">
+      <ul>
+        <li><a href="#history">الرحلة</a></li>
+        <li><a href="#today">اليوم</a></li>
+        <li><a href="#challenges">التحديات</a></li>
+        <li><a href="#faq">أسئلة</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="content">
+    <article id="top">
+      <!-- ===== ترويسة المقال ===== -->
+      <header class="hero">
+        <p class="kicker">تقنية · ذكاء اصطناعي</p>
+        <h1>ثورة الذكاء الاصطناعي <span>كيف تعيد الآلات التفكير في عالمنا؟</span></h1>
+        <p class="byline">بقلم <strong>هايل فايز البلوي</strong> · <time datetime="2026-10-29">٢٩ أكتوبر ٢٠٢٦</time> · قراءة في ٥ دقائق</p> 
+        <figure class="hero__figure">
+          <img src="assets/neural-network.svg" width="1200" height="560"
+               alt="رسم لشبكة عصبية اصطناعية: طبقات من العقد المضيئة المترابطة بخطوط.">
+          <figcaption>شبكة عصبية اصطناعية: عقد مترابطة تتعلم الأنماط من البيانات.</figcaption>
+        </figure>
+      </header>
+
+      <div class="layout">
+        <div class="body">
+          <p class="lead">
+            لم يعد الذكاء الاصطناعي حكاية من أفلام الخيال العلمي. هو اليوم يقترح علينا ما نشاهده، ويساعد الأطباء في قراءة
+            الأشعة، ويترجم الكلام في لحظته، ويكتب النصوص والأكواد. إنه واحد من أسرع التحولات التقنية في تاريخ البشرية.
+          </p>
+
+          <section id="history" aria-labelledby="h-history">
+            <h2 id="h-history">من فكرة إلى واقع</h2>
+            <p>
+              بدأت القصة بسؤال بسيط طرحه العالم آلان تورينغ عام ١٩٥٠: <em>هل تستطيع الآلة أن تفكر؟</em> وبعد ست سنوات،
+              في ورشة عمل بكلية دارتموث، وُلد مصطلح «الذكاء الاصطناعي» رسمياً. ومنذ ذلك الحين مرّ المجال بفترات حماس
+              وفترات ركود، حتى جاءت الطفرة الحديثة مع توفر البيانات الضخمة والمعالجات القوية.
+            </p>
+
+            <div class="table-wrap">
+              <table>
+                <caption>محطات بارزة في رحلة الذكاء الاصطناعي</caption>
+                <thead>
+                  <tr><th scope="col">السنة</th><th scope="col">الحدث</th><th scope="col">لماذا يهم؟</th></tr>
+                </thead>
+                <tbody>
+                  <tr><th scope="row">١٩٥٠</th><td>ورقة تورينغ «الحوسبة والذكاء»</td><td>طرحت فكرة اختبار ذكاء الآلة</td></tr>
+                  <tr><th scope="row">١٩٥٦</th><td>ورشة دارتموث</td><td>أول استخدام رسمي لمصطلح «الذكاء الاصطناعي»</td></tr>
+                  <tr><th scope="row">٢٠١٢</th><td>نموذج AlexNet</td><td>أشعل ثورة التعلّم العميق في التعرّف على الصور</td></tr>
+                  <tr><th scope="row">٢٠١٧</th><td>معمارية Transformer</td><td>الأساس لمعظم نماذج اللغة الحديثة</td></tr>
+                  <tr><th scope="row">٢٠٢٢</th><td>انتشار الذكاء الاصطناعي التوليدي</td><td>وصل لملايين المستخدمين اليوميين</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section id="today" aria-labelledby="h-today">
+            <h2 id="h-today">أين نراه اليوم؟</h2>
+            <ul class="cards">
+              <li><h3>الصحة</h3><p>دعم تشخيص الصور الطبية واكتشاف الأدوية وتحليل السجلات الصحية.</p></li>
+              <li><h3>التعليم</h3><p>مساعدون يشرحون الدروس ويتكيفون مع مستوى كل طالب وسرعته.</p></li>
+              <li><h3>الخدمات اللوجستية</h3><p>توقع الطلب وتخطيط المسارات وإدارة المخزون وقت الأزمات.</p></li>
+              <li><h3>الإبداع والعمل</h3><p>كتابة وتلخيص وترجمة وبرمجة تسرّع أعمالنا اليومية.</p></li>
+            </ul>
+
+            <blockquote class="pull">
+              الذكاء الاصطناعي لا يحلّ محل الإنسان، لكن من يتقنه سيحلّ محل من لا يتقنه.
+            </blockquote>
+          </section>
+
+          <section id="challenges" aria-labelledby="h-challenges">
+            <h2 id="h-challenges">التحديات والأسئلة الأخلاقية</h2>
+            <ol class="issues">
+              <li><strong>الوظائف:</strong> تتغير المهن وتظهر أخرى جديدة، والتعلّم المستمر هو الحل.</li>
+              <li><strong>التحيّز:</strong> النماذج تتعلم من بيانات بشرية قد تحمل انحيازات، فيجب اختبارها ومراجعتها.</li>
+              <li><strong>الخصوصية:</strong> جمع البيانات وتحليلها يستدعي ضوابط واضحة لحماية الأفراد.</li>
+              <li><strong>الاعتماد الزائد:</strong> قد تُخطئ النماذج بثقة، فيبقى التحقق البشري ضرورياً.</li>
+            </ol>
+
+            <!-- ✏️ يمكنك إضافة فيديو هنا (ضع ملف الفيديو في assets/):
+            <figure>
+              <video controls width="720" poster="assets/neural-network.svg">
+                <source src="assets/intro.mp4" type="video/mp4">
+                متصفحك لا يدعم الفيديو.
+              </video>
+              <figcaption>وصف الفيديو</figcaption>
+            </figure>
+            -->
+          </section>
+
+          <section id="faq" aria-labelledby="h-faq">
+            <h2 id="h-faq">أسئلة سريعة</h2>
+            <details>
+              <summary>ما الفرق بين الذكاء الاصطناعي والتعلّم الآلي؟</summary>
+              <p>الذكاء الاصطناعي هو المجال الأوسع لجعل الآلات تؤدي مهام تتطلب ذكاءً. والتعلّم الآلي فرع منه تتعلم فيه الآلة الأنماط من البيانات بدل أن تُبرمج بقواعد ثابتة.</p>
+            </details>
+            <details>
+              <summary>هل أحتاج إلى الرياضيات لأتعلمه؟</summary>
+              <p>تساعدك الأساسيات في الجبر والإحصاء كثيراً، لكن تستطيع البدء بمشاريع عملية بلغة بايثون ثم تعمّق فهمك تدريجياً.</p>
+            </details>
+          </section>
+
+          <section aria-labelledby="h-end">
+            <h2 id="h-end">الخلاصة</h2>
+            <p>
+              نحن في بداية الطريق. من يفهم هذه التقنية ويستخدمها بمسؤولية سيصنع الفرق في عمله ومجتمعه. والمهم أن نتعامل
+              معها بفضول وتفكير نقدي، فهي أداة قوية بقدر ما نحسن توجيهها.
+            </p>
+          </section>
+        </div>
+
+        <!-- ===== شريط جانبي (Semantic: aside) ===== -->
+        <aside aria-label="معلومات إضافية">
+          <section class="note">
+            <h2>هل تعلم؟</h2>
+            <p>أُنشئت الهيئة السعودية للبيانات والذكاء الاصطناعي «سدايا» عام ٢٠١٩ لتقود هذا التوجه في المملكة ضمن رؤية ٢٠٣٠.</p>
+          </section>
+          <section class="note">
+            <h2>ابدأ بنفسك</h2>
+            <ul>
+              <li><a href="https://www.kaggle.com/learn" target="_blank" rel="noopener">Kaggle Learn</a></li>
+              <li><a href="https://www.freecodecamp.org" target="_blank" rel="noopener">freeCodeCamp</a></li>
+              <li><a href="../../careers/cv/index.html">السيرة الذاتية للكاتب</a></li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>© ٢٠٢٦ مجلة التقنية · مقال تعليمي ضمن مشروع HTML/CSS</p>
+  </footer>
+</body>
+</html>

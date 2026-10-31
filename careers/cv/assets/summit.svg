@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" role="img" aria-label="قمة جبل عند شروق الشمس ترمز إلى الطموح والشغف">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#050f20"/>
+      <stop offset=".35" stop-color="#1b1a45"/>
+      <stop offset=".62" stop-color="#7a2f58"/>
+      <stop offset=".8" stop-color="#e8683a"/>
+      <stop offset="1" stop-color="#f7c46c"/>
+    </linearGradient>
+    <radialGradient id="sun" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#fff3c9"/>
+      <stop offset=".25" stop-color="#ffd27a" stop-opacity=".95"/>
+      <stop offset=".6" stop-color="#ff8a45" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#ff6a2b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="m1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3b2a4d"/><stop offset="1" stop-color="#1b1633"/>
+    </linearGradient>
+    <linearGradient id="m2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#241b3d"/><stop offset="1" stop-color="#0e0c22"/>
+    </linearGradient>
+    <linearGradient id="m3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#120f26"/><stop offset="1" stop-color="#050611"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#sky)"/>
+
+  <!-- نجوم -->
+  <g fill="#fff" opacity=".85">
+    <circle cx="140" cy="90" r="1.6"/><circle cx="310" cy="170" r="1.2"/><circle cx="520" cy="60" r="1.8"/>
+    <circle cx="690" cy="140" r="1.3"/><circle cx="880" cy="80" r="1.6"/><circle cx="1040" cy="190" r="1.2"/>
+    <circle cx="1210" cy="70" r="1.8"/><circle cx="1390" cy="150" r="1.4"/><circle cx="1510" cy="60" r="1.6"/>
+    <circle cx="240" cy="260" r="1"/><circle cx="1120" cy="280" r="1"/><circle cx="780" cy="250" r="1.1"/>
+    <circle cx="60" cy="210" r="1.1"/><circle cx="1460" cy="270" r="1.1"/>
+  </g>
+
+  <!-- الشمس وتوهجها: الشغف -->
+  <circle cx="330" cy="600" r="340" fill="url(#sun)"/>
+  <circle cx="330" cy="612" r="74" fill="#fff0bf"/>
+
+  <!-- سلاسل الجبال -->
+  <path d="M0 660 L120 590 L240 640 L400 560 L560 650 L700 600 L860 680 L1010 600 L1160 670 L1300 590 L1450 660 L1600 610 V900 H0 Z" fill="url(#m1)" opacity=".9"/>
+  <path d="M0 740 L170 670 L330 730 L500 650 L680 740 L850 690 L1010 750 L1180 660 L1350 730 L1500 680 L1600 720 V900 H0 Z" fill="url(#m2)"/>
+  <path d="M0 900 V800 L200 740 L360 790 L560 720 L760 790 L960 760 L1100 800 L1300 760 L1600 800 V900 Z" fill="url(#m3)"/>
+  <!-- القمة العالية (الطموح) -->
+  <path d="M1080 900 L1350 470 L1600 900 Z" fill="#0a0818"/>
+  <path d="M1350 470 L1412 580 L1376 562 L1350 618 L1326 560 L1294 586 Z" fill="#f4d9a3" opacity=".55"/>
+  <!-- راية على القمة -->
+  <line x1="1350" y1="470" x2="1350" y2="400" stroke="#f7c46c" stroke-width="3" stroke-linecap="round"/>
+  <path d="M1350 402 L1402 416 L1350 430 Z" fill="#e8683a"/>
+</svg>

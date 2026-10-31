@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>صفحتي الشخصية</title>
+</head>
+<body>
+
+  <!-- 1) العناوين من h1 إلى h6 -->
+  <h1>مرحباً، انا هايل البلوي</h1> <!-- ✏️ عدّل اسمك -->
+  <h2>طالب برمجة وهاوي تقنية</h2>
+
+  <!-- 2) الفقرات والنص: <b> غامق، <i> مائل -->
+  <p>
+    أهلاً بك في صفحتي الأولى! أنا <b>طالب في معسكر بايثون</b>، وأحب <i>تعلّم أشياء جديدة</i>
+    وتحويل الأفكار إلى برامج. هذه الصفحة بدون أي تنسيق، وهدفها تعلّم عناصر HTML الأساسية.
+  </p>
+
+  <!-- 3) الصور: src مسار الصورة، alt وصف بديل -->
+  <img src="assets/avatar.svg" alt="صورتي الشخصية" width="140" height="140">
+
+  <hr>
+
+  <!-- 4) القوائم: غير مرتبة (ul) ومرتبة (ol) -->
+  <h2>هواياتي</h2>
+  <ul>
+    <li>البرمجة</li>
+    <li>القراءة</li>
+    <li>كرة القدم</li>
+    <li>السفر</li>
+  </ul>
+
+  <h3>خطوات تعلّمي للبرمجة</h3>
+  <ol>
+    <li>تعلّم أساسيات بايثون</li>
+    <li>بناء مشروع صغير</li>
+    <li>تعلّم HTML وCSS</li>
+    <li>رفع المشاريع على GitHub</li>
+  </ol>
+
+  <hr>
+
+  <!-- 5) الجداول -->
+  <h2>جدولي الأسبوعي</h2>
+  <table border="1" cellpadding="6">
+    <caption>جدول المذاكرة</caption>
+    <thead>
+      <tr><th>اليوم</th><th>المادة</th><th>المدة</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>الأحد</td><td>بايثون</td><td>ساعتان</td></tr>
+      <tr><td>الاثنين</td><td>HTML</td><td>ساعتان</td></tr>
+      <tr><td>الثلاثاء</td><td>CSS</td><td>ساعتان</td></tr>
+      <tr><td>الأربعاء</td><td>مشروع تطبيقي</td><td>٣ ساعات</td></tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <!-- 6) الروابط: href وجهة الرابط، target="_blank" يفتحه في تبويب جديد -->
+  <h2>روابطي المفضلة</h2>
+  <ul>
+    <li><a href="https://developer.mozilla.org/ar/" target="_blank" rel="noopener">MDN Web Docs</a></li>
+    <li><a href="https://www.w3schools.com/html/" target="_blank" rel="noopener">W3Schools</a></li>
+    <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+    <li><a href="../../css/introduction/index.html">النسخة المنسّقة من هذه الصفحة</a></li>
+  </ul>
+
+  <hr>
+
+  <!-- 7) النماذج: form + عناصر الإدخال -->
+  <h2>تواصل معي</h2>
+  <form action="#" method="post">
+    <p>
+      <label for="name">الاسم:</label><br>
+      <input type="text" id="name" name="name" placeholder="اكتب اسمك" required>
+    </p>
+    <p>
+      <label for="email">البريد الإلكتروني:</label><br>
+      <input type="email" id="email" name="email" placeholder="name@example.com" required>
+    </p>
+    <p>
+      <label for="topic">الموضوع:</label><br>
+      <select id="topic" name="topic">
+        <option value="question">سؤال</option>
+        <option value="project">فكرة مشروع</option>
+        <option value="other">أخرى</option>
+      </select>
+    </p>
+    <p>
+      نوع الرد المفضّل:<br>
+      <input type="radio" id="r-mail" name="reply" value="mail" checked> <label for="r-mail">بريد</label>
+      <input type="radio" id="r-phone" name="reply" value="phone"> <label for="r-phone">اتصال</label>
+    </p>
+    <p>
+      <input type="checkbox" id="news" name="news"> <label for="news">أرغب بتلقي الجديد</label>
+    </p>
+    <p>
+      <label for="msg">رسالتك:</label><br>
+      <textarea id="msg" name="msg" rows="5" cols="40" placeholder="اكتب رسالتك هنا"></textarea>
+    </p>
+    <button type="submit">إرسال</button>
+    <button type="reset">مسح</button>
+  </form>
+
+  <hr>
+  <p><small>© ٢٠٢٦ — صفحتي الأولى بلغة HTML</small></p>
+</body>
+</html>

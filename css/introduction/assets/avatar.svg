@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="صورة شخصية">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#17375e"/><stop offset="1" stop-color="#0b1b2e"/></linearGradient>
+  </defs>
+  <rect width="200" height="200" fill="url(#bg)"/>
+  <circle cx="100" cy="78" r="36" fill="#e0b25c"/>
+  <path d="M30 200 C30 140 70 118 100 118 C130 118 170 140 170 200 Z" fill="#e0b25c"/>
+</svg>
