@@ -2,9 +2,11 @@
 
 # HTML / CSS lab
 
+[![Click to open website](assets/open-website.svg)](https://suliman-altwaijry.github.io/LAB_HTML_CSS/?lang=en)
+
 Five front-end projects built with HTML, CSS and JavaScript.
 
-## Open the website
+## Open locally
 
 Double-click [index.html](index.html) in this folder. No Node.js, installation, build step or server is required. Keep the folders together so relative links, images and fonts load correctly.
 
@@ -12,16 +14,16 @@ Double-click [index.html](index.html) in this folder. No Node.js, installation, 
 
 | Project | Page |
 | --- | --- |
-| Introduction to HTML | [HTML-only introduction](html/introduction/index.html) |
-| Introduction to CSS | [Styled introduction](css/introduction/index.html) |
-| Advanced HTML & CSS Concepts | [AI article](article/ai/index.html) |
-| Mini CV PROJECT | [Professional CV](careers/cv/index.html) |
-| BONUS | [Original English logistics dashboard](dashboard/index.html) |
+| Introduction to HTML | [HTML-only introduction](https://suliman-altwaijry.github.io/LAB_HTML_CSS/html/introduction/index.html) |
+| Introduction to CSS | [Styled introduction](https://suliman-altwaijry.github.io/LAB_HTML_CSS/css/introduction/index.html?lang=en) |
+| Advanced HTML & CSS Concepts | [AI article](https://suliman-altwaijry.github.io/LAB_HTML_CSS/article/ai/index.html?lang=en) |
+| Mini CV PROJECT | [Professional CV](https://suliman-altwaijry.github.io/LAB_HTML_CSS/careers/cv/index.html?lang=en) |
+| BONUS | [Original English logistics dashboard](https://suliman-altwaijry.github.io/LAB_HTML_CSS/dashboard/index.html) |
 
 ## Features
 
 - The home page, CSS introduction, article and CV support English and Arabic.
-- The HTML introduction has separate [English](html/introduction/index.html) and [Arabic](html/introduction/index.ar.html) pages, without CSS or JavaScript.
+- The HTML introduction has separate [English](https://suliman-altwaijry.github.io/LAB_HTML_CSS/html/introduction/index.html) and [Arabic](https://suliman-altwaijry.github.io/LAB_HTML_CSS/html/introduction/index.ar.html) pages, without CSS or JavaScript.
 - The dashboard keeps its original English layout, search, filters and demonstration dialogs. It has no Arabic mode.
 - The CSS introduction loops the walking illustration. Select the illustration to stop or restart it; reduced motion disables autoplay.
 - The CV includes work history, education and detailed projects, with no printing controls.
