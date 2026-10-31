@@ -1,0 +1,256 @@
+/* Universal selector */
+* {
+    box-sizing: border-box;
+}
+
+/* Element selectors */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0d1117;      /* HEX color */
+    color: rgb(220, 225, 230);      /* RGB color */
+}
+
+h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.4rem;              /* rem unit */
+    font-weight: 700;
+    color: gold;                    /* color name */
+}
+
+img {
+    width: 100%;                    /* percent unit */
+    border-radius: 8px;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;                /* stays at the top */
+    top: 0;
+    width: 100%;
+    z-index: 5;
+    display: flex;
+    justify-content: flex-end;      /* flexbox */
+    align-items: center;            /* flexbox */
+    gap: 20px;
+    padding: 15px 30px;
+    background-color: black;
+    border-bottom: 2px solid gold;
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    color: gold;
+    margin-right: auto;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: gold;
+}
+
+/* Header with background image */
+.header {
+    position: relative;             /* for the badge */
+    height: 320px;
+    margin-top: 55px;
+    padding: 90px 20px;
+    text-align: center;
+    color: white;
+    background-color: black;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/poster.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 60%;
+}
+
+.header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3em;                 /* em unit */
+    margin: 0;
+    text-shadow: 2px 2px 8px black;
+}
+
+.header p {
+    font-size: 1.2em;
+    text-shadow: 2px 2px 8px black;
+}
+
+/* position: absolute (inside the header) */
+.badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 5px 12px;
+    background-color: gold;
+    color: black;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+/* Container */
+.container {
+    position: static;               /* default position */
+    width: 80%;
+    margin: 30px auto;
+}
+
+/* Class selector: box model */
+.box {
+    background-color: #161b22;
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 1px solid #30363d;
+    border-left: 5px solid gold;
+    border-radius: 10px;
+}
+
+/* Image + text side by side */
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.row video {
+    width: 40%;
+}
+
+/* ID selector */
+#duo p {
+    font-style: italic;
+}
+
+/* display: inline */
+.note {
+    display: inline;
+    padding: 2px 8px;
+    background-color: gold;
+    color: black;
+    border-radius: 4px;
+}
+
+/* display: none */
+.hidden {
+    display: none;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: gold;
+    color: black;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #30363d;
+    text-align: left;
+}
+
+tr:hover {
+    background-color: hsl(51, 100%, 15%);   /* HSL color */
+}
+
+/* Best episode: red theme */
+.episode {
+    background-color: #1a0000;
+    border-left-color: red;
+}
+
+.episode h2 {
+    color: red;
+}
+
+.episode h3 {
+    color: #ff6b6b;
+}
+
+.episode-img {
+    display: block;                 /* block display */
+    width: 60%;
+    margin: 15px auto;
+    border: 3px solid red;
+}
+
+/* Links as buttons (inline-block) */
+.link {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: gold;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.link:hover {
+    background-color: white;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    font-weight: 600;
+}
+
+input, select, textarea {
+    padding: 8px;
+    margin-top: 5px;
+    background-color: #0d1117;
+    color: white;
+    border: 1px solid #30363d;
+    border-radius: 5px;
+}
+
+.choices {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.choices label {
+    margin: 0 10px 0 0;
+    font-weight: 400;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: gold;
+    color: black;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white;
+}
+
+/* Footer */
+.footer {
+    position: relative;
+    text-align: center;
+    padding: 15px;
+    background-color: black;
+    color: gray;
+}

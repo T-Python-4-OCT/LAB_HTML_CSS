@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistics Dashboard - Integrations</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Icons library (Bootstrap Icons - CSS only, no JavaScript) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar">
+
+        <div class="sidebar-top">
+            <div class="brand">
+                <div class="brand-logo"><i class="bi bi-box-seam"></i></div>
+                <span>Logistics</span>
+            </div>
+            <i class="bi bi-layout-sidebar collapse-icon"></i>
+        </div>
+
+        <nav class="menu">
+            <a href="#" class="menu-item"><i class="bi bi-grid"></i> Control Tower</a>
+
+            <!-- Dropdown 1: opens down -->
+            <details class="dropdown">
+                <summary class="menu-item">
+                    <i class="bi bi-magic"></i> Generate Quote
+                    <i class="bi bi-chevron-down arrow"></i>
+                </summary>
+                <div class="submenu">
+                    <a href="#">New Quote</a>
+                    <a href="#">Saved Quotes</a>
+                    <a href="#">Quote History</a>
+                </div>
+            </details>
+
+            <a href="#" class="menu-item"><i class="bi bi-truck"></i> Track Shipments</a>
+            <a href="#" class="menu-item"><i class="bi bi-robot"></i> AI Console</a>
+            <a href="#" class="menu-item"><i class="bi bi-people"></i> Customer Portal</a>
+
+            <!-- Dropdown 2: section group (open by default) -->
+            <details class="dropdown section-group" open>
+                <summary class="section-title">
+                    INSIGHT &amp; CONTROL
+                    <i class="bi bi-chevron-down arrow"></i>
+                </summary>
+                <a href="#" class="menu-item"><i class="bi bi-file-earmark-text"></i> Documents</a>
+                <a href="#" class="menu-item"><i class="bi bi-bar-chart"></i> Analytics</a>
+                <a href="#" class="menu-item active"><i class="bi bi-diagram-3"></i> Integrations</a>
+                <a href="#" class="menu-item"><i class="bi bi-cpu"></i> AI Training</a>
+            </details>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <a href="#" class="menu-item"><i class="bi bi-gear"></i> Setting</a>
+            <a href="#" class="menu-item"><i class="bi bi-headset"></i> Get Help</a>
+            <a href="#" class="menu-item"><i class="bi bi-rocket-takeoff"></i> Updates</a>
+
+            <!-- Dropdown 3: user menu (opens up) -->
+            <details class="user-menu">
+                <summary class="user">
+                    <img src="https://i.pravatar.cc/80?img=12" alt="Alex profile photo" class="avatar">
+                    <div class="user-info">
+                        <strong>Alex</strong>
+                        <small>Acme Logistics</small>
+                    </div>
+                    <i class="bi bi-chevron-expand"></i>
+                </summary>
+                <div class="user-popup">
+                    <a href="#"><i class="bi bi-person"></i> My Profile</a>
+                    <a href="#"><i class="bi bi-sliders"></i> Account Settings</a>
+                    <a href="#"><i class="bi bi-bell"></i> Notifications</a>
+                    <a href="#" class="logout"><i class="bi bi-box-arrow-right"></i> Log out</a>
+                </div>
+            </details>
+        </div>
+    </aside>
+
+    <!-- ================= MAIN ================= -->
+    <main class="main">
+
+        <!-- Top bar -->
+        <header class="topbar">
+            <div class="breadcrumb">
+                <a href="#">Dashboard</a>
+                <i class="bi bi-chevron-right"></i>
+                <span>Integrations</span>
+            </div>
+
+            <div class="topbar-right">
+                <label class="search">
+                    <i class="bi bi-search"></i>
+                    <input type="text" placeholder="Search by cargo, shipping, user id etc">
+                </label>
+                <button class="ai-btn">Get Ai Insight <i class="bi bi-stars"></i></button>
+                <button class="icon-btn"><i class="bi bi-bell"></i></button>
+                <button class="icon-btn"><i class="bi bi-chat-square-dots"></i></button>
+            </div>
+        </header>
+
+        <!-- Page title -->
+        <div class="page-head">
+            <div>
+                <h1>Integrations</h1>
+                <p>Connect your freight operations with existing systems</p>
+            </div>
+            <button class="add-btn"><i class="bi bi-plus-lg"></i> Add New</button>
+        </div>
+
+        <!-- Stats -->
+        <section class="stats">
+            <div class="stat">
+                <div>
+                    <p class="stat-label">Connected</p>
+                    <p class="stat-value">45 <span>Active integrations</span></p>
+                </div>
+                <div class="stat-icon"><i class="bi bi-link-45deg"></i></div>
+            </div>
+            <div class="stat">
+                <div>
+                    <p class="stat-label">Syncing</p>
+                    <p class="stat-value">5 <span>In Progress</span></p>
+                </div>
+                <div class="stat-icon"><i class="bi bi-clock"></i></div>
+            </div>
+            <div class="stat">
+                <div>
+                    <p class="stat-label">Errors</p>
+                    <p class="stat-value">1 <span class="danger-text">Needs attention</span></p>
+                </div>
+                <div class="stat-icon"><i class="bi bi-exclamation-circle"></i></div>
+            </div>
+            <div class="stat">
+                <div>
+                    <p class="stat-label">Available</p>
+                    <p class="stat-value">54 <span>More to add</span></p>
+                </div>
+                <div class="stat-icon"><i class="bi bi-plus-circle-dotted"></i></div>
+            </div>
+        </section>
+
+        <!-- Carrier APIs -->
+        <section class="panel">
+            <div class="panel-head">
+                <h2>Carrier APIs</h2>
+                <a href="#" class="view-all">View All <i class="bi bi-arrow-up-right"></i></a>
+            </div>
+
+            <div class="carriers">
+                <div class="carrier">
+                    <div class="carrier-top">
+                        <div class="carrier-logo ship"><i class="bi bi-water"></i></div>
+                        <span class="status connected"><i class="bi bi-check-circle"></i> Connected</span>
+                    </div>
+                    <h3>Maersk Line <a href="#">Maersk line.com</a> <i class="bi bi-box-arrow-up-right small-icon"></i></h3>
+                    <p>AI-powered document generation and management</p>
+                    <div class="carrier-foot">
+                        <a href="#" class="outline-btn">View Integration</a>
+                        <i class="bi bi-gear"></i>
+                    </div>
+                </div>
+
+                <div class="carrier">
+                    <div class="carrier-top">
+                        <div class="carrier-logo plane"><i class="bi bi-airplane"></i></div>
+                        <span class="status syncing"><i class="bi bi-arrow-repeat"></i> Syncing</span>
+                    </div>
+                    <h3>Maersk Line <a href="#">Maersk line.com</a> <i class="bi bi-box-arrow-up-right small-icon"></i></h3>
+                    <p>AI-powered document generation and management</p>
+                    <div class="carrier-foot">
+                        <a href="#" class="outline-btn">View Integration</a>
+                        <i class="bi bi-gear"></i>
+                    </div>
+                </div>
+
+                <div class="carrier">
+                    <div class="carrier-top">
+                        <div class="carrier-logo ship"><i class="bi bi-water"></i></div>
+                        <span class="status error"><i class="bi bi-exclamation-circle"></i> Errors</span>
+                    </div>
+                    <h3>Maersk Line <a href="#">Maersk line.com</a> <i class="bi bi-box-arrow-up-right small-icon"></i></h3>
+                    <p>AI-powered document generation and management</p>
+                    <div class="carrier-foot">
+                        <a href="#" class="outline-btn">View Integration</a>
+                        <i class="bi bi-gear"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- System Integrations -->
+        <section class="panel">
+            <div class="panel-head">
+                <h2>System Integrations</h2>
+                <div class="panel-tools">
+                    <button class="icon-btn small"><i class="bi bi-funnel"></i></button>
+                    <button class="icon-btn small"><i class="bi bi-grid"></i></button>
+                    <button class="icon-btn small"><i class="bi bi-three-dots-vertical"></i></button>
+                </div>
+            </div>
+
+            <div class="list">
+                <div class="row">
+                    <div class="row-logo" style="background:#e0f2fe;color:#0ea5e9;">S</div>
+                    <div class="row-info">
+                        <h4>Salesforce CRM</h4>
+                        <p>Customer relationship management</p>
+                    </div>
+                    <span class="category">CRM</span>
+                    <span class="status connected"><i class="bi bi-check-circle"></i> Connected</span>
+                    <a href="#" class="outline-btn">Configure</a>
+                </div>
+
+                <div class="row">
+                    <div class="row-logo" style="background:#dbeafe;color:#1d4ed8;">S</div>
+                    <div class="row-info">
+                        <h4>SAP TMS</h4>
+                        <p>Transportation management system</p>
+                    </div>
+                    <span class="category">TMS</span>
+                    <span class="status connected"><i class="bi bi-check-circle"></i> Connected</span>
+                    <a href="#" class="outline-btn">Configure</a>
+                </div>
+
+                <div class="row">
+                    <div class="row-logo" style="background:#fee2e2;color:#dc2626;">O</div>
+                    <div class="row-info">
+                        <h4>Oracle ERP</h4>
+                        <p>Enterprise resource planning</p>
+                    </div>
+                    <span class="category">ERP</span>
+                    <span class="status syncing"><i class="bi bi-arrow-repeat"></i> Syncing</span>
+                    <a href="#" class="outline-btn">Configure</a>
+                </div>
+
+                <div class="row">
+                    <div class="row-logo" style="background:#e0e7ff;color:#4338ca;">M</div>
+                    <div class="row-info">
+                        <h4>Microsoft Dynamics</h4>
+                        <p>Business applications</p>
+                    </div>
+                    <span class="category">ERP</span>
+                    <span class="status error"><i class="bi bi-exclamation-circle"></i> Errors</span>
+                    <a href="#" class="outline-btn">Configure</a>
+                </div>
+
+                <div class="row">
+                    <div class="row-logo" style="background:#fce7f3;color:#db2777;"><i class="bi bi-hash"></i></div>
+                    <div class="row-info">
+                        <h4>Slack</h4>
+                        <p>Team communication</p>
+                    </div>
+                    <span class="category">Communication</span>
+                    <span class="status connected"><i class="bi bi-check-circle"></i> Connected</span>
+                    <a href="#" class="outline-btn">Configure</a>
+                </div>
+
+                <div class="row">
+                    <div class="row-logo" style="background:#dcfce7;color:#16a34a;"><i class="bi bi-bag"></i></div>
+                    <div class="row-info">
+                        <h4>Shopify</h4>
+                        <p>E-commerce platform</p>
+                    </div>
+                    <span class="category">E-commerce</span>
+                    <span class="status connected"><i class="bi bi-check-circle"></i> Connected</span>
+                    <a href="#" class="outline-btn">Configure</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+</body>
+</html>

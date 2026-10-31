@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person of Interest</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <span class="logo">POI</span>
+        <a href="#about">About</a>
+        <a href="#characters">Characters</a>
+        <a href="#duo">Duo</a>
+        <a href="#episode">Best Episode</a>
+        <a href="#survey">Survey</a>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+        <span class="badge">2011 - 2016</span>
+        <h1>Person of Interest</h1>
+        <p><i>"My Favorite TV Show."</i></p>
+    </div>
+
+    <div class="container">
+
+        <!-- About the show -->
+        <div class="box" id="about">
+            <h2>About the Show</h2>
+            <div class="row">
+                <video src="video/intro POI.mp4" autoplay loop muted></video>
+                <div>
+                    <p>
+                        <b>Person of Interest</b> is an American crime and science fiction series created by
+                        <i>Jonathan Nolan</i>. It started in <b>2011</b> and ended in <b>2016</b>.
+                    </p>
+                    <p>
+                        The story is about <b>Harold Finch</b>, a genius programmer who built "The Machine",
+                        a computer system that watches everything and can predict crimes.
+                        Finch hires <b>John Reese</b>, a former CIA agent, to save the people
+                        whose numbers the Machine gives them.
+                    </p>
+                    <ul>
+                        <li>Genre: Crime, Action, Sci-Fi</li>
+                        <li>Seasons: <span class="note">5</span></li>
+                        <li>Episodes: <span class="note">103</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main characters -->
+        <div class="box" id="characters">
+            <h2>Main Characters</h2>
+            <table>
+                <tr>
+                    <th>Character</th>
+                    <th>Actor</th>
+                    <th>Role in the Team</th>
+                </tr>
+                <tr>
+                    <td>John Reese</td>
+                    <td>Jim Caviezel</td>
+                    <td>Former CIA agent, the fighter</td>
+                </tr>
+                <tr>
+                    <td>Harold Finch</td>
+                    <td>Michael Emerson</td>
+                    <td>Built the Machine</td>
+                </tr>
+                <tr>
+                    <td>Sameen Shaw</td>
+                    <td>Sarah Shahi</td>
+                    <td>Strong and funny agent</td>
+                </tr>
+                <tr>
+                    <td>Root</td>
+                    <td>Amy Acker</td>
+                    <td>Hacker who talks with the Machine</td>
+                </tr>
+                <tr>
+                    <td>Joss Carter</td>
+                    <td>Taraji P. Henson</td>
+                    <td>Honest police detective</td>
+                </tr>
+                <tr>
+                    <td>Lionel Fusco</td>
+                    <td>Kevin Chapman</td>
+                    <td>Police detective who helps</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Favorite duo -->
+        <div class="box" id="duo">
+            <h2>My Favorite Duo: Shaw &amp; Reese</h2>
+            <div class="row">
+                <img src="https://mbc1955.wordpress.com/wp-content/uploads/2020/02/poi-2.jpg" alt="Sameen Shaw and John Reese together">
+                <div>
+                    <p>
+                        <b>Shaw</b> and <b>Reese</b> are my favorite duo. They are both strong,
+                        calm, and always ready for action. Their talks are short but very <i>funny</i>.
+                    </p>
+                    <ul>
+                        <li>They work together without many words.</li>
+                        <li>Their action scenes are the best.</li>
+                        <li>They joke even in dangerous moments.</li>
+                        <li>They always protect each other.</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="hidden">This text is hidden with display: none.</p>
+        </div>
+
+        <!-- Best episode (red theme) -->
+        <div class="box episode" id="episode">
+            <h2>The Best Episode: Season 3, Episode 10</h2>
+            <h3>"The Devil's Share"</h3>
+            <img src="https://m.media-amazon.com/images/M/MV5BMjUxYWExMjktNmFkNy00MmNmLTg3MGUtMjBhNWU1NDM2ZDMwXkEyXkFqcGc@._V1_.jpg" alt="John Reese looking angry in red light" class="episode-img">
+            <p>
+                In the episode before it, the team loses <b>Detective Joss Carter</b>.
+                In <i>"The Devil's Share"</i>, John Reese is full of anger and goes to take revenge for her.
+            </p>
+            <ol>
+                <li>The team is sad after losing Carter.</li>
+                <li>Reese goes alone to find the people responsible.</li>
+                <li>Finch, Shaw, and Fusco try to stop him.</li>
+                <li>The episode ends with a very emotional scene.</li>
+            </ol>
+        </div>
+
+        <!-- Links -->
+        <div class="box">
+            <h2>Useful Links</h2>
+            <a href="https://en.wikipedia.org/wiki/Person_of_Interest_(TV_series)" target="_blank" class="link">Wikipedia</a>
+            <a href="https://www.imdb.com/title/tt1839578/" target="_blank" class="link">IMDb</a>
+            <a href="#survey" class="link">Fan Survey</a>
+        </div>
+
+        <!-- Form -->
+        <div class="box" id="survey">
+            <h2>Fan Survey</h2>
+            <form action="#">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" placeholder="Your name">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="example@mail.com">
+
+                <label for="character">Favorite Character:</label>
+                <select id="character">
+                    <option>John Reese</option>
+                    <option>Harold Finch</option>
+                    <option>Sameen Shaw</option>
+                    <option>Root</option>
+                    <option>Joss Carter</option>
+                    <option>Lionel Fusco</option>
+                </select>
+
+                <label>Favorite Season:</label>
+                <div class="choices">
+                    <input type="radio" id="s1" name="season"><label for="s1">1</label>
+                    <input type="radio" id="s2" name="season"><label for="s2">2</label>
+                    <input type="radio" id="s3" name="season"><label for="s3">3</label>
+                    <input type="radio" id="s4" name="season"><label for="s4">4</label>
+                    <input type="radio" id="s5" name="season"><label for="s5">5</label>
+                </div>
+
+                <div class="choices">
+                    <input type="checkbox" id="all"><label for="all">I watched all 103 episodes</label>
+                </div>
+
+                <label for="scene">Your Favorite Scene:</label>
+                <textarea id="scene" rows="4" placeholder="Write about your favorite scene..."></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>Made by a Person of Interest fan &copy; 2026</p>
+    </div>
+
+</body>
+</html>
