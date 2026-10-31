@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحتي الشخصية - المشروع الثاني (CSS)</title>
+    
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <div class="container">
+       
+        <header class="header">
+            <h1>مرحباً بك في صفحتي الشخصية</h1>
+            <p class="intro">أنا أتعلم أساسيات تطوير الويب <span>HTML</span> و <span>CSS</span> لبناء تطبيقات ومواقع احترافية.</p>
+        </header>
+
+       
+        <section class="card">
+            <h2>هواياتي المفضلة</h2>
+            <ul class="hobbies-list">
+                <li>برمجة وتطوير المواقع</li>
+                <li>ألعاب الفيديو والتحديات التكتيكية</li>
+                <li>تعلم التقنيات الحديثة</li>
+            </ul>
+        </section>
+
+        
+        <section class="card">
+            <h2>روابط مفيدة وصورة</h2>
+            <p>يمكنك زيارة <a href="https://developer.mozilla.org" target="_blank" class="link-btn">موسوعة MDN للويب</a> لتعلم المزيد.</p>
+            <div class="image-wrapper">
+                <img src="emeer.jpg" alt="صورة توضيحية للمشروع">
+            </div>
+        </section>
+
+    
+        <section class="card">
+            <h2>جدول المهارات والتقنيات</h2>
+            <table class="skills-table">
+                <thead>
+                    <tr>
+                        <th>التقنية</th>
+                        <th>المستوى</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML5</td>
+                        <td>مبتدئ - ممتاز</td>
+                    </tr>
+                    <tr>
+                        <td>CSS3</td>
+                        <td>متقدم - قيد التطوير</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+      
+        <section class="card">
+            <h2>تواصل معي</h2>
+            <form action="#" method="post" class="contact-form">
+                <div class="form-group">
+                    <label for="username">الاسم:</label>
+                    <input type="text" id="username" name="username" placeholder="أدخل اسمك" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني:</label>
+                    <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">الرسالة:</label>
+                    <textarea id="message" name="message" rows="4" placeholder="اكتب رسالتك هنا..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">إرسال الرسالة</button>
+            </form>
+        </section>
+    </div>
+
+</body>
+</html> 

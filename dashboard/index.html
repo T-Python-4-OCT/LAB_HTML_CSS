@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logistics | Operations Dashboard</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand"><div class="brand-mark">✦</div><span>Logistics</span><button class="collapse-btn" id="collapseBtn" aria-label="Collapse sidebar">◫</button></div>
+    <nav class="main-nav">
+      <button class="nav-item" data-page="overview"><span>▦</span>Control Tower</button>
+      <button class="nav-item" data-page="quotes"><span>✧</span>Generate Quote <b class="chevron">⌄</b></button>
+      <button class="nav-item" data-page="shipments"><span>♧</span>Track Shipments</button>
+      <button class="nav-item" data-page="ai"><span>◎</span>AI Console</button>
+      <button class="nav-item" data-page="customers"><span>♙</span>Customer Portal</button>
+      <div class="nav-label">INSIGHT &amp; CONTROL <span>⌃</span></div>
+      <button class="nav-item" data-page="documents"><span>▤</span>Documents</button>
+      <button class="nav-item" data-page="analytics"><span>▥</span>Analytics</button>
+      <button class="nav-item active" data-page="integrations"><span>♧</span>Integrations</button>
+      <button class="nav-item" data-page="training"><span>▣</span>AI Training</button>
+    </nav>
+    <div class="sidebar-bottom">
+      <button class="nav-item" data-page="settings"><span>⚙</span>Settings</button>
+      <button class="nav-item" data-page="help"><span>☏</span>Get Help</button>
+      <button class="nav-item" data-page="updates"><span>♧</span>Updates</button>
+      <button class="profile" id="profileButton" type="button"><div class="avatar" id="profileAvatar">A</div><div class="profile-details"><strong id="profileName">Alex Morgan</strong><small id="profileCompany">Acme Logistics</small></div><span class="profile-more">⌄</span></button>
+    </div>
+  </aside>
+
+  <main class="main-area">
+    <header class="topbar">
+      <div class="breadcrumbs"><span>Dashboard</span><span>›</span><strong id="crumb">Integrations</strong></div>
+      <div class="top-actions">
+        <div class="global-search"><span>⌕</span><input id="globalSearch" placeholder="Search by cargo, shipping, user id etc."><kbd>⌘ K</kbd></div>
+        <button class="insight-btn" id="insightBtn">✧ Get AI Insight</button>
+        <button class="icon-btn" id="notificationsBtn" aria-label="Notifications">♧<i></i></button>
+        <button class="icon-btn" aria-label="Help">ⓘ</button>
+      </div>
+    </header>
+    <section class="content" id="content">
+      <div class="page-heading">
+        <div><h1>Integrations</h1><p>Connect your freight operations with existing systems</p></div>
+        <button class="primary-btn" id="addIntegrationBtn">＋ Add New</button>
+      </div>
+      <div class="stats-grid">
+        <article class="stat-card"><div class="stat-top">Connected <span>♧</span></div><div class="stat-value" id="connectedCount">45 <small>Active integrations</small></div></article>
+        <article class="stat-card"><div class="stat-top">Syncing <span>◷</span></div><div class="stat-value" id="syncingCount">5 <small>In Progress</small></div></article>
+        <article class="stat-card"><div class="stat-top">Errors <span>ⓘ</span></div><div class="stat-value error-number" id="errorCount">1 <small>Needs attention</small></div></article>
+        <article class="stat-card"><div class="stat-top">Available <span>♧</span></div><div class="stat-value" id="availableCount">54 <small>More to add</small></div></article>
+      </div>
+      <section class="section-block">
+        <div class="section-title"><h2>Carrier APIs</h2><button class="text-btn" id="viewAllCarriers">View All ↗</button></div>
+        <div class="carrier-grid" id="carrierGrid"></div>
+      </section>
+      <section class="section-block system-section">
+        <div class="section-title"><h2>System Integrations</h2><div class="table-tools"><button class="round-tool" id="filterBtn" title="Filter">▽</button><button class="round-tool" id="layoutBtn" title="Toggle view">▦</button><button class="round-tool" id="moreBtn" title="More">⋮</button></div></div>
+        <div class="integration-list" id="integrationList"></div>
+      </section>
+    </section>
+  </main>
+</div>
+
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal" role="dialog" aria-modal="true">
+    <div class="modal-head"><div><h2 id="modalTitle">Add integration</h2><p id="modalSubtitle">Connect a new service to your workspace</p></div><button class="close-modal" id="closeModal">×</button></div>
+    <form id="integrationForm">
+      <label>Integration name<input id="serviceName" required placeholder="e.g. DHL Express"></label>
+      <label>Category<select id="serviceCategory"><option>Carrier API</option><option>CRM</option><option>TMS</option><option>ERP</option><option>Communication</option><option>E-commerce</option><option>Other</option></select></label>
+      <label>Description<input id="serviceDescription" placeholder="What does this integration do?"></label>
+      <label>Status<select id="serviceStatus"><option>Connected</option><option>Syncing</option><option>Errors</option></select></label>
+      <div class="modal-actions"><button type="button" class="secondary-btn" id="cancelModal">Cancel</button><button type="submit" class="primary-btn">Save integration</button></div>
+    </form>
+  </div>
+</div>
+<div class="modal-backdrop" id="profileBackdrop">
+  <div class="modal profile-modal" role="dialog" aria-modal="true">
+    <div class="modal-head"><div><h2>Edit account profile</h2><p>Update your account details and profile photo</p></div><button class="close-modal" id="closeProfileModal" type="button">×</button></div>
+    <form id="profileForm">
+      <div class="photo-editor"><div class="photo-preview" id="photoPreview">A</div><div><label class="upload-photo">Change photo<input type="file" id="profilePhoto" accept="image/*" hidden></label><button type="button" class="remove-photo" id="removePhoto">Remove photo</button><small>JPG, PNG or WEBP · Max 2 MB</small></div></div>
+      <label>Account name<input id="accountName" required maxlength="50" placeholder="Your name"></label>
+      <label>Company name<input id="companyName" required maxlength="60" placeholder="Your company"></label>
+      <div class="modal-actions"><button type="button" class="secondary-btn" id="cancelProfile">Cancel</button><button type="submit" class="primary-btn">Save changes</button></div>
+    </form>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+const defaultItems = [
+ {id:1,name:"Salesforce CRM",category:"CRM",description:"Customer relationship management",status:"Connected",icon:"☁",color:"blue"},
+ {id:2,name:"SAP TMS",category:"TMS",description:"Transportation management system",status:"Connected",icon:"SAP",color:"sky"},
+ {id:3,name:"Oracle ERP",category:"ERP",description:"Enterprise resource planning",status:"Syncing",icon:"◉",color:"red"},
+ {id:4,name:"Microsoft Dynamics",category:"ERP",description:"Business applications",status:"Errors",icon:"◧",color:"indigo"},
+ {id:5,name:"Slack",category:"Communication",description:"Team communication",status:"Connected",icon:"✣",color:"multi"},
+ {id:6,name:"Shopify",category:"E-commerce",description:"E-commerce platform",status:"Connected",icon:"S",color:"green"},
+ {id:7,name:"Google Workspace",category:"Communication",description:"Email and productivity tools",status:"Connected",icon:"G",color:"multi"},
+ {id:8,name:"QuickBooks",category:"ERP",description:"Accounting and financial management",status:"Syncing",icon:"qb",color:"green"}
+];
+const defaultCarriers = [
+ {id:101,name:"Maersk Line",url:"maerskline.com",description:"AI-powered document generation and management",status:"Connected",icon:"🚢"},
+ {id:102,name:"Maersk Line",url:"maerskline.com",description:"Air freight tracking and shipment updates",status:"Syncing",icon:"✈"},
+ {id:103,name:"Maersk Line",url:"maerskline.com",description:"Ocean freight booking and management",status:"Errors",icon:"🚢"}
+];
+let items = JSON.parse(localStorage.getItem("logisticsItems") || "null") || defaultItems;
+let carriers = JSON.parse(localStorage.getItem("logisticsCarriers") || "null") || defaultCarriers;
+let currentPage = "integrations";
+let editingId = null;
+let profileData = JSON.parse(localStorage.getItem("logisticsProfile") || "null") || {name:"Alex Morgan",company:"Acme Logistics",photo:""};
+let pendingProfilePhoto = profileData.photo || "";
+let filteredStatus = "All";
+let cardView = false;
+
+const $ = (s) => document.querySelector(s);
+const escapeHTML = (v) => String(v).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function save(){localStorage.setItem("logisticsItems",JSON.stringify(items));localStorage.setItem("logisticsCarriers",JSON.stringify(carriers));}
+function renderProfile(){
+ const avatar=$("#profileAvatar");const preview=$("#photoPreview");
+ $("#profileName").textContent=profileData.name;$("#profileCompany").textContent=profileData.company;
+ [avatar,preview].forEach(el=>{el.innerHTML="";if(profileData.photo){const img=document.createElement("img");img.src=profileData.photo;img.alt="Profile photo";el.append(img);}else{el.textContent=(profileData.name.trim()[0]||"A").toUpperCase();}});
+}
+function openProfileModal(){pendingProfilePhoto=profileData.photo||"";$("#accountName").value=profileData.name;$("#companyName").value=profileData.company;renderProfile();$("#profileBackdrop").classList.add("show");}
+function closeProfileModal(){$("#profileBackdrop").classList.remove("show");$("#profileForm").reset();pendingProfilePhoto=profileData.photo||"";}
+
+function toast(message){const el=$("#toast");el.textContent=message;el.classList.add("show");clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>el.classList.remove("show"),2600);}
+function statusClass(status){return status==="Connected"?"connected":status==="Syncing"?"syncing":"errors";}
+function counts(){
+ $("#connectedCount").innerHTML=items.filter(x=>x.status==="Connected").length+carriers.filter(x=>x.status==="Connected").length+' <small>Active integrations</small>';
+ $("#syncingCount").innerHTML=items.filter(x=>x.status==="Syncing").length+carriers.filter(x=>x.status==="Syncing").length+' <small>In Progress</small>';
+ $("#errorCount").innerHTML='<span>'+ (items.filter(x=>x.status==="Errors").length+carriers.filter(x=>x.status==="Errors").length)+'</span> <small>Needs attention</small>';
+ $("#availableCount").innerHTML=Math.max(0,54-items.length)+' <small>More to add</small>';
+}
+function renderCarriers(){
+ $("#carrierGrid").innerHTML=carriers.map(c=>`<article class="carrier-card">
+ <div class="carrier-top"><div class="carrier-logo">${escapeHTML(c.icon)}</div><span class="status-pill ${statusClass(c.status)}">${c.status}</span></div>
+ <h3>${escapeHTML(c.name)} <a href="https://${escapeHTML(c.url)}" target="_blank" rel="noopener">↗</a></h3><p>${escapeHTML(c.description)}</p>
+ <div class="carrier-footer"><button class="outline-btn" data-action="view-carrier" data-id="${c.id}">View integration</button><button class="settings-mini" data-action="edit-carrier" data-id="${c.id}" title="Settings">⚙</button></div></article>`).join("");
+}
+function renderItems(){
+ const query=($("#globalSearch").value||"").toLowerCase();
+ const visible=items.filter(x=>(filteredStatus==="All"||x.status===filteredStatus)&&[x.name,x.category,x.description].join(" ").toLowerCase().includes(query));
+ $("#integrationList").classList.toggle("card-view",cardView);
+ $("#integrationList").innerHTML=visible.length?visible.map(x=>`<div class="integration-row">
+ <div class="service-info"><div class="service-logo ${x.color||"blue"}">${escapeHTML(x.icon||"◈")}</div><div><strong>${escapeHTML(x.name)}</strong><small>${escapeHTML(x.description)}</small></div></div>
+ <span class="category-tag">${escapeHTML(x.category)}</span><span class="status-pill ${statusClass(x.status)}">${x.status}</span>
+ <div class="row-actions"><button class="configure-btn" data-action="configure" data-id="${x.id}">Configure</button><button class="dots-btn" data-action="more-item" data-id="${x.id}">⋮</button></div></div>`).join(""):`<div class="empty-state"><div>⌕</div><strong>No integrations found</strong><p>Try another search or change the filter.</p><button class="secondary-btn" data-action="clear-filter">Clear filters</button></div>`;
+ counts();
+}
+function render(){renderCarriers();renderItems();}
+const pages={
+ overview:{title:"Control Tower",subtitle:"Your logistics operations at a glance"},
+ quotes:{title:"Generate Quote",subtitle:"Create and manage freight quotations"},
+ shipments:{title:"Track Shipments",subtitle:"Monitor shipments and delivery progress"},
+ ai:{title:"AI Console",subtitle:"Ask questions and get operational insights"},
+ customers:{title:"Customer Portal",subtitle:"Manage customer relationships and access"},
+ documents:{title:"Documents",subtitle:"Organize shipping and compliance documents"},
+ analytics:{title:"Analytics",subtitle:"Understand performance across your operations"},
+ integrations:{title:"Integrations",subtitle:"Connect your freight operations with existing systems"},
+ training:{title:"AI Training",subtitle:"Train and manage your logistics AI assistant"},
+ settings:{title:"Settings",subtitle:"Manage your workspace preferences"},
+ help:{title:"Get Help",subtitle:"Find answers and contact support"},
+ updates:{title:"Updates",subtitle:"Latest platform improvements"}
+};
+function pageContent(page){
+ if(page==="integrations") return $("#content").innerHTML=integrationMarkup();
+ const p=pages[page]||pages.overview;
+ let body="";
+ if(page==="overview") body=`<div class="stats-grid"><article class="stat-card"><div class="stat-top">Active shipments</div><div class="stat-value">128 <small>Across all routes</small></div></article><article class="stat-card"><div class="stat-top">On-time delivery</div><div class="stat-value">96.8% <small>Last 30 days</small></div></article><article class="stat-card"><div class="stat-top">Pending quotes</div><div class="stat-value">12 <small>Awaiting response</small></div></article><article class="stat-card"><div class="stat-top">Exceptions</div><div class="stat-value error-number">4 <small>Need attention</small></div></article></div><div class="section-block panel"><div class="section-title"><h2>Shipment activity</h2><span class="muted">Live workspace overview</span></div><div class="activity-list"><div><b class="dot green-dot"></b><span><strong>Shipment #SH-2048</strong><small>Delivered to Riyadh · 10:42 AM</small></span><em>Completed</em></div><div><b class="dot blue-dot"></b><span><strong>Shipment #SH-2047</strong><small>In transit to Jeddah · 09:18 AM</small></span><em>In transit</em></div><div><b class="dot orange-dot"></b><span><strong>Shipment #SH-2046</strong><small>Customs clearance · 08:05 AM</small></span><em>Pending</em></div></div></div>`;
+ else if(page==="shipments") body=`<div class="section-block panel"><div class="section-title"><h2>Shipment tracker</h2><button class="primary-btn" data-action="new-shipment">＋ Add shipment</button></div><div class="form-inline"><input id="trackingInput" placeholder="Enter tracking number (e.g. SH-2048)"><button class="primary-btn" data-action="track">Track shipment</button></div><div id="trackingResult" class="tracking-result">Enter a tracking number to view its latest status.</div><div class="simple-table"><div><b>Tracking ID</b><b>Destination</b><b>Status</b></div><div><span>SH-2048</span><span>Riyadh, KSA</span><span class="status-pill connected">Delivered</span></div><div><span>SH-2047</span><span>Jeddah, KSA</span><span class="status-pill syncing">In transit</span></div><div><span>SH-2046</span><span>Dammam, KSA</span><span class="status-pill errors">Customs hold</span></div></div></div>`;
+ else if(page==="quotes") body=`<div class="section-block panel"><div class="section-title"><h2>Freight quote calculator</h2><span class="muted">Indicative estimate</span></div><form id="quoteForm" class="quote-form"><label>Origin<input required placeholder="e.g. Riyadh"></label><label>Destination<input required placeholder="e.g. Jeddah"></label><label>Freight type<select><option>Road freight</option><option>Air freight</option><option>Ocean freight</option></select></label><label>Weight (kg)<input required type="number" min="1" value="100"></label><button class="primary-btn">Calculate quote</button></form><div id="quoteResult" class="result-box">Complete the details to calculate an estimate.</div></div>`;
+ else if(page==="ai") body=`<div class="section-block panel ai-panel"><div class="ai-orb">✧</div><h2>Logistics AI Assistant</h2><p>Ask about shipments, operational trends, or integration health.</p><div class="chat-box" id="chatBox"><div class="bot-message">Hello! I can help you explore your logistics workspace. What would you like to know?</div></div><form id="chatForm" class="chat-form"><input id="chatInput" placeholder="Ask your logistics assistant..." required><button class="primary-btn">Send ↑</button></form></div>`;
+ else if(page==="analytics") body=`<div class="stats-grid"><article class="stat-card"><div class="stat-top">Shipments this month</div><div class="stat-value">1,284 <small>+12.4% vs last month</small></div></article><article class="stat-card"><div class="stat-top">Average transit time</div><div class="stat-value">2.4 <small>Days</small></div></article><article class="stat-card"><div class="stat-top">Cost per shipment</div><div class="stat-value">SAR 284 <small>Average</small></div></article><article class="stat-card"><div class="stat-top">Customer satisfaction</div><div class="stat-value">4.8/5 <small>Based on feedback</small></div></article></div><div class="section-block panel"><div class="section-title"><h2>Monthly shipment volume</h2><span class="muted">Sample workspace data</span></div><div class="chart" id="chart">${[42,62,50,78,66,92,72,84,58,96,76,88].map((v,i)=>`<div class="bar-wrap"><div class="bar" style="height:${v}%"></div><small>${["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][i]}</small></div>`).join("")}</div></div>`;
+ else if(page==="documents") body=`<div class="section-block panel"><div class="section-title"><h2>Document center</h2><label class="upload-btn">＋ Upload document<input type="file" id="documentUpload" hidden></label></div><div class="document-list" id="documentList"><div><span class="file-icon">PDF</span><span><strong>Bill of Lading - SH-2048</strong><small>PDF document · Sample</small></span><button data-action="download-doc">Download</button></div><div><span class="file-icon">XLS</span><span><strong>Monthly shipment report</strong><small>Spreadsheet · Sample</small></span><button data-action="download-doc">Download</button></div></div></div>`;
+ else if(page==="customers") body=`<div class="section-block panel"><div class="section-title"><h2>Customers</h2><button class="primary-btn" data-action="add-customer">＋ Add customer</button></div><div id="customerList" class="customer-list"><div><strong>Acme Retail Group</strong><span>operations@acme.example</span><em>Active</em></div><div><strong>Northstar Trading</strong><span>logistics@northstar.example</span><em>Active</em></div><div><strong>Desert Supply Co.</strong><span>contact@desert.example</span><em>Review</em></div></div></div>`;
+ else if(page==="training") body=`<div class="section-block panel"><div class="section-title"><h2>AI model training</h2><span class="status-pill connected">Model ready</span></div><p class="muted">Manage sample training settings for your logistics assistant.</p><div class="setting-line"><span><strong>Shipment classification</strong><small>Classify shipment types and priority</small></span><label class="switch"><input type="checkbox" checked><i></i></label></div><div class="setting-line"><span><strong>Delay prediction</strong><small>Identify potential delivery delays</small></span><label class="switch"><input type="checkbox"><i></i></label></div><button class="primary-btn" data-action="train">Start training</button><div id="trainingResult" class="result-box"></div></div>`;
+ else if(page==="settings") body=`<div class="section-block panel"><div class="section-title"><h2>Workspace settings</h2></div><form id="settingsForm" class="quote-form"><label>Workspace name<input value="Acme Logistics" id="workspaceName"></label><label>Timezone<select><option>Asia/Riyadh (GMT+3)</option><option>UTC</option></select></label><label>Default currency<select><option>SAR - Saudi Riyal</option><option>USD - US Dollar</option><option>EUR - Euro</option></select></label><button class="primary-btn">Save settings</button></form></div>`;
+ else if(page==="help") body=`<div class="section-block panel"><h2>How can we help?</h2><p class="muted">Browse common topics or send a support request.</p><div class="help-grid"><button data-action="help-topic">Getting started</button><button data-action="help-topic">Managing shipments</button><button data-action="help-topic">Connecting integrations</button><button data-action="help-topic">Reports and analytics</button></div><form id="supportForm" class="support-form"><input required placeholder="Your email"><textarea required placeholder="Describe your issue"></textarea><button class="primary-btn">Send request</button></form></div>`;
+ else body=`<div class="section-block panel"><h2>What's new</h2><div class="activity-list"><div><b class="dot green-dot"></b><span><strong>Integration center refresh</strong><small>Improved integration management and status visibility.</small></span><em>Today</em></div><div><b class="dot blue-dot"></b><span><strong>Analytics improvements</strong><small>New shipment performance indicators.</small></span><em>Recently</em></div></div></div>`;
+ $("#content").innerHTML=`<div class="page-heading"><div><h1>${p.title}</h1><p>${p.subtitle}</p></div>${page==="overview"?'<button class="primary-btn" data-action="new-shipment">＋ New shipment</button>':""}</div>${body}`;
+}
+function integrationMarkup(){return `<div class="page-heading"><div><h1>Integrations</h1><p>Connect your freight operations with existing systems</p></div><button class="primary-btn" id="addIntegrationBtn">＋ Add New</button></div><div class="stats-grid"><article class="stat-card"><div class="stat-top">Connected <span>♧</span></div><div class="stat-value" id="connectedCount">45 <small>Active integrations</small></div></article><article class="stat-card"><div class="stat-top">Syncing <span>◷</span></div><div class="stat-value" id="syncingCount">5 <small>In Progress</small></div></article><article class="stat-card"><div class="stat-top">Errors <span>ⓘ</span></div><div class="stat-value error-number" id="errorCount">1 <small>Needs attention</small></div></article><article class="stat-card"><div class="stat-top">Available <span>♧</span></div><div class="stat-value" id="availableCount">54 <small>More to add</small></div></article></div><section class="section-block"><div class="section-title"><h2>Carrier APIs</h2><button class="text-btn" id="viewAllCarriers">View All ↗</button></div><div class="carrier-grid" id="carrierGrid"></div></section><section class="section-block system-section"><div class="section-title"><h2>System Integrations</h2><div class="table-tools"><button class="round-tool" id="filterBtn" title="Filter">▽</button><button class="round-tool" id="layoutBtn" title="Toggle view">▦</button><button class="round-tool" id="moreBtn" title="More">⋮</button></div></div><div class="integration-list" id="integrationList"></div></section>`;}
+function openModal(item=null){
+ editingId=item?item.id:null;$("#modalTitle").textContent=item?"Edit integration":"Add integration";$("#modalSubtitle").textContent=item?"Update integration details":"Connect a new service to your workspace";
+ $("#serviceName").value=item?.name||"";$("#serviceCategory").value=item?.category||"Carrier API";$("#serviceDescription").value=item?.description||"";$("#serviceStatus").value=item?.status||"Connected";$("#modalBackdrop").classList.add("show");$("#serviceName").focus();
+}
+function closeModal(){$("#modalBackdrop").classList.remove("show");$("#integrationForm").reset();editingId=null;}
+function setPage(page){currentPage=page;document.querySelectorAll(".nav-item[data-page]").forEach(b=>b.classList.toggle("active",b.dataset.page===page));$("#crumb").textContent=pages[page]?.title||"Integrations";pageContent(page);if(page==="integrations")render();}
+document.querySelectorAll(".nav-item[data-page]").forEach(b=>b.addEventListener("click",()=>setPage(b.dataset.page)));
+$("#collapseBtn").addEventListener("click",()=>$("#sidebar").classList.toggle("collapsed"));
+$("#content").addEventListener("click",e=>{
+ const btn=e.target.closest("[data-action]");if(!btn)return;const id=Number(btn.dataset.id);const item=items.find(x=>x.id===id);const carrier=carriers.find(x=>x.id===id);
+ switch(btn.dataset.action){
+ case "add-integration":openModal();break;
+ case "configure":openModal(item);break;
+ case "more-item":if(confirm(`Delete ${item.name} from integrations?`)){items=items.filter(x=>x.id!==id);save();render();toast("Integration removed");}break;
+ case "edit-carrier":if(carrier){const next=prompt("Update status: Connected, Syncing, or Errors",carrier.status);if(["Connected","Syncing","Errors"].includes(next)){carrier.status=next;save();render();toast("Carrier status updated");}}break;
+ case "view-carrier":toast(`${carrier.name}: ${carrier.description}`);break;
+ case "clear-filter":filteredStatus="All";$("#globalSearch").value="";renderItems();break;
+ case "track":{const val=$("#trackingInput").value.trim().toUpperCase();const found={"SH-2048":"Delivered to Riyadh, Saudi Arabia","SH-2047":"In transit to Jeddah, Saudi Arabia","SH-2046":"Held for customs clearance in Dammam"}[val];$("#trackingResult").textContent=found?`${val}: ${found}`:`No shipment found for ${val||"that tracking number"}.`;break;}
+ case "new-shipment":toast("New shipment form is ready for API integration.");break;
+ case "add-customer":{const name=prompt("Customer name");if(name){const row=document.createElement("div");row.innerHTML=`<strong>${escapeHTML(name)}</strong><span>New customer</span><em>Active</em>`;$("#customerList").append(row);toast("Customer added");}break;}
+ case "train":$("#trainingResult").textContent="Training job queued successfully (demo).";toast("Training started");break;
+ case "download-doc":toast("Sample document download is not connected to a document server.");break;
+ case "help-topic":toast("Help article opened in demo mode.");break;
+ }
+});
+$("#content").addEventListener("submit",e=>{
+ e.preventDefault();
+ if(e.target.id==="quoteForm"){const data=new FormData(e.target);const weight=Number(e.target.querySelector('input[type="number"]').value);const type=e.target.querySelector("select").value;const factor=type==="Air freight"?8:type==="Ocean freight"?1.5:2.8;const total=Math.max(150,weight*factor+95);$("#quoteResult").textContent=`Estimated freight cost: SAR ${total.toLocaleString("en-US",{maximumFractionDigits:2})}. This is an indicative demo estimate.`;}
+ if(e.target.id==="chatForm"){const input=$("#chatInput");const message=input.value.trim();if(!message)return;const box=$("#chatBox");const user=document.createElement("div");user.className="user-message";user.textContent=message;box.append(user);const reply=document.createElement("div");reply.className="bot-message";reply.textContent="I can summarize the demo workspace: "+items.length+" system integrations are listed, and "+items.filter(x=>x.status==="Errors").length+" currently show errors. Connect a live AI service to enable contextual answers.";box.append(reply);input.value="";box.scrollTop=box.scrollHeight;}
+ if(e.target.id==="settingsForm"){toast("Workspace settings saved locally.");}
+ if(e.target.id==="supportForm"){toast("Support request saved in this demo.");e.target.reset();}
+});
+$("#integrationForm").addEventListener("submit",e=>{e.preventDefault();const data={name:$("#serviceName").value.trim(),category:$("#serviceCategory").value,description:$("#serviceDescription").value.trim()||"No description provided",status:$("#serviceStatus").value,icon:"◈",color:"blue"};if(editingId){items=items.map(x=>x.id===editingId?{...x,...data}:x);toast("Integration updated");}else{items.unshift({...data,id:Date.now()});toast("Integration added");}save();closeModal();if(currentPage!=="integrations")setPage("integrations");else render();});
+$("#closeModal").addEventListener("click",closeModal);$("#cancelModal").addEventListener("click",closeModal);$("#modalBackdrop").addEventListener("click",e=>{if(e.target.id==="modalBackdrop")closeModal();});
+$("#content").addEventListener("click",e=>{if(e.target.closest("#addIntegrationBtn"))openModal();});
+$("#globalSearch").addEventListener("input",()=>{if(currentPage!=="integrations")setPage("integrations");else renderItems();});
+$("#filterBtn").addEventListener("click",()=>{const options=["All","Connected","Syncing","Errors"];const choice=prompt("Filter by status: All, Connected, Syncing, Errors",filteredStatus);if(options.includes(choice)){filteredStatus=choice;renderItems();}});
+$("#layoutBtn").addEventListener("click",()=>{cardView=!cardView;$("#integrationList").classList.toggle("card-view",cardView);});
+$("#moreBtn").addEventListener("click",()=>{if(confirm("Reset integrations to the original demo data?")){items=JSON.parse(JSON.stringify(defaultItems));carriers=JSON.parse(JSON.stringify(defaultCarriers));save();render();toast("Demo data restored");}});
+$("#viewAllCarriers").addEventListener("click",()=>toast(`${carriers.length} carrier API connections shown`));
+$("#insightBtn").addEventListener("click",()=>{setPage("ai");toast("AI Console opened");});
+$("#notificationsBtn").addEventListener("click",()=>toast("You are all caught up."));
+document.addEventListener("change",e=>{if(e.target.id!=="documentUpload")return;const file=e.target.files[0];if(file){const row=document.createElement("div");row.innerHTML=`<span class="file-icon">${escapeHTML(file.name.split(".").pop().toUpperCase().slice(0,4))}</span><span><strong>${escapeHTML(file.name)}</strong><small>${(file.size/1024).toFixed(1)} KB · Local selection</small></span><em>Added</em>`;$("#documentList").append(row);toast("Document added to this session");}});
+document.addEventListener("keydown",e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==="k"){e.preventDefault();$("#globalSearch").focus();}if(e.key==="Escape")closeModal();});
+$("#profileButton").addEventListener("click",openProfileModal);
+$("#closeProfileModal").addEventListener("click",closeProfileModal);
+$("#cancelProfile").addEventListener("click",closeProfileModal);
+$("#profileBackdrop").addEventListener("click",e=>{if(e.target.id==="profileBackdrop")closeProfileModal();});
+$("#removePhoto").addEventListener("click",()=>{pendingProfilePhoto="";const preview=$("#photoPreview");preview.textContent=($("#accountName").value.trim()[0]||"A").toUpperCase();});
+$("#profilePhoto").addEventListener("change",e=>{const file=e.target.files[0];if(!file)return;if(!file.type.startsWith("image/")){toast("Please select an image file");e.target.value="";return;}if(file.size>2*1024*1024){toast("Image must be 2 MB or smaller");e.target.value="";return;}const reader=new FileReader();reader.onload=()=>{pendingProfilePhoto=reader.result;const preview=$("#photoPreview");preview.innerHTML="";const img=document.createElement("img");img.src=pendingProfilePhoto;img.alt="Profile photo preview";preview.append(img);};reader.readAsDataURL(file);});
+$("#accountName").addEventListener("input",e=>{if(!pendingProfilePhoto)$("#photoPreview").textContent=(e.target.value.trim()[0]||"A").toUpperCase();});
+$("#profileForm").addEventListener("submit",e=>{e.preventDefault();profileData={name:$("#accountName").value.trim(),company:$("#companyName").value.trim(),photo:pendingProfilePhoto};localStorage.setItem("logisticsProfile",JSON.stringify(profileData));renderProfile();closeProfileModal();toast("Account profile updated");});
+renderProfile();
+render();
+</script>
+</body>
+</html>
