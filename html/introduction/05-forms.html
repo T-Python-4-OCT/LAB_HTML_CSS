@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Forms and Input</title>
+</head>
+<body>
+  <h1>Registration Form</h1>
+
+  <form action="#" method="post">
+    <p>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required>
+    </p>
+
+    <p>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </p>
+
+    <p>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" minlength="6">
+    </p>
+
+    <p>
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" min="1" max="120">
+    </p>
+
+    <p>
+      Gender:
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">Female</label>
+    </p>
+
+    <p>
+      <label for="country">Country:</label>
+      <select id="country" name="country">
+        <option value="">-- Choose --</option>
+        <option value="sa">Saudi Arabia</option>
+        <option value="eg">qatar</option>
+        <option value="ae">kowait</option>
+      </select>
+    </p>
+
+    <p>
+      Interests:
+      <input type="checkbox" id="html" name="interests" value="html">
+      <label for="html">HTML</label>
+      <input type="checkbox" id="css" name="interests" value="css">
+      <label for="css">CSS</label>
+    </p>
+
+    <p>
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="4" cols="40"></textarea>
+    </p>
+
+    <button type="submit">Send</button>
+    <button type="reset">Clear</button>
+  </form>
+</body>
+</html>
