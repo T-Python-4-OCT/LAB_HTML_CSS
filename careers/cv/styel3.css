@@ -1,0 +1,158 @@
+
+body {
+    font-family: "Roboto", Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.7;
+}
+
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 15px;
+    z-index: 2000;
+    padding: 10px 15px;
+    background: white;
+    color: #0f172a;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
+header {
+    animation: fadeIn 0.8s ease-in;
+}
+
+.section-title {
+    color: #1d4ed8;
+    font-weight: 700;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #dbeafe;
+}
+
+.section-title::before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 22px;
+    background-color: #2563eb;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+    overflow-wrap: anywhere;
+}
+
+.contact-list i {
+    color: #2563eb;
+    font-size: 18px;
+}
+
+.contact-list a {
+    color: #1d4ed8;
+    text-decoration: none;
+}
+
+.contact-list a:hover {
+    text-decoration: underline;
+}
+
+.timeline-item {
+    border-left: 3px solid #2563eb;
+    padding-left: 18px;
+    margin-bottom: 20px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.1) !important;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #f59e0b;
+    outline-offset: 3px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+@media print {
+    @page {
+        size: A4;
+        margin: 12mm;
+    }
+
+    body {
+        background: white;
+        font-size: 10pt;
+    }
+
+    header {
+        background: #0d47a1 !important;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+
+    .card {
+        break-inside: avoid;
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+        transform: none !important;
+    }
+
+    .card:hover {
+        transform: none;
+    }
+
+    .skip-link,
+    .btn {
+        display: none !important;
+    }
+
+    footer {
+        background: white !important;
+        color: black !important;
+    }
+
+    a {
+        color: black !important;
+        text-decoration: none !important;
+    }
+    
+}
+
+
