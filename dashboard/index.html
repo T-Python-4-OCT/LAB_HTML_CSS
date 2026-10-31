@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Integrations | Logistics</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a href="#content" class="skip-link">Skip to content</a>
+
+  <div class="app">
+
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-logo" aria-hidden="true"><i class="ti ti-box"></i></span>
+        <span class="brand-name">Logistics</span>
+        <button class="icon-btn ghost" type="button" aria-label="Collapse sidebar"><i class="ti ti-layout-sidebar"></i></button>
+      </div>
+
+      <nav class="side-nav" aria-label="Main menu">
+        <ul class="side-links">
+          <li><a href="#"><i class="ti ti-layout-grid"></i> Control Tower</a></li>
+          <li><a href="#"><i class="ti ti-sparkles"></i> Generate Quote <i class="ti ti-chevron-down end"></i></a></li>
+          <li><a href="#"><i class="ti ti-truck-delivery"></i> Track Shipments</a></li>
+          <li><a href="#"><i class="ti ti-robot"></i> AI Console</a></li>
+          <li><a href="#"><i class="ti ti-users"></i> Customer Portal</a></li>
+        </ul>
+
+        <p class="nav-label">Insight &amp; Control <i class="ti ti-chevron-up"></i></p>
+
+        <ul class="side-links">
+          <li><a href="#"><i class="ti ti-file-text"></i> Documents</a></li>
+          <li><a href="#"><i class="ti ti-chart-bar"></i> Analytics</a></li>
+          <li><a href="#" aria-current="page"><i class="ti ti-plug-connected"></i> Integrations</a></li>
+          <li><a href="#"><i class="ti ti-school"></i> AI Training</a></li>
+        </ul>
+      </nav>
+
+      <div class="side-footer">
+        <ul class="side-links">
+          <li><a href="#"><i class="ti ti-settings"></i> Setting</a></li>
+          <li><a href="#"><i class="ti ti-headset"></i> Get Help</a></li>
+          <li><a href="#"><i class="ti ti-rocket"></i> Updates</a></li>
+        </ul>
+
+        <div class="user">
+          <span class="avatar" aria-hidden="true">A</span>
+          <div>
+            <strong>Alex</strong>
+            <small>Acme Logistics</small>
+          </div>
+          <i class="ti ti-selector"></i>
+        </div>
+      </div>
+    </aside>
+
+    <main id="content" class="main">
+
+      <header class="topbar">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="#">Dashboard</a>
+          <i class="ti ti-chevron-right"></i>
+          <span aria-current="page">Integrations</span>
+        </nav>
+
+        <div class="top-actions">
+          <label class="search">
+            <i class="ti ti-search"></i>
+            <input type="search" name="q" placeholder="Search by cargo, shipping, user id etc" aria-label="Search">
+          </label>
+          <button class="ai-btn" type="button">Get Ai Insight <i class="ti ti-sparkles"></i></button>
+          <button class="icon-btn dot" type="button" aria-label="Notifications"><i class="ti ti-bell"></i></button>
+          <button class="icon-btn dot" type="button" aria-label="Messages"><i class="ti ti-message-circle"></i></button>
+        </div>
+      </header>
+
+      <section class="page-head">
+        <div>
+          <h1>Integrations</h1>
+          <p>Connect your freight operations with existing systems</p>
+        </div>
+        <button class="add-btn" type="button"><i class="ti ti-plus"></i> Add New</button>
+      </section>
+
+      <section class="stats" aria-label="Integration summary">
+        <article class="stat">
+          <h2 class="stat-label">Connected</h2>
+          <p class="stat-value">45 <span>Active integrations</span></p>
+          <span class="stat-icon" aria-hidden="true"><i class="ti ti-plug-connected"></i></span>
+        </article>
+        <article class="stat">
+          <h2 class="stat-label">Syncing</h2>
+          <p class="stat-value">5 <span>In Progress</span></p>
+          <span class="stat-icon" aria-hidden="true"><i class="ti ti-clock-check"></i></span>
+        </article>
+        <article class="stat danger">
+          <h2 class="stat-label">Errors</h2>
+          <p class="stat-value">1 <span>Needs attention</span></p>
+          <span class="stat-icon" aria-hidden="true"><i class="ti ti-alert-circle"></i></span>
+        </article>
+        <article class="stat">
+          <h2 class="stat-label">Available</h2>
+          <p class="stat-value">54 <span>More to add</span></p>
+          <span class="stat-icon" aria-hidden="true"><i class="ti ti-apps"></i></span>
+        </article>
+      </section>
+
+      <section class="panel" aria-labelledby="carriers-title">
+        <div class="panel-head">
+          <h2 id="carriers-title">Carrier APIs</h2>
+          <a href="#" class="pill-btn">View All <i class="ti ti-arrow-up-right"></i></a>
+        </div>
+
+        <div class="carrier-grid">
+          <article class="carrier">
+            <div class="carrier-body">
+              <div class="carrier-top">
+                <span class="carrier-icon" aria-hidden="true"><i class="ti ti-ship"></i></span>
+                <span class="status ok"><i class="ti ti-circle-check"></i> Connected</span>
+              </div>
+              <h3>Maersk Line <a href="https://www.maersk.com" target="_blank" rel="noopener">maersk.com <i class="ti ti-external-link"></i></a></h3>
+              <p>Ocean bookings, live tracking and shipping documents</p>
+            </div>
+            <div class="carrier-foot">
+              <a href="#" class="pill-btn">View Integration</a>
+              <button class="icon-btn ghost" type="button" aria-label="Maersk Line settings"><i class="ti ti-settings"></i></button>
+            </div>
+          </article>
+
+          <article class="carrier">
+            <div class="carrier-body">
+              <div class="carrier-top">
+                <span class="carrier-icon" aria-hidden="true"><i class="ti ti-plane"></i></span>
+                <span class="status sync"><i class="ti ti-refresh"></i> Syncing</span>
+              </div>
+              <h3>Saudia Cargo <a href="https://www.saudiacargo.com" target="_blank" rel="noopener">saudiacargo.com <i class="ti ti-external-link"></i></a></h3>
+              <p>Air cargo bookings, rates and flight status updates</p>
+            </div>
+            <div class="carrier-foot">
+              <a href="#" class="pill-btn">View Integration</a>
+              <button class="icon-btn ghost" type="button" aria-label="Saudia Cargo settings"><i class="ti ti-settings"></i></button>
+            </div>
+          </article>
+
+          <article class="carrier">
+            <div class="carrier-body">
+              <div class="carrier-top">
+                <span class="carrier-icon" aria-hidden="true"><i class="ti ti-ship"></i></span>
+                <span class="status err"><i class="ti ti-alert-circle"></i> Errors</span>
+              </div>
+              <h3>MSC <a href="https://www.msc.com" target="_blank" rel="noopener">msc.com <i class="ti ti-external-link"></i></a></h3>
+              <p>Vessel schedules, container events and invoices</p>
+            </div>
+            <div class="carrier-foot">
+              <a href="#" class="pill-btn">View Integration</a>
+              <button class="icon-btn ghost" type="button" aria-label="MSC settings"><i class="ti ti-settings"></i></button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="systems-title">
+        <div class="panel-head">
+          <h2 id="systems-title">System Integrations</h2>
+          <div class="panel-tools">
+            <button class="icon-btn" type="button" aria-label="Filter"><i class="ti ti-filter"></i></button>
+            <button class="icon-btn" type="button" aria-label="Grid view"><i class="ti ti-layout-grid"></i></button>
+            <button class="icon-btn" type="button" aria-label="More options"><i class="ti ti-dots-vertical"></i></button>
+          </div>
+        </div>
+
+        <ul class="sys-list">
+          <li class="sys-row">
+            <span class="logo" style="--logo: #0b8fd6;" aria-hidden="true">SF</span>
+            <div class="sys-info">
+              <h3>Salesforce CRM</h3>
+              <p>Customer relationship management</p>
+            </div>
+            <span class="tag">CRM</span>
+            <span class="status ok"><i class="ti ti-circle-check"></i> Connected</span>
+            <a href="#" class="pill-btn">Configure</a>
+          </li>
+          <li class="sys-row">
+            <span class="logo" style="--logo: #1d6fd1;" aria-hidden="true">SAP</span>
+            <div class="sys-info">
+              <h3>SAP TMS</h3>
+              <p>Transportation management system</p>
+            </div>
+            <span class="tag">TMS</span>
+            <span class="status ok"><i class="ti ti-circle-check"></i> Connected</span>
+            <a href="#" class="pill-btn">Configure</a>
+          </li>
+          <li class="sys-row">
+            <span class="logo" style="--logo: #d93025;" aria-hidden="true">O</span>
+            <div class="sys-info">
+              <h3>Oracle ERP</h3>
+              <p>Enterprise resource planning</p>
+            </div>
+            <span class="tag">ERP</span>
+            <span class="status sync"><i class="ti ti-refresh"></i> Syncing</span>
+            <a href="#" class="pill-btn">Configure</a>
+          </li>
+          <li class="sys-row">
+            <span class="logo" style="--logo: #2b5fd9;" aria-hidden="true">MD</span>
+            <div class="sys-info">
+              <h3>Microsoft Dynamics</h3>
+              <p>Business applications</p>
+            </div>
+            <span class="tag">ERP</span>
+            <span class="status err"><i class="ti ti-alert-circle"></i> Errors</span>
+            <a href="#" class="pill-btn">Configure</a>
+          </li>
+          <li class="sys-row">
+            <span class="logo" style="--logo: #7c3aed;" aria-hidden="true">S</span>
+            <div class="sys-info">
+              <h3>Slack</h3>
+              <p>Team communication</p>
+            </div>
+            <span class="tag">Communication</span>
+            <span class="status ok"><i class="ti ti-circle-check"></i> Connected</span>
+            <a href="#" class="pill-btn">Configure</a>
+          </li>
+          <li class="sys-row">
+            <span class="logo" style="--logo: #4d9a2a;" aria-hidden="true">S</span>
+            <div class="sys-info">
+              <h3>Shopify</h3>
+              <p>E-commerce platform</p>
+            </div>
+            <span class="tag">E-commerce</span>
+            <span class="status ok"><i class="ti ti-circle-check"></i> Connected</span>
+            <a href="#" class="pill-btn">Configure</a>
+          </li>
+        </ul>
+      </section>
+
+    </main>
+  </div>
+
+</body>
+</html>
