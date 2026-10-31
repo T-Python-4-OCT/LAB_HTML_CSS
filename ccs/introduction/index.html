@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Hobbies</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hobbies</title>
+</head>
+<body>
+
+    <h1>My Hobbies</h1>
+    <h2>About Me</h2>
+    <p>Hello! My name is <b>abdullah alharbi</b> and this is my first web page.</p>
+    <p>I am learning <i>HTML</i> and I love building things on the web.</p>
+
+    <h3>Why I made this page</h3>
+    <p>To practice <b>headings</b>, <i>paragraphs</i>, links, images, lists, tables, and forms.</p>
+
+    <hr>
+
+    <h2>My Favorite Picture</h2>
+    <img src="/images/jeddah.jpg" alt="My favorite picture" width="400">
+
+    <hr>
+
+    <h2>My Favorite Video</h2>
+    <video src="/videos/my_video.mp4" width="400" controls>
+        Your browser does not support the video tag.
+    </video>
+
+    <hr>
+
+    <h2>My Favorite Links</h2>
+    <p>
+        <a href="https://www.w3schools.com" target="_blank">W3Schools</a><br>
+        <a href="https://www.freecodecamp.org" target="_blank">freeCodeCamp</a>
+    </p>
+
+    <hr>
+
+    <h2>My Hobbies List</h2>
+
+    <h3>Unordered list</h3>
+    <ul>
+        <li>Reading</li>
+        <li>Football</li>
+        <li>Coding</li>
+    </ul>
+
+    <h3>Top 3 (ordered list)</h3>
+    <ol>
+        <li>Coding</li>
+        <li>Football</li>
+        <li>Reading</li>
+    </ol>
+
+    <hr>
+
+    <h2>My Weekly Schedule</h2>
+    <table border="1">
+        <tr>
+            <th>Day</th>
+            <th>Hobby</th>
+            <th>Time</th>
+        </tr>
+        <tr>
+            <td>Sunday</td>
+            <td>Coding</td>
+            <td>2 hours</td>
+        </tr>
+        <tr>
+            <td>Tuesday</td>
+            <td>Football</td>
+            <td>1 hour</td>
+        </tr>
+        <tr>
+            <td>Thursday</td>
+            <td>Reading</td>
+            <td>30 minutes</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h2>Contact Me</h2>
+    <form>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Your name"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="you@example.com"><br><br>
+
+        <label for="hobby">Favorite hobby:</label><br>
+        <select id="hobby" name="hobby">
+            <option value="reading">Reading</option>
+            <option value="football">Football</option>
+            <option value="coding">Coding</option>
+        </select><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="40" placeholder="Write your message..."></textarea><br><br>
+
+        <button type="submit">Send</button>
+    </form>
+
+</body>
+</html>

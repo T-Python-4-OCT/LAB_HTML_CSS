@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Logistics integrations dashboard for connected shipping and business systems.">
+  <title>Integrations | Logistics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Logistics navigation">
+      <a class="brand" href="#main-content" aria-label="Logistics home"><span class="brand-mark" aria-hidden="true"><span>↗</span></span><span class="brand-name">Logistics</span></a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a class="nav-link" href="#control-tower"><span class="nav-icon" aria-hidden="true">▦</span><span class="nav-label">Control Tower</span></a>
+        <a class="nav-link" href="#carrier-apis"><span class="nav-icon" aria-hidden="true">✧</span><span class="nav-label">Generate Quote</span><span class="nav-chevron" aria-hidden="true">⌄</span></a>
+        <a class="nav-link" href="#carrier-apis"><span class="nav-icon" aria-hidden="true">♧</span><span class="nav-label">Track Shipments</span></a>
+        <a class="nav-link" href="#control-tower"><span class="nav-icon ai-icon" aria-hidden="true">AI</span><span class="nav-label">AI Console</span></a>
+        <a class="nav-link" href="#system-integrations"><span class="nav-icon" aria-hidden="true">♧</span><span class="nav-label">Customer Portal</span></a>
+      </nav>
+      <div class="nav-group">
+        <p class="nav-group-title">INSIGHT &amp; CONTROL <span aria-hidden="true">⌃</span></p>
+        <nav class="secondary-nav" aria-label="Insight and control navigation">
+          <a class="nav-link" href="#documents"><span class="nav-icon" aria-hidden="true">▤</span><span class="nav-label">Documents</span></a>
+          <a class="nav-link" href="#analytics"><span class="nav-icon" aria-hidden="true">▧</span><span class="nav-label">Analytics</span></a>
+          <a class="nav-link active" href="#integrations" aria-current="page"><span class="nav-icon" aria-hidden="true">♧</span><span class="nav-label">Integrations</span></a>
+          <a class="nav-link" href="#control-tower"><span class="nav-icon ai-icon" aria-hidden="true">AI</span><span class="nav-label">AI Training</span></a>
+        </nav>
+      </div>
+      <div class="sidebar-bottom">
+        <nav class="utility-nav" aria-label="Help and settings">
+          <a class="nav-link" href="#profile"><span class="nav-icon" aria-hidden="true">⚙</span><span class="nav-label">Setting</span></a>
+          <a class="nav-link" href="mailto:a.m.albshri22@gmail.com?subject=Dashboard%20help"><span class="nav-icon" aria-hidden="true">☏</span><span class="nav-label">Get Help</span></a>
+          <a class="nav-link" href="#control-tower"><span class="nav-icon" aria-hidden="true">♧</span><span class="nav-label">Updates</span></a>
+        </nav>
+        <a class="sidebar-user" href="#profile" id="profile">
+          <img src="../images/عبدالله البشري jpg.jpg" alt="Abdullah Alharbi">
+          <span class="sidebar-user-copy"><strong>Abdullah</strong><small>Logistics team</small></span>
+          <span class="user-switch" aria-hidden="true">⌃<br>⌄</span>
+        </a>
+      </div>
+    </aside>
+    <main class="main-content" id="main-content">
+      <header class="topbar">
+        <p class="breadcrumb"><a href="#control-tower">Dashboard</a><span aria-hidden="true">›</span><strong>Integrations</strong></p>
+        <div class="top-actions">
+          <form class="search-form" role="search" action="#system-integrations" method="get">
+            <label class="visually-hidden" for="integration-search">Search integrations</label>
+            <span class="search-symbol" aria-hidden="true">⌕</span>
+            <input id="integration-search" name="q" type="search" placeholder="Search by cargo, shipping, user id etc">
+          </form>
+          <a class="ai-button" href="#control-tower">Get AI Insight <span aria-hidden="true">✧</span></a>
+          <a class="icon-button notification-button" href="#notifications" aria-label="Notifications"><span aria-hidden="true">♧</span><i></i></a>
+          <a class="icon-button message-button" href="#messages" aria-label="Messages, one unread"><span aria-hidden="true">☷</span><i>1</i></a>
+        </div>
+      </header>
+      <div class="content">
+        <section class="page-intro" id="integrations">
+          <div><h1>Integrations</h1><p>Connect your freight operations with existing systems</p></div>
+          <a class="add-button" href="#available-integrations"><span aria-hidden="true">＋</span> Add New</a>
+        </section>
+        <section class="summary-grid" id="control-tower" aria-label="Integration summary">
+          <article class="summary-card"><div class="summary-label">Connected <span class="summary-icon" aria-hidden="true">♧</span></div><p><strong>45</strong><span>Active integrations</span></p></article>
+          <article class="summary-card"><div class="summary-label">Syncing <span class="summary-icon" aria-hidden="true">◉</span></div><p><strong>5</strong><span>In Progress</span></p></article>
+          <article class="summary-card"><div class="summary-label">Error <span class="summary-icon" aria-hidden="true">!</span></div><p><strong>1</strong><span class="attention-text">Needs attention</span></p></article>
+          <article class="summary-card"><div class="summary-label">Available <span class="summary-icon" aria-hidden="true">▧</span></div><p><strong>54</strong><span>More to add</span></p></article>
+        </section>
+        <section class="panel carrier-panel" id="carrier-apis">
+          <header class="panel-heading"><h2>Carrier APIs</h2><a class="subtle-button" href="#available-integrations">View All <span aria-hidden="true">↗</span></a></header>
+          <div class="carrier-grid">
+            <article class="carrier-card">
+              <div class="carrier-main">
+                <div class="carrier-meta"><span class="carrier-logo maersk-logo" aria-hidden="true">🚢</span><span class="status-badge" data-status="connected"><span aria-hidden="true">✓</span> Connected</span></div>
+                <h3>Maersk Line <a href="https://www.maersk.com/" target="_blank" rel="noopener noreferrer">Maersk line.com <span aria-hidden="true">↗</span></a></h3>
+                <p>AI-powered document generation and management</p>
+              </div>
+              <footer class="carrier-footer"><a href="https://www.maersk.com/" target="_blank" rel="noopener noreferrer">View Integration</a><a href="https://www.maersk.com/" target="_blank" rel="noopener noreferrer" aria-label="Open Maersk Line integration settings">⚙</a></footer>
+            </article>
+            <article class="carrier-card">
+              <div class="carrier-main">
+                <div class="carrier-meta"><span class="carrier-logo flight-logo" aria-hidden="true">✈</span><span class="status-badge" data-status="syncing"><span aria-hidden="true">◉</span> Syncing</span></div>
+                <h3>Maersk Line <a href="https://www.maersk.com/" target="_blank" rel="noopener noreferrer">Maersk line.com <span aria-hidden="true">↗</span></a></h3>
+                <p>AI-powered document generation and management</p>
+              </div>
+              <footer class="carrier-footer"><a href="https://www.maersk.com/" target="_blank" rel="noopener noreferrer">View Integration</a><a href="https://www.maersk.com/" target="_blank" rel="noopener noreferrer" aria-label="Open Maersk Line integration settings">⚙</a></footer>
+            </article>
+            <article class="carrier-card">
+              <div class="carrier-main">
+                <div class="carrier-meta"><span class="carrier-logo maersk-logo" aria-hidden="true">🚢</span><span class="status-badge" data-status="error"><span aria-hidden="true">!</span> Errors</span></div>
+                <h3>Maersk Line <a href="https://www.maersk.com/" target="_blank" rel="noopener noreferrer">Maersk line.com <span aria-hidden="true">↗</span></a></h3>
+                <p>AI-powered document generation and management</p>
+              </div>
+              <footer class="carrier-footer"><a href="https://www.maersk.com/" target="_blank" rel="noopener noreferrer">View Integration</a><a href="https://www.maersk.com/" target="_blank" rel="noopener noreferrer" aria-label="Open Maersk Line integration settings">⚙</a></footer>
+            </article>
+          </div>
+        </section>
+        <section class="panel systems-panel" id="system-integrations">
+          <header class="panel-heading">
+            <div><h2>System Integrations</h2><p>Connect the tools your team already uses</p></div>
+            <div class="panel-tools"><a href="#system-integrations" aria-label="Filter integrations">▽</a><a href="#system-integrations" aria-label="Change integrations view">▦</a><a href="#system-integrations" aria-label="More integration options">⋮</a></div>
+          </header>
+          <ul class="integration-list">
+            <li class="integration-row" id="customer-portal">
+              <span class="system-logo salesforce-logo" aria-hidden="true">☁</span><div class="system-name"><h3>Salesforce CRM</h3><p>Customer relationship management</p></div>
+              <span class="system-category">CRM</span><span class="status-badge" data-status="connected"><span aria-hidden="true">✓</span> Connected</span><a class="configure-button" href="https://www.salesforce.com/" target="_blank" rel="noopener noreferrer">Configure</a>
+            </li>
+            <li class="integration-row" id="documents">
+              <span class="system-logo sap-logo" aria-hidden="true">SAP</span><div class="system-name"><h3>SAP TMS</h3><p>Transportation management system</p></div>
+              <span class="system-category">TMS</span><span class="status-badge" data-status="connected"><span aria-hidden="true">✓</span> Connected</span><a class="configure-button" href="https://www.sap.com/products/scm/transportation-logistics.html" target="_blank" rel="noopener noreferrer">Configure</a>
+            </li>
+            <li class="integration-row" id="analytics">
+              <span class="system-logo oracle-logo" aria-hidden="true">ORACLE</span><div class="system-name"><h3>Oracle ERP</h3><p>Enterprise resource planning</p></div>
+              <span class="system-category">ERP</span><span class="status-badge" data-status="syncing"><span aria-hidden="true">◉</span> Syncing</span><a class="configure-button" href="https://www.oracle.com/erp/" target="_blank" rel="noopener noreferrer">Configure</a>
+            </li>
+            <li class="integration-row" id="notifications">
+              <span class="system-logo dynamics-logo" aria-hidden="true">D</span><div class="system-name"><h3>Microsoft Dynamics</h3><p>Business applications</p></div>
+              <span class="system-category">ERP</span><span class="status-badge" data-status="error"><span aria-hidden="true">!</span> Errors</span><a class="configure-button" href="https://www.microsoft.com/en-us/dynamics-365" target="_blank" rel="noopener noreferrer">Configure</a>
+            </li>
+            <li class="integration-row" id="messages">
+              <span class="system-logo slack-logo" aria-hidden="true">✣</span><div class="system-name"><h3>Slack</h3><p>Team communication</p></div>
+              <span class="system-category">Communication</span><span class="status-badge" data-status="connected"><span aria-hidden="true">✓</span> Connected</span><a class="configure-button" href="https://slack.com/" target="_blank" rel="noopener noreferrer">Configure</a>
+            </li>
+            <li class="integration-row" id="available-integrations">
+              <span class="system-logo shopify-logo" aria-hidden="true">S</span><div class="system-name"><h3>Shopify</h3><p>E-commerce platform</p></div>
+              <span class="system-category">E-commerce</span><span class="status-badge" data-status="connected"><span aria-hidden="true">✓</span> Connected</span><a class="configure-button" href="https://www.shopify.com/" target="_blank" rel="noopener noreferrer">Configure</a>
+            </li>
+          </ul>
+        </section>
+        <footer class="page-footer"><span>© 2026 Logistics Workspace</span><span>All systems operational <i aria-hidden="true"></i></span></footer>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
