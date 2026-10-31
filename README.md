@@ -1,6 +1,5 @@
 # LAB_HTML_CSS
 
-
 # Learn the about HTML/CSS and apply your learning on 4 mini projects!
 - Eatch mini project is in a seperate folder. 
 - Your final result should have at least 4 web mini projects (you can create more while learning!)
