@@ -1,0 +1,435 @@
+
+/* =====================================
+   1. Universal Selector and Variables
+   ===================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: hsl(195, 70%, 31%);    
+    --dark-color: #102a43;
+    --accent-color: #ffd166;
+    --text-color: #263238;
+    --light-color: #f2f5f9;
+    --white-color: #ffffff;
+}
+
+/* =====================================
+   2. Basic Elements and Text Styling
+   ===================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: #f2f5f9;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.3;
+}
+
+h2,
+h3 {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+p {
+    margin-bottom: 16px;
+}
+
+/* =====================================
+   3. Header and Backgrounds
+   ===================================== */
+
+.site-header {
+    position: relative;
+    overflow: hidden;
+    padding: 75px 20px;
+    color: white;
+    text-align: center;
+
+    background-color: #123456;
+    background-image:
+        linear-gradient(rgba(16, 42, 67, 0.88),
+                        rgba(23, 107, 135, 0.85)),
+        url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80");
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-content {
+    position: relative;
+}
+
+.eyebrow {
+    color: #ffd166;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.site-header h1 {
+    margin: 15px 0;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.hero-description {
+    max-width: 600px;
+    margin: 0 auto 25px;
+    font-size: 1.15rem;
+}
+
+/* Absolute Position */
+
+.hero-label {
+    position: absolute;
+    top: 0;
+    right: 12px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    color: #102a43;
+    background-color: #ffd166;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+/* =====================================
+   4. Navigation and Flexbox
+   ===================================== */
+
+.site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #102a43;
+}
+
+.site-nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.site-nav .nav-link {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.site-nav .nav-link:hover,
+.site-nav .nav-link:focus {
+    color: #ffd166;
+}
+
+/* =====================================
+   5. Buttons and Inline Elements
+   ===================================== */
+
+.primary-button,
+.read-more {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #176b87;
+    border-radius: 7px;
+    color: white;
+    background-color: #176b87;
+    text-decoration: none;
+    font-weight: 700;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.primary-button {
+    border-color: #ffd166;
+    color: #102a43;
+    background-color: #ffd166;
+}
+
+.primary-button:hover,
+.read-more:hover {
+    color: #102a43;
+    background-color: #ffd166;
+    transform: translateY(-3px);
+}
+
+/* Inline Example */
+
+.hero-description strong {
+    display: inline;
+}
+
+/* =====================================
+   6. Main Layout and Box Model
+   ===================================== */
+
+.page-layout {
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.article-card,
+.sidebar {
+    padding: 25px;
+    border: 1px solid #e1e8ed;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.article-section {
+    margin-bottom: 35px;
+}
+
+.article-section:last-child {
+    margin-bottom: 0;
+}
+
+.article-section h2 {
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #d6e4ed;
+    font-size: 1.65rem;
+}
+
+/* =====================================
+   7. Images and Attribute Selectors
+   ===================================== */
+
+.article-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+/* Attribute Selector */
+
+img[alt] {
+    border: 2px solid #e1e8ed;
+}
+
+/* =====================================
+   8. Advanced Selectors
+   ===================================== */
+
+/* nth-child */
+
+.benefits-list li:nth-child(odd) {
+    background-color: #edf7fa;
+}
+
+.benefits-list li {
+    margin-bottom: 6px;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+/* Hover */
+
+.topic-list li:hover {
+    color: #176b87;
+}
+
+/* Pseudo-elements */
+
+.article-section h2::before {
+    content: "✦ ";
+    color: #e09f3e;
+}
+
+.sidebar h2::after {
+    content: " ★";
+    color: #e09f3e;
+}
+
+/* =====================================
+   9. Sidebar and Animation
+   ===================================== */
+
+.sidebar {
+    position: relative;
+    height: auto;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+}
+
+.sidebar h3 {
+    margin-top: 25px;
+    font-size: 1.2rem;
+}
+
+.sidebar-note {
+    margin-top: 20px;
+    padding: 12px;
+    border-left: 4px solid #176b87;
+    background-color: #edf7fa;
+}
+
+/* Keyframes */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =====================================
+   10. Fixed Position
+   ===================================== */
+
+.back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 20;
+
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 50%;
+    color: white;
+    background-color: #176b87;
+    text-decoration: none;
+    font-size: 1.4rem;
+
+    transition: background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+    color: white;
+    background-color: #102a43;
+}
+
+/* =====================================
+   11. Responsive Design
+   ===================================== */
+
+@media screen and (max-width: 768px) {
+    .site-header {
+        padding: 55px 15px;
+    }
+
+    .site-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .hero-label {
+        position: static;
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+    .site-nav .container {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .article-card,
+    .sidebar {
+        padding: 18px;
+    }
+
+    .article-section h2 {
+        font-size: 1.4rem;
+    }
+}
+
+/* =====================================
+   12. Accessibility and Motion
+   ===================================== */
+
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 10px;
+    z-index: 100;
+
+    padding: 10px;
+    color: white;
+    background-color: #102a43;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
+a:focus-visible {
+    outline: 3px solid #e09f3e;
+    outline-offset: 4px;
+}
+
+/* Respect Reduced Motion Preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* =====================================
+   13. Footer
+   ===================================== */
+
+.site-footer {
+    padding: 25px 15px;
+    color: white;
+    background-color: #102a43;
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 5px 0;
+}
+
+/* Example of hiding an element when needed */
+
+.hidden-example {
+    display: none;
+}
