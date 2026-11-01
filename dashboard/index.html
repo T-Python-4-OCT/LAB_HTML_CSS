@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistics Dashboard - Integrations</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-layout">
+        
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="brand">
+                    <div class="logo-icon">📦</div>
+                    <h2>Logistics</h2>
+                </div>
+
+                <nav class="nav-menu">
+                    <a href="#" class="nav-item"><span>🎛️</span> Control Tower</a>
+                    <a href="#" class="nav-item has-dropdown"><span>📄</span> Generate Quote <span class="arrow">⌄</span></a>
+                    <a href="#" class="nav-item"><span>🚚</span> Track Shipments</a>
+                    <a href="#" class="nav-item"><span>🤖</span> AI Console</a>
+                    <a href="#" class="nav-item"><span>👤</span> Customer Portal</a>
+                    
+                    <div class="nav-section-title"><span>INSIGHT & CONTROL</span> <span class="arrow-up">⌄</span></div>
+                    <a href="#" class="nav-item"><span>📁</span> Documents</a>
+                    <a href="#" class="nav-item"><span>📊</span> Analytics</a>
+                    <a href="#" class="nav-item active"><span>🔗</span> Integrations</a>
+                    <a href="#" class="nav-item"><span>🧠</span> AI Training</a>
+                </nav>
+            </div>
+
+            <div class="sidebar-footer">
+                <a href="#" class="nav-item"><span>⚙️</span> Setting</a>
+                <a href="#" class="nav-item"><span>❓</span> Get Help</a>
+                <a href="#" class="nav-item"><span>🔄</span> Updates</a>
+                <div class="user-profile">
+                    <div class="avatar">F</div>
+                    <div class="user-info">
+                        <span class="user-name">Faisal Alshehri</span>
+                        <span class="user-role">Acme Logistics</span>
+                    </div>
+                    <span class="profile-arrow">↕</span>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            
+            <header class="top-header">
+                <div class="breadcrumb">Dashboard &gt; <span>Integrations</span></div>
+                <div class="header-actions">
+                    <div class="search-box">
+                        <span>🔍</span>
+                        <input type="text" placeholder="Search by cargo, shipping, user id etc">
+                    </div>
+                    <button class="btn-ai">Get AI Insight ✨</button>
+                    <button class="icon-btn">🔔</button>
+                    <button class="icon-btn">👤</button>
+                </div>
+            </header>
+
+            <div class="page-title-bar">
+                <div>
+                    <h1>Integrations</h1>
+                    <p class="subtitle">Connect your freight operations with existing systems</p>
+                </div>
+                <button class="btn-add-new">+ Add New</button>
+            </div>
+
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-label">Connected</span>
+                    <div class="stat-value-group">
+                        <span class="stat-number">45</span>
+                        <span class="stat-sub">Active integrations</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Syncing</span>
+                    <div class="stat-value-group">
+                        <span class="stat-number">5</span>
+                        <span class="stat-sub">In Progress</span>
+                    </div>
+                </div>
+                <div class="stat-card warning">
+                    <span class="stat-label">Errore</span>
+                    <div class="stat-value-group">
+                        <span class="stat-number warning-text">1</span>
+                        <span class="stat-sub warning-tag">Needs attention</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Available</span>
+                    <div class="stat-value-group">
+                        <span class="stat-number">54</span>
+                        <span class="stat-sub">More to add</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="dashboard-section">
+                <div class="section-header">
+                    <h2>Carrier APIs</h2>
+                    <a href="#" class="link-view-all">View All ↗</a>
+                </div>
+
+                <div class="cards-grid-3">
+                    <div class="integration-card">
+                        <div class="card-top">
+                            <div class="app-icon">🚢</div>
+                            <span class="status-badge connected">✓ Connected</span>
+                        </div>
+                        <h3>Maersk Line <span class="domain">maersk.line.com ↗</span></h3>
+                        <p>AI-powered document generation and management</p>
+                        <div class="card-bottom">
+                            <button class="btn-action">View Integration</button>
+                            <button class="btn-icon-setting">⚙️</button>
+                        </div>
+                    </div>
+
+                    <div class="integration-card">
+                        <div class="card-top">
+                            <div class="app-icon">✈️</div>
+                            <span class="status-badge syncing">🔄 Syncing</span>
+                        </div>
+                        <h3>Maersk Line <span class="domain">maersk.line.com ↗</span></h3>
+                        <p>AI-powered document generation and management</p>
+                        <div class="card-bottom">
+                            <button class="btn-action">View Integration</button>
+                            <button class="btn-icon-setting">⚙️</button>
+                        </div>
+                    </div>
+
+                    <div class="integration-card">
+                        <div class="card-top">
+                            <div class="app-icon">🚢</div>
+                            <span class="status-badge error">⚠️ Errors</span>
+                        </div>
+                        <h3>Maersk Line <span class="domain">maersk.line.com ↗</span></h3>
+                        <p>AI-powered document generation and management</p>
+                        <div class="card-bottom">
+                            <button class="btn-action">View Integration</button>
+                            <button class="btn-icon-setting">⚙️</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="dashboard-section">
+                <div class="section-header">
+                    <h2>System Integrations</h2>
+                    <div class="header-actions">
+                        <button class="icon-btn">🌪️</button>
+                        <button class="icon-btn active">🔲</button>
+                        <button class="icon-btn">⋮</button>
+                    </div>
+                </div>
+
+                <div class="integration-list">
+    <div class="list-item">
+        <div class="item-brand">
+            <div class="item-icon">☁️</div>
+            <div>
+                <h4>Salesforce CRM</h4>
+                <p>Customer relationship management</p>
+            </div>
+        </div>
+        <div class="item-right-group">
+            <span class="category-tag">CRM</span>
+            <span class="status-badge connected">✓ Connected</span>
+            <button class="btn-outline">Configure</button>
+        </div>
+    </div>
+
+    <div class="list-item">
+        <div class="item-brand">
+            <div class="item-icon">🏬</div>
+            <div>
+                <h4>SAP TMS</h4>
+                <p>Transportation management system</p>
+            </div>
+        </div>
+        <div class="item-right-group">
+            <span class="category-tag">TMS</span>
+            <span class="status-badge connected">✓ Connected</span>
+            <button class="btn-outline">Configure</button>
+        </div>
+    </div>
+
+    <div class="list-item">
+        <div class="item-brand">
+            <div class="item-icon">🔴</div>
+            <div>
+                <h4>Oracle ERP</h4>
+                <p>Enterprise resource planning</p>
+            </div>
+        </div>
+        <div class="item-right-group">
+            <span class="category-tag">ERP</span>
+            <span class="status-badge syncing">🔄 Syncing</span>
+            <button class="btn-outline">Configure</button>
+        </div>
+    </div>
+
+    <div class="list-item">
+        <div class="item-brand">
+            <div class="item-icon">🟩</div>
+            <div>
+                <h4>Microsoft Dynamics</h4>
+                <p>Business applications</p>
+            </div>
+        </div>
+        <div class="item-right-group">
+            <span class="category-tag">ERP</span>
+            <span class="status-badge error">⚠️ Errors</span>
+            <button class="btn-outline">Configure</button>
+        </div>
+    </div>
+
+    <div class="list-item">
+        <div class="item-brand">
+            <div class="item-icon">💬</div>
+            <div>
+                <h4>Slack</h4>
+                <p>Team communication</p>
+            </div>
+        </div>
+        <div class="item-right-group">
+            <span class="category-tag">Communication</span>
+            <span class="status-badge connected">✓ Connected</span>
+            <button class="btn-outline">Configure</button>
+        </div>
+    </div>
+
+    <div class="list-item">
+        <div class="item-brand">
+            <div class="item-icon">🛍️</div>
+            <div>
+                <h4>Shopify</h4>
+                <p>E-commerce platform</p>
+            </div>
+        </div>
+        <div class="item-right-group">
+            <span class="category-tag">E-commerce</span>
+            <span class="status-badge connected">✓ Connected</span>
+            <button class="btn-outline">Configure</button>
+        </div>
+    </div>
+</div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
